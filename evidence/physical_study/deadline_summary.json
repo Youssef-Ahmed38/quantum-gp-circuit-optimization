@@ -1,0 +1,40 @@
+{
+  "scope": "Exploratory follow-up after unconstrained-duration results; same pulse libraries, fastest latency matched to published slack; no coefficient tuning",
+  "channels": 144,
+  "state_checks": 288,
+  "regimes": {
+    "low_drive": {
+      "n": 48,
+      "mean_gain_pp": -0.009341211896417694,
+      "median_gain_pp": 0.0,
+      "minimum_gain_pp": -0.12546507301817167,
+      "maximum_gain_pp": 0.02948268849317648,
+      "regressions": 17,
+      "max_relative_gap": 1.7277006454747882e-10,
+      "uncertified_optimal": 0,
+      "max_deadline_excess": 0.0
+    },
+    "balanced": {
+      "n": 48,
+      "mean_gain_pp": 0.025780574500666065,
+      "median_gain_pp": 0.0,
+      "minimum_gain_pp": -0.0019874362827521086,
+      "maximum_gain_pp": 0.22469907653142052,
+      "regressions": 1,
+      "max_relative_gap": 1.6047709544228035e-10,
+      "uncertified_optimal": 0,
+      "max_deadline_excess": 0.0
+    },
+    "high_drive": {
+      "n": 48,
+      "mean_gain_pp": 0.008078253382114082,
+      "median_gain_pp": 0.0,
+      "minimum_gain_pp": -0.006282723098976345,
+      "maximum_gain_pp": 0.11127592785670493,
+      "regressions": 5,
+      "max_relative_gap": 3.742598494869103e-12,
+      "uncertified_optimal": 0,
+      "max_deadline_excess": 0.0
+    }
+  }
+}

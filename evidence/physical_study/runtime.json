@@ -1,0 +1,614 @@
+{
+  "records": [
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 1,
+      "method": "pathflow",
+      "seconds": 0.0005501999985426664,
+      "status": "certified_dual_gap",
+      "gap": 5.263316729818501e-14
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 1,
+      "method": "direct_convex",
+      "seconds": 0.07397509994916618,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 1,
+      "method": "finite_milp",
+      "seconds": 0.009407699923031032,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 1,
+      "method": "characterized_milp",
+      "seconds": 0.010209099971689284,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 2,
+      "method": "pathflow",
+      "seconds": 0.0005460999673232436,
+      "status": "certified_dual_gap",
+      "gap": 5.263316729818501e-14
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 2,
+      "method": "direct_convex",
+      "seconds": 0.07873700000345707,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 2,
+      "method": "finite_milp",
+      "seconds": 0.008592199999839067,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 2,
+      "method": "characterized_milp",
+      "seconds": 0.009850500035099685,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 3,
+      "method": "pathflow",
+      "seconds": 0.0005356000037863851,
+      "status": "certified_dual_gap",
+      "gap": 5.263316729818501e-14
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 3,
+      "method": "direct_convex",
+      "seconds": 0.0920022000791505,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 3,
+      "method": "finite_milp",
+      "seconds": 0.015321100014261901,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qft_2_101_balanced",
+      "repeat": 3,
+      "method": "characterized_milp",
+      "seconds": 0.016913400031626225,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 1,
+      "method": "pathflow",
+      "seconds": 0.00832949997857213,
+      "status": "certified_dual_gap",
+      "gap": 6.261487924574773e-07
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 1,
+      "method": "direct_convex",
+      "seconds": 0.1133683999069035,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 1,
+      "method": "finite_milp",
+      "seconds": 0.029156200005672872,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 1,
+      "method": "characterized_milp",
+      "seconds": 0.02168779994826764,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 2.787495528141473e-16
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 2,
+      "method": "pathflow",
+      "seconds": 0.0035100000677630305,
+      "status": "certified_dual_gap",
+      "gap": 6.261487924574773e-07
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 2,
+      "method": "direct_convex",
+      "seconds": 0.1163183000171557,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 2,
+      "method": "finite_milp",
+      "seconds": 0.02594289998523891,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 2,
+      "method": "characterized_milp",
+      "seconds": 0.021299000014550984,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 2.787495528141473e-16
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 3,
+      "method": "pathflow",
+      "seconds": 0.003541099955327809,
+      "status": "certified_dual_gap",
+      "gap": 6.261487924574773e-07
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 3,
+      "method": "direct_convex",
+      "seconds": 0.08843700005672872,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 3,
+      "method": "finite_milp",
+      "seconds": 0.0264736000681296,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "grover_2_101_balanced",
+      "repeat": 3,
+      "method": "characterized_milp",
+      "seconds": 0.02189799991901964,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 2.787495528141473e-16
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 1,
+      "method": "pathflow",
+      "seconds": 0.005906500038690865,
+      "status": "certified_dual_gap",
+      "gap": 9.273970840651489e-07
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 1,
+      "method": "direct_convex",
+      "seconds": 0.06687480001710355,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 1,
+      "method": "finite_milp",
+      "seconds": 0.02968420006800443,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 1,
+      "method": "characterized_milp",
+      "seconds": 0.03251629997976124,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 2,
+      "method": "pathflow",
+      "seconds": 0.0058654999593272805,
+      "status": "certified_dual_gap",
+      "gap": 9.273970840651489e-07
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 2,
+      "method": "direct_convex",
+      "seconds": 0.07058299996424466,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 2,
+      "method": "finite_milp",
+      "seconds": 0.02687009994406253,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 2,
+      "method": "characterized_milp",
+      "seconds": 0.03396180004347116,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 3,
+      "method": "pathflow",
+      "seconds": 0.006141799967736006,
+      "status": "certified_dual_gap",
+      "gap": 9.273970840651489e-07
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 3,
+      "method": "direct_convex",
+      "seconds": 0.0750535000115633,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 3,
+      "method": "finite_milp",
+      "seconds": 0.026743400027044117,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "vqe_ansatz_2_101_balanced",
+      "repeat": 3,
+      "method": "characterized_milp",
+      "seconds": 0.03247099998407066,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 1,
+      "method": "pathflow",
+      "seconds": 0.029435599921271205,
+      "status": "certified_dual_gap",
+      "gap": 8.868283065460749e-07
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 1,
+      "method": "direct_convex",
+      "seconds": 0.08004280005116016,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 1,
+      "method": "finite_milp",
+      "seconds": 0.0468083000741899,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 1,
+      "method": "characterized_milp",
+      "seconds": 0.03017439995892346,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 2,
+      "method": "pathflow",
+      "seconds": 0.028489899937994778,
+      "status": "certified_dual_gap",
+      "gap": 8.868283065460749e-07
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 2,
+      "method": "direct_convex",
+      "seconds": 0.06845050002448261,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 2,
+      "method": "finite_milp",
+      "seconds": 0.04408469994086772,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 2,
+      "method": "characterized_milp",
+      "seconds": 0.03161159995943308,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 3,
+      "method": "pathflow",
+      "seconds": 0.028967199963517487,
+      "status": "certified_dual_gap",
+      "gap": 8.868283065460749e-07
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 3,
+      "method": "direct_convex",
+      "seconds": 0.07092259998898953,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 3,
+      "method": "finite_milp",
+      "seconds": 0.04645989998243749,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "qaoa_2_101_balanced",
+      "repeat": 3,
+      "method": "characterized_milp",
+      "seconds": 0.030184300034306943,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 1,
+      "method": "pathflow",
+      "seconds": 0.02870449994225055,
+      "status": "certified_dual_gap",
+      "gap": 7.813209604378005e-07
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 1,
+      "method": "direct_convex",
+      "seconds": 0.07142900000326335,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 1,
+      "method": "finite_milp",
+      "seconds": 0.06605829996988177,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 1.3192604690072256e-16
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 1,
+      "method": "characterized_milp",
+      "seconds": 0.06852199998684227,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 2,
+      "method": "pathflow",
+      "seconds": 0.034360499936155975,
+      "status": "certified_dual_gap",
+      "gap": 7.813209604378005e-07
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 2,
+      "method": "direct_convex",
+      "seconds": 0.06894470006227493,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 2,
+      "method": "finite_milp",
+      "seconds": 0.07198040001094341,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 1.3192604690072256e-16
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 2,
+      "method": "characterized_milp",
+      "seconds": 0.0695258000632748,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 3,
+      "method": "pathflow",
+      "seconds": 0.026632699999026954,
+      "status": "certified_dual_gap",
+      "gap": 7.813209604378005e-07
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 3,
+      "method": "direct_convex",
+      "seconds": 0.06918970006518066,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 3,
+      "method": "finite_milp",
+      "seconds": 0.06758920010179281,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 1.3192604690072256e-16
+    },
+    {
+      "key": "random_pauli_2_101_balanced",
+      "repeat": 3,
+      "method": "characterized_milp",
+      "seconds": 0.06644470000173897,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 1,
+      "method": "pathflow",
+      "seconds": 0.02905270003248006,
+      "status": "certified_dual_gap",
+      "gap": 7.813209607040558e-07
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 1,
+      "method": "direct_convex",
+      "seconds": 0.06982929992955178,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 1,
+      "method": "finite_milp",
+      "seconds": 0.16341050004120916,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 1,
+      "method": "characterized_milp",
+      "seconds": 0.165326299960725,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 2.8311222554495894e-16
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 2,
+      "method": "pathflow",
+      "seconds": 0.028253600001335144,
+      "status": "certified_dual_gap",
+      "gap": 7.813209607040558e-07
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 2,
+      "method": "direct_convex",
+      "seconds": 0.07036860007792711,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 2,
+      "method": "finite_milp",
+      "seconds": 0.14651130000129342,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 2,
+      "method": "characterized_milp",
+      "seconds": 0.1535761000122875,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 2.8311222554495894e-16
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 3,
+      "method": "pathflow",
+      "seconds": 0.027585500036366284,
+      "status": "certified_dual_gap",
+      "gap": 7.813209607040558e-07
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 3,
+      "method": "direct_convex",
+      "seconds": 0.07024229993112385,
+      "status": "optimal",
+      "gap": null
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 3,
+      "method": "finite_milp",
+      "seconds": 0.14617960003670305,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 0.0
+    },
+    {
+      "key": "mirror_2_101_balanced",
+      "repeat": 3,
+      "method": "characterized_milp",
+      "seconds": 0.1602777000516653,
+      "status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "gap": 2.8311222554495894e-16
+    }
+  ],
+  "summary": {
+    "pathflow": {
+      "n": 18,
+      "median": 0.017481099988799542,
+      "q25": 0.004122199956327677,
+      "q75": 0.028650849941186607,
+      "maximum": 0.034360499936155975
+    },
+    "direct_convex": {
+      "n": 18,
+      "median": 0.07117579999612644,
+      "q25": 0.0699325499299448,
+      "q75": 0.07971635003923438,
+      "maximum": 0.1163183000171557
+    },
+    "finite_milp": {
+      "n": 18,
+      "median": 0.036884450004436076,
+      "q25": 0.02654105005785823,
+      "q75": 0.06720647506881505,
+      "maximum": 0.16341050004120916
+    },
+    "characterized_milp": {
+      "n": 18,
+      "median": 0.03204129997175187,
+      "q25": 0.02174034994095564,
+      "q75": 0.06800267499056645,
+      "maximum": 0.165326299960725
+    }
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "warmup_per_method_per_case": 1,
+  "measured_repetitions": 3,
+  "scope": "Six two-qubit balanced cases; excludes characterization; single process, one BLAS/OpenMP thread; no asymptotic claim"
+}

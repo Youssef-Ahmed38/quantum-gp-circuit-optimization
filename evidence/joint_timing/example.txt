@@ -1,0 +1,1 @@
+{'durations': [0.931948485791153, 8.741915453121594, 0.30000000000000004, 2.11467219585135], 'latency': 11.788536134764097, 'risk': 0.010853355679178063, 'effort': 2.2442766655598425, 'numerical_relative_gap': 0.0, 'conditional_fidelity_floor': 0.989205329483373, 'simulated_fidelity': 0.9919407552261938, 'direct_objective': 0.9760397613539629, 'free_local_only': True}

@@ -1,0 +1,31 @@
+{
+  "research_version": "0.2.0",
+  "tests_passed": 95,
+  "configurations": 96,
+  "timing_rows": 864,
+  "state_channel_checks": 1152,
+  "entangled_process_checks": 24,
+  "pulse_checks": 24,
+  "pathflow_checks": 192,
+  "pareto_points": 160,
+  "outer_cases": 16,
+  "scaling_cases": 6,
+  "sensitivity_rows": 144,
+  "all_free_local": true,
+  "hardware_jobs": 0,
+  "paid_services": false,
+  "public_repository": null,
+  "zenodo_doi": null,
+  "independent_peer_review": false,
+  "submission_ready": false,
+  "contribution": "Conditional certified joint-duration model/software integration; component mathematics has prior work",
+  "pdf_pages": 6,
+  "pdf_rendered_pages_reviewed": 6,
+  "study_limitations": [
+    "Constructed coefficients",
+    "Conditional unitary-jump noise class",
+    "Continuous fixed-DAG optimum",
+    "Finite circuit candidate set",
+    "Single-call runtimes"
+  ]
+}

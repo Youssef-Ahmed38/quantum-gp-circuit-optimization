@@ -1,0 +1,17 @@
+{
+  "tests_passed": 57,
+  "cases": 96,
+  "candidates": 384,
+  "baseline_circuits": 576,
+  "hardware_jobs": 0,
+  "paid_services": false,
+  "public_repository": null,
+  "zenodo_doi": null,
+  "submission_ready": false,
+  "reason": "No incremental GP advantage established; small synthetic simulation study",
+  "pdf_pages": 7,
+  "pdf_compiled": true,
+  "pdf_rendering_reviewed": true,
+  "notebook_cells_executed": true,
+  "all_experiments_local": true
+}

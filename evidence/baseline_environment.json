@@ -1,0 +1,6 @@
+{
+  "cirq-core": "1.7.0",
+  "pytket": "2.18.5",
+  "pytket-qiskit": "0.78.0",
+  "qiskit": "2.5.2"
+}

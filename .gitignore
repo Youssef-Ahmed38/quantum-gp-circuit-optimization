@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.xdv
+.DS_Store

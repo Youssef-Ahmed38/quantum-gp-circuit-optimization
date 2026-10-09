@@ -1,0 +1,67 @@
+{
+  "research_version": "0.3.0",
+  "tests_passed": 119,
+  "test_warnings": 2,
+  "main_configurations": 144,
+  "native_circuits": 48,
+  "physical_policy_channels": 1440,
+  "physical_state_checks": 2880,
+  "independent_integrator_diamond_checks": 6,
+  "all_free_local": true,
+  "hardware_jobs": 0,
+  "paid_services": false,
+  "pdf_pages": 7,
+  "pdf_rendered_pages_reviewed": 7,
+  "public_repository": null,
+  "zenodo_doi": null,
+  "submission_ready": false,
+  "field_changing_result_established": false,
+  "independent_peer_review": false,
+  "equal_latency_findings": {
+    "low_drive": {
+      "equal_latency_mean_gain_pp": -0.009341211896417694,
+      "regressions": 17
+    },
+    "balanced": {
+      "equal_latency_mean_gain_pp": 0.025780574500666065,
+      "regressions": 1
+    },
+    "high_drive": {
+      "equal_latency_mean_gain_pp": 0.008078253382114082,
+      "regressions": 5
+    }
+  },
+  "source_font_names": [
+    "/AKHCZK+CMMI9",
+    "/BZIVMZ+NimbusRomNo9L-MediItal",
+    "/CAFSZL+CMMI10",
+    "/DDIEWW+CMSY10",
+    "/DZGKAF+CMR8",
+    "/FKPJSN+CMMI7",
+    "/FZDNHS+CMMI8",
+    "/GJMHKB+CMMI6",
+    "/GQYLQL+NimbusMonL-Regu",
+    "/IHAIZV+NimbusRomNo9L-Regu",
+    "/IXFAWU+NimbusRomNo9L-Medi",
+    "/JAGKKY+CMSY7",
+    "/KPXLOM+CMMI5",
+    "/LPOGEQ+CMSY6",
+    "/NITCSQ+CMEX8",
+    "/NOMARO+CMR7",
+    "/PVTTLK+CMR10",
+    "/TQTHRL+CMSY9",
+    "/UBBQTN+CMSY8",
+    "/UTACNV+CMEX10",
+    "/VDVGTR+NimbusRomNo9L-ReguItal",
+    "/WXMALW+MSBM10",
+    "/YEUUOC+CMR9"
+  ],
+  "all_regressions_retained": true,
+  "limitations": [
+    "Constructed spin model; no calibration",
+    "Full physical channels only two/three qubits",
+    "Established mathematical components and close duration-aware prior work",
+    "Tiny matched-latency gains with regressions",
+    "No correlated noise/leakage/bandwidth validation"
+  ]
+}

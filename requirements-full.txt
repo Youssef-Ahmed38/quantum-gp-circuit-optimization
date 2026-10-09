@@ -1,0 +1,15 @@
+qiskit==2.5.2
+cvxpy==1.9.3
+numpy==2.5.3
+scipy==1.18.1
+clarabel==0.11.1
+scs==3.3.1
+matplotlib==3.11.2
+pytest==9.1.1
+ecos==2.0.14
+cirq-core==1.7.0
+pytket==2.18.5
+pytket-qiskit==0.78.0
+scikit-learn==1.9.1
+narwhals==2.26.0
+threadpoolctl==3.7.0

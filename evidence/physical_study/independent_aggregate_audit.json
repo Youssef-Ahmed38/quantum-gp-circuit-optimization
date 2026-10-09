@@ -1,0 +1,19 @@
+{
+  "paired_deadline_joins_checked": 144,
+  "mean_comparison_method": "math.fsum compared with NumPy mean",
+  "finite_library_choices_checked": 144,
+  "findings": {
+    "low_drive": {
+      "equal_latency_mean_gain_pp": -0.009341211896417694,
+      "regressions": 17
+    },
+    "balanced": {
+      "equal_latency_mean_gain_pp": 0.025780574500666065,
+      "regressions": 1
+    },
+    "high_drive": {
+      "equal_latency_mean_gain_pp": 0.008078253382114082,
+      "regressions": 5
+    }
+  }
+}

@@ -1,0 +1,36 @@
+Repeated matched runtimes: qft_2_101_balanced
+Repeated matched runtimes: grover_2_101_balanced
+Repeated matched runtimes: vqe_ansatz_2_101_balanced
+Repeated matched runtimes: qaoa_2_101_balanced
+Repeated matched runtimes: random_pauli_2_101_balanced
+Repeated matched runtimes: mirror_2_101_balanced
+{
+  "pathflow": {
+    "n": 18,
+    "median": 0.017481099988799542,
+    "q25": 0.004122199956327677,
+    "q75": 0.028650849941186607,
+    "maximum": 0.034360499936155975
+  },
+  "direct_convex": {
+    "n": 18,
+    "median": 0.07117579999612644,
+    "q25": 0.0699325499299448,
+    "q75": 0.07971635003923438,
+    "maximum": 0.1163183000171557
+  },
+  "finite_milp": {
+    "n": 18,
+    "median": 0.036884450004436076,
+    "q25": 0.02654105005785823,
+    "q75": 0.06720647506881505,
+    "maximum": 0.16341050004120916
+  },
+  "characterized_milp": {
+    "n": 18,
+    "median": 0.03204129997175187,
+    "q25": 0.02174034994095564,
+    "q75": 0.06800267499056645,
+    "maximum": 0.165326299960725
+  }
+}

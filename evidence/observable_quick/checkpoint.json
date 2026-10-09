@@ -1,0 +1,431 @@
+{
+  "graph_4_11_0.8_0.95": {
+    "key": "graph_4_11_0.8_0.95",
+    "family": "graph",
+    "qubits": 4,
+    "seed": 11,
+    "alpha": 0.8,
+    "target": 0.95,
+    "gates": 15,
+    "timed_gates": 7,
+    "physical_qubits": [
+      11,
+      10,
+      12,
+      9
+    ],
+    "gp": {
+      "feasible": true,
+      "status": "optimal",
+      "durations": [
+        0.016000000015558784,
+        0.019732871775075832,
+        0.01600000001674369,
+        0.021979721399186976,
+        0.034000000007985795,
+        0.03400000000825702,
+        0.03400000000835646
+      ],
+      "makespan": 0.11800000004134296,
+      "normalized_objective": 0.500000000175182,
+      "normalized_dual_lower": 0.49999999920060484,
+      "relative_gap": 1.9491542817383483e-09,
+      "minimum_expectation": 0.9758806497233257,
+      "constraint_excess": -0.013439154610763903,
+      "method": "gp",
+      "safety": 1.0,
+      "elapsed": 0.024495699908584356
+    },
+    "direct": {
+      "feasible": true,
+      "status": "optimal",
+      "durations": [
+        0.016000000033261852,
+        0.02784773771669831,
+        0.016000000042604382,
+        0.03231914127196184,
+        0.03400000001596713,
+        0.034000000014277276,
+        0.034000000014947795
+      ],
+      "makespan": 0.11800000008779658,
+      "normalized_objective": 0.5000000003720194,
+      "normalized_dual_lower": null,
+      "relative_gap": null,
+      "minimum_expectation": 0.9758806497281036,
+      "constraint_excess": -0.013439154613211927,
+      "method": "convex",
+      "safety": 1.0,
+      "elapsed": 0.010763300000689924
+    },
+    "safe_gp": {
+      "feasible": true,
+      "status": "optimal",
+      "durations": [
+        0.016000000016414277,
+        0.01976816527894662,
+        0.016000000017451374,
+        0.022013191607538358,
+        0.03400000000866195,
+        0.0340000000094266,
+        0.034000000009711935
+      ],
+      "makespan": 0.11800000004525185,
+      "normalized_objective": 0.5000000001917451,
+      "normalized_dual_lower": 0.49999999902227427,
+      "relative_gap": 2.338941595061527e-09,
+      "minimum_expectation": 0.9758806497240229,
+      "constraint_excess": -0.013424792855133531,
+      "method": "gp",
+      "safety": 1.02,
+      "elapsed": 0.018196400022134185
+    },
+    "global_gp": {
+      "feasible": true,
+      "status": "optimal",
+      "durations": [
+        0.01600000002623281,
+        0.023038152988989914,
+        0.016000000021652576,
+        0.032818247124487575,
+        0.0340000000114093,
+        0.034000000011409695,
+        0.034000000011409626
+      ],
+      "makespan": 0.11800000006046144,
+      "normalized_objective": 0.5000000002561925,
+      "normalized_dual_lower": null,
+      "relative_gap": null,
+      "minimum_expectation": 0.9758806497256655,
+      "constraint_excess": -0.0013732358227220853,
+      "method": "gp",
+      "safety": 1.0,
+      "elapsed": 0.016109099960885942
+    },
+    "fixed_minimum_expectation": 0.9857408820922747,
+    "base_makespan": 0.23600000000000002,
+    "uniform_makespan": 0.11800000000000001,
+    "formulation_relative_difference": 3.9367473485748076e-10,
+    "latency_reduction_vs_uniform_percent": -3.50363960066602e-08,
+    "unprotected_rounding_minimum_expectation": 0.9762924034006203,
+    "rounded": {
+      "durations": [
+        0.01632,
+        0.01989398893431444,
+        0.01632,
+        0.0224038627070788,
+        0.03468,
+        0.03468,
+        0.03468
+      ],
+      "makespan": 0.12036000000000001,
+      "minimum_expectation": 0.9762924034006203,
+      "uniform_grid_makespan": 0.11800000000000001,
+      "latency_reduction_vs_grid_uniform_percent": -2.0000000000000018
+    },
+    "dense_validation": {
+      "maximum_difference": 2.55351295663786e-15,
+      "minimum_dense_expectation": 0.9762924034006221
+    },
+    "sampling_validation": {
+      "expectations": [
+        0.97607421875,
+        0.983154296875,
+        0.9837646484375,
+        0.989501953125
+      ],
+      "fidelity": 0.9786376953125,
+      "shots": 16384,
+      "seed": 1915,
+      "maximum_difference": 0.0013788040184666839,
+      "simultaneous_tolerance": 0.03312204589691303,
+      "generator_fidelity_lower_bound": 0.967095728839922
+    }
+  },
+  "graph_4_11_0.8_0.99": {
+    "key": "graph_4_11_0.8_0.99",
+    "family": "graph",
+    "qubits": 4,
+    "seed": 11,
+    "alpha": 0.8,
+    "target": 0.99,
+    "gates": 15,
+    "timed_gates": 7,
+    "physical_qubits": [
+      11,
+      10,
+      12,
+      9
+    ],
+    "gp": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.005744702393344107,
+      "budget": 0.005025167926750725,
+      "elapsed": 0.00015049998182803392
+    },
+    "direct": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.005744702393344107,
+      "budget": 0.005025167926750725,
+      "elapsed": 6.780005060136318e-05
+    },
+    "safe_gp": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.005801865019099926,
+      "budget": 0.005025167926750725,
+      "elapsed": 5.989999044686556e-05
+    },
+    "global_gp": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.011684434776909416,
+      "budget": 0.005025167926750725,
+      "elapsed": 6.89999433234334e-05
+    },
+    "fixed_minimum_expectation": 0.9857408820922747,
+    "base_makespan": 0.23600000000000002,
+    "uniform_makespan": null
+  },
+  "scrambled_4_11_0.8_0.95": {
+    "key": "scrambled_4_11_0.8_0.95",
+    "family": "scrambled",
+    "qubits": 4,
+    "seed": 11,
+    "alpha": 0.8,
+    "target": 0.95,
+    "gates": 43,
+    "timed_gates": 23,
+    "physical_qubits": [
+      11,
+      10,
+      12,
+      9
+    ],
+    "gp": {
+      "feasible": true,
+      "status": "optimal",
+      "durations": [
+        0.016000000100213,
+        0.022529638788859753,
+        0.01600000002691627,
+        0.025911360667263187,
+        0.047896857248227294,
+        0.05190945094552732,
+        0.06926272415543189,
+        0.017441487627758264,
+        0.01600000004791791,
+        0.021352526924272218,
+        0.06782123648761879,
+        0.05190969529751428,
+        0.05680123493779309,
+        0.016000000199009882,
+        0.018844966796074347,
+        0.06399736518078315,
+        0.01884496710934055,
+        0.11644693640448064,
+        0.05680073762462243,
+        0.05190994152320504,
+        0.01600000001027188,
+        0.06399869076875375,
+        0.06399810168562883
+      ],
+      "makespan": 0.45333560900006464,
+      "normalized_objective": 0.750555644039842,
+      "normalized_dual_lower": 0.7505267904772925,
+      "relative_gap": 3.8442935948284176e-05,
+      "minimum_expectation": 0.9500000000440569,
+      "constraint_excess": -2.3187892578269143e-11,
+      "method": "gp",
+      "safety": 1.0,
+      "elapsed": 3.7826990999747068
+    },
+    "direct": {
+      "feasible": true,
+      "status": "optimal",
+      "durations": [
+        0.01600000040511742,
+        0.03046294968368274,
+        0.016000000193614812,
+        0.03451776135235239,
+        0.047896887833357445,
+        0.05190957958094064,
+        0.06926311651937553,
+        0.017441593431277304,
+        0.016000000293636886,
+        0.03071340505624632,
+        0.06782152326483028,
+        0.05190958027876397,
+        0.05680084300005302,
+        0.016000001272708085,
+        0.018845176991342638,
+        0.06399724565795624,
+        0.01884517733384193,
+        0.1164468583928813,
+        0.05680084302317308,
+        0.05190958093048602,
+        0.01600000005683678,
+        0.06399173665904437,
+        0.06399414578223124
+      ],
+      "makespan": 0.4533356092555827,
+      "normalized_objective": 0.7505556444628851,
+      "normalized_dual_lower": null,
+      "relative_gap": null,
+      "minimum_expectation": 0.9500000000319956,
+      "constraint_excess": -1.6839776101340576e-11,
+      "method": "convex",
+      "safety": 1.0,
+      "elapsed": 0.11167720006778836
+    },
+    "safe_gp": {
+      "feasible": true,
+      "status": "optimal",
+      "durations": [
+        0.016000000134040723,
+        0.022519076324657595,
+        0.01600000004181307,
+        0.025890491198950358,
+        0.04821667382443712,
+        0.052234183600601204,
+        0.06959667445091668,
+        0.017552967178843505,
+        0.01600000007280151,
+        0.021428881406471954,
+        0.06804370720727179,
+        0.05223459052949321,
+        0.05702999307256237,
+        0.016000000316755403,
+        0.018949875723655304,
+        0.06336949798139725,
+        0.018949876128941924,
+        0.1170101869354237,
+        0.05703032311415736,
+        0.05223423776450258,
+        0.016000000015410985,
+        0.063369928816162,
+        0.06336962662881725
+      ],
+      "makespan": 0.45552655270786563,
+      "normalized_objective": 0.7541830342845456,
+      "normalized_dual_lower": 0.7541830318837164,
+      "relative_gap": 3.1833508484938547e-09,
+      "minimum_expectation": 0.9501651299280108,
+      "constraint_excess": -3.265836906463093e-11,
+      "method": "gp",
+      "safety": 1.02,
+      "elapsed": 0.908335700049065
+    },
+    "global_gp": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.0358261395340181,
+      "budget": 0.02564664719377529,
+      "elapsed": 0.0005900999531149864
+    },
+    "fixed_minimum_expectation": 0.9551282750895863,
+    "base_makespan": 0.6040000000000001,
+    "uniform_makespan": 0.5093842140079435,
+    "formulation_relative_difference": 5.636399305267199e-10,
+    "latency_reduction_vs_uniform_percent": 11.00320808273121,
+    "unprotected_rounding_minimum_expectation": 0.9502742160863399,
+    "rounded": {
+      "durations": [
+        0.01632,
+        0.022851939961220376,
+        0.01632,
+        0.02624969591143569,
+        0.0485603724175933,
+        0.05256330880637994,
+        0.07074329308006068,
+        0.017665292851200002,
+        0.01632,
+        0.021533893413186077,
+        0.06935616968633398,
+        0.05256330880637994,
+        0.0580341402057976,
+        0.01632,
+        0.01912148109795698,
+        0.06399293156557505,
+        0.01912148109795698,
+        0.11838310810922929,
+        0.0580341402057976,
+        0.05256330880637994,
+        0.01632,
+        0.06399293156557505,
+        0.06399293156557505
+      ],
+      "makespan": 0.461143353426346,
+      "minimum_expectation": 0.9505347731593219,
+      "uniform_grid_makespan": 0.515479715945614,
+      "latency_reduction_vs_grid_uniform_percent": 10.540931260426323
+    },
+    "dense_validation": {
+      "maximum_difference": 2.4424906541753444e-15,
+      "minimum_dense_expectation": 0.9505347731593226
+    },
+    "sampling_validation": {
+      "expectations": [
+        0.9490966796875,
+        0.9505615234375,
+        0.9552001953125,
+        0.9610595703125
+      ],
+      "fidelity": 0.95245361328125,
+      "shots": 16384,
+      "seed": 1915,
+      "maximum_difference": 0.003115019549940534,
+      "simultaneous_tolerance": 0.03312204589691303,
+      "generator_fidelity_lower_bound": 0.9112111632854749
+    }
+  },
+  "scrambled_4_11_0.8_0.99": {
+    "key": "scrambled_4_11_0.8_0.99",
+    "family": "scrambled",
+    "qubits": 4,
+    "seed": 11,
+    "alpha": 0.8,
+    "target": 0.99,
+    "gates": 43,
+    "timed_gates": 23,
+    "physical_qubits": [
+      11,
+      10,
+      12,
+      9
+    ],
+    "gp": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.018363851222369238,
+      "budget": 0.005025167926750725,
+      "elapsed": 0.0006313999183475971
+    },
+    "direct": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.018363851222369238,
+      "budget": 0.005025167926750725,
+      "elapsed": 0.00046310003381222486
+    },
+    "safe_gp": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.018546580610766458,
+      "budget": 0.005025167926750725,
+      "elapsed": 0.00047969992738217115
+    },
+    "global_gp": {
+      "feasible": false,
+      "status": "analytic_infeasibility",
+      "minimum_constraint_exposure": 0.0358261395340181,
+      "budget": 0.005025167926750725,
+      "elapsed": 0.0004607000155374408
+    },
+    "fixed_minimum_expectation": 0.9551282750895863,
+    "base_makespan": 0.6040000000000001,
+    "uniform_makespan": null
+  }
+}

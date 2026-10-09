@@ -1,0 +1,38 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "packages": {
+    "qiskit": "2.5.2",
+    "cvxpy": "1.9.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "clarabel": "0.11.1",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1"
+  },
+  "wall_seconds": 453.3595513999462,
+  "resumed_cases": 0,
+  "families": [
+    "qft",
+    "grover",
+    "vqe_ansatz",
+    "qaoa"
+  ],
+  "sizes": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "instances": [
+    0,
+    1,
+    2
+  ],
+  "candidate_seeds": "1000*instance + 17*candidate + 7",
+  "synthetic_hardware": true,
+  "real_hardware_jobs": 0,
+  "noise_scope": "local depolarizing channels after gates, all-zero input, n<=4",
+  "duration_unit": "synthetic arbitrary time units"
+}

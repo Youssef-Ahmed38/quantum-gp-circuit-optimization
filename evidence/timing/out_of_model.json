@@ -1,0 +1,34 @@
+[
+  {
+    "case": "qft_3_line_0",
+    "unmodeled_noise": "terminal_coherent_z_rotation",
+    "rotation_radians": 0.7,
+    "fidelity": 0.7145981909352483,
+    "nominal_certificate": 0.8910386076691851,
+    "certificate_breached": true
+  },
+  {
+    "case": "grover_3_line_0",
+    "unmodeled_noise": "terminal_coherent_z_rotation",
+    "rotation_radians": 0.7,
+    "fidelity": 0.5947398790099419,
+    "nominal_certificate": 0.6294419992896155,
+    "certificate_breached": true
+  },
+  {
+    "case": "vqe_ansatz_3_line_0",
+    "unmodeled_noise": "terminal_coherent_z_rotation",
+    "rotation_radians": 0.7,
+    "fidelity": 0.8239086515812126,
+    "nominal_certificate": 0.9448304865091364,
+    "certificate_breached": true
+  },
+  {
+    "case": "qaoa_3_line_0",
+    "unmodeled_noise": "terminal_coherent_z_rotation",
+    "rotation_radians": 0.7,
+    "fidelity": 0.724997308018266,
+    "nominal_certificate": 0.8065630743843683,
+    "certificate_breached": true
+  }
+]

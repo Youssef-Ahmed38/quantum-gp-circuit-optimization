@@ -1,0 +1,232 @@
+{
+  "cases": 96,
+  "candidates": 384,
+  "baseline_circuits": 576,
+  "noise_candidates": 192,
+  "noise_baselines": 288,
+  "unitary_max_error": 4.937101568281053e-14,
+  "gp_max_relative_gap": 2.660543038396873e-06,
+  "lp_max_absolute_gap": 0.0,
+  "gp_max_violation": 0.00041543792963238957,
+  "gp_solver_counts": {
+    "CLARABEL": 374,
+    "ECOS": 10
+  },
+  "gp_status_counts": {
+    "optimal": 322,
+    "optimal_inaccurate": 62
+  },
+  "matched_selection_equal_cases": 96,
+  "median_gp_seconds": 0.3670374499633908,
+  "median_cp_seconds": 9.970000246539712e-05,
+  "median_lp_seconds": 0.0024318500072695315,
+  "family_results": {
+    "qft": {
+      "depth_reduction_pct": {
+        "mean": -0.2805628248774257,
+        "ci_low": -1.2711752946127945,
+        "ci_high": 0.8086088365270309,
+        "clusters": 8,
+        "observations": 24
+      },
+      "gates_reduction_pct": {
+        "mean": -4.356726939503147,
+        "ci_low": -7.153926428258739,
+        "ci_high": -1.5711378806720673,
+        "clusters": 8,
+        "observations": 24
+      },
+      "makespan_reduction_pct": {
+        "mean": 4.601001883738712,
+        "ci_low": 2.1005645454559865,
+        "ci_high": 6.949223622441267,
+        "clusters": 8,
+        "observations": 24
+      },
+      "score_improvement": {
+        "mean": 3.772204081374129,
+        "ci_low": 1.824952175505846,
+        "ci_high": 5.8256492297832985,
+        "clusters": 8,
+        "observations": 24
+      },
+      "simulated_fidelity_gain_pp": {
+        "mean": 0.4100563715231995,
+        "ci_low": 0.0,
+        "ci_high": 0.820112743046399,
+        "clusters": 4,
+        "observations": 12
+      }
+    },
+    "grover": {
+      "depth_reduction_pct": {
+        "mean": -0.8334611546560142,
+        "ci_low": -2.3240954839954933,
+        "ci_high": 0.6741955507498849,
+        "clusters": 8,
+        "observations": 24
+      },
+      "gates_reduction_pct": {
+        "mean": -2.1545170575955153,
+        "ci_low": -4.2217505223892875,
+        "ci_high": -0.4688290072305473,
+        "clusters": 8,
+        "observations": 24
+      },
+      "makespan_reduction_pct": {
+        "mean": 2.3746555787847328,
+        "ci_low": 0.9126285779156389,
+        "ci_high": 3.7754606965330235,
+        "clusters": 8,
+        "observations": 24
+      },
+      "score_improvement": {
+        "mean": 2.462750496632592,
+        "ci_low": 1.128031686453981,
+        "ci_high": 3.8725528009620827,
+        "clusters": 8,
+        "observations": 24
+      },
+      "simulated_fidelity_gain_pp": {
+        "mean": 0.6407928643969565,
+        "ci_low": -0.08745418364047668,
+        "ci_high": 1.7632658917999757,
+        "clusters": 4,
+        "observations": 12
+      }
+    },
+    "vqe_ansatz": {
+      "depth_reduction_pct": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "clusters": 8,
+        "observations": 24
+      },
+      "gates_reduction_pct": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "clusters": 8,
+        "observations": 24
+      },
+      "makespan_reduction_pct": {
+        "mean": 0.6693309327215442,
+        "ci_low": 0.0,
+        "ci_high": 1.4331034504813753,
+        "clusters": 8,
+        "observations": 24
+      },
+      "score_improvement": {
+        "mean": 0.5606217723162725,
+        "ci_low": 1.8503717077085944e-15,
+        "ci_high": 1.249716669209279,
+        "clusters": 8,
+        "observations": 24
+      },
+      "simulated_fidelity_gain_pp": {
+        "mean": 0.05852155483792217,
+        "ci_low": 0.0,
+        "ci_high": 0.15419347886362345,
+        "clusters": 4,
+        "observations": 12
+      }
+    },
+    "qaoa": {
+      "depth_reduction_pct": {
+        "mean": 0.21176739926739926,
+        "ci_low": 0.0,
+        "ci_high": 0.6353021978021978,
+        "clusters": 8,
+        "observations": 24
+      },
+      "gates_reduction_pct": {
+        "mean": -0.27848567221655907,
+        "ci_low": -0.8354570166496772,
+        "ci_high": 0.0,
+        "clusters": 8,
+        "observations": 24
+      },
+      "makespan_reduction_pct": {
+        "mean": 0.4358661244146876,
+        "ci_low": 0.0,
+        "ci_high": 1.2768764070382257,
+        "clusters": 8,
+        "observations": 24
+      },
+      "score_improvement": {
+        "mean": 0.43139255281818045,
+        "ci_low": 4.510281037539738e-16,
+        "ci_high": 1.2560702698979496,
+        "clusters": 8,
+        "observations": 24
+      },
+      "simulated_fidelity_gain_pp": {
+        "mean": 0.31336458098628983,
+        "ci_low": 0.0,
+        "ci_high": 0.9318217571290281,
+        "clusters": 4,
+        "observations": 12
+      }
+    }
+  },
+  "pipeline_results": {
+    "qiskit_l0": {
+      "depth": -19.586052175987394,
+      "gates": -17.089039897553885,
+      "makespan": -16.47567092485617
+    },
+    "qiskit_l1": {
+      "depth": -0.4298054897491577,
+      "gates": 5.062388433154504,
+      "makespan": -14.390763803698297
+    },
+    "qiskit_l2": {
+      "depth": 0.04462133456429018,
+      "gates": 0.0924629926680043,
+      "makespan": -0.21676748742725852
+    },
+    "qiskit_l3": {
+      "depth": 0.0,
+      "gates": 0.0,
+      "makespan": 0.0
+    },
+    "tket_common_route": {
+      "depth": -66.13078568871367,
+      "gates": -50.27062602065991,
+      "makespan": -21.06277538385328
+    },
+    "cirq_common_route": {
+      "depth": -268.99926910586333,
+      "gates": -262.9184205025608,
+      "makespan": -45.95738076502466
+    },
+    "hybrid_4seeds": {
+      "depth": -0.22556414506651015,
+      "gates": -1.6974324173288056,
+      "makespan": 2.020213629914919
+    },
+    "matched_4seeds": {
+      "depth": -0.22556414506651015,
+      "gates": -1.6974324173288056,
+      "makespan": 2.020213629914919
+    },
+    "ml_seed_predictor": {
+      "depth": 0.17440718532941926,
+      "gates": -0.1968667204889807,
+      "makespan": 0.07854045934714188
+    }
+  },
+  "data_cleaning": "No exclusions, imputations or outlier removal. Exact-key uniqueness checked.",
+  "bootstrap": "5000 resamples of size/topology stratum means, seed 20261009; exploratory",
+  "paid_services_used": false,
+  "hardware_jobs": 0,
+  "ml_mean_score": 0.9997571823559479,
+  "oracle_mean_score": 0.981932577742147,
+  "ml_choice_accuracy_pct": 51.041666666666664,
+  "proxy_state_fidelity_mean_absolute_gap": 0.03500184519925426,
+  "density_max_trace_error": 1.3767133167388854e-14,
+  "density_min_eigenvalue": 0.00011155875177652515,
+  "weight_changed_cases": 15,
+  "raw_gp_ranking_differences": 23
+}

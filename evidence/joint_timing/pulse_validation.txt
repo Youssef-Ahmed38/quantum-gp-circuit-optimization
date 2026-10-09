@@ -1,0 +1,25 @@
+Exact local-memory pulse validation qft_3_line_0/fixed: F=0.900423, bound=0.877654
+Exact local-memory pulse validation qft_3_line_0/joint_gp: F=0.911237, bound=0.891039
+Exact local-memory pulse validation qft_3_line_0/robust_gp: F=0.911240, bound=0.891029
+Exact local-memory pulse validation qft_3_ring_0/fixed: F=0.928081, bound=0.913366
+Exact local-memory pulse validation qft_3_ring_0/joint_gp: F=0.935315, bound=0.923072
+Exact local-memory pulse validation qft_3_ring_0/robust_gp: F=0.935344, bound=0.923063
+Exact local-memory pulse validation grover_3_line_0/fixed: F=0.660228, bound=0.601919
+Exact local-memory pulse validation grover_3_line_0/joint_gp: F=0.682798, bound=0.629442
+Exact local-memory pulse validation grover_3_line_0/robust_gp: F=0.682844, bound=0.629405
+Exact local-memory pulse validation grover_3_ring_0/fixed: F=0.757948, bound=0.715154
+Exact local-memory pulse validation grover_3_ring_0/joint_gp: F=0.778264, bound=0.740288
+Exact local-memory pulse validation grover_3_ring_0/robust_gp: F=0.778297, bound=0.740263
+Exact local-memory pulse validation vqe_ansatz_3_line_0/fixed: F=0.949503, bound=0.937054
+Exact local-memory pulse validation vqe_ansatz_3_line_0/joint_gp: F=0.955650, bound=0.944830
+Exact local-memory pulse validation vqe_ansatz_3_line_0/robust_gp: F=0.955652, bound=0.944820
+Exact local-memory pulse validation vqe_ansatz_3_ring_0/fixed: F=0.951961, bound=0.939679
+Exact local-memory pulse validation vqe_ansatz_3_ring_0/joint_gp: F=0.957497, bound=0.946778
+Exact local-memory pulse validation vqe_ansatz_3_ring_0/robust_gp: F=0.957499, bound=0.946768
+Exact local-memory pulse validation qaoa_3_line_0/fixed: F=0.823124, bound=0.789483
+Exact local-memory pulse validation qaoa_3_line_0/joint_gp: F=0.836231, bound=0.806563
+Exact local-memory pulse validation qaoa_3_line_0/robust_gp: F=0.836263, bound=0.806544
+Exact local-memory pulse validation qaoa_3_ring_0/fixed: F=0.874832, bound=0.851190
+Exact local-memory pulse validation qaoa_3_ring_0/joint_gp: F=0.884564, bound=0.863696
+Exact local-memory pulse validation qaoa_3_ring_0/robust_gp: F=0.884590, bound=0.863681
+24 dense Lindblad pulse simulations passed

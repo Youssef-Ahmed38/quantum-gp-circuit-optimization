@@ -1,0 +1,91 @@
+{
+  "configurations": 144,
+  "sizes": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "families": [
+    "graph",
+    "scrambled"
+  ],
+  "table_rows": [
+    {
+      "qubits": 4,
+      "total": 24,
+      "feasible": 9,
+      "infeasible": 15,
+      "avg_gates": 14,
+      "med_feas_ms": "11.8",
+      "med_screen_ms": "0.18",
+      "mean_gap": "4.27e-06",
+      "max_diff": "1.10e-09"
+    },
+    {
+      "qubits": 8,
+      "total": 24,
+      "feasible": 6,
+      "infeasible": 18,
+      "avg_gates": 31,
+      "med_feas_ms": "19.5",
+      "med_screen_ms": "0.59",
+      "mean_gap": "1.15e-05",
+      "max_diff": "1.58e-09"
+    },
+    {
+      "qubits": 16,
+      "total": 24,
+      "feasible": 6,
+      "infeasible": 18,
+      "avg_gates": 64,
+      "med_feas_ms": "281.8",
+      "med_screen_ms": "0.87",
+      "mean_gap": "1.81e-05",
+      "max_diff": "1.69e-09"
+    },
+    {
+      "qubits": 32,
+      "total": 24,
+      "feasible": 6,
+      "infeasible": 18,
+      "avg_gates": 131,
+      "med_feas_ms": "624.4",
+      "med_screen_ms": "1.33",
+      "mean_gap": "2.15e-05",
+      "max_diff": "1.03e-09"
+    },
+    {
+      "qubits": 64,
+      "total": 24,
+      "feasible": 0,
+      "infeasible": 24,
+      "avg_gates": 269,
+      "med_feas_ms": "N/A",
+      "med_screen_ms": "1.29",
+      "mean_gap": "N/A",
+      "max_diff": "N/A"
+    },
+    {
+      "qubits": 128,
+      "total": 24,
+      "feasible": 0,
+      "infeasible": 24,
+      "avg_gates": 545,
+      "med_feas_ms": "N/A",
+      "med_screen_ms": "2.44",
+      "mean_gap": "N/A",
+      "max_diff": "N/A"
+    }
+  ],
+  "overall": {
+    "total_feasible": 27,
+    "total_infeasible": 117,
+    "median_gp_ms": 0.8711999980732799,
+    "median_cvx_ms": 0.7655999506823719,
+    "max_formulation_diff": 1.6936859905398678e-09,
+    "all_safe_rounded_verified": true
+  }
+}

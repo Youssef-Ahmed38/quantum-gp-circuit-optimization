@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-gp-research"
+version = "1.0.0"
+description = "Research code and local simulation data for quantum circuit timing via geometric programming"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{name = "Youssef Ahmed Ramadan", email = "p-youssef.ramdan@zewailcity.edu.eg"}]
+dependencies = ["qiskit==2.5.2", "cvxpy==1.9.3", "numpy==2.5.3", "scipy==1.18.1", "clarabel==0.11.1", "scs==3.3.1"]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+plots = ["matplotlib==3.11.2"]
+ecos = ["ecos==2.0.14"]
+baselines = ["cirq-core==1.7.0", "pytket==2.18.5", "pytket-qiskit==0.78.0"]
+ml = ["scikit-learn==1.9.1", "narwhals==2.26.0", "threadpoolctl==3.7.0"]
+
+[project.urls]
+Repository = "https://github.com/Youssef-Ahmed38/quantum-gp-circuit-optimization"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

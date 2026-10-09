@@ -1,0 +1,62 @@
+{
+  "families": [
+    "qft",
+    "grover",
+    "vqe_ansatz",
+    "qaoa",
+    "random_pauli",
+    "mirror"
+  ],
+  "sizes": [
+    2,
+    3
+  ],
+  "seeds": [
+    101,
+    102,
+    103,
+    104
+  ],
+  "amplitude_eta_regimes": {
+    "low_drive": 0.002,
+    "balanced": 0.02,
+    "high_drive": 0.2
+  },
+  "duration_ratios": [
+    0.5,
+    0.75,
+    1,
+    1.5,
+    2,
+    3
+  ],
+  "t1_uniform_us": [
+    80,
+    160
+  ],
+  "tphi_uniform_us": [
+    120,
+    240
+  ],
+  "spin_model": true,
+  "all_to_all": true,
+  "hardware_calibrated": false,
+  "free_local_only": true,
+  "active_rate_per_us": 0.0005,
+  "omega_single_radians_per_us": 1.5,
+  "omega_pair_radians_per_us": 0.35,
+  "two_qubit_eta_multiplier": 4,
+  "coefficients_chosen_before_experiments": true,
+  "input_preparation": "Seeded RX/RZ prefix for QFT/Grover; seeded variational/random circuits; mirror inverse pairs kept intentionally",
+  "mirror_compiler_cancellation_disabled": true,
+  "primary_metrics": [
+    "risk",
+    "process_fidelity",
+    "zero_fidelity",
+    "haar_fidelity",
+    "observable_error",
+    "latency",
+    "finite_optimality_gap"
+  ],
+  "interpretation": "Exploratory declared simulator model; no physical calibration, population significance or universal compiler claim"
+}

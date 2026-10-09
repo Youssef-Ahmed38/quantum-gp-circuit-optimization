@@ -1,0 +1,770 @@
+[
+  {
+    "case": "qft_3_line_0",
+    "family": "qft",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.0177825475756967
+  },
+  {
+    "case": "qft_3_line_1",
+    "family": "qft",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.815038702137885
+  },
+  {
+    "case": "qft_3_line_2",
+    "family": "qft",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.815038702137885
+  },
+  {
+    "case": "qft_3_ring_0",
+    "family": "qft",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 0,
+    "value": 1.7939639528986413
+  },
+  {
+    "case": "qft_3_ring_1",
+    "family": "qft",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 1,
+    "value": 1.6646011201495892
+  },
+  {
+    "case": "qft_3_ring_2",
+    "family": "qft",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 2,
+    "value": 1.6646011201495892
+  },
+  {
+    "case": "qft_4_line_0",
+    "family": "qft",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.819690025109397
+  },
+  {
+    "case": "qft_4_line_1",
+    "family": "qft",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 1,
+    "value": 3.0448083120286693
+  },
+  {
+    "case": "qft_4_line_2",
+    "family": "qft",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 2,
+    "value": 3.0448083120286693
+  },
+  {
+    "case": "qft_4_ring_0",
+    "family": "qft",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.852483027253164
+  },
+  {
+    "case": "qft_4_ring_1",
+    "family": "qft",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 1,
+    "value": 3.3673197082384885
+  },
+  {
+    "case": "qft_4_ring_2",
+    "family": "qft",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 2,
+    "value": 3.2400533914131135
+  },
+  {
+    "case": "qft_5_line_0",
+    "family": "qft",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 0,
+    "value": 3.238462026487457
+  },
+  {
+    "case": "qft_5_line_1",
+    "family": "qft",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.6474679763187523
+  },
+  {
+    "case": "qft_5_line_2",
+    "family": "qft",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 2,
+    "value": 3.238462026487457
+  },
+  {
+    "case": "qft_5_ring_0",
+    "family": "qft",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.5251593152891867
+  },
+  {
+    "case": "qft_5_ring_1",
+    "family": "qft",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 1,
+    "value": 3.636956027339057
+  },
+  {
+    "case": "qft_5_ring_2",
+    "family": "qft",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.6331047403634136
+  },
+  {
+    "case": "qft_6_line_0",
+    "family": "qft",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.8996047941893623
+  },
+  {
+    "case": "qft_6_line_1",
+    "family": "qft",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 1,
+    "value": 3.0198356300229587
+  },
+  {
+    "case": "qft_6_line_2",
+    "family": "qft",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.4299854396462397
+  },
+  {
+    "case": "qft_6_ring_0",
+    "family": "qft",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.776680803943937
+  },
+  {
+    "case": "qft_6_ring_1",
+    "family": "qft",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.8691179973972507
+  },
+  {
+    "case": "qft_6_ring_2",
+    "family": "qft",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.482106239497465
+  },
+  {
+    "case": "grover_3_line_0",
+    "family": "grover",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.5333486510249115
+  },
+  {
+    "case": "grover_3_line_1",
+    "family": "grover",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.3199583015146077
+  },
+  {
+    "case": "grover_3_line_2",
+    "family": "grover",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.5333486510249115
+  },
+  {
+    "case": "grover_3_ring_0",
+    "family": "grover",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.2474547084748018
+  },
+  {
+    "case": "grover_3_ring_1",
+    "family": "grover",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.931185192300205
+  },
+  {
+    "case": "grover_3_ring_2",
+    "family": "grover",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.583239350079914
+  },
+  {
+    "case": "grover_4_line_0",
+    "family": "grover",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.467669722264868
+  },
+  {
+    "case": "grover_4_line_1",
+    "family": "grover",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.404941178229542
+  },
+  {
+    "case": "grover_4_line_2",
+    "family": "grover",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.467669722264868
+  },
+  {
+    "case": "grover_4_ring_0",
+    "family": "grover",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.4941246776239234
+  },
+  {
+    "case": "grover_4_ring_1",
+    "family": "grover",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.0408747814842663
+  },
+  {
+    "case": "grover_4_ring_2",
+    "family": "grover",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.359832847224744
+  },
+  {
+    "case": "grover_5_line_0",
+    "family": "grover",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.7156247614130433
+  },
+  {
+    "case": "grover_5_line_1",
+    "family": "grover",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.8366403418348383
+  },
+  {
+    "case": "grover_5_line_2",
+    "family": "grover",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.7156247614130433
+  },
+  {
+    "case": "grover_5_ring_0",
+    "family": "grover",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.834797666652364
+  },
+  {
+    "case": "grover_5_ring_1",
+    "family": "grover",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.6461816861768224
+  },
+  {
+    "case": "grover_5_ring_2",
+    "family": "grover",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.4625974123027072
+  },
+  {
+    "case": "grover_6_line_0",
+    "family": "grover",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.4746306797813507
+  },
+  {
+    "case": "grover_6_line_1",
+    "family": "grover",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 1,
+    "value": 3.0050539809558785
+  },
+  {
+    "case": "grover_6_line_2",
+    "family": "grover",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.4746306797813507
+  },
+  {
+    "case": "grover_6_ring_0",
+    "family": "grover",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.65260184148566
+  },
+  {
+    "case": "grover_6_ring_1",
+    "family": "grover",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.8308609013605914
+  },
+  {
+    "case": "grover_6_ring_2",
+    "family": "grover",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.571160262178195
+  },
+  {
+    "case": "vqe_ansatz_3_line_0",
+    "family": "vqe_ansatz",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.7319352174016065
+  },
+  {
+    "case": "vqe_ansatz_3_line_1",
+    "family": "vqe_ansatz",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 1,
+    "value": 0.668735900333409
+  },
+  {
+    "case": "vqe_ansatz_3_line_2",
+    "family": "vqe_ansatz",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 2,
+    "value": 0.668735900333409
+  },
+  {
+    "case": "vqe_ansatz_3_ring_0",
+    "family": "vqe_ansatz",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.738221606643222
+  },
+  {
+    "case": "vqe_ansatz_3_ring_1",
+    "family": "vqe_ansatz",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 1,
+    "value": 0.7782786985941097
+  },
+  {
+    "case": "vqe_ansatz_3_ring_2",
+    "family": "vqe_ansatz",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 2,
+    "value": 0.7782786985941097
+  },
+  {
+    "case": "vqe_ansatz_4_line_0",
+    "family": "vqe_ansatz",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.384712325129285
+  },
+  {
+    "case": "vqe_ansatz_4_line_1",
+    "family": "vqe_ansatz",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.2672973362455875
+  },
+  {
+    "case": "vqe_ansatz_4_line_2",
+    "family": "vqe_ansatz",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 2,
+    "value": 0.8341582448207893
+  },
+  {
+    "case": "vqe_ansatz_4_ring_0",
+    "family": "vqe_ansatz",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.7796788448667895
+  },
+  {
+    "case": "vqe_ansatz_4_ring_1",
+    "family": "vqe_ansatz",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.646688027451799
+  },
+  {
+    "case": "vqe_ansatz_4_ring_2",
+    "family": "vqe_ansatz",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 2,
+    "value": 0.7729643637996273
+  },
+  {
+    "case": "vqe_ansatz_5_line_0",
+    "family": "vqe_ansatz",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.1770070002917756
+  },
+  {
+    "case": "vqe_ansatz_5_line_1",
+    "family": "vqe_ansatz",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 1,
+    "value": 1.1065423252580326
+  },
+  {
+    "case": "vqe_ansatz_5_line_2",
+    "family": "vqe_ansatz",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 2,
+    "value": 1.1150163820437837
+  },
+  {
+    "case": "vqe_ansatz_5_ring_0",
+    "family": "vqe_ansatz",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.1616056297971835
+  },
+  {
+    "case": "vqe_ansatz_5_ring_1",
+    "family": "vqe_ansatz",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 1,
+    "value": 1.306657946628678
+  },
+  {
+    "case": "vqe_ansatz_5_ring_2",
+    "family": "vqe_ansatz",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 2,
+    "value": 1.2349377225080909
+  },
+  {
+    "case": "vqe_ansatz_6_line_0",
+    "family": "vqe_ansatz",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.21601152766504
+  },
+  {
+    "case": "vqe_ansatz_6_line_1",
+    "family": "vqe_ansatz",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 1,
+    "value": 1.2214323430778966
+  },
+  {
+    "case": "vqe_ansatz_6_line_2",
+    "family": "vqe_ansatz",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 2,
+    "value": 1.2214323430778966
+  },
+  {
+    "case": "vqe_ansatz_6_ring_0",
+    "family": "vqe_ansatz",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.0447674678848453
+  },
+  {
+    "case": "vqe_ansatz_6_ring_1",
+    "family": "vqe_ansatz",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.487601895407559
+  },
+  {
+    "case": "vqe_ansatz_6_ring_2",
+    "family": "vqe_ansatz",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 2,
+    "value": 1.3457245687094506
+  },
+  {
+    "case": "qaoa_3_line_0",
+    "family": "qaoa",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.5206816728867825
+  },
+  {
+    "case": "qaoa_3_line_1",
+    "family": "qaoa",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.5206816728867825
+  },
+  {
+    "case": "qaoa_3_line_2",
+    "family": "qaoa",
+    "qubits": 3,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.5206816728867825
+  },
+  {
+    "case": "qaoa_3_ring_0",
+    "family": "qaoa",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.1714503553917073
+  },
+  {
+    "case": "qaoa_3_ring_1",
+    "family": "qaoa",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.290859446650914
+  },
+  {
+    "case": "qaoa_3_ring_2",
+    "family": "qaoa",
+    "qubits": 3,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.290859446650914
+  },
+  {
+    "case": "qaoa_4_line_0",
+    "family": "qaoa",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.512295828716808
+  },
+  {
+    "case": "qaoa_4_line_1",
+    "family": "qaoa",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.061506620275292
+  },
+  {
+    "case": "qaoa_4_line_2",
+    "family": "qaoa",
+    "qubits": 4,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.6150210346834264
+  },
+  {
+    "case": "qaoa_4_ring_0",
+    "family": "qaoa",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.5456432937189373
+  },
+  {
+    "case": "qaoa_4_ring_1",
+    "family": "qaoa",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.3660078732792087
+  },
+  {
+    "case": "qaoa_4_ring_2",
+    "family": "qaoa",
+    "qubits": 4,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.091371934304904
+  },
+  {
+    "case": "qaoa_5_line_0",
+    "family": "qaoa",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.5575819739073196
+  },
+  {
+    "case": "qaoa_5_line_1",
+    "family": "qaoa",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 1,
+    "value": 2.4729303137064353
+  },
+  {
+    "case": "qaoa_5_line_2",
+    "family": "qaoa",
+    "qubits": 5,
+    "topology": "line",
+    "instance": 2,
+    "value": 2.393780592139168
+  },
+  {
+    "case": "qaoa_5_ring_0",
+    "family": "qaoa",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.460501613213491
+  },
+  {
+    "case": "qaoa_5_ring_1",
+    "family": "qaoa",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.7767902873074983
+  },
+  {
+    "case": "qaoa_5_ring_2",
+    "family": "qaoa",
+    "qubits": 5,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.767199120249623
+  },
+  {
+    "case": "qaoa_6_line_0",
+    "family": "qaoa",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 0,
+    "value": 2.8329439394989184
+  },
+  {
+    "case": "qaoa_6_line_1",
+    "family": "qaoa",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 1,
+    "value": 3.1615064574213445
+  },
+  {
+    "case": "qaoa_6_line_2",
+    "family": "qaoa",
+    "qubits": 6,
+    "topology": "line",
+    "instance": 2,
+    "value": 3.0696376070466496
+  },
+  {
+    "case": "qaoa_6_ring_0",
+    "family": "qaoa",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 0,
+    "value": 2.149720040717238
+  },
+  {
+    "case": "qaoa_6_ring_1",
+    "family": "qaoa",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 1,
+    "value": 2.0810684763673866
+  },
+  {
+    "case": "qaoa_6_ring_2",
+    "family": "qaoa",
+    "qubits": 6,
+    "topology": "ring",
+    "instance": 2,
+    "value": 2.1097859797012917
+  }
+]

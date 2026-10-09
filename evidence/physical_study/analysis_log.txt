@@ -1,0 +1,779 @@
+{
+  "counts": {
+    "configurations": 144,
+    "native_circuits": 48,
+    "policy_channels": 1296,
+    "state_checks": 2592,
+    "pulse_entries": 25056,
+    "independent_ode_diamond_checks": 6
+  },
+  "inspection": {
+    "duplicate_keys": 0,
+    "missing_numeric_metrics": 0,
+    "excluded_cases": 0,
+    "all_negative_results_retained": true
+  },
+  "regimes": {
+    "balanced": {
+      "fixed": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 4.562381463188338,
+          "median": 4.103892542771465,
+          "minimum": 1.116243093636582,
+          "maximum": 9.191801382113656
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 3.1761727461511047,
+          "high": 5.946749326375274,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 3.748478580379288,
+          "median": 3.2186605430032875,
+          "minimum": 0.46726493880264175,
+          "maximum": 8.251154224024349
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": -33.72399046282603,
+          "median": -36.61399379146084,
+          "minimum": -46.62941764302065,
+          "maximum": -18.830344221745364
+        }
+      },
+      "fastest": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 6.927851976651911,
+          "median": 7.526123368636411,
+          "minimum": 1.7530240910767152,
+          "maximum": 9.643344076504029
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 6.367589413225169,
+          "high": 7.518924629784129,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 5.9803270920757825,
+          "median": 6.049464981598662,
+          "minimum": 1.8881939465698647,
+          "maximum": 8.849122524879366
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 32.552019074347946,
+          "median": 26.772012417078315,
+          "minimum": 6.741164713958692,
+          "maximum": 62.33931155650927
+        }
+      },
+      "uniform": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 4.493442985759587,
+          "median": 3.945922709981647,
+          "minimum": 1.3452781859030982,
+          "maximum": 9.102227642858896
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 3.327456208605627,
+          "high": 5.661354346407926,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 3.922923224592657,
+          "median": 3.3478946570457913,
+          "minimum": 0.8361446468044931,
+          "maximum": 8.5458318134119
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 0.6717485245036837,
+          "median": -1.4116383728758786,
+          "minimum": -20.07973017834682,
+          "maximum": 26.772012417078315
+        }
+      },
+      "published_slack": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 3.965562558081972,
+          "median": 3.8116437693586915,
+          "minimum": 0.34585717704104446,
+          "maximum": 8.072006428680433
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 3.0982290417711846,
+          "high": 4.858146092846164,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 3.393889127648651,
+          "median": 3.3314598331757734,
+          "minimum": 0.3769123966558263,
+          "maximum": 6.542562849567735
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 32.552019074347946,
+          "median": 26.772012417078315,
+          "minimum": 6.741164713958692,
+          "maximum": 62.33931155650927
+        }
+      },
+      "gp_nearest": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 0.6143933342629334,
+          "median": 0.45589940998487094,
+          "minimum": -0.0748927589180104,
+          "maximum": 2.049855706994247
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 0.35414454440963183,
+          "high": 0.931745184988821,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 3,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 0.516886691348429,
+          "median": 0.38234651360233296,
+          "minimum": -0.14544207022462174,
+          "maximum": 1.8579577907540084
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": -0.0747635945931614,
+          "median": 0.0,
+          "minimum": -10.145963263700164,
+          "maximum": 10.581837698878903
+        }
+      },
+      "characterized_uniform": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 4.493442985759587,
+          "median": 3.945922709981647,
+          "minimum": 1.3452781859030982,
+          "maximum": 9.102227642858896
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 3.327456208605627,
+          "high": 5.661354346407926,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 3.922923224592657,
+          "median": 3.3478946570457913,
+          "minimum": 0.8361446468044931,
+          "maximum": 8.5458318134119
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 0.6717485245036837,
+          "median": -1.4116383728758786,
+          "minimum": -20.07973017834682,
+          "maximum": 26.772012417078315
+        }
+      }
+    },
+    "high_drive": {
+      "fixed": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 9.686234498646652,
+          "median": 11.413689733409322,
+          "minimum": 0.00664861938320313,
+          "maximum": 19.203702217202988
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 6.840213861820958,
+          "high": 12.504735908146547,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 8.713131555145676,
+          "median": 10.543223565445123,
+          "minimum": 0.06016554421050188,
+          "maximum": 17.339338383110363
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 58.48552564288271,
+          "median": 54.83383564484152,
+          "minimum": 10.586099467195421,
+          "maximum": 124.67862311301855
+        }
+      },
+      "fastest": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 16.235529326230786,
+          "median": 18.320681914611672,
+          "minimum": 0.007174017021650131,
+          "maximum": 34.24987358599411
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 10.825441342273228,
+          "high": 21.55980103217383,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 14.772011493918592,
+          "median": 17.05515436914038,
+          "minimum": 0.15913534531494938,
+          "maximum": 28.237031858948026
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 216.9710512857654,
+          "median": 209.66767128968306,
+          "minimum": 121.17219893439083,
+          "maximum": 349.3572462260371
+        }
+      },
+      "uniform": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 2.3398420762138095,
+          "median": 2.421808051874376,
+          "minimum": 0.004887808221304066,
+          "maximum": 4.409945178279018
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 2.070712148097126,
+          "high": 2.61823657173663,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 1.9715937682445135,
+          "median": 2.0767114597968677,
+          "minimum": -0.33659071653733275,
+          "maximum": 4.9767869187456455
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": -21.711198234263595,
+          "median": -23.556033151126893,
+          "minimum": -39.69421524916291,
+          "maximum": 1.6534921184335305
+        }
+      },
+      "published_slack": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 15.34057019543007,
+          "median": 16.3854246579485,
+          "minimum": 0.007129620376536069,
+          "maximum": 32.5573664946542
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 9.881901791645657,
+          "high": 20.668979961896092,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 13.843945974882297,
+          "median": 16.1375934993813,
+          "minimum": 0.09373852432094515,
+          "maximum": 28.237031858948026
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 216.9710512857654,
+          "median": 209.66767128968306,
+          "minimum": 121.17219893439083,
+          "maximum": 349.3572462260371
+        }
+      },
+      "gp_nearest": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 0.18185184853227002,
+          "median": 0.0314347776160356,
+          "minimum": -0.2559814596984622,
+          "maximum": 1.3125806765978991
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 0.11006134095928571,
+          "high": 0.26061054924438404,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 11,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 0.1377081635827996,
+          "median": 0.013916983618329076,
+          "minimum": -0.2616888630890546,
+          "maximum": 1.4778870548881162
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": -1.8139972856357869,
+          "median": -0.8290986631420916,
+          "minimum": -14.355792202372598,
+          "maximum": 3.2478851188691538
+        }
+      },
+      "characterized_uniform": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 2.251531467295548,
+          "median": 2.186357629370904,
+          "minimum": 0.004887808221304066,
+          "maximum": 4.409945178279018
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 2.022445363930753,
+          "high": 2.519832172664002,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 1.892296292952965,
+          "median": 2.0085921271318368,
+          "minimum": -0.33659071653733275,
+          "maximum": 4.9767869187456455
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": -22.65878730339546,
+          "median": -24.289936058637075,
+          "minimum": -38.237862329773854,
+          "maximum": -1.1514424186769956
+        }
+      }
+    },
+    "low_drive": {
+      "fixed": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 11.94750700223912,
+          "median": 10.772199204644345,
+          "minimum": 4.008540657227478,
+          "maximum": 20.612654748483322
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 9.066374501242887,
+          "high": 14.833844674139792,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 9.718761374228961,
+          "median": 8.607758216036725,
+          "minimum": 2.7526141331906673,
+          "maximum": 18.786876536037813
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": -49.97663067070218,
+          "median": -50.0,
+          "minimum": -50.0,
+          "maximum": -49.83748693020422
+        }
+      },
+      "fastest": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 0.3961915749555289,
+          "median": 0.3603720594472559,
+          "minimum": 0.0,
+          "maximum": 0.9906863682366152
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 0.19932755942787697,
+          "high": 0.5922728861047777,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 0.4091370996677683,
+          "median": 0.23756126768761376,
+          "minimum": -0.056565096868821385,
+          "maximum": 1.824281791222826
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 0.04673865859564872,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.32502613959155546
+        }
+      },
+      "uniform": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 0.3961915749555289,
+          "median": 0.3603720594472559,
+          "minimum": 0.0,
+          "maximum": 0.9906863682366152
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 0.19932755942787697,
+          "high": 0.5922728861047777,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 0.4091370996677683,
+          "median": 0.23756126768761376,
+          "minimum": -0.056565096868821385,
+          "maximum": 1.824281791222826
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 0.04673865859564872,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.32502613959155546
+        }
+      },
+      "published_slack": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": -0.008166059769469195,
+          "median": 0.0,
+          "minimum": -0.12546507301817167,
+          "maximum": 0.02948268849317648
+        },
+        "interval": {
+          "clusters": 8,
+          "low": -0.019304710221906135,
+          "high": 0.0015557499560406383,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 16,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 0.0065215715751621,
+          "median": 0.0,
+          "minimum": -0.10788854003480619,
+          "maximum": 0.19834557057424318
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 0.04673865859564733,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.32502613959155546
+        }
+      },
+      "gp_nearest": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 0.3527172934917733,
+          "median": 0.21225033826852702,
+          "minimum": -0.12351724658684615,
+          "maximum": 1.6212284055744597
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 0.18455815100527975,
+          "high": 0.5509771537873894,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 3,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 0.296883674399196,
+          "median": 0.18533762669320775,
+          "minimum": -0.27997168601380795,
+          "maximum": 1.1011290089989467
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": -2.5991723861176386,
+          "median": -1.7972302992161127,
+          "minimum": -12.814044278305758,
+          "maximum": 0.18336911064502637
+        }
+      },
+      "characterized_uniform": {
+        "process_gain_pp": {
+          "n": 48,
+          "mean": 0.3961915749555289,
+          "median": 0.3603720594472559,
+          "minimum": 0.0,
+          "maximum": 0.9906863682366152
+        },
+        "interval": {
+          "clusters": 8,
+          "low": 0.19932755942787697,
+          "high": 0.5922728861047777,
+          "scope": "Exploratory size/seed clusters; physical parameters shared across families; not hardware inference"
+        },
+        "process_regressions": 0,
+        "state_gain_pp": {
+          "n": 48,
+          "mean": 0.4091370996677683,
+          "median": 0.23756126768761376,
+          "minimum": -0.056565096868821385,
+          "maximum": 1.824281791222826
+        },
+        "latency_change_percent": {
+          "n": 48,
+          "mean": 0.04673865859564872,
+          "median": 0.0,
+          "minimum": 0.0,
+          "maximum": 0.32502613959155546
+        }
+      }
+    }
+  },
+  "numerics": {
+    "unitary_error_max": 3.4364272212582614e-15,
+    "tp_error_max": 2.776038747906072e-15,
+    "minimum_choi_eigenvalue": 5.1461519637101876e-05,
+    "finite_mip_gap": {
+      "n": 144,
+      "mean": 1.9043524253056416e-08,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.1748317620525416e-06
+    },
+    "characterized_mip_gap": {
+      "n": 144,
+      "mean": 3.9315273445787884e-08,
+      "median": 0.0,
+      "minimum": 0.0,
+      "maximum": 1.5429851365855026e-06
+    },
+    "characterized_lp_relaxation_gap": {
+      "n": 144,
+      "mean": 0.003101733114371961,
+      "median": 0.0024222138744681063,
+      "minimum": 0.0,
+      "maximum": 0.010130002700642297
+    },
+    "finite_nonoptimal_count": 1,
+    "characterized_nonoptimal_count": 3,
+    "ode_difference": {
+      "n": 6,
+      "mean": 1.7283115226395864e-09,
+      "median": 1.7096921018041686e-09,
+      "minimum": 6.270367610226371e-10,
+      "maximum": 3.256771505755803e-09
+    },
+    "sdp_half_diamond": {
+      "n": 6,
+      "mean": 0.3204937643975654,
+      "median": 0.3165646270475462,
+      "minimum": 0.1697199756221587,
+      "maximum": 0.48180791368682574
+    },
+    "minimum_general_fidelity_slack": 0.015625038613644615,
+    "minimum_library_fidelity_slack": 0.015625038613644615
+  },
+  "family_regime": {
+    "grover": {
+      "balanced": {
+        "n": 8,
+        "mean": 4.039073975064258,
+        "median": 3.883323940977458,
+        "minimum": 0.34585717704104446,
+        "maximum": 8.072006428680433,
+        "regressions": 0
+      },
+      "high_drive": {
+        "n": 8,
+        "mean": 9.969842328964535,
+        "median": 9.463622802695312,
+        "minimum": 0.007129620376536069,
+        "maximum": 21.13885393703369,
+        "regressions": 0
+      },
+      "low_drive": {
+        "n": 8,
+        "mean": -0.011234451475904128,
+        "median": 0.0,
+        "minimum": -0.09541369640237995,
+        "maximum": 0.01685535827423701,
+        "regressions": 2
+      }
+    },
+    "mirror": {
+      "balanced": {
+        "n": 8,
+        "mean": 4.788593011664023,
+        "median": 4.288356480127906,
+        "minimum": 3.435890024812027,
+        "maximum": 6.897953740842421,
+        "regressions": 0
+      },
+      "high_drive": {
+        "n": 8,
+        "mean": 7.606533317840524,
+        "median": 7.165879544401768,
+        "minimum": 2.0172438460473177,
+        "maximum": 14.467841703973683,
+        "regressions": 0
+      },
+      "low_drive": {
+        "n": 8,
+        "mean": 0.009399376098054302,
+        "median": 0.006300407186804469,
+        "minimum": -0.0007131229101009495,
+        "maximum": 0.02948268849317648,
+        "regressions": 1
+      }
+    },
+    "qaoa": {
+      "balanced": {
+        "n": 8,
+        "mean": 4.289829983820471,
+        "median": 4.0282244649728955,
+        "minimum": 2.5396286842522544,
+        "maximum": 6.457688568003883,
+        "regressions": 0
+      },
+      "high_drive": {
+        "n": 8,
+        "mean": 15.668680490681929,
+        "median": 14.932194647375276,
+        "minimum": 2.572210690135715,
+        "maximum": 32.5573664946542,
+        "regressions": 0
+      },
+      "low_drive": {
+        "n": 8,
+        "mean": -0.013247613353327414,
+        "median": 0.0,
+        "minimum": -0.06882125932593519,
+        "maximum": 0.00492850376776488,
+        "regressions": 3
+      }
+    },
+    "qft": {
+      "balanced": {
+        "n": 8,
+        "mean": 2.872828979379896,
+        "median": 2.8981800566437066,
+        "minimum": 2.0560696821760427,
+        "maximum": 4.108791014308178,
+        "regressions": 0
+      },
+      "high_drive": {
+        "n": 8,
+        "mean": 25.153797473015292,
+        "median": 26.03372366042506,
+        "minimum": 15.93642636078822,
+        "maximum": 32.334539250791316,
+        "regressions": 0
+      },
+      "low_drive": {
+        "n": 8,
+        "mean": -0.0024240925783625134,
+        "median": 0.0,
+        "minimum": -0.041885540617425665,
+        "maximum": 0.015370739137576805,
+        "regressions": 2
+      }
+    },
+    "random_pauli": {
+      "balanced": {
+        "n": 8,
+        "mean": 3.872876173136272,
+        "median": 3.869364347962001,
+        "minimum": 2.8688906422755234,
+        "maximum": 4.862101244460715,
+        "regressions": 0
+      },
+      "high_drive": {
+        "n": 8,
+        "mean": 19.9293114734855,
+        "median": 19.78960169362681,
+        "minimum": 11.34356979082574,
+        "maximum": 28.728315095459813,
+        "regressions": 0
+      },
+      "low_drive": {
+        "n": 8,
+        "mean": 0.0021661862648597596,
+        "median": 0.0,
+        "minimum": -0.0025975378192599763,
+        "maximum": 0.012248712171825105,
+        "regressions": 3
+      }
+    },
+    "vqe_ansatz": {
+      "balanced": {
+        "n": 8,
+        "mean": 3.930173225426911,
+        "median": 3.8980891944879303,
+        "minimum": 1.831493599548778,
+        "maximum": 6.130184037166853,
+        "regressions": 0
+      },
+      "high_drive": {
+        "n": 8,
+        "mean": 13.715256088592643,
+        "median": 12.543898446316522,
+        "minimum": 5.1248702563249084,
+        "maximum": 27.23255363990346,
+        "regressions": 0
+      },
+      "low_drive": {
+        "n": 8,
+        "mean": -0.03365576357213518,
+        "median": -0.010098644007533464,
+        "minimum": -0.12546507301817167,
+        "maximum": 0.0016047694089027509,
+        "regressions": 5
+      }
+    }
+  },
+  "certificate_coverage": {
+    "total": 1296,
+    "linear_nonvacuous": 697,
+    "stronger_nonvacuous": 974,
+    "transfer_nonvacuous": 144,
+    "transfer_gap": {
+      "n": 144,
+      "mean": 0.41753837678718536,
+      "median": 0.4563817147247185,
+      "minimum": 0.14393072925165606,
+      "maximum": 0.7386409543015652
+    }
+  }
+}

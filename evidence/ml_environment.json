@@ -1,0 +1,43 @@
+{
+  "scikit_learn": "1.9.1",
+  "features": [
+    "qubits",
+    "logical_depth",
+    "logical_gates",
+    "logical_2q",
+    "ring",
+    "family_one_hot"
+  ],
+  "split": "leave-one-qubit-size-out",
+  "folds": [
+    {
+      "heldout_size": 3,
+      "train_cases": 72,
+      "test_cases": 24,
+      "fit_seconds": 0.2838869000552222,
+      "inference_seconds": 0.010323400027118623
+    },
+    {
+      "heldout_size": 4,
+      "train_cases": 72,
+      "test_cases": 24,
+      "fit_seconds": 0.19637859996873885,
+      "inference_seconds": 0.01227080007083714
+    },
+    {
+      "heldout_size": 5,
+      "train_cases": 72,
+      "test_cases": 24,
+      "fit_seconds": 0.18666280002798885,
+      "inference_seconds": 0.008472400018945336
+    },
+    {
+      "heldout_size": 6,
+      "train_cases": 72,
+      "test_cases": 24,
+      "fit_seconds": 0.19343330000992864,
+      "inference_seconds": 0.00856230000499636
+    }
+  ],
+  "published_ML_method_reproduction": false
+}

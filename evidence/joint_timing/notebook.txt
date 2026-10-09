@@ -1,0 +1,4 @@
+Durations: [0.93194849 8.74191545 0.3        2.1146722 ]
+Numerical relative optimum gap: 0.0
+Conditional fidelity floor: 0.989205329483373
+Simulated fidelity: 0.9919407552261938

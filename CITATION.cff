@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or its benchmark data, please cite this repository and the manuscript if published."
+title: "Quantum circuit timing with geometric programming"
+type: software
+authors:
+  - family-names: Ramadan
+    given-names: Youssef Ahmed
+    affiliation: "Department of Artificial Intelligence Engineering, School of Engineering, University of Science and Technology at Zewail City, Giza, Egypt"
+    email: "p-youssef.ramdan@zewailcity.edu.eg"
+repository-code: "https://github.com/Youssef-Ahmed38/quantum-gp-circuit-optimization"
+license: MIT
+keywords:
+  - quantum compilation
+  - geometric programming
+  - convex optimization
+  - gate scheduling
+  - Pauli observables

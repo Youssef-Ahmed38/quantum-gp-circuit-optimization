@@ -1,0 +1,526 @@
+{
+  "counts": {
+    "configurations": 96,
+    "timing_rows": 864,
+    "state_channel_checks": 1152,
+    "entangled_process_checks": 24,
+    "pulse_checks": 24,
+    "pathflow_checks": 192,
+    "pareto_points": 160,
+    "outer_cases": 16,
+    "scaling_cases": 6,
+    "sensitivity_rows": 144
+  },
+  "families": {
+    "qft": {
+      "risk_reduction_vs_fixed": {
+        "n": 24,
+        "mean": 12.844610119928163,
+        "median": 12.496115771546181,
+        "minimum": 9.025345032475819,
+        "maximum": 18.024973510558635,
+        "interval": {
+          "strata": 8,
+          "low": 11.300924481618754,
+          "high": 14.544763749271231,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fastest": {
+        "n": 24,
+        "mean": 44.76349413100036,
+        "median": 44.454090698681114,
+        "minimum": 39.90329316550688,
+        "maximum": 50.520485422495156,
+        "interval": {
+          "strata": 8,
+          "low": 42.94712297400811,
+          "high": 46.689907907806905,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_local": {
+        "n": 24,
+        "mean": 3.031898362610955,
+        "median": 2.940874590983836,
+        "minimum": 2.5136871836968586,
+        "maximum": 3.6139519829422744,
+        "interval": {
+          "strata": 8,
+          "low": 2.795116973273852,
+          "high": 3.284442018534595,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_uniform": {
+        "n": 24,
+        "mean": 2.7307138307543055,
+        "median": 2.817364363623641,
+        "minimum": 1.6646011201495892,
+        "maximum": 3.636956027339057,
+        "interval": {
+          "strata": 8,
+          "low": 2.392524004385338,
+          "high": 2.9771494326506223,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fast_deadline": {
+        "n": 24,
+        "mean": 41.99306207710505,
+        "median": 42.362042363799674,
+        "minimum": 36.924530954720026,
+        "maximum": 47.40797398407744,
+        "interval": {
+          "strata": 8,
+          "low": 40.567713763509374,
+          "high": 43.37014884463209,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "latency_change_vs_fixed": {
+        "n": 24,
+        "mean": 51.27837312933445,
+        "median": 52.95108834027648,
+        "minimum": 35.043083767312716,
+        "maximum": 72.11098111361171
+      },
+      "fidelity_floor": {
+        "n": 24,
+        "mean": 0.7238304293245651,
+        "median": 0.7525992337275018,
+        "minimum": 0.46737169202693746,
+        "maximum": 0.9233334102410643
+      },
+      "simulated_fidelity_gain_percentage_points": {
+        "n": 12,
+        "mean": 1.1763503702235034,
+        "median": 1.154330078285612,
+        "minimum": 0.6647413586169049,
+        "maximum": 1.8634825522707066,
+        "regressions": 0
+      }
+    },
+    "grover": {
+      "risk_reduction_vs_fixed": {
+        "n": 24,
+        "mean": 12.274808519435737,
+        "median": 12.640094967233722,
+        "minimum": 8.293287690936365,
+        "maximum": 16.218890972547406,
+        "interval": {
+          "strata": 8,
+          "low": 10.614473831184446,
+          "high": 13.940047438067728,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fastest": {
+        "n": 24,
+        "mean": 44.16662712970688,
+        "median": 44.76491245795532,
+        "minimum": 39.19656558583564,
+        "maximum": 48.72303623551428,
+        "interval": {
+          "strata": 8,
+          "low": 42.16003477324368,
+          "high": 46.139518463308384,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_local": {
+        "n": 24,
+        "mean": 3.268918342170187,
+        "median": 3.214890838345336,
+        "minimum": 2.922633719557279,
+        "maximum": 3.650343597673634,
+        "interval": {
+          "strata": 8,
+          "low": 3.1150886722098443,
+          "high": 3.4293984898442247,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_uniform": {
+        "n": 24,
+        "mean": 2.566835531618642,
+        "median": 2.5333486510249115,
+        "minimum": 2.0408747814842663,
+        "maximum": 3.0050539809558785,
+        "interval": {
+          "strata": 8,
+          "low": 2.4654796735972404,
+          "high": 2.6598964086791277,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fast_deadline": {
+        "n": 24,
+        "mean": 42.272753067624855,
+        "median": 42.35032773403554,
+        "minimum": 39.009770994143544,
+        "maximum": 46.526129816353425,
+        "interval": {
+          "strata": 8,
+          "low": 40.99335760075439,
+          "high": 43.60139277766984,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "latency_change_vs_fixed": {
+        "n": 24,
+        "mean": 51.99269582814662,
+        "median": 52.08512720590177,
+        "minimum": 37.91747094420356,
+        "maximum": 67.82427242176168
+      },
+      "fidelity_floor": {
+        "n": 24,
+        "mean": 0.2945072378386086,
+        "median": 0.21292791846109194,
+        "minimum": 5.681084737970286e-05,
+        "maximum": 0.868592581610131
+      },
+      "simulated_fidelity_gain_percentage_points": {
+        "n": 12,
+        "mean": 2.6061345767276025,
+        "median": 2.3245010275443763,
+        "minimum": 0.9278615934922796,
+        "maximum": 4.21244784213865,
+        "regressions": 0
+      }
+    },
+    "vqe_ansatz": {
+      "risk_reduction_vs_fixed": {
+        "n": 24,
+        "mean": 14.148263277847619,
+        "median": 13.763638198631716,
+        "minimum": 12.097000089476202,
+        "maximum": 17.795305483653273,
+        "interval": {
+          "strata": 8,
+          "low": 13.46182353845991,
+          "high": 14.898832622988422,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fastest": {
+        "n": 24,
+        "mean": 46.797602233388886,
+        "median": 46.428215161117095,
+        "minimum": 44.046540946082416,
+        "maximum": 50.6528059688495,
+        "interval": {
+          "strata": 8,
+          "low": 46.10227940902553,
+          "high": 47.565828277020074,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_local": {
+        "n": 24,
+        "mean": 3.099525471292928,
+        "median": 2.948363941680913,
+        "minimum": 2.510114277023227,
+        "maximum": 3.9190602755745516,
+        "interval": {
+          "strata": 8,
+          "low": 2.8549297444729205,
+          "high": 3.383347867843597,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_uniform": {
+        "n": 24,
+        "mean": 1.6536842631901658,
+        "median": 1.3261912576690644,
+        "minimum": 0.668735900333409,
+        "maximum": 2.7796788448667895,
+        "interval": {
+          "strata": 8,
+          "low": 1.492876029372536,
+          "high": 1.8287604512510307,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fast_deadline": {
+        "n": 24,
+        "mean": 45.274502952299706,
+        "median": 45.00334409007898,
+        "minimum": 42.11832926930276,
+        "maximum": 48.85211758431005,
+        "interval": {
+          "strata": 8,
+          "low": 44.63574311750266,
+          "high": 45.9140357073098,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "latency_change_vs_fixed": {
+        "n": 24,
+        "mean": 63.964678077753355,
+        "median": 63.16840436052978,
+        "minimum": 50.82808866541455,
+        "maximum": 81.1650931927303
+      },
+      "fidelity_floor": {
+        "n": 24,
+        "mean": 0.9042611800068329,
+        "median": 0.9066724335005834,
+        "minimum": 0.8522327711933215,
+        "maximum": 0.9467779575716276
+      },
+      "simulated_fidelity_gain_percentage_points": {
+        "n": 12,
+        "mean": 0.8320685114337456,
+        "median": 0.8051059801248872,
+        "minimum": 0.5207611574401916,
+        "maximum": 1.203836292555116,
+        "regressions": 0
+      }
+    },
+    "qaoa": {
+      "risk_reduction_vs_fixed": {
+        "n": 24,
+        "mean": 12.30817238938773,
+        "median": 12.831617422595857,
+        "minimum": 9.052773104924286,
+        "maximum": 15.895355854221885,
+        "interval": {
+          "strata": 8,
+          "low": 10.78011646911972,
+          "high": 13.760584897250357,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fastest": {
+        "n": 24,
+        "mean": 44.30100612558041,
+        "median": 45.05701866876496,
+        "minimum": 40.16677845763757,
+        "maximum": 48.2622153342559,
+        "interval": {
+          "strata": 8,
+          "low": 42.44934927572037,
+          "high": 46.01885441634572,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_local": {
+        "n": 24,
+        "mean": 3.2401786775148005,
+        "median": 3.357223629649159,
+        "minimum": 2.6611340165074426,
+        "maximum": 3.500130089198965,
+        "interval": {
+          "strata": 8,
+          "low": 3.0600685219907415,
+          "high": 3.401918995422133,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_uniform": {
+        "n": 24,
+        "mean": 2.472521135567034,
+        "median": 2.492613071211622,
+        "minimum": 2.061506620275292,
+        "maximum": 3.1615064574213445,
+        "interval": {
+          "strata": 8,
+          "low": 2.3048964565266625,
+          "high": 2.6702380186054535,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "risk_reduction_vs_fast_deadline": {
+        "n": 24,
+        "mean": 43.0629542946867,
+        "median": 43.671151231485865,
+        "minimum": 39.93535102524795,
+        "maximum": 45.682428448966355,
+        "interval": {
+          "strata": 8,
+          "low": 41.65915915073668,
+          "high": 44.318863745693406,
+          "interpretation": "Exploratory size/topology-stratum bootstrap; no population or hardware inference"
+        }
+      },
+      "latency_change_vs_fixed": {
+        "n": 24,
+        "mean": 53.65594363491189,
+        "median": 56.584501053048825,
+        "minimum": 41.39397426572162,
+        "maximum": 63.438988884732964
+      },
+      "fidelity_floor": {
+        "n": 24,
+        "mean": 0.7115143135751946,
+        "median": 0.7208973689240399,
+        "minimum": 0.48215057151526225,
+        "maximum": 0.8636963803835724
+      },
+      "simulated_fidelity_gain_percentage_points": {
+        "n": 12,
+        "mean": 1.8589996215232099,
+        "median": 1.4690854052016893,
+        "minimum": 1.0261449177657755,
+        "maximum": 3.665504292794025,
+        "regressions": 0
+      }
+    }
+  },
+  "max_gp_convex_objective_gap": 1.811013610408807e-06,
+  "unitary_error_max": 2.4011978184681347e-14,
+  "state_min_certificate_slack": 0.008826035552404243,
+  "process_min_certificate_slack": 0.0033964965685110426,
+  "pulse_min_certificate_slack": 0.010719258807650234,
+  "flow_max_relative_gap": 9.998791684745044e-07,
+  "flow_max_lp_residual": 2.1936697770005246e-18,
+  "flow_iterations": {
+    "n": 192,
+    "mean": 69.19791666666667,
+    "median": 8.0,
+    "minimum": 0.0,
+    "maximum": 5773.0
+  },
+  "flow_seconds": {
+    "n": 192,
+    "mean": 0.2180923994777307,
+    "median": 0.018253550049848855,
+    "minimum": 0.0001879000337794423,
+    "maximum": 9.144034099997953
+  },
+  "coherent_counterexamples": {
+    "tested": 16,
+    "breaches": 16
+  },
+  "implementation_counts": {
+    "fixed": 96,
+    "fastest": 96,
+    "local": 96,
+    "uniform": 96,
+    "gp": 204,
+    "convex": 156,
+    "quantized_gp": 36,
+    "pathflow": 24,
+    "quantized": 60
+  },
+  "risk_solver_runtimes": {
+    "joint_gp": {
+      "n": 84,
+      "mean": 0.760567704763075,
+      "median": 0.44157685001846403,
+      "minimum": 0.07224140001926571,
+      "maximum": 21.355441899970174
+    },
+    "joint_convex": {
+      "n": 96,
+      "mean": 0.4208882875015358,
+      "median": 0.3865032999892719,
+      "minimum": 0.07550489995628595,
+      "maximum": 0.9778371999273077
+    }
+  },
+  "robust_worst_risk_reduction": {
+    "n": 96,
+    "mean": 0.020646412909134274,
+    "median": 0.016520333140589163,
+    "minimum": 0.009632238482779188,
+    "maximum": 0.04841705654212019
+  },
+  "quantization": {
+    "checks": 96,
+    "max_absolute_risk_change": 0.0005958764874094413,
+    "mean_bound": 0.040968263896441
+  },
+  "finite_search": {
+    "improvement": {
+      "n": 16,
+      "mean": 8.205110508792856,
+      "median": 8.204368252674843,
+      "minimum": 6.9783102629419895,
+      "maximum": 9.66069292154336
+    },
+    "candidate_choice_changes": 0,
+    "max_direct_gap": 7.027532313852447e-07
+  },
+  "scale": [
+    {
+      "family": "qaoa",
+      "qubits": 8,
+      "gates": 212,
+      "method": "gp",
+      "seconds": 0.5912490000482649,
+      "direct_seconds": 0.4086812000023201,
+      "gap": 1.6002221769895186e-10
+    },
+    {
+      "family": "qaoa",
+      "qubits": 12,
+      "gates": 312,
+      "method": "pathflow",
+      "seconds": 0.03580309997778386,
+      "direct_seconds": 0.44393239996861666,
+      "gap": 6.078841848777827e-07
+    },
+    {
+      "family": "qaoa",
+      "qubits": 20,
+      "gates": 512,
+      "method": "pathflow",
+      "seconds": 0.03266959998290986,
+      "direct_seconds": 0.5212780000874773,
+      "gap": 4.4997625592291257e-07
+    },
+    {
+      "family": "vqe_ansatz",
+      "qubits": 8,
+      "gates": 80,
+      "method": "gp",
+      "seconds": 0.4422725000185892,
+      "direct_seconds": 0.37992939993273467,
+      "gap": 2.453015568448791e-11
+    },
+    {
+      "family": "vqe_ansatz",
+      "qubits": 12,
+      "gates": 120,
+      "method": "gp",
+      "seconds": 0.5867404999444261,
+      "direct_seconds": 0.38796520000323653,
+      "gap": 1.2451579767258636e-09
+    },
+    {
+      "family": "vqe_ansatz",
+      "qubits": 20,
+      "gates": 200,
+      "method": "gp",
+      "seconds": 0.5719723999500275,
+      "direct_seconds": 0.4178494999650866,
+      "gap": 1.972957019980015e-09
+    }
+  ],
+  "sensitivity": {
+    "2e-05": {
+      "n": 16,
+      "mean": 2.2405802934943218,
+      "median": 2.2634136983950075,
+      "minimum": 1.4738871281060273,
+      "maximum": 2.7991491856877024
+    },
+    "0.00015": {
+      "n": 16,
+      "mean": 2.475696028561284,
+      "median": 2.5164887508017952,
+      "minimum": 1.7939639528986413,
+      "maximum": 2.852483027253164
+    },
+    "0.001": {
+      "n": 16,
+      "mean": 3.3466274996053658,
+      "median": 3.144418040675564,
+      "minimum": 2.2082624174953613,
+      "maximum": 4.672789428303687
+    }
+  }
+}

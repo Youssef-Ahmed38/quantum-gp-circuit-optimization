@@ -1,0 +1,7 @@
+{
+  "saved_candidate_circuits_reopened": 384,
+  "saved_baseline_circuits_reopened": 576,
+  "schedules_independently_rechecked": 384,
+  "serialized_unitary_spot_checks": 32,
+  "all_checks_passed": true
+}

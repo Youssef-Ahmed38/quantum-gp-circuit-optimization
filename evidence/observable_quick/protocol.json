@@ -1,0 +1,35 @@
+{
+  "sizes": [
+    4
+  ],
+  "seeds": [
+    11
+  ],
+  "alphas": [
+    0.8
+  ],
+  "targets": [
+    0.95,
+    0.99
+  ],
+  "families": [
+    "graph",
+    "scrambled"
+  ],
+  "grid_ratio": 1.02,
+  "snapshot_sha256": "116c5692ad5669219571ce4c13132fdd68394aa543537b5ccf14a6bd2df10b11",
+  "snapshot_date": "2025-02-26T15:26:08-05:00",
+  "source": "https://raw.githubusercontent.com/Qiskit/qiskit-ibm-runtime/refs/heads/main/qiskit_ibm_runtime/fake_provider/backends/torino/props_torino.json",
+  "native_graph": true,
+  "base_average_gate_errors_and_lengths_anchored": true,
+  "duration_dependence_calibrated": false,
+  "noise": "Independent isotropic Pauli Markov channels after ideal Clifford gates; virtual RZ noiseless; no idle relaxation or crosstalk",
+  "duration_box": [
+    0.5,
+    2.0
+  ],
+  "all_free_local": true,
+  "hardware_jobs": 0,
+  "comparison": "Minimum latency with identical stabilizer-generator expectation targets; global envelope is a conservative comparator",
+  "predeclared_before_full_measurement": true
+}

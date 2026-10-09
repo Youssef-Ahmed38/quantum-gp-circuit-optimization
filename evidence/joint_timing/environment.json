@@ -1,0 +1,22 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "qiskit": "2.5.2",
+    "cvxpy": "1.9.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "clarabel": "0.11.1",
+    "ecos": "2.0.14",
+    "scs": "3.3.1"
+  },
+  "invocation_seconds": 445.30267809994984,
+  "free_local_only": true,
+  "hardware_jobs": 0,
+  "paid_services": false,
+  "gp_interface": "Exact vectorized logarithmic transformation; automatic CVXPY DGP cross-checked in unit tests",
+  "large_problem_policy": "Risk-only at most 300 gates: logarithmic cones. Larger or multiobjective: certified GP-equivalent path-flow dual. Deadline comparator: ordinary convex.",
+  "uncertainty_radius": 0.3,
+  "synthetic_not_calibrated": true,
+  "noise_model": "local isotropic strength-dependent depolarization plus globally covariant background depolarization"
+}
