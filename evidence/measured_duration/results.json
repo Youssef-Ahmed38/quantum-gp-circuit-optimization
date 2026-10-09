@@ -1,0 +1,60 @@
+{
+  "source_doi": "10.5281/zenodo.13808824",
+  "source_archive_url": "https://zenodo.org/api/records/13808824/files/Data_for_Reducing_leakage_errors_v2.zip/content",
+  "source_archive_md5": "b2d6a335a41bb0f8f9123d5ddfb4247a",
+  "figure": "Fig. 3a",
+  "measurement": "Mean RB error per gate and reported one-sigma uncertainty",
+  "split": "Ascending duration; even-indexed points train, odd-indexed points test; per pulse family",
+  "fit": "Nonnegative weighted least squares, error=A/t_ns+G*t_ns; weights=1/sigma^2",
+  "no_hardware_jobs": true,
+  "fits": [
+    {
+      "pulse": "FAST_DRAG-L",
+      "train_n": 7,
+      "test_n": 6,
+      "inverse_coefficient_error_ns": 0.0008956165637552295,
+      "linear_coefficient_error_per_ns": 9.490992006444465e-06,
+      "test_mae": 2.6521524993435073e-05,
+      "constant_test_mae": 3.46847615063551e-05,
+      "test_mean_squared_standardized_residual": 22.719294131394403,
+      "measured_min_error": 0.0001555808257712732,
+      "measured_min_duration_ns": 7.916666666666666
+    },
+    {
+      "pulse": "HD_DRAG-L",
+      "train_n": 7,
+      "test_n": 6,
+      "inverse_coefficient_error_ns": 0.0012056513264008086,
+      "linear_coefficient_error_per_ns": 7.821544802278547e-06,
+      "test_mae": 7.763742771509682e-05,
+      "constant_test_mae": 9.255412589102465e-05,
+      "test_mean_squared_standardized_residual": 40.604030638905215,
+      "measured_min_error": 0.0001844971126334638,
+      "measured_min_duration_ns": 14.166666666666666
+    },
+    {
+      "pulse": "Cosine_DRAG-L",
+      "train_n": 7,
+      "test_n": 6,
+      "inverse_coefficient_error_ns": 0.001164168833394961,
+      "linear_coefficient_error_per_ns": 9.392485595571285e-06,
+      "test_mae": 0.00017061274976350532,
+      "constant_test_mae": 0.0001844155588943395,
+      "test_mean_squared_standardized_residual": 49.164079012088486,
+      "measured_min_error": 0.00018417284538030376,
+      "measured_min_duration_ns": 10.833333333333332
+    },
+    {
+      "pulse": "Cosine_DRAG-P",
+      "train_n": 8,
+      "test_n": 7,
+      "inverse_coefficient_error_ns": 0.004231907830303644,
+      "linear_coefficient_error_per_ns": 3.326524966116273e-06,
+      "test_mae": 0.0003708365291665789,
+      "constant_test_mae": 0.0004168463314747312,
+      "test_mean_squared_standardized_residual": 82.48023088278048,
+      "measured_min_error": 0.00031721974055609614,
+      "measured_min_duration_ns": 15.416666666666666
+    }
+  ]
+}

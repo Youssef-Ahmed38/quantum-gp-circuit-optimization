@@ -1,0 +1,36 @@
+{
+  "all_free_local": true,
+  "hardware_jobs": 0,
+  "rows": [
+    {
+      "policy": "GP p=2 ALAP",
+      "quadrature_order": 5,
+      "fidelity": 0.9381644232245772
+    },
+    {
+      "policy": "GP p=2 ALAP",
+      "quadrature_order": 7,
+      "fidelity": 0.9381644106747355
+    },
+    {
+      "policy": "GP p=2 ALAP",
+      "quadrature_order": 9,
+      "fidelity": 0.9381644106734648
+    },
+    {
+      "policy": "ASAP+DD",
+      "quadrature_order": 5,
+      "fidelity": 0.9934484024879858
+    },
+    {
+      "policy": "ASAP+DD",
+      "quadrature_order": 7,
+      "fidelity": 0.9934484024879879
+    },
+    {
+      "policy": "ASAP+DD",
+      "quadrature_order": 9,
+      "fidelity": 0.9934484024879844
+    }
+  ]
+}

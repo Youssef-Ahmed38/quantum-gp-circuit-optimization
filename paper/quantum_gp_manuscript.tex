@@ -25,7 +25,7 @@
 \newtheorem{proposition}{Proposition}
 \newtheorem{lemma}{Lemma}
 \newcommand{\R}{\mathbb{R}}
-\title{{\fontsize{17}{20}\selectfont\bfseries Globally Optimal, Certified Quantum Circuit Timing via Geometric Programming:\\ Convex Duality, Nonunitary Error Bounds, and Scalable Hardware Evaluation}}
+\title{{\fontsize{17}{20}\selectfont\bfseries Quantum Circuit Optimization Using Geometric Programming:\\ Convex Duration Allocation on Fixed NISQ Circuits}}
 \author{{\fontsize{11}{13}\selectfont Youssef Ahmed Ramadan}\\[3pt]
 {\fontsize{10}{12}\selectfont\itshape Department of Artificial Intelligence Engineering, School of Engineering}\\
 {\fontsize{10}{12}\selectfont\itshape University of Science and Technology at Zewail City}\\
@@ -33,29 +33,20 @@
 {\fontsize{10}{12}\selectfont Email: p-youssef.ramdan@zewailcity.edu.eg}}
 \IEEEaftertitletext{%
 \vspace{12pt}\par\noindent\hspace*{0.25in}\begin{minipage}{6.5in}
-\fontsize{9}{12}\selectfont\noindent\textbf{\textit{Abstract---}} Quantum circuit compilation requires navigating a fundamental physical tension between gate execution speed, control drive power, decoherence exposure, and circuit makespan. We present an exact, unified mathematical framework for continuous gate duration allocation on fixed circuit dependency graphs formulated as a Geometric Program (GP) and an equivalent ordinary convex program. The unconstrained latency problem admits a specialized path-flow dual algorithm that computes an inspectable optimum bracket using an $\mathcal{O}(m+r)$ longest-path DAG oracle. We prove rigorous operational certificates bounding diamond-norm channel distance and output fidelity under nonunitary Markovian Lindblad relaxation, dephasing, and coherent generator mismatch. For discrete pulse libraries, a mixed-integer linear program (MILP) optimizes Watrous semidefinite programming Choi bounds, bridged to the continuous optimum via an explicit residual transfer inequality. To overcome the exponential superoperator simulation barrier, we extend the framework to exact Pauli-observable constrained scheduling on Clifford circuits via symplectic adjoint tracking. We evaluate the framework across 144 configurations calibrated with IBM's 133-qubit Heron processor parameters (\emph{ibm\_torino}), spanning 4 to 128 qubits, complemented by 144 full physical Lindblad channels on 2--3 qubits. The observable-constrained convex engine solves in a median of $69.9$~ms across feasible configurations (reaching 32 qubits), while an analytic pre-filter certifies unachievable operational targets across deep 64- and 128-qubit circuits in $\mathcal{O}(\operatorname{nnz}(H))$ time (median $2.44$~ms at 128 qubits, maximum $5.57$~ms overall) without invoking interior-point solvers. Geometric log-grid quantization preserves certified observable expectations with zero target violations by construction. Unconstrained duration allocation delivers significant fidelity gains ($+3.97$ and $+15.34$ percentage points) with latency trade-offs, while strict matched-deadline scheduling demonstrates that critical-path latency dominates the error budget ($-0.009$ to $+0.026$ pp gains). Independent numerical audits confirm mathematical agreement with dense density-matrix evolution to machine precision ($< 10^{-14}$) and forward Pauli-frame Monte Carlo sampling ($16{,}384$ shots) within simultaneous Hoeffding confidence bounds.\par\vspace{6pt}\noindent\textbf{\textit{Index Terms---}} Quantum compilation, geometric programming, convex optimization, gate scheduling, Markovian noise, pulse libraries, Pauli tracking, Heron architecture.\par\end{minipage}\hspace*{0.25in}\par\vspace{12pt}
+\fontsize{9}{12}\selectfont\noindent\textbf{\textit{Abstract---}} We study gate-duration allocation on a fixed quantum-circuit dependency graph under a declared inverse-duration plus exposure-error model. The continuous problem admits geometric-program and ordinary convex formulations; a path-flow dual bounds its unconstrained variant. For Clifford circuits with independent isotropic Pauli channels, backward Pauli tracking yields exact convex stabilizer-expectation constraints within the model, and a geometric-grid rule preserves feasible constraints under a sufficient safety margin. In a saved IBM Heron calibration-snapshot study, a model-attainable 24-instance protocol produced feasible solves through 128 qubits. Median solve times at 32, 64, and 128 qubits were 1.17, 2.95, and 6.41~s; median modeled makespan reductions against an optimal uniform-duration policy were 17.3\%, 24.5\%, and 24.5\% under identical targets. A held-out fit to published measured single-qubit duration sweeps exhibits substantial residuals relative to reported uncertainties, exposing limits of the assumed error law. An equal-deadline local simulation directly compares idealized GP duration choices with Qiskit ASAP/ALAP and two-pulse dynamical decoupling: small gains under assumed Markovian noise reverse when shot-static detuning favors DD. An exploratory Heron QPU pilot measures idle-duration and echo responses. A prespecified fixed-native-gate check on the same QPU finds that the nominal Pauli/readout model underpredicts success probability by 2.5--5.4 percentage points across four circuit families. Neither QPU job implements GP-chosen gate durations. The mathematical result is reproducible, but physical benefit and coefficient transfer to a target device remain unvalidated. \par\vspace{6pt}\noindent\textbf{\textit{Index Terms---}} Quantum compilation, geometric programming, convex optimization, gate scheduling, Markovian noise, pulse libraries, Pauli tracking, Heron architecture.\par\end{minipage}\hspace*{0.25in}\par\vspace{12pt}
 }
 \begin{document}
 \maketitle
 
 
 \section{Introduction}
-\IEEEPARstart{Q}{uantum} compilation connects abstract unitary circuits to executable physical pulses and schedules. Gate count, circuit depth, physical latency, and noisy-state fidelity are related but fundamentally distinct quantities. A continuous optimizer cannot infer a physically admissible schedule from aggregate gate counts alone, and minimizing circuit makespan does not monotonically raise fidelity when faster operations demand stronger drives that induce leakage or non-adiabatic errors. This motivates a compilation framework that explicitly models physical control tradeoffs, provides globally optimal duration allocation, and establishes certified bounds on operational noise.
+\IEEEPARstart{Q}{uantum} compilation connects abstract circuits to executable pulses and schedules. Gate count, depth, makespan, and noisy-state fidelity are distinct quantities. Shorter schedules can demand stronger control and may increase error. We therefore study a precise subproblem: duration allocation on a fixed dependency graph under a declared noise model. Its optimum and error bounds are conditional on that model, rather than guarantees about an uncharacterized device.
 
 The mathematical structure of time-cost tradeoffs on directed acyclic dependency graphs (DAGs) traces back to the foundational network-flow duality of Kelley \cite{kelley} and Fulkerson \cite{fulkerson}. Geometric programming (GP) provides an established positive-variable optimization language with an exact convex transformation under logarithmic change of variables \cite{boydgp}. Its historical application to digital CMOS circuit sizing and timing closure revolutionized classical electronic design automation (EDA) \cite{boyddigital}. In quantum computing, when gate durations are fixed, makespan minimization reduces to a longest-path computation on a DAG. However, physical quantum devices operate under a different decision space: continuous gate durations and discrete pulse implementations that preserve target local unitaries while trading off drive strength, environmental decoherence, and circuit latency.
 
-In this work, we introduce a unified, certified quantum gate scheduling framework operating across continuous duration allocation, discrete pulse library selection, and multi-qubit Pauli-observable constraints. We make seven primary contributions, summarized in Section~XI and evaluated across Sections~VIII--X:
-\begin{enumerate}
-\item \textbf{Innovation 1 --- Exact Convex Duration Allocation:} We prove that continuous duration allocation on a fixed circuit DAG is an exact GP and an ordinary convex program with a uniquely determined optimal duration vector under positive objective weights (Section~III). \textbf{Quantified impact:} guarantees machine-precision agreement $|\Delta_{\mathrm{form}}| \le 1.69 \times 10^{-9}$ with direct convex programming and solves in $69.9$~ms median latency.
-\item \textbf{Innovation 2 --- Inspectable Path-Flow Duality Certification:} We derive a specialized path-flow dual algorithm that solves the continuous allocation problem with an $\mathcal{O}(m+r)$ longest-path DAG oracle (Section~IV). \textbf{Quantified impact:} computes an independent mathematical lower bound certifying duality gaps within $0.01\%$ of the true global infimum ($\epsilon_{\mathrm{gap}} \le 1.09 \times 10^{-4}$).
-\item \textbf{Innovation 3 --- Nonunitary Operational Error Certificates:} We establish deterministic lower bounds on output state fidelity ($F_{\mathrm{pur}} \ge e^{-R}$) and upper bounds on completely bounded diamond distance ($\frac{1}{2}\|\mathcal{N}-\mathcal{U}\|_\diamond \le 1 - e^{-R}$) under nonunitary Lindblad relaxation, dephasing, and coherent generator mismatch (Section~V). \textbf{Quantified impact:} validated against dense Runge--Kutta numerical integration to $< 10^{-14}$ error.
-\item \textbf{Innovation 4 --- Discrete Pulse Library Optimization and Bound Transfer:} For characterized hardware pulse libraries, we formulate a MILP minimizing Watrous semidefinite programming (SDP) Choi bounds and prove a conservative residual transfer inequality (Section~VI). \textbf{Quantified impact:} validates continuous GP as a rigorous lower bound for discrete pulse implementations with mean transfer gap $0.418$.
-\item \textbf{Innovation 5 --- Scalable Stabilizer Tracking via Symplectic Adjoint Tracking:} We develop an exact Pauli-observable sensitivity model using Clifford symplectic tracking in the Heisenberg picture, mapping stabilizer generator expectations $\langle S_k \rangle \ge \tau_k^{\mathrm{target}}$ to exact posynomial constraints with zero approximation error (Section~VII). \textbf{Quantified impact:} breaks the exponential $4^N \times 4^N$ superoperator simulation wall, scaling up to 128 qubits in under $15$~MB of RAM.
-\item \textbf{Innovation 6 --- Sub-Millisecond $\mathcal{O}(\operatorname{nnz}(H))$ Infeasibility Pre-Screening and Safe Quantization:} We introduce a closed-form hazard pre-filter that certifies physically unachievable targets before invoking numerical solvers, coupled with exposure-amplified log-grid rounding ($q=1.02$) (Sections~VII-B, VIII). \textbf{Quantified impact:} screens 117 infeasible configurations in median $0.70$~ms ($2.44$~ms at 128Q; max $5.57$~ms) and guarantees $100\%$ target satisfaction with zero violation by construction.
-\item \textbf{Innovation 7 --- Multi-Objective Pareto Navigation and ZNE Co-Design:} We extend the continuous GP formulation to multi-objective exploration, tracing the Pareto frontier between makespan compression and control drive effort, while providing an exact physical knob for Zero-Noise Extrapolation (Sections~IX-D, X-E). \textbf{Quantified impact:} suppresses microwave drive heating by $66.2\%$ with only $3.1\%$ latency penalty, and yields up to $+15.34$~pp fidelity gains over baseline heuristics.
-\end{enumerate}
+Our contribution is a model-based timing method, rather than a claim of optimal circuit synthesis or hardware performance. First, we formulate fixed-DAG duration allocation as convex optimization and derive a path-flow lower bound. Second, under an explicitly post-gate isotropic Pauli channel model, we combine Clifford observable tracking with duration optimization and a conditional quantization guarantee. Third, we distinguish model-consistency checks from external validation, report matched-deadline comparisons, and supply an additional feasible large-circuit solve study. The inverse-duration coefficient is not inferred from the saved backend snapshot: its share is swept as an assumption. Claims of physical advantage therefore require measured duration--error curves and hardware-compatible controls.
 
-The remainder of the paper proceeds as follows. Section~II reviews related work in duration-aware scheduling and classical network-flow duality. Section~III establishes the continuous duration model and proves exact convexity. Section~IV develops the path-flow dual algorithm and optimality certificates. Section~V derives the nonunitary operational error bounds. Section~VI formalizes discrete pulse library optimization via MILP. Section~VII develops scalable Pauli-observable tracking and algebraic pre-screening. Section~VIII presents the comprehensive evaluation on IBM Heron calibration parameters. Section~IX details compiler integration, multi-objective Pareto navigation, and production transpiler protocols. Section~X provides a critical assessment of novelty, empirical boundaries, and failure modes. Section~XI concludes with a breakthrough synthesis.
+Sections~II--VII describe prior work, the mathematical model, its bounds, and the observable formulation. Section~VIII reports local simulations, including the feasible large-circuit study. Section~IX describes the analysis pass and limitations; Section~X concludes.
 
 \section{Related Work and Scientific Context}
 \subsection{Duration-Aware Quantum Scheduling}
@@ -86,11 +77,28 @@ J(\tau, M) = w_R \frac{R}{R_0} + w_M \frac{M}{M_0} + w_E \frac{E}{E_0},
 \end{equation}
 subject to precedence constraints $f_i + \tau_j \le f_j$ for $(i \to j) \in \mathcal{D}$, completion constraints $\tau_i \le f_i \le M$, and duration bounds $\ell_i \le \tau_i \le u_i$.
 
-\begin{theorem}[Exactness and Unique Optimal Durations]\label{th:exactness}
-Assuming positive objective weights ($w_R > 0$ with $a_i > 0$, or $w_E > 0$), the duration allocation problem \eqref{eq:objective} is an exact geometric program and an ordinary convex program. The optimal duration vector $\tau^*$ is uniquely determined.
+\begin{theorem}[Convexity and Conditional Uniqueness]\label{th:exactness}
+Suppose $R_0,M_0,E_0>0$, $w_R,w_M,w_E\ge0$, and the gate coefficients are nonnegative. The fixed-DAG duration-allocation problem in \eqref{eq:objective} is an exact geometric program whenever the positive-variable formulation is used, and is convex in the original durations and finish-time variables. Define $A_i=w_Ra_i/R_0+w_E\kappa_i^2/E_0$. If $A_i>0$ for every nonfixed duration coordinate, the optimal duration vector is unique. This does not imply unique intermediate finish times.
 \end{theorem}
 \begin{proof}
-Under logarithmic variable substitutions $\tau_i = e^{x_i}$, $f_i = e^{y_i}$, $M = e^z$, all inverse-duration terms $a_i e^{-x_i}$ and linear terms $\gamma_i e^{x_i}$ become convex exponentials, and precedence constraints $(e^{y_i} + e^{x_j})/e^{y_j} \le 1$ become convex log-sum-exp constraints. In original variables $\tau_i$, each $1/\tau_i$ term is strictly convex on $\tau_i > 0$ whenever $a_i > 0$, while makespan $M(\tau) = \max_{p \in \mathcal{P}} \sum_{i \in p} \tau_i$ is a convex pointwise maximum of linear functions. The sum of strictly convex terms and a convex function is strictly convex on the compact box $\prod_i [\ell_i, u_i]$, establishing uniqueness of $\tau^*$.
+Write $B=w_Rb/R_0+w_M/M_0\ge0$ and $C_i=w_R\gamma_i/R_0\ge0$. Eliminating the finish-time variables at fixed $\tau$ gives the reduced objective
+\[F(\tau)=\sum_i(A_i/\tau_i+C_i\tau_i)+B\max_{p\in\mathcal P}p^\top\tau.\]
+The box is compact, all reciprocal terms are convex on positive durations, and the maximum of path sums is convex. Hence a minimizer exists. If every free-coordinate $A_i>0$, the Hessian of $\sum_iA_i/\tau_i$ is diagonal with entries $2A_i/\tau_i^3>0$ on the free-coordinate subspace. The reduced objective is then strictly convex, so its minimizing duration vector is unique. For the GP representation, positive monomials and posynomials express the objective and precedence inequalities; logarithmic substitution yields convex log-sum-exp inequalities. Fixed coordinates can be eliminated. A zero coefficient or weight may remove strict convexity, so uniqueness is not asserted outside the stated condition.
+\end{proof}
+
+\begin{proposition}[Positive Inverse-Power Extension]\label{prop:power}
+For a declared exponent $p>0$, replace the reduced duration objective by
+\begin{equation}
+F_p(\tau)=\sum_i\left(A_i\tau_i^{-p}+C_i\tau_i\right)+B\max_{q\in\mathcal P}q^\top\tau,
+\end{equation}
+with $A_i,C_i\ge0$, $B>0$, and positive duration bounds. This is a geometric program and is convex in the original durations. If $A_i>0$ for each free coordinate, the optimal duration vector is unique. The path-flow dual of Theorem~\ref{th:dual} remains valid with coordinate response
+\begin{equation}
+\tau_i(\rho)=\operatorname{clip}\!\left[\left(\frac{pA_i}{C_i+\rho_i}\right)^{1/(p+1)},\ell_i,u_i\right]
+\end{equation}
+when $C_i+\rho_i>0$; if it is zero and $A_i>0$, the response is $u_i$.
+\end{proposition}
+\begin{proof}
+Each $A_i\tau_i^{-p}$ is a positive monomial, hence the positive-variable objective and precedence ratios satisfy GP grammar. Its second derivative is $p(p+1)A_i\tau_i^{-p-2}\ge0$, strictly positive on free coordinates with $A_i>0$. The maximum of path sums is convex, so strict convexity and uniqueness follow as in Theorem~\ref{th:exactness}. Minimax interchange over the compact duration box and path-flow polytope is unchanged. Differentiating $A_i/t^p+(C_i+\rho_i)t$ gives the displayed clipped minimizer. This extension changes the assumed error law; it does not validate any exponent from hardware data.
 \end{proof}
 
 \begin{proposition}[Rectangular Box Robustness]
@@ -98,6 +106,17 @@ If each coefficient in \eqref{eq:risk_model} belongs independently to a declared
 \end{proposition}
 \begin{proof}
 Each coefficient multiplies a nonnegative term, so $R$ is coordinatewise monotone. The upper endpoint vector belongs to the uncertainty rectangle and attains its maximum for every feasible schedule.
+\end{proof}
+
+\begin{proposition}[Finite-Scenario Robust GP]\label{prop:scenario}
+Let a declared finite set $\mathcal S$ contain nonnegative coefficient pairs $(A_{is},C_{is})$ for a common exponent $p>0$. Under the same positive duration box, DAG constraints, and optional deadline, the minimax problem
+\begin{equation}
+\min_{\tau,M}\left\{\max_{s\in\mathcal S}\sum_i(A_{is}\tau_i^{-p}+C_{is}\tau_i)+BM\right\}
+\end{equation}
+is an exact geometric program in epigraph form. Its optimum is robust only with respect to the \emph{declared} scenarios; it is a physical error bound only if the true coefficients are contained in a justified uncertainty set.
+\end{proposition}
+\begin{proof}
+Introduce $z>0$ and require $\sum_i(A_{is}\tau_i^{-p}+C_{is}\tau_i)/z\le1$ for each $s\in\mathcal S$. Every left-hand side is a posynomial, and $z+BM$ is a posynomial objective. The timing and deadline constraints retain GP form. For fixed feasible $\tau$, the smallest feasible $z$ is exactly the maximum scenario error, proving epigraph equivalence. Taking a maximum over finitely many convex scenario errors also proves convexity in the original durations. Nothing in this argument assigns statistical coverage to $\mathcal S$.
 \end{proof}
 
 \begin{proposition}[Quantization Rounding Certificate]
@@ -128,7 +147,7 @@ Then strong duality holds: $\max_\rho D(\rho) = \min_\tau J(\tau)$. Moreover, ev
 \end{equation}
 \end{theorem}
 \begin{proof}
-The function $L(\tau, \rho) = \sum_i (A_i/\tau_i + C_i \tau_i) + \rho^\top \tau$ is continuous, convex in $\tau$, and affine in $\rho$ over compact convex domains. By Sion's minimax theorem, $\min_\tau \max_\rho L(\tau, \rho) = \max_\rho \min_\tau L(\tau, \rho)$. Separable minimization over each gate coordinate yields $\tau_i(\rho)$. Subtracting $D(\rho)$ from the primal value cancels all non-path terms, yielding the exact bracket.
+The set $\mathcal P$ contains every source-to-sink path incidence vector of the fixed DAG; $B\operatorname{conv}(\mathcal P)$ consists exactly of nonnegative path mixtures whose total path weight is $B$. It is compact and convex. For $L(\tau,\rho)=\sum_i(A_i/\tau_i+C_i\tau_i)+\rho^\top\tau$, the duration box is also compact and convex, $L$ is continuous and convex in $\tau$, and it is affine in $\rho$. The minimax theorem interchanges min and max. Since $\max_{\rho\in B\operatorname{conv}(\mathcal P)}\rho^\top\tau=B M(\tau)$, the primal is recovered. Coordinatewise minimization gives $D(\rho)$ and the clipped square-root response. For any feasible $\rho$, weak duality gives $D(\rho)\le J^*$. At $\tau(\rho)$, $J(\tau(\rho))-D(\rho)=B M(\tau(\rho))-\rho^\top\tau(\rho)$. Combining the two inequalities yields the stated upper bound on primal suboptimality.
 \end{proof}
 
 Because $\nabla D(\rho) = \tau(\rho)$, a longest-path oracle on the DAG solves the linear subproblem in $\mathcal{O}(m+r)$ time. A conditional gradient (Frank--Wolfe) update $\rho \leftarrow (1-\alpha)\rho + \alpha B p$ with bisection line search guarantees dual-feasible monotonic ascent.
@@ -140,15 +159,16 @@ We extend operational guarantees to open quantum systems governed by the Lindbla
 \end{equation}
 Let $\Delta H(t)$ denote coherent Hamiltonian mismatch, $N = \int \sum_\mu \|L_\mu(t)\|_\infty^2 dt$, and $C = \int \|\Delta H(t)\|_\infty dt$.
 
-\begin{theorem}[Unital Operational Certificate]\label{th:noise}
-Suppose coherent Hamiltonian mismatch vanishes ($\Delta H(t) = 0$, so $C = 0$) and Lindblad jumps are $L_\mu(t) = \sqrt{r_\mu(t)}V_\mu(t)$ with $V_\mu^\dagger V_\mu = I$, corresponding to unital channels (e.g., pure dephasing with $Z$, bit-flip with $X$, and isotropic depolarizing noise). If $\Lambda = \int \sum_\mu r_\mu(t)\,dt \le R$, then for implemented channel $\mathcal{N}$ and ideal channel $\mathcal{U}$:
+For clarity, $F_{\mathrm{pur}}$ below denotes the infimum, over normalized input states with an arbitrary untouched reference, of the squared overlap between the ideal output purification and the implemented output state.
+\begin{theorem}[Unitary-jump operational bound]\label{th:noise}
+Suppose coherent Hamiltonian mismatch vanishes and $L_\mu(t)=\sqrt{r_\mu(t)}V_\mu(t)$ with $V_\mu^\dagger V_\mu=I$. If $\Lambda=\int\sum_\mu r_\mu(t)\,dt\le R$, then
 \begin{align}
-F_{\mathrm{pur}} &\ge e^{-R},\\
-\tfrac{1}{2}\|\mathcal{N} - \mathcal{U}\|_\diamond &\le 1 - e^{-R}.
+F_{\mathrm{pur}}&\ge e^{-R},\\
+\tfrac12\|\mathcal N-\mathcal U\|_\diamond&\le1-e^{-R}.
 \end{align}
 \end{theorem}
 \begin{proof}
-Since $\Delta H(t) = 0$, the no-jump effective Hamiltonian is $H_{\mathrm{eff}} = H - \mathrm{i}h(t)I/2$ with $h = \sum_\mu r_\mu$. Since $V_\mu^\dagger V_\mu = I$, the jump dissipation operator satisfies $\sum_\mu L_\mu^\dagger L_\mu = h(t)I$, so its propagator is $e^{-\Lambda/2}U$, irrespective of jump-control commutation. Normalization gives a CPTP channel $\mathcal{Q}$ with $\mathcal{N} = e^{-\Lambda}\mathcal{U} + (1 - e^{-\Lambda})\mathcal{Q}$. Positivity gives overlap at least $e^{-\Lambda}$. Monotonicity and trace-norm duality establish the bounds.
+For every time, $\sum_\mu L_\mu^\dagger L_\mu=h(t)I$ with $h(t)=\sum_\mu r_\mu(t)$. The no-jump propagator is therefore $K_0=e^{-\Lambda/2}U$, even when the unitary jumps do not commute with the control. The trajectory expansion is a sum of completely positive branches, and its no-jump branch is $e^{-\Lambda}\mathcal U$. As the complete map is trace preserving, the sum of all remaining branches is a completely positive map whose output trace is $(1-e^{-\Lambda})\operatorname{Tr}\rho$. After normalization it is a channel $\mathcal Q$ (the $\Lambda=0$ case is immediate). Thus $\mathcal N=e^{-\Lambda}\mathcal U+(1-e^{-\Lambda})\mathcal Q$. Tensoring with any reference preserves the decomposition. The output overlap with the ideal pure state is at least the weight of its ideal branch, proving $F_{\mathrm{pur}}\ge e^{-\Lambda}\ge e^{-R}$. Finally, $\|\mathcal Q-\mathcal U\|_\diamond\le2$ implies the distance bound.
 \end{proof}
 
 \begin{proposition}[General Markovian Operational Certificates]\label{prop:nonunitary}
@@ -159,7 +179,7 @@ F_{\mathrm{pur}} &\ge \max\left\{ (1 - N - C)_+, \left(1 - \tfrac{N}{2} - C\righ
 \end{align}
 \end{proposition}
 \begin{proof}
-Variation-of-constants writes $\mathcal{N} - \mathcal{U}$ as an integral of generator differences between CPTP propagators. In the interaction picture, $\dot K_0 = (-\mathrm{i}\widetilde{\Delta H} - \widetilde\Gamma/2)K_0$ with $\Gamma = \sum_\mu L_\mu^\dagger L_\mu \ge 0$. Since $\|K_0\|_\infty \le 1$, integration yields $\|K_0 - I\| \le C + N/2$. The overlap against any normalized purification is at least $(1 - C - N/2)_+$. Squaring gives the reduced-state floor.
+Let $\Gamma(t)=\sum_\mu L_\mu(t)^\dagger L_\mu(t)$ and move to the ideal interaction picture, including an arbitrary untouched reference. The dissipator superoperator has diamond norm at most $2\sum_\mu\|L_\mu(t)\|_\infty^2$; the coherent commutator has diamond norm at most $2\|\Delta H(t)\|_\infty$. Duhamel's formula between CPTP propagators therefore gives $\|\mathcal N-\mathcal U\|_\diamond/2\le N+C$, capped by one. For the second bound, the no-jump interaction-picture operator $K_0$ obeys $\dot K_0=(-i\widetilde{\Delta H}-\widetilde\Gamma/2)K_0$. Its propagator is contractive, and integration gives $\|K_0-I\|_\infty\le C+N/2$. On any normalized input purification $|\psi\rangle$, $|\langle\psi|K_0\otimes I|\psi\rangle|\ge(1-C-N/2)_+$. The no-jump contribution to the output overlap is the square of this amplitude, while all other Kraus contributions are nonnegative. The trace-distance bound independently yields an overlap of at least $(1-N-C)_+$ for a pure ideal output. Taking the better floor and the infimum over inputs proves the claim.
 \end{proof}
 
 Our physical spin model uses $K_i = \theta_i P_i/2$. Always-on memory jumps are $\sqrt{1/T_{1q}}\sigma^-_q$ and $\sqrt{1/(2T_{\phi q})}Z_q$, while gate-dependent drive jumps are $\sqrt{\eta_i}K_i/\tau_i$ and $\sqrt{\gamma_i}P_i$. While Theorem~\ref{th:noise} provides an exponential floor for unital jump generators, Proposition~\ref{prop:nonunitary} rigorously bounds general non-unital $T_1$ relaxation.
@@ -187,22 +207,22 @@ Consider a Clifford circuit with stabilizer generators $\{S_k\}_{k=1}^n$. Under 
 \begin{equation}
 h_{kj} = \frac{1}{|\mathcal{P}_j^*|} \sum_{P \in \mathcal{P}_j^*} [S_k(t_j) \text{ anticommutes with } P],
 \end{equation}
-where $|\mathcal{P}_j^*| = 4^{|\operatorname{supp}(j)|} - 1$. Consider continuous-time open quantum system dynamics where each gate $j$ is subjected to a continuous-time isotropic Pauli Markov generator:
+where $|\mathcal{P}_j^*| = 4^{|\operatorname{supp}(j)|} - 1$. In the declared model, an isotropic Pauli channel follows each ideal Clifford gate. Its formal semigroup generator is
 \begin{equation}\label{eq:isotropic_generator}
 \mathcal{L}_j(\rho) = \frac{\lambda_j(t)}{|\mathcal{P}_j^*|} \sum_{P \in \mathcal{P}_j^*} (P \rho P - \rho),
 \end{equation}
-distributing jump rates uniformly over all non-identity local Paulis $\mathcal{P}_j^*$. The quantity $\Lambda_j(\tau_j) = a_j/\tau_j + \gamma_j \tau_j$ represents the \textbf{integrated jump intensity} $\Lambda_j = \int_0^{\tau_j} \lambda_j(t) \, dt$, rather than an ordinary discrete gate error probability. In the Heisenberg picture, the adjoint generator acts on Pauli observable $S_k$ as $\mathcal{L}_j^\dagger(S_k) = \frac{\lambda_j(t)}{|\mathcal{P}_j^*|} \sum_{P \in \mathcal{P}_j^*} (P S_k P - S_k) = -2 \lambda_j(t) h_{kj} S_k$, yielding $\dot{S}_k = -2 \lambda_j(t) h_{kj} S_k$. Integrating over the gate execution interval yields the \emph{exact} scalar expectation formula:
+distributing jump rates uniformly over all non-identity local Paulis $\mathcal{P}_j^*$. The quantity $\Lambda_j(\tau_j) = a_j/\tau_j + \gamma_j \tau_j$ is the \textbf{integrated jump intensity} of an isotropic Pauli channel applied after the ideal gate, rather than an ordinary discrete gate-error probability. The semigroup parameter need not represent simultaneous evolution under the physical drive Hamiltonian. For noise acting during a gate, the same scalar formula requires a commuting or otherwise Pauli-covariant interaction-picture generator; it is not established for general driven dynamics. In the Heisenberg picture, the adjoint generator acts on Pauli observable $S_k$ as $\mathcal{L}_j^\dagger(S_k) = \frac{\lambda_j(t)}{|\mathcal{P}_j^*|} \sum_{P \in \mathcal{P}_j^*} (P S_k P - S_k) = -2 \lambda_j(t) h_{kj} S_k$, yielding $\dot{S}_k = -2 \lambda_j(t) h_{kj} S_k$. Composing these post-gate channels and ideal Clifford gates yields the \emph{exact within-model} scalar expectation formula:
 \begin{equation}\label{eq:observable_expectation}
 \langle S_k \rangle = \exp\left( -2 \sum_j h_{kj} \Lambda_j(\tau_j) \right).
 \end{equation}
-We emphasize that this exact exponential form strictly requires a continuous-time isotropic Pauli Markov process. For general anisotropic noise, Pauli twirling produces direction-dependent error rates $(p_X, p_Y, p_Z)$, which necessitate component-wise anticommutation decomposition rather than a single scalar intensity \cite{aigner}. Imposing the operational reliability constraint $\langle S_k \rangle \ge \tau_k^{\mathrm{target}}$ yields:
+This exponential form is exact for the specified post-gate isotropic Pauli channels. The intensity is a parameter of the channel; the model does not prove that actual driven-gate noise is Pauli, isotropic, or confined to the end of a gate. Anisotropic Pauli noise would require component-wise rates and anticommutation tracking. Imposing $\langle S_k \rangle \ge \tau_k^{\mathrm{target}}$ yields:
 \begin{equation}\label{eq:observable_constraint}
 \sum_j h_{kj} \left( \frac{a_j}{\tau_j} + \gamma_j \tau_j \right) \le -\frac{1}{2} \ln \tau_k^{\mathrm{target}} \equiv \beta_k.
 \end{equation}
 Because $h_{kj}, a_j, \gamma_j \ge 0$, \eqref{eq:observable_constraint} is an \textbf{exact posynomial constraint}!
 
 \subsection{Sub-Millisecond Analytic Infeasibility Filter}
-Before invoking any numerical solver, the gatewise unconstrained noise minimum is evaluated: $\tau_j^{\mathrm{unc}} = \operatorname{clip}( \sqrt{a_j/\gamma_j}, \ell_j, u_j )$ in $\mathcal{O}(m)$ time. Given the precomputed sensitivity matrix $H \in \mathbb{R}^{K \times m}$, evaluating the minimum achievable noise vector $\mu = H (a/\tau^{\mathrm{unc}} + \gamma\tau^{\mathrm{unc}})$ requires a sparse matrix-vector multiplication taking $\mathcal{O}(\operatorname{nnz}(H))$ operations (at most $\mathcal{O}(Km)$ across $K$ target observables). If $\max_k (\mu_k - \beta_k) > 0$, the operational target is certified physically infeasible in $\mathcal{O}(\operatorname{nnz}(H))$ time (with a median screening latency of $0.70$~ms across all configurations, $2.44$~ms at 128 qubits, and a recorded maximum of $5.57$~ms), completely preventing costly solver timeouts.
+Before invoking any numerical solver, the gatewise unconstrained noise minimum is evaluated: $\tau_j^{\mathrm{unc}} = \operatorname{clip}( \sqrt{a_j/\gamma_j}, \ell_j, u_j )$ in $\mathcal{O}(m)$ time. Given the precomputed sensitivity matrix $H \in \mathbb{R}^{K \times m}$, evaluating the minimum achievable noise vector $\mu = H (a/\tau^{\mathrm{unc}} + \gamma\tau^{\mathrm{unc}})$ requires a sparse matrix-vector multiplication taking $\mathcal{O}(\operatorname{nnz}(H))$ operations (at most $\mathcal{O}(Km)$ across $K$ target observables). If $\max_k (\mu_k - \beta_k) > 0$, the operational target is infeasible within the specified model in $\mathcal{O}(\operatorname{nnz}(H))$ time (with a median screening latency of $0.70$~ms across all configurations, $2.44$~ms at 128 qubits, and a recorded maximum of $5.57$~ms), avoiding a numerical solve for instances rejected by the filter.
 
 \subsection{Certified Log-Grid Geometric Quantization}
 Hardware pulse controllers enforce discrete timing increments. For a geometric ratio $q > 1$ (e.g., $q = 1.02$), available durations form a grid $d_j^{(m)} = \ell_j q^m \le u_j$. To guarantee that discrete quantization never violates the operational threshold, we solve the continuous posynomial program using an amplified exposure factor $\tilde{\gamma}_j = q \gamma_j$. Given continuous solution $\tau^*$, discrete allocations are obtained by upward rounding with upper-bound box clamping:
@@ -213,51 +233,164 @@ Because $d_j^* \in [\tau_j^*, q \tau_j^*]$, the inverse drive term satisfies $a_
 \begin{equation}
 \sum_j h_{kj} \left( \frac{a_j}{d_j^*} + \gamma_j d_j^* \right) \le \sum_j h_{kj} \left( \frac{a_j}{\tau_j^*} + \tilde{\gamma}_j \tau_j^* \right) \le \beta_k,
 \end{equation}
-guaranteeing that the quantized schedule satisfies the exact operational expectation $\langle S_k \rangle \ge \tau_k^{\mathrm{target}}$ by mathematical construction with zero violation.
+guaranteeing that the quantized schedule satisfies the exact operational expectation $\langle S_k \rangle \ge \tau_k^{\mathrm{target}}$ by mathematical construction when the strengthened constraints are solved with a verified numerical feasibility margin.
 
 \input{../docs/observable_tables.tex}
 
 \section{Experimental Results and Visualizations}
 
-\subsection{Scalable Evaluation with IBM Heron Calibrations}
-We evaluated the observable-constrained scheduling framework across 144 configurations calibrated against IBM's 133-qubit Heron processor parameters (\emph{ibm\_torino}). The study spans circuit sizes $n \in \{4, 8, 16, 32, 64, 128\}$ qubits, two topological families (native heavy-hex graph and scrambled layers), three drive noise ratios $\alpha \in \{0.2, 0.5, 0.8\}$, and operational targets $\tau^{\mathrm{target}} \in \{0.95, 0.99\}$.
+\subsection{Calibration-Snapshot Study and Feasibility}
+The saved \emph{ibm\_torino} snapshot supplies nominal gate lengths and average gate errors, not measured duration--error curves. We map each snapshot error to a total isotropic Pauli intensity at its nominal duration, then set the inverse-duration share by $\alpha\in\{0.2,0.5,0.8\}$; $\alpha$ is assumed, not fitted. The study includes 144 combinations of $4$--$128$ qubits, graph and scrambled circuit families, two seeds, the three assumed shares, and absolute minimum stabilizer-expectation targets $0.95$ and $0.99$. All calculations are local. The model omits idle relaxation, crosstalk, leakage, and duration-dependent calibration data.
 
-Table~\ref{tab:observables} presents the quantitative breakdown, separating feasible optimization solve times from $\mathcal{O}(\operatorname{nnz}(H))$ analytic screening times:
-\begin{itemize}
-\item \textbf{Feasible Optimization vs. Infeasibility Screening:} Feasible observable-constrained optimization solves in a median of $69.86$~ms across all 27 feasible instances (ranging from $11.8$~ms at 4Q to $624.4$~ms at 32Q). At 64 and 128 qubits, under the declared isotropic Pauli noise model (anchored to average gate errors and durations of \emph{ibm\_torino}, but omitting uncalibrated pulse Hamiltonians, idle decay, and crosstalk), all 48 deep configurations accumulate minimum noise hazards exceeding the stringent operational targets $\tau^{\mathrm{target}} \in \{0.95, 0.99\}$. Rather than asserting a physical limit of the physical processor under unmodelled idle relaxation, this infeasibility reflects the strict mathematical impossibility of meeting high fidelity targets under the assumed baseline error rates on deep circuits. Crucially, the analytic filter screens all 48 instances as infeasible in a median of $2.44$~ms at 128 qubits (and maximum $5.57$~ms across all 117 screening runs) without invoking numerical interior-point solvers. Figure~\ref{fig:runtime} illustrates the scaling curves.
-\item \textbf{Mathematical Rigor:} The formulation difference between logarithmic GP and direct convex optimization on feasible cases is bounded by $1.69 \times 10^{-9}$, confirming exact mathematical equivalence across scales.
-\item \textbf{Tight Duality Brackets:} For all feasible configurations, the mean relative duality gap is $1.28 \times 10^{-5}$ (maximum: $1.09 \times 10^{-4}$).
-\item \textbf{Latency Compression Across Baselines:} Figure~\ref{fig:makespan_fidelity}(a) demonstrates that continuous GP achieves up to $50\%$ makespan reduction (mean $46.65\%$) compared to the nominal calibrated base durations ($\tau_j^{\mathrm{base}}$), and up to $25.01\%$ reduction (mean $5.41\%$) compared to the stronger optimal uniform-duration baseline. Figure~\ref{fig:makespan_fidelity}(b) confirms that $100\%$ of geometric rounded schedules strictly meet target expectations with zero violation by construction.
-\end{itemize}
+Table~\ref{tab:observables} separates 27 feasible solves from 117 analytically rejected targets. In this strict-target protocol, every 64- and 128-qubit instance is rejected before optimization. Thus those rows demonstrate pre-filter operation, not large-scale solver performance. The feasible subset ends at 32 qubits and has median GP solve time $69.86$~ms. The $0.95/0.99$ targets should not be interpreted as achievable hardware specifications for the deeper workloads. Numerical GP and direct convex formulations agree on feasible cases within the recorded tolerance, while the path-flow gap bounds apply to the continuous declared model. The up-to-50\% reduction against nominal durations partly follows from the imposed lower box $\ell_i=0.5\tau_i^{\mathrm{base}}$; the stronger comparison is the optimal feasible uniform-duration policy.
 
 \begin{figure}[t]
 \centering\includegraphics[width=0.92\columnwidth]{../figures/observable_runtime_scaling.pdf}
-\caption{Optimization latency vs. analytic screening latency on IBM Heron (133Q \emph{ibm\_torino}). Feasible constrained optimization solves in median 69.9 ms (up to 32 qubits), while $\mathcal{O}(\operatorname{nnz}(H))$ analytic screening certifies infeasible targets up to 128 qubits in median 2.44 ms (maximum 5.57 ms).}\label{fig:runtime}
+\caption{Local solver times under a saved Heron calibration snapshot. The original absolute-target protocol has feasible solves only through 32 qubits; its 64- and 128-qubit timings measure analytic rejection, not optimization.}\label{fig:runtime}
 \end{figure}
 
 \begin{figure}[t]
 \centering\includegraphics[width=\columnwidth]{../figures/observable_makespan_fidelity.pdf}
-\caption{Comparative performance on IBM Heron: (a) Latency compression showing makespan reduction across nominal calibrated base durations ($\tau_j^{\mathrm{base}}$) and the optimal uniform-duration baseline. (b) Certified preservation of operational expectation targets $\langle S_k \rangle \ge \tau$ after discrete log-grid rounding ($q=1.02$).}\label{fig:makespan_fidelity}
+\caption{Modeled performance using a saved Heron snapshot: (a) Latency compression showing makespan reduction across nominal calibrated base durations ($\tau_j^{\mathrm{base}}$) and the optimal uniform-duration baseline. (b) Certified preservation of operational expectation targets $\langle S_k \rangle \ge \tau$ after discrete log-grid rounding ($q=1.02$).}\label{fig:makespan_fidelity}
 \end{figure}
 
-\subsection{Physical Lindblad Channel Benchmark (Past vs. Now)}
-\input{../docs/physical_tables.tex}
-To benchmark our framework against established prior art, Table~\ref{tab:physical} and Figure~\ref{fig:gains} report characterized finite selection against an adapted implementation of the published slack scheduler of Lussi et al. \cite{lussi} across 144 configurations and 1,296 simulated channels on our common characterized library.
+\subsection{Feasible Solves Through 128 Qubits}
+To measure solver behavior at larger sizes, we ran a separate, model-attainable protocol on 24 configurations at 32, 64, and 128 qubits (two families, two seeds, and assumed $\alpha\in\{0.5,0.8\}$). For each instance, let $e_\ell$ be the minimum generator expectation at the lower-duration vector and $e_{\min}$ the minimum expectation at the coordinatewise minimum-hazard vector. We set the target to $\sqrt{e_\ell e_{\min}}$ and require $e_\ell<\sqrt{e_\ell e_{\min}}<e_{\min}$. This deliberately selects a nontrivial feasible target using the same model; it is a solver stress test, not external noise validation. We compare with the earliest \emph{optimal uniform scaling} that satisfies that identical target. Targets vary by instance, so absolute fidelity levels are not comparable across sizes.
 
-In balanced and high drive regimes, unconstrained optimization achieves significant process fidelity improvements ($+3.97$~pp and $+15.34$~pp), accompanied by latency increases ($+32.6\%$ and $+217\%$). However, our matched-deadline study isolates duration allocation from makespan: when constrained strictly to the fastest critical-path latency, fidelity gains range from $-0.009$ to $+0.026$~pp. This demonstrates the fundamental physical Pareto frontier between circuit makespan and control strength, confirming that critical-path latency dominates the overall error budget.
+All 24 GP and direct-convex solves were feasible and their makespans agreed to a maximum relative difference below $3\times10^{-7}$. Table~\ref{tab:feasible_scale} reports descriptive medians of single-run wall time and modeled makespan reduction. The 128-qubit cases include up to 830 timed gates; their median observed solve time is 6.41~s. These runs address the earlier missing feasible large-scale solve, but do not establish linear scaling or physical speedup. The additional grid-rounding margin was not imposed in this study; a tightened margin may itself be infeasible or numerically difficult even when the original target is feasible.
+
+\input{../docs/feasible_scale_table.tex}
+\begin{figure}[t]
+\centering\includegraphics[width=\columnwidth]{../figures/feasible_scale.pdf}
+\caption{Model-attainable 32--128-qubit continuous solves. Each point is one local solve; the right panel compares with an optimal uniform policy under the same instance-specific target. Neither panel measures device execution.}\label{fig:feasible_scale}
+\end{figure}
+
+\subsection{Small-Channel Simulation and Matched Deadlines}
+\input{../docs/physical_tables.tex}
+Table~\ref{tab:physical} and Figure~\ref{fig:gains} compare finite pulse-library policies on the same simulated channels. The Lussi et al. scheduler is our adaptation of the published heuristic, not an independently supplied implementation. Unconstrained modeled process-fidelity changes in the balanced and high-drive settings are $+3.97$ and $+15.34$ percentage points, with corresponding latency increases of $32.6\%$ and $217\%$. Under the fastest matched deadline, gains are small (reported group averages range from $-0.009$ to $+0.026$ percentage points), and some individual low-drive cases regress. The model and comparison therefore do not support a general fidelity advantage at fixed latency. The additional Qiskit scheduler studies below test both fixed-duration policies and idealized variable-duration GP policies in a common local evaluator.
 
 \begin{figure}[t]
 \centering\includegraphics[width=0.88\columnwidth]{../figures/physical_gains.pdf}
-\caption{Paired process-fidelity changes against adapted published slack scheduling \cite{lussi} on the same simulated library, demonstrating significant fidelity gains in balanced and high drive regimes.}\label{fig:gains}
+\caption{Paired process-fidelity changes against adapted published slack scheduling \cite{lussi} on the same simulated library, showing modeled fidelity and latency trade-offs; the matched-deadline result is reported in the text.}\label{fig:gains}
 \end{figure}
 
 \begin{figure}[t]
 \centering\includegraphics[width=0.88\columnwidth]{../figures/physical_certificates.pdf}
-\caption{General-jump certificate coverage. All simulated fidelities lie strictly above the analytical theoretical fidelity floors, verifying mathematical bound validity.}\label{fig:cert}
+\caption{General-jump certificate coverage. All simulated fidelities lie strictly above the analytical theoretical fidelity floors, checking implementation consistency with the assumed Lindblad model; this is not external physical validation.}\label{fig:cert}
 \end{figure}
 
+\subsection{Measured Error Versus Gate Duration}
+We tested the assumed inverse-plus-linear law on a publicly deposited experimental single-qubit randomized-benchmarking (RB) duration sweep by Hyypp\"a \emph{et al.}~\cite{hyyppa_data}. Its Figure~3a archive provides measured mean error per gate, one-standard-deviation uncertainties, and durations for four calibrated pulse families. For each family, durations were sorted and alternating points allocated to fitting and held-out evaluation (54 points overall; 25 held out). Nonnegative weighted least squares fitted $e(t)=A/t+Gt$ on the fit points using inverse reported variance. Table~\ref{tab:measured_duration} and Figure~\ref{fig:measured_duration} report the held-out results. The law beats a constant-error predictor in mean absolute error for each family, but squared residuals measured in reported standard deviations are large. Thus its qualitative trade-off can describe these measurements while its two-parameter form does not adequately explain their reported uncertainty. Pulse-family-specific calibration and time-varying coherence are documented with the source data. These are external single-qubit measurements on a different platform, not a calibration or hardware validation of our three-qubit scheduler or IBM snapshot model.
+
+\begin{table}[t]
+\centering\caption{Held-out measured RB error per gate, by pulse family. MSR is mean squared residual divided by reported variance; smaller is better.}\label{tab:measured_duration}
+\begin{tabular}{lccc}\hline
+Pulse family & Fit MAE & Constant MAE & MSR\\\hline
+FAST DRAG-L & $2.65\!\times\!10^{-5}$ & $3.47\!\times\!10^{-5}$ & 22.7\\
+HD DRAG-L & $7.76\!\times\!10^{-5}$ & $9.26\!\times\!10^{-5}$ & 40.6\\
+Cosine DRAG-L & $1.71\!\times\!10^{-4}$ & $1.84\!\times\!10^{-4}$ & 49.2\\
+Cosine DRAG-P & $3.71\!\times\!10^{-4}$ & $4.17\!\times\!10^{-4}$ & 82.5\\\hline
+\end{tabular}
+\end{table}
+
+An exploratory model comparison then considered $e_2(t)=A/t^2+Gt$, motivated by the observed short-duration residuals. For each pulse family, we refitted nonnegative coefficients while leaving out one duration at a time. Table~\ref{tab:law_comparison} shows lower mean absolute prediction error for $e_2$ than for $e_1(t)=A/t+Gt$ in all four families. However, the root mean squared residual divided by reported uncertainty remains well above one, and the inverse-square candidate was selected after inspecting the earlier holdout data. When fitted to the alternating training points, both laws selected the same minimum-predicted-error duration among held-out choices in every family. The predictive improvement therefore has no demonstrated decision benefit in this small dataset. These results generate a model hypothesis; they are not an independent confirmation or evidence of better circuit outcomes. Proposition~\ref{prop:power} shows that testing a declared positive inverse power does not forfeit the continuous convex/GP structure.
+\input{../docs/law_comparison_table.tex}
+
+\paragraph{Measured finite-library decision audit.}
+To test whether lower prediction error improves an actual choice, we fitted each law on the marked training durations and required it to select from the \emph{same withheld measured duration options} within each pulse family. We also evaluated shape-preserving piecewise-cubic interpolation (PCHIP) as an exploratory empirical alternative. Table~\ref{tab:choice_audit} reports regret relative to the lowest reported RB error among withheld options. The two GP-compatible laws selected the same option in all four families. PCHIP selected the lowest observed option in three families and missed by $4.97\times10^{-6}$ error per gate in HD DRAG-L; the inverse-power laws selected the lowest option in HD DRAG-L but incurred larger regret in FAST DRAG-L and Cosine DRAG-P. Thus a better \emph{measured} duration choice is possible on this retrospective library, but it comes from an empirical finite-library predictor, not the proposed inverse-power GP law.
+
+The reported one-sigma measurement error bars do not cover model discrepancy. PCHIP's held-out root mean squared residual divided by the source sigma remains 1.92--6.82 across the four families. We estimated an additional per-family RMS discrepancy from leave-one-out predictions on \emph{interior training points only}; the resulting diagnostic $1.96\sqrt{\sigma^2+\tau^2}$ bands cover all withheld points in three families and five of six in Cosine DRAG-L. These are descriptive bands, not calibrated confidence or prediction intervals: there are few durations, adjacent errors may be correlated, and the empirical predictor was examined after the earlier law results. The test therefore does not establish prospective or target-device performance. A finite-library optimizer can use measured pulse options and conservative error inputs, but its discrete choice is outside the continuous GP optimality theorem.
+
+\input{../docs/measured_choice_table.tex}
+
+\begin{figure*}[t]
+\centering\includegraphics[width=0.78\textwidth]{../figures/measured_duration.pdf}
+\caption{Published experimental single-qubit RB gate error versus duration for four pulse families \cite{hyyppa_data}. Circles fit the nonnegative inverse-plus-linear law; squares are held out. Error bars show source-reported one-standard-deviation uncertainties.}\label{fig:measured_duration}
+\end{figure*}
+
+\subsection{Calibration Pairs and Idle-Noise Scheduling Stress Test}
+We extracted 566 reported gate-error/duration pairs for \texttt{sx}, \texttt{x}, and \texttt{cz} from the saved \emph{ibm\_torino} fake-backend calibration file. These are cross-sectional entries across gates and locations, sometimes with different parameter timestamps; they are not repeated measurements of one gate under controlled duration changes. Figure~\ref{fig:schedule_noise}(a) displays the pairs descriptively. Fitting $a/t+\gamma t$ to this scatter would confound qubit, gate type, and calibration state, so no duration-response coefficients were inferred. A separate published two-qubit duration-sweep archive was identified \cite{andersen_data}, but its file service returned a storage-maintenance error at the time of this analysis; no values from it enter the results.
+
+For a three-qubit native Clifford circuit, Qiskit's \texttt{ASAPScheduleAnalysis} and \texttt{ALAPScheduleAnalysis} were each followed by \texttt{PadDelay} or \texttt{PadDynamicalDecoupling} with two $X$ pulses. All four schedules have the same 168-ns makespan and ideal output state. We independently propagated the density matrix under gate-local anisotropic Pauli errors, idle amplitude damping and dephasing, and, in one scenario, a Gaussian shot-static $Z$ detuning acting during idles. Seven-node Gauss--Hermite quadrature per qubit integrated the static detuning. The gate error probabilities and detuning variance are declared stress-test assumptions, not fitted hardware parameters. Table~\ref{tab:schedule_noise} gives ideal-state fidelities. Under Markovian $Z$-biased noise, DD adds faulty gates and lowers the ASAP fidelity; under shot-static detuning, ASAP+DD refocuses the long idle and improves it. ALAP's different idle placement also changes fidelity. These effects show that idle and noise anisotropy matter and that no scheduler dominates across the assumed noise regimes.
+
+\begin{table}[t]
+\centering\caption{Matched 168-ns Qiskit scheduling baselines; simulated ideal-state fidelity (no hardware jobs).}\label{tab:schedule_noise}
+\begin{tabular}{lccc}\hline
+Policy & Isotropic & $Z$-biased & Static $Z$ + biased\\\hline
+ASAP & 0.996804 & 0.995908 & 0.696027\\
+ALAP & 0.997087 & 0.996191 & 0.882678\\
+ASAP+DD & 0.996215 & 0.994426 & 0.994426\\
+ALAP+DD & 0.996281 & 0.995982 & 0.882493\\\hline
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering\includegraphics[width=0.88\textwidth]{../figures/schedule_noise.pdf}
+\caption{Left: cross-sectional reported calibration pairs from a cached fake-backend file, not a controlled duration sweep. Right: matched-makespan local density-matrix simulation under three declared noise scenarios.}\label{fig:schedule_noise}
+\end{figure*}
+
+\subsection{Direct Equal-Deadline Comparison with Qiskit Scheduling}
+We next optimized the durations of the same five-gate, three-qubit circuit with the declared inverse-power law, using $p=1$ or $p=2$, a drive-error share $\alpha=0.8$, duration bounds $[0.5,1.5]$ times each nominal duration, and a 168-ns critical-path deadline. Nominal durations and errors came from the saved \emph{ibm\_torino} snapshot; the duration dependence and $\alpha$ are \emph{assumed}, not calibrated. Each GP vector was placed ASAP or ALAP and padded to the common deadline. We compared it directly with Qiskit's ASAP/ALAP passes with either delay padding or two-$X$ DD padding. All eight policies preserve the logical operation and meet 168~ns; the DD variants add two $X$ gates. The GP variants require hypothetical alternate-duration native pulses, whereas Qiskit schedules the snapshot's fixed nominal gates. They therefore share the circuit, deadline, and evaluator, but not an experimentally available action set.
+
+The evaluation independently propagates a density matrix through the explicit timed gate and delay list. A nominal gate error anchors each hypothetical gate-error curve $e(t)=e_0[\alpha(t_0/t)^p+(1-\alpha)t/t_0]$; a deliberately misspecified flat-error case tests sensitivity. Per-qubit Pauli errors are isotropic or $Z$ biased; idle periods have $T_1=200\,\mu$s and $T_\phi=250\,\mu$s, with optional shot-static Gaussian $Z$ detuning of standard deviation $0.02$~rad/ns. The static ensemble uses seven-node Gauss--Hermite quadrature per qubit. Coherent detuning and relaxation act during explicit delays only, and the model excludes driven-gate decoherence, crosstalk, leakage, and pulse-shape constraints. These are declared local simulation assumptions, not target-device predictions.
+
+Table~\ref{tab:direct_matched} reports deterministic simulated ideal-state fidelity. Under the aligned $p=1$ Markovian model, GP-$p=1$ ALAP reaches 0.993483 versus Qiskit ALAP's 0.993162, a small absolute gain. Under the $p=2$ $Z$-biased Markovian model, GP-$p=2$ ALAP reaches 0.994553 versus 0.994203. The flat-error case leaves only a tiny idle-placement difference. Under shot-static detuning, Qiskit ASAP+DD reaches 0.993448 while the best GP-only schedule reaches 0.938164. Seven- versus nine-node quadrature differs by at most $1.3\times10^{-12}$ in these two leading static-noise policies. This rank reversal is a counterexample to general superiority of duration allocation without DD under an omitted idle process. The p=1 and p=2 GP vectors differ in this assumed model; it does not repair the unchanged held-out duration decisions in the published measurement sweep.
+
+\begin{table*}[t]
+\centering\caption{Direct local comparison at a common 168-ns deadline: simulated ideal-state fidelity under declared hypothetical duration laws and noise models. No hardware jobs or measured duration-response curves.}\label{tab:direct_matched}
+\begin{tabular}{lcccc}\hline
+Policy & $p=1$, isotropic & $p=2$, $Z$ biased & Flat, $Z$ biased & $p=1$, static $Z$\\\hline
+GP $p=1$ ASAP & 0.993289 & 0.994205 & 0.994041 & 0.821760\\
+GP $p=1$ ALAP & 0.993483 & 0.994399 & 0.994235 & 0.932671\\
+GP $p=2$ ASAP & 0.993278 & 0.994357 & 0.994044 & 0.814316\\
+GP $p=2$ ALAP & 0.993474 & 0.994553 & 0.994239 & 0.938164\\
+Qiskit ASAP & 0.992880 & 0.993920 & 0.993920 & 0.694797\\
+Qiskit ALAP & 0.993162 & 0.994203 & 0.994203 & 0.881003\\
+Qiskit ASAP+DD & 0.992584 & 0.993448 & 0.993448 & 0.993448\\
+Qiskit ALAP+DD & 0.992650 & 0.994042 & 0.994042 & 0.880861\\\hline
+\end{tabular}
+\end{table*}
+
+\begin{figure*}[t]
+\centering\includegraphics[width=0.95\textwidth]{../figures/direct_matched.pdf}
+\caption{Simulated infidelity ($1-F$; logarithmic axis) for the eight policies in Table~\ref{tab:direct_matched}. The horizontal positions are categorical. The static-detuning case exposes a large rank reversal favoring DD.}\label{fig:direct_matched}
+\end{figure*}
+
+\subsection{Exploratory Heron Idle-Noise Pilot}
+We executed a small, separate timing pilot on \texttt{ibm\_marrakesh} through the free Open instance (job \texttt{db4ll9o4qg6s73c2buj0}). Four one-qubit circuits on physical qubit 0 were interleaved in two shuffled blocks, with 2,048 shots per circuit. Each prepared and measured an $X$-basis state with two logical Hadamards. The three Ramsey circuits inserted a 1, 20, or 80~$\mu$s idle delay; the fourth inserted two 40~$\mu$s delays separated by $X$, followed by a second $X$ before the final Hadamard, preserving the ideal operation. Qiskit transpilation at optimization level zero retained all requested delays. The backend calibration snapshot immediately preceding the job reported $T_1=298.5~\mu$s and $T_2=40.4~\mu$s for that qubit. These are device-reported calibration values, not fitted parameters for our GP law.
+
+Table~\ref{tab:hardware_idle} gives the raw outcome fractions. Both blocks showed a higher zero frequency with the echo sequence than with the 80-$\mu$s Ramsey sequence; the blockwise differences were 0.1021 and 0.1201. This is exploratory evidence that idle dynamics and control placement matter on the target architecture. It is not a matched gate-count comparison, does not isolate a decay constant from coherent detuning and readout effects, and does not test a GP-selected gate duration. Shot-level exact-binomial intervals and the full counts are archived with the executable protocol; they exclude calibration drift. The job consumed 7~s of the free QPU allowance.
+
+\begin{table}[t]
+\centering\caption{Exploratory \emph{ibm\_marrakesh} idle-noise pilot on physical qubit 0: two blocks per condition, 2,048 shots per block. $P(0)$ is an observed frequency, not circuit fidelity.}\label{tab:hardware_idle}
+\begin{tabular}{lcc}\hline
+Circuit & Zero counts/shots & $P(0)$\\\hline
+Ramsey, 1~$\mu$s & 4025/4096 & 0.9827\\
+Ramsey, 20~$\mu$s & 2655/4096 & 0.6482\\
+Ramsey, 80~$\mu$s & 1947/4096 & 0.4753\\
+Echo, 80~$\mu$s & 2402/4096 & 0.5864\\\hline
+\end{tabular}
+\end{table}
+
+\subsection{Prespecified Heron Native-Gate Model Check}
+We next tested one narrower prerequisite for the duration study: whether the declared independent post-gate isotropic Pauli model, anchored to the backend's reported nominal gate errors and independent readout assignment errors, predicts outcomes for fixed native gates. Before submission, we saved a calibration snapshot and the predicted distributions for four small Clifford circuit families, compiled to physical qubits 0--2 on \texttt{ibm\_marrakesh}. Three shuffled blocks each contained one instance of every family, with 2,048 shots per instance (job \texttt{db4nov04qg6s73c2e8d0}). The prespecified events were return to \texttt{0}, Bell parity \texttt{00}/\texttt{11}, Bell return to \texttt{00}, and GHZ parity \texttt{000}/\texttt{111}. The prediction uses only nominal-duration gate errors, so it is independent of the unmeasured inverse-duration coefficient split.
+
+\begin{table}[t]
+\centering\caption{Prespecified nominal native-gate model check on \emph{ibm\_marrakesh}; each family has three blocks of 2,048 shots. Residual is observed minus pre-job predicted event probability. The two-percentage-point tolerance was descriptive, not a hypothesis test.}\label{tab:hardware_model}
+\begin{tabular}{lccc}\hline
+Family & Successes/6144 & Predicted & Residual\\\hline
+Single return & 6119 & 0.9685 & +0.0274\\
+Bell parity & 6065 & 0.9619 & +0.0253\\
+Bell return & 6000 & 0.9512 & +0.0254\\
+GHZ parity & 5984 & 0.9201 & +0.0538\\\hline
+\end{tabular}
+\end{table}
+
+All four discrepancies exceed the prespecified absolute tolerance of 0.02; the model underpredicts the observed success frequencies. The pre-job snapshot's qubit-0 probability of reporting 1 after preparing 0 was 0.03027, while the return circuit produced only 25 ones in 6,144 shots. This suggests a calibration-to-run mismatch or another unmodeled effect, but the experiment cannot distinguish calibration drift, readout treatment, and gate-noise misspecification. Shot-only Wilson intervals and blockwise frequencies are supplied with the raw counts and exact ISA circuits; neither accounts for calibration uncertainty. This result challenges quantitative transfer of the nominal model to this QPU. It does not test a GP duration choice or establish a hardware improvement.
+
 \subsection{Multi-Scale Statistical Verification}
-Independent numerical audits confirm analytical model consistency across scales:
+The following audits test implementation consistency against the declared model, rather than independent physical validity:
+For twelve deterministic fixed-DAG instances with three, five, or eight gates, inverse powers one or two, and optional deadlines, we additionally bounded each computed GP objective with a supporting-hyperplane linear program solved independently by HiGHS. The maximum relative upper--lower gap was $1.10\times10^{-5}$. This bounds numerical suboptimality for the specified convex objective in these small instances; it cannot validate its empirical gate-error coefficients or establish a hardware gain.
 \begin{enumerate}
 \item \textbf{Dense Master Equations ($n=4$):} Comparison between analytical observable predictions and dense $16 \times 16$ density-matrix Lindblad simulation yielded a maximum deviation of $2.99 \times 10^{-15}$, confirming exact numerical agreement to machine precision.
 \item \textbf{Forward Pauli-Frame Monte Carlo ($16{,}384$ shots):} Figure~\ref{fig:monte_carlo} displays forward Monte Carlo sampling deviations up to 32 qubits, verifying that empirical errors ($\le 0.0043$) remain strictly inside simultaneous Hoeffding confidence bounds ($\epsilon \approx 0.033\text{--}0.037$ at $\alpha = 0.001$).
@@ -268,71 +401,19 @@ Independent numerical audits confirm analytical model consistency across scales:
 \caption{Forward Pauli-frame Monte Carlo sampling validation ($16{,}384$ shots) across multi-qubit circuits. Empirical observable errors remain well below the simultaneous Hoeffding tolerance bounds ($\epsilon$ at 99.9\% confidence).}\label{fig:monte_carlo}
 \end{figure}
 
-\subsection{Comparative Accuracy and Proof of Concept Across Optimization Techniques}
-To prove the concept and demonstrate the tangible accuracy and performance differences between our Geometric Programming approach and alternative optimization paradigms, Table~\ref{tab:optimization_comparison} provides an empirical and theoretical cross-method benchmark across eight distinct formulations and baselines:
-
-\begin{table*}[t]
-\centering
-\caption{Cross-Method Optimization Benchmark: Accuracy, Latency, and Theoretical Certification. Contrasting solution fidelity, makespan compression, relative formulation difference $|\Delta_{\mathrm{form}}|$, certified duality gaps, and execution latency across distinct optimization paradigms against our continuous Geometric Programming (GP) solution.}\label{tab:optimization_comparison}
-\footnotesize
-\setlength{\tabcolsep}{3pt}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.11\textwidth}>{\raggedright\arraybackslash}p{0.12\textwidth}>{\raggedright\arraybackslash}p{0.08\textwidth}}
-\toprule
-\textbf{Optimization Paradigm} & \textbf{Mathematical Formulation} & \textbf{Objective \& Constraint Scope} & \textbf{Accuracy vs.\ Continuous GP} & \textbf{Makespan Gain} & \textbf{Certifiability} & \textbf{Solve Latency} \\
-\midrule
-\textbf{Continuous GP (Ours)} & Posynomial Convex Cone & $\min M(\tau)$ s.t. $\langle S_k \rangle \ge \tau_k, \; \ell \le \tau \le u$ & Reference global optimum & Baseline ($1.00\times$) & Duality Gap $\le 1.09 \times 10^{-4}$ & $69.9$~ms (median feas.) \\
-\textbf{Direct Convex Optimization} & Ordinary Convex Program & Convex power formulation in natural $\tau$ & $|\Delta_{\mathrm{form}}| \le 1.69 \times 10^{-9}$ (identical) & $0.00\%$ difference & Numerical KKT residual & $0.77$~ms (median all) \\
-\textbf{Path-Flow Dual (Frank--Wolfe)} & Network Dual on DAG Polytope & $\max_{\rho} D(w^*, \rho)$ via longest-path oracle & Dual lower bound $D \le M_{\mathrm{cont}}^*/\bar{M}$ & N/A (dual bound) & Mean gap: $1.28 \times 10^{-5}$ & $\mathcal{O}(m+r)$ per iter \\
-\textbf{Optimal Uniform Duration} & 1D Scalar Convex Minimizer & Common scalar duration: $\tau_i = c \tau_i^{\mathrm{base}}$ & Suboptimal on asymmetric DAGs & GP reduces by up to $25.01\%$ & Root bracket certificate & $< 0.1$~ms \\
-\textbf{Nominal Base Calibrations} & Static Duration Box & Unoptimized hardware lengths ($\tau^{\mathrm{base}}$) & Static uncompressed baseline & GP reduces by up to $50.00\%$ & None & $0$~ms \\
-\textbf{Heuristic Slack Sizing \cite{lussi}} & Critical-Path Discrete Slack & Heuristic assignment along DAG slack & Suboptimal vs joint convex GP & GP $+3.97$ to $+15.34$ pp fidelity & None & Compilation pass \\
-\textbf{Characterized MILP} & Mixed-Integer Linear Program & Discrete Choi error under Watrous SDP & Discrete global combinatorial optimum & Bound transfer from GP & Transfer gap: $0.418$ (mean) & Branch-and-bound \\
-\textbf{Analytic Pre-Filter (Ours)} & Closed-Form Sparse Product & Minimum hazard check: $\mu \le \beta$ & Exact algebraic infeasibility & Bypasses solver timeouts & Physical lower bound & $0.70$~ms (max $5.57$~ms) \\
-\bottomrule
-\end{tabular*}
-\end{table*}
-
-\begin{enumerate}
-\item \textbf{Mathematical Equivalence to Direct Convex Optimization:}
-Comparing continuous logarithmic GP against direct convex optimization in natural duration variables $\tau_j$ confirms that both formulations yield identical physical schedules to machine precision:
-\begin{equation}
-|\Delta_{\mathrm{form}}| = \frac{|M_{\mathrm{GP}} - M_{\mathrm{CVX}}|}{M_{\mathrm{GP}}} \le 1.69 \times 10^{-9},
-\end{equation}
-with an empirical sample mean of $1.35 \times 10^{-9}$. This proves the fundamental concept that global tractability arises from the intrinsic mathematical convexity of quantum duration allocation under drive and decoherence tradeoffs, establishing that GP is not an empirical heuristic but an exact convex formulation.
-
-\item \textbf{Global Optimality Certification via Path-Flow Dual:}
-While standard conic interior-point solvers output numerical primal solutions, our path-flow dual algorithm computes an independent mathematical lower bound $D(w^*, \rho^*)$ via an $\mathcal{O}(m+r)$ DAG oracle. Across all 27 feasible multi-qubit benchmarks, the relative duality gap satisfies:
-\begin{equation}
-\epsilon_{\mathrm{gap}} = \frac{M_{\mathrm{cont}}^*/\bar{M} - D(w^*, \rho^*)}{M_{\mathrm{cont}}^*/\bar{M}} \le 1.09 \times 10^{-4},
-\end{equation}
-with an empirical sample mean of $1.28 \times 10^{-5}$. This certifies that the GP continuous solution is within $0.01\%$ of the globally optimal infimum, providing an inspectable audit trail required for safety-critical quantum compilation.
-
-\item \textbf{Overcoming Suboptimality of Uniform Duration Scaling:}
-A standard engineering heuristic scales all gate durations uniformly by a single scalar factor $\tau_j = c \tau_j^{\mathrm{base}}$. On symmetric circuits, optimal uniform scaling achieves within $5.41\%$ of the GP makespan. However, on realistic asymmetric hardware topologies (such as IBM Heron's heavy-hex coupling graph), continuous GP achieves up to a \textbf{$25.01\%$ latency reduction} over the optimal uniform policy. Because GP independently optimizes each gate coordinate, it compresses critical-path gates while simultaneously expanding off-critical spectator gates to reduce drive power, an advantage unattainable by scalar tuning.
-
-\item \textbf{Outperforming Heuristic Slack Scheduling:}
-Compared to the published slack scheduling heuristic of Lussi et al.\ \cite{lussi}, our continuous formulation achieves substantial fidelity advantages in drive-dominated regimes ($+3.97$~pp in balanced drive, $+15.34$~pp in high drive). Furthermore, our matched-deadline experiment isolates the latency-fidelity trade-off, proving that when circuit makespan is strictly constrained, gains saturate ($-0.009$ to $+0.026$~pp), confirming that critical-path decoherence dominates the error budget.
-
-\item \textbf{Continuous-to-Discrete Certificate Transfer:}
-For discrete hardware pulse libraries, solving the characterized MILP yields discrete schedules. Proposition~\ref{prop:transfer} proves that the continuous GP dual bound transfer inequality $J_{\mathrm{char}}^* \ge \max(0, D_{\mathrm{GP}} + \sum_i \min_k e_{ik})$ holds nonvacuously across all 144 configurations with a mean transfer gap of $0.418$, rigorously proving that continuous GP lower-bounds discrete physical pulse implementations.
-
-\item \textbf{Early Infeasibility Screening vs.\ Solver Timeouts:}
-On 117 of the 144 configurations, operational targets exceed the physical noise budget. While general-purpose interior-point solvers require tens of seconds to declare numerical infeasibility, our $\mathcal{O}(\operatorname{nnz}(H))$ analytic filter certifies infeasibility algebraically in a median of $0.70$~ms (maximum $5.57$~ms), demonstrating a $100\times$--$1{,}000\times$ speedup for compiler pre-screening.
-
-\item \textbf{Resource and Time Parsimony with Superior Optimization Power:}
-Compared to prevailing machine-learning compilers (e.g., reinforcement-learning agents requiring days of multi-GPU training and gigabytes of rollout buffers) and stochastic metaheuristics (e.g., genetic algorithms and simulated annealing requiring minutes per circuit with zero convergence guarantees), our convex GP framework requires drastically \emph{fewer computational resources} (under $15$~MB RAM on a single standard CPU core, zero training datasets), orders of magnitude \emph{less time} ($69.9$~ms median solve latency; $0.70$~ms analytic pre-screening), while delivering substantially \emph{more optimization power} (guaranteed global infimum with inspectable duality gap $\le 1.09 \times 10^{-4}$, strict 100\% hard target satisfaction, and up to $50\%$ makespan compression).
-\end{enumerate}
+\subsection{Interpretation of the Comparative Evidence}
+The GP and ordinary convex formulations solve the same mathematical relaxation; their numerical agreement is a software and formulation check, not independent evidence that the physical model is accurate. The path-flow dual bracket bounds the optimum only for the declared fixed-DAG objective. The discrete-library transfer gap is sufficiently wide that it should not be read as a tight device-level performance certificate. Comparisons against the adapted slack heuristic are informative about modeled trade-offs, but unequal makespans confound unconstrained fidelity rankings. Accordingly, we treat matched-deadline results as the primary comparison and retain regressions. The 24 new feasible large-circuit instances establish that the continuous solver, rather than only its pre-filter, can run at 128 qubits under attainable modeled targets. They do not resolve coefficient identification, idle noise, or hardware control feasibility.
 
 \section{Discussion and Compiler Integration}
 
 \subsection{End-to-End Compiler Pass Architecture}
 We packaged the optimization engine as a native Qiskit compilation pass (\texttt{ConvexDurationAllocationPass}), subclassing \texttt{AnalysisPass}. The pass operates directly on the transpiler's \texttt{DAGCircuit} representation through a streamlined pipeline:
 \begin{enumerate}
-\item \textbf{DAG Extraction:} Extracts the directed acyclic dependency graph $\mathcal{D}$, identifying causal scheduling precedence between successive gates on overlapping qubit supports while maintaining commutativity relationships.
-\item \textbf{Analytic Infeasibility Pre-Screening:} In $\mathcal{O}(\operatorname{nnz}(H))$ time, computes unconstrained gatewise noise minima $\tau_j^* = \operatorname{clip}(\sqrt{a_j/\gamma_j}, \ell_j, u_j)$ and evaluates $\max_k (\mu_k - \beta_k) \le 0$ with precomputed sensitivity matrix $H$. If violated, it raises an informative diagnostic without invoking numerical solvers.
-\item \textbf{Convex Duration Allocation:} Formulates the posynomial program with safety exposure $q\gamma_j$ and invokes Clarabel/CVXPY, yielding optimal continuous durations $\tau^*$ in median $69.86$~ms on feasible circuits.
-\item \textbf{Log-Grid Quantization:} Maps continuous allocations $\tau^*$ to discrete hardware pulse durations via upward ceiling quantization with box clamping $d_j^* = \min(u_j, \ell_j q^{\lceil \log_q (\tau_j^* / \ell_j) \rceil})$, guaranteeing zero target violation by construction.
-\item \textbf{Property Set Annotation:} Annotates the pass manager's \texttt{property\_set} with optimal durations, certified makespan, and optimality certificates for downstream schedulers and pulse synthesis passes.
+\item \textbf{DAG Extraction:} Extracts the directed acyclic dependency graph $\mathcal{D}$, identifying causal scheduling precedence between successive gates on overlapping qubit supports without changing the gate order.
+\item \textbf{Analytic Infeasibility Pre-Screening:} In $\mathcal{O}(\operatorname{nnz}(H))$ time, computes unconstrained gatewise noise minima $\tau_j^* = \operatorname{clip}(\sqrt{a_j/\gamma_j}, \ell_j, u_j)$ and evaluates $\max_k (\mu_k - \beta_k) \le 0$ with precomputed sensitivity matrix $H$. If violated, it records an analytic infeasibility diagnostic without invoking the numerical solver.
+\item \textbf{Convex Duration Allocation:} Formulates the posynomial program with safety exposure $q\gamma_j$ and invokes Clarabel/CVXPY, yielding a numerical continuous-duration solution on feasible instances.
+\item \textbf{Log-Grid Quantization:} Maps continuous allocations $\tau^*$ to an abstract geometric pulse library via upward ceiling quantization with box clamping $d_j^* = \min(u_j, \ell_j q^{\lceil \log_q (\tau_j^* / \ell_j) \rceil})$, with a conditional within-model feasibility bound.
+\item \textbf{Property Set Annotation:} Annotates the pass manager's \texttt{property\_set} with duration vectors, modeled makespan, and any computed dual gap; the prototype does not synthesize executable pulses.
 \end{enumerate}
 
 \subsection{Algorithmic Routine and Constrained Dual Certification}
@@ -352,7 +433,7 @@ Subsequent discrete log-grid rounding yields discrete makespan $M_{\mathrm{disc}
 \textbf{Algorithm 1:} Observable-Constrained Gate Duration Allocation\\[-0.5em]
 \rule{0.96\columnwidth}{0.4pt}\\[0.2em]
 \textbf{Input:} Circuit DAG $\mathcal{D}=(V, E)$, duration bounds $[\ell_j, u_j]$, noise rates $a_j, \gamma_j$, sensitivity matrix $H = (h_{kj}) \in \mathbb{R}^{K \times m}$, target observable fidelities $\tau_k^{\mathrm{target}}$, grid ratio $q > 1$, baseline makespan $\bar{M}$.\\
-\textbf{Output:} Certified discrete schedule $d^* \in \mathbb{R}^m$, discrete makespan $M_{\mathrm{disc}}^*$, continuous relaxation makespan $M_{\mathrm{cont}}^*$, relative optimality gap certificate $\epsilon_{\mathrm{gap}}$, or Infeasible diagnostic.
+\textbf{Output:} Model-feasible discrete schedule $d^* \in \mathbb{R}^m$, discrete makespan $M_{\mathrm{disc}}^*$, continuous relaxation makespan $M_{\mathrm{cont}}^*$, relative optimality gap certificate $\epsilon_{\mathrm{gap}}$, or Infeasible diagnostic.
 \begin{enumerate}
 \itemsep 0.08em
 \item Set $\beta_k \gets -\frac{1}{2} \ln \tau_k^{\mathrm{target}}$ for each target observable $k \in \{1, \dots, K\}$.
@@ -370,130 +451,41 @@ $\mu \gets H(a/\tau^{\mathrm{unc}} + \gamma\tau^{\mathrm{unc}})$ and $\mu^{\math
 & \ell_j \le \tau_j \le u_j, \quad \forall j.
 \end{aligned}
 \end{equation*}
-\item Solve via Clarabel/CVXPY ($\epsilon_{\mathrm{tol}} = 10^{-4}$). \textbf{if} solver status is infeasible \textbf{then} \textbf{return} Infeasible (no schedule satisfies precedence and bounds under safety margin $q$).
+\item Solve via Clarabel/CVXPY and check the returned primal constraint residual; reject a numerical result that exceeds the implemented feasibility tolerance. \textbf{if} solver status is infeasible \textbf{then} \textbf{return} Infeasible (no schedule satisfies precedence and bounds under safety margin $q$).
 \item Retrieve continuous optimum $\tau^*$ and dual multipliers $w^* \ge 0$.
 \item Compute continuous makespan $M_{\mathrm{cont}}^* \gets \operatorname{LongestPath}(\mathcal{D}, \tau^*)$.
 \item Compute dual lower bound $D(w^*, \rho^*)$ via \eqref{eq:constrained_dual} and evaluate continuous gap:
 \[ \epsilon_{\mathrm{gap}} \gets \frac{M_{\mathrm{cont}}^*/\bar{M} - D(w^*, \rho^*)}{M_{\mathrm{cont}}^*/\bar{M}}. \]
 \item For each gate $j$, round upward with upper-bound box clamping:
 \[ d_j^* \gets \min\left(u_j, \, \ell_j q^{\lceil \log_q (\tau_j^* / \ell_j) \rceil}\right). \]
-\item Compute certified discrete makespan $M_{\mathrm{disc}}^* \gets \operatorname{LongestPath}(\mathcal{D}, d^*)$.
+\item Compute model-based discrete makespan $M_{\mathrm{disc}}^* \gets \operatorname{LongestPath}(\mathcal{D}, d^*)$.
 \item \textbf{return} $d^*$, $M_{\mathrm{disc}}^*$, $M_{\mathrm{cont}}^*$, and primal--dual gap certificate $\epsilon_{\mathrm{gap}}$.
 \end{enumerate}
 }%
 }
 \vspace{0.4em}
 
-\subsection{Hardware Realities and Abstract Pulse Library Discretization}
-On physical superconducting quantum processors (such as IBM Heron), pulse timing is constrained by uniform hardware clock cycles (sample interval $dt \approx 0.5$~ns) and multi-sample pulse duration granularities (e.g., 16-sample / 8~ns align boundaries in Qiskit pulse builders). We emphasize that the geometric log-grid $d_j^{(m)} = \ell_j q^m$ studied here constitutes an \emph{abstract library} of pre-characterized discrete pulses. It provides an analytical multiplicative ratio guarantee ($d_j \in [\tau_j^*, q\tau_j^*]$) that bounds worst-case decoherence growth while compressing drive errors.
+\subsection{Scope, Missing Baselines, and Physical Validation}
+The geometric grid is an abstract library; it is not a measured set of alternate pulses on \emph{ibm\_torino}. A clock-aligned controller may require different rounding and an experimentally characterized noise response. The Qiskit implementation is an analysis pass that attaches duration results to a property set; it does not upload pulses or execute a modified schedule on hardware. The direct comparison uses Qiskit's published ASAP/ALAP and DD passes \cite{qiskit_sched}; it holds circuit and deadline fixed, but GP has hypothetical continuous-duration actions unavailable to those passes. Its rank reversal under static detuning limits rather than establishes a superiority claim.
 
-However, a geometric grid does not automatically satisfy a physical processor's integer-clock sample increments ($\Delta t_{\mathrm{sample}} = 16\,dt$). For direct physical AWG deployment, durations must be snapped to integer multiples of the hardware sample clock. While such uniform quantization requires an affine, duration-dependent safety margin $\tilde{\gamma}_j = \gamma_j (1 + \Delta t_{\mathrm{sample}}/\ell_j)$ rather than a uniform geometric factor $q$, the underlying mathematical principle remains identical: continuous GP acts as a convex relaxation, and conservative exposure amplification guarantees that subsequent discrete quantization preserves operational targets with zero physical violation.
+The largest source of uncertainty for the target device is the unmeasured split between inverse-duration and duration-proportional hazards. The snapshot determines one nominal point per gate, so multiple duration-error curves interpolate it equally well. Varying $\alpha$ probes this model uncertainty but cannot estimate $\alpha$. The external measured single-qubit sweep shows that the assumed law can miss uncertainty-scale structure even where duration is varied experimentally; its coefficients cannot be transferred to IBM CZ gates. The new Heron pilot varies \emph{idle} duration, not driven-gate duration; it cannot identify this split either. The fixed-native-gate QPU check additionally fails the prespecified nominal-model tolerance in every family. Its discrepancy cannot be assigned uniquely to the gate channel because reported readout assignment probabilities also differ from the observed return behavior. An inverse-square candidate improves exploratory prediction error while preserving convexity, but remains inconsistent with reported measurement uncertainty and has no independent confirmation. The retrospective PCHIP decision audit improves choices in two families relative to the GP laws, but its larger-than-reported residuals and post hoc selection rule out a prospective accuracy claim. The GP proof for the evaluated circuit study still assumes isotropic post-gate Pauli noise and excludes schedule-dependent idle processes. The separate simulator probes anisotropic errors, idle $T_1/T_\phi$, and shot-static detuning during delays, but does not establish convexity for those additions. It omits detuning during driven gates, coherent crosstalk, leakage, and pulse-shape dependence. Dense Lindblad and Monte Carlo agreement only establish that separate implementations evaluate their shared assumed model consistently.
 
-Beyond superconducting circuits, the mathematical formulation is platform-agnostic. In neutral-atom systems, single-qubit addressing and multi-qubit Rydberg-blockade interactions trade off laser drive power against spontaneous emission decay, adhering to the identical inverse-plus-linear exposure structure \cite{saffman}. In trapped-ion architectures, ion shuttling latency and motional heating scale with transit duration, rendering our framework directly applicable to scalable spatial routing schedules \cite{monz}.
+The appropriate next experiment measures error against duration for a controllable gate family on the intended target device, fits coefficients on training measurements, and tests fidelity predictions on held-out durations and circuits. The observed residuals also motivate richer or robust uncertainty-aware error models before physical deployment. The local GP-versus-ASAP/ALAP/DD comparison closes the software-comparison gap only for a declared simulator; a matched comparison on an experimentally characterized discrete pulse library, including a pulse-level optimizer, remains necessary. Report measured fidelity, uncertainty, and schedule length, including failures and regressions. Until such data exist, the contribution is a reproducible convex timing method with conditional mathematical bounds, not a demonstrated improvement on a physical quantum processor.
 
-\subsection{Multi-Objective Pareto Navigation: Makespan vs.\ Control Effort}
-In practical quantum control, latency compression must be balanced against aggregate microwave drive power. High microwave amplitudes induce non-adiabatic leakage into non-computational states and thermal heating of cryostat dilution stages. Our continuous Geometric Program naturally accommodates multi-objective Pareto exploration:
-\begin{equation}\label{eq:pareto_objective}
-\min_{\tau, f, M} \quad \alpha \frac{M(\tau)}{\bar{M}} + (1-\alpha) \sum_{j=1}^m \frac{a_j}{\tau_j E_0},
-\end{equation}
-subject to the operational observable constraints \eqref{eq:observable_constraint}, DAG precedence $f_i + \tau_j \le f_j$, and bounds $\ell_j \le \tau_j \le u_j$, where $E_0 = \sum_j a_j/\ell_j$ normalizes control effort.
-
-Because both makespan and drive energy are posynomials, sweeping the Pareto weight $\alpha \in [0.4, 1.0]$ generates the globally optimal trade-off frontier. Empirical evaluation across our multi-objective benchmark suite (20 Pareto points in the research package) reveals:
-\begin{itemize}
-\item When $\alpha = 1.0$ (pure latency minimization), the solver compresses makespan by up to $50.0\%$ (e.g., from $156.6$~ns to $64.4$~ns on 3-qubit line topologies), operating gates near their upper drive limits (aggregate effort $119.3$).
-\item When $\alpha = 0.4$ and control effort is prioritized, the optimizer decelerates off-critical spectator gates while retaining necessary critical-path speed, reducing aggregate drive effort from $76.3$ to $25.8$ (a $66.2\%$ drive power suppression) at the cost of only $3.1\%$ makespan expansion.
-\end{itemize}
-This establishes continuous GP as a principled multi-objective tool for thermal-aware and leakage-aware quantum scheduling.
-
-\subsection{Production Transpiler Protocol and Dynamic Calibration Ingestion}
-For production quantum compilers (such as the Qiskit Transpiler), our framework operates through a standardized operational workflow:
-\begin{enumerate}
-\item \textbf{Dynamic Calibration Ingestion:} The compiler pass dynamically queries daily backend calibration snapshots (\texttt{backend.properties()}), ingesting live $T_1$, $T_2$, and gate error rates $\epsilon_g$ to update the physical rate parameters $a_j = \frac{1}{2}\epsilon_g \ell_j$ and $\gamma_j = 1/T_1 + 1/T_2$.
-\item \textbf{Heuristic Weight Configuration:} For processors with low coherence ratios ($T_2/t_{\mathrm{avg}} \le 200$), the pass automatically sets $\alpha = 0.8$ to prioritize makespan compression. For high-coherence platforms ($T_2/t_{\mathrm{avg}} \ge 1{,}000$, such as trapped ions), $\alpha = 0.3$ is selected to minimize drive power and gate leakage.
-\item \textbf{Pass Manager Staging:} The pass is staged immediately following routing and topological SWAP insertion, annotating continuous gate durations and discrete pulse identifiers directly into the pass manager's \texttt{property\_set} for downstream pulse schedulers.
-\end{enumerate}
-
-\section{Critical Assessment: Novelty, Comparative Scope, and Failure Modes}
-A rigorous evaluation of quantum compilation methods requires establishing the boundary between theoretical guarantees, comparative advantages over prior art, and physical execution limits across four methodological axes:
-
-\subsection{Step 1: Precise New Contribution Beyond Prior Formulations}
-Convex cost-time optimization on DAGs via network-flow duality and geometric programming is established in operations research \cite{kelley,fulkerson,ahuja} and classical CMOS transistor sizing \cite{boyddigital}. Employing convex programming or GP alone is therefore not our fundamental advance. Instead, the precise new knowledge established in this work comprises:
-\begin{enumerate}
-\item \textbf{Exact Posynomial Equivalence of Stabilizer Constraints:} We prove that under a continuous-time isotropic Pauli Markov generator \eqref{eq:isotropic_generator}, Heisenberg operator evolution converts multi-qubit operational fidelity bounds $\langle S_k \rangle \ge \tau_k^{\mathrm{target}}$ into the exact posynomial constraint \eqref{eq:observable_constraint} with zero approximation error.
-\item \textbf{Provably Safe Discrete Quantization:} By solving the continuous program under exposure amplification $\tilde{\gamma}_j = q\gamma_j$, subsequent ceiling rounding $d_j^* = \min(u_j, \ell_j q^{\lceil \log_q (\tau_j^*/\ell_j) \rceil})$ guarantees zero operational target violation by mathematical construction.
-\item \textbf{Sub-Millisecond $\mathcal{O}(\operatorname{nnz}(H))$ Physical Screening:} Precomputing unconstrained gatewise noise minima enables exact certification of physically unachievable targets across hundreds of gates in median $0.70$~ms ($2.44$~ms at 128Q, maximum $5.57$~ms), completely preventing interior-point solver timeouts.
-\end{enumerate}
-
-\subsection{Step 2: Comparative Capabilities against Closest Prior Art}
-We contrast our framework against the primary competing paradigms:
-\begin{itemize}
-\item \textbf{Slack-Based Quantum Scheduling \cite{lussi}:} Lussi et al.\ assign faster pulse implementations to critical paths and robust pulses to off-critical slack using heuristic discrete pulse libraries. However, their framework lacks continuous convex duration optimization, provides no dual optimality certificates, and cannot enforce multi-qubit Pauli observable constraints $\langle S_k \rangle \ge \tau_k$.
-\item \textbf{Analytical Stabilizer Simulation \cite{aigner}:} Aigner et al.\ recently introduced exact analytical expectation techniques for noisy stabilizer circuits. Their method serves as a fast \emph{forward simulation and evaluation} tool for fixed circuits. In contrast, our framework solves the \emph{inverse compiler optimization problem}, allocating gate durations to minimize circuit makespan subject to certified expectation bounds.
-\item \textbf{Ordinary Convex Formulation vs.\ Logarithmic GP:} We prove that solving the problem in natural variables $\tau$ is an ordinary convex program achieving identical solutions to logarithmic GP ($|\Delta_{\mathrm{form}}| < 1.69 \times 10^{-9}$). This demonstrates that tractability stems from fundamental problem convexity rather than logarithmic variable substitution alone.
-\end{itemize}
-
-\subsection{Step 3: Empirical Impact, Satiation, and Failure Modes}
-Empirical evidence from our 144-configuration IBM Heron study and 1,296 physical Lindblad channels reveals three distinct performance regimes:
-\begin{enumerate}
-\item \textbf{Regime of Substantial Impact:} On circuits with heterogeneous DAG topologies (e.g., heavy-hex layouts with parallel spectator gates), continuous GP compresses makespan by up to $25.01\%$ over optimal uniform duration scaling, and up to $50.0\%$ over nominal calibrated durations ($\tau_j^{\mathrm{base}}$). In unconstrained drive regimes, duration optimization yields $+3.97$~pp and $+15.34$~pp fidelity gains over baseline slack allocation.
-\item \textbf{Regime of Satiation (Zero Gain):} In our matched-deadline study, where schedules are constrained to the fastest critical-path latency, fidelity gains range from $-0.009$ to $+0.026$~pp (essentially zero). This establishes a critical physical reality: \emph{critical-path latency dominates the environmental decoherence budget}. When drive power is already balanced, gatewise duration tailoring cannot overcome the fundamental decay accumulated along the critical path. Furthermore, for uniform circuits, optimal uniform scaling achieves within $5.41\%$ makespan of the continuous optimum on average (median $0.0\%$).
-\item \textbf{Regime of Infeasibility (Failure Mode):} At 64 and 128 qubits, $0$ of $48$ deep configurations can physically satisfy the stringent targets $\tau \in \{0.95, 0.99\}$ under baseline noise accumulation. Here, the contribution is the $\mathcal{O}(\operatorname{nnz}(H))$ analytic pre-filter, which screens all $48$ instances as infeasible in under $5.57$~ms, bypassing solver timeouts.
-\end{enumerate}
-
-\subsection{Step 4: Mathematical Guarantees vs.\ Physical Device Boundaries}
-To ensure rigorous interpretation, we delineate mathematical proofs from physical hardware realities:
-\begin{itemize}
-\item \textbf{Guaranteed within the Mathematical Model:} Global convexity, uniqueness of $\tau^*$ under positive weights, exactness of the posynomial observable constraint under continuous-time isotropic Pauli noise, and zero target violation after log-grid rounding are mathematically proven.
-\item \textbf{Hardware Reality and Limitations:} Real quantum processors exhibit crosstalk, coherent spectator dephasing, and leakage. Furthermore, current IBM transmon processors do not support continuous gate duration allocation in runtime pulse control. While our framework directly applies to continuously tunable architectures (such as neutral-atom Rydberg optical pulses and trapped-ion shuttling), transmon deployment requires snapping to uniform AWG clock cycles ($\Delta t_{\mathrm{sample}} = 16\,dt$) using duration-dependent affine safety margins $\tilde{\gamma}_j = \gamma_j(1 + \Delta t_{\mathrm{sample}}/\ell_j)$.
-\end{itemize}
-
-\subsection{Step 5: Co-Design Extensions: Error Mitigation, Variational Circuits, and Cross-Platform Architectures}
-Beyond static circuit timing, the mathematical structure of continuous duration allocation enables three powerful co-design avenues:
-\begin{enumerate}
-\item \textbf{Continuous Zero-Noise Extrapolation (ZNE):}
-Quantum error mitigation via ZNE requires scaling circuit noise by known factors $\lambda \in \{1.0, 1.5, 2.0\}$ to extrapolate to the zero-noise limit $\lambda \to 0$. Standard methods either stretch pulse shapes (which distorts Hamiltonian dynamics) or insert redundant unitary gate pairs ($CX-CX$), altering the circuit depth and exacerbating crosstalk. Because our framework models gate noise as an exact continuous function $\Lambda_j(\tau_j) = a_j/\tau_j + \gamma_j\tau_j$, compiler passes can compute duration vectors $\tau^{(\lambda)}$ that scale aggregate noise exposure $\sum_j \Lambda_j$ by exact mathematical factors $\lambda$ along the certified Pareto frontier, providing a continuous, unitary-preserving physical knob for ZNE without adding artificial gates.
-
-\item \textbf{Bi-Level Variational Circuit Co-Design (VQE / QAOA):}
-In variational quantum algorithms, parameterized rotation gates $R_Z(\theta)$ and $R_{XX}(\theta)$ adjust their angles $\theta$ at every classical optimization iteration. For small angles $|\theta| \ll 1$, the required drive area is substantially smaller, scaling control noise as $a_j(\theta) \propto \theta^2$. Coupling our GP pass into the classical optimizer loop allows gate duration bounds $[\ell_j(\theta), u_j(\theta)]$ to adapt dynamically per iteration, accelerating VQE convergence as parameter angles shrink near the ground state.
-
-\item \textbf{Cross-Platform Portability (Neutral Atoms and Trapped Ions):}
-While demonstrated with superconducting transmons, our formulation is fundamentally hardware-agnostic. In neutral-atom arrays (e.g., Rydberg optical tweezer systems \cite{saffman}), single-qubit addressing and multi-qubit entangling pulses continuously trade off laser intensity against spontaneous atomic decay, with additional spatial shuttling delays governed by DAG path constraints. In trapped-ion architectures \cite{monz}, motional heating scales with transit duration. By updating $(a_j, \gamma_j)$ and bounds $[\ell_j, u_j]$, the identical convex engine optimizes timing closure across diverse physical quantum computing modalities.
-\end{enumerate}
-
-\balance
-\section{Conclusion and Breakthrough Synthesis}
-We have presented an exact, certified quantum circuit scheduling framework based on geometric programming, convex duality, and symplectic Clifford tracking. Navigating the fundamental physical trade-off between control drive power ($a_j/\tau_j$) and environmental decoherence ($\gamma_j\tau_j$) on directed dependency DAGs, this work resolves long-standing computational and physical bottlenecks in quantum compilation.
-
-\subsection{Summary of the Technique}
-The framework connects open-system quantum physics to polynomial-time convex optimization through three foundational mechanisms:
-\begin{enumerate}
-\item \textbf{Exact Convex Equivalence:} Continuous gate duration allocation is an exact posynomial Geometric Program (GP) and ordinary convex program with a uniquely determined global minimum under positive weights ($|\Delta_{\mathrm{form}}| \le 1.69 \times 10^{-9}$).
-\item \textbf{Posynomial Reduction of Stabilizer Dynamics:} Under continuous-time isotropic Pauli Markov noise, Heisenberg adjoint evolution converts multi-qubit stabilizer generator expectations $\langle S_k \rangle \ge \tau_k^{\mathrm{target}}$ into exact posynomial constraints with zero approximation error, bypassing the exponential $4^N \times 4^N$ superoperator simulation wall.
-\item \textbf{Safe Discrete Hardware Realization:} Solving the continuous program under decoherence exposure amplification ($\tilde{\gamma}_j = q\gamma_j$) followed by geometric ceiling quantization ($q=1.02$) guarantees 100\% target fidelity satisfaction on discrete hardware controllers with zero violations by construction.
-\end{enumerate}
-
-\subsection{Resource Parsimony and Computational Efficiency}
-Compared to prevailing machine-learning compilers (e.g., reinforcement-learning agents requiring days of multi-GPU training and gigabytes of rollout buffers) and stochastic metaheuristics (such as genetic algorithms and simulated annealing requiring minutes of uncertified search), our convex framework delivers:
-\begin{itemize}
-\item \textbf{Drastically Fewer Resources:} Operates in under $15$~MB of RAM on a single commodity CPU core for up to 128 qubits, requiring zero offline training datasets and zero GPU cluster infrastructure.
-\item \textbf{Orders of Magnitude Less Time:} Solves multi-qubit continuous convex schedules in a median of $69.9$~ms on feasible circuits. Furthermore, our $\mathcal{O}(\operatorname{nnz}(H))$ closed-form analytic pre-filter certifies unachievable operational targets in median $0.70$~ms ($2.44$~ms at 128 qubits; maximum $5.57$~ms overall), providing a $100\times$--$1{,}000\times$ speedup over interior-point solver stalls.
-\item \textbf{Superior Optimization Power and Certifiability:} Guarantees convergence to the exact global infimum accompanied by an inspectable Frank--Wolfe path-flow dual certificate ($\epsilon_{\mathrm{gap}} \le 1.09 \times 10^{-4}$). In unconstrained drive regimes, the framework yields up to $50.0\%$ makespan reduction over nominal calibrations and $+15.34$~pp fidelity improvements over baseline slack heuristics.
-\end{itemize}
-
-\subsection{Architectural Significance}
-By establishing an analytical bridge between continuous convex optimization, nonunitary Lindblad certificates, and discrete hardware execution, this work demonstrates that quantum gate timing is an intrinsically convex, globally certifiable physical discipline. The resulting framework provides a rigorous, highly scalable mathematical foundation for timing closure in next-generation quantum compiler pipelines.
+\section{Conclusion}
+For a fixed circuit DAG and declared inverse-plus-linear noise model, gate-duration allocation has an exact convex representation and an inspectable path-flow lower bound. The same convex structure accommodates a declared positive inverse-power model. Under post-gate isotropic Pauli noise on Clifford circuits, stabilizer-expectation targets produce convex constraints and conditional safe rounding for the evaluated law. The model-attainable study shows feasible continuous solves through 128 qubits, while the original strict-target study mainly demonstrates fast analytic rejection. Experimental duration sweeps reveal sizeable departures from the evaluated two-parameter law; an exploratory inverse-square variant reduces prediction error but does not explain reported uncertainty. A retrospective empirical finite-library predictor improves selected measured durations in two pulse families without validating the GP error law. The direct local GP-versus-Qiskit comparison shows only small modeled Markovian gains and a substantial regression against DD under shot-static detuning. The Heron pilot observes idle-time dependence and an echo response, and a separate prespecified native-gate test finds nominal-model residuals outside tolerance in all four families. Neither implements the proposed duration policy. Target-device \emph{gate}-duration sweeps, matched pulse libraries, and pulse-control access remain necessary for a physical performance claim.
 
 \section*{Statements and Declarations}
 \noindent\textbf{Funding.} No funds, grants, or other support were received for this study.\par
 \noindent\textbf{Competing interests.} The author declares no relevant financial or non-financial competing interests.\par
 \noindent\textbf{Data and code availability.} The calibration snapshot, raw and processed benchmark results, analysis scripts, and source code supporting this study are supplied in the accompanying supplementary archive (Online Resource 1).\par
 
-\begin{thebibliography}{18}
+\begin{thebibliography}{17}
 \bibitem{kelley} J. E. Kelley, ``Critical-path planning and scheduling: Mathematical basis,'' \emph{Operations Research}, vol. 9, no. 3, pp. 296--320, 1961.
 \bibitem{fulkerson} D. R. Fulkerson, ``A network flow computation for project cost curves,'' \emph{Management Science}, vol. 7, no. 2, pp. 167--178, 1961.
 \bibitem{boydgp} S. Boyd, S.-J. Kim, L. Vandenberghe, and A. Hassibi, ``A tutorial on geometric programming,'' \emph{Optimization and Engineering}, vol. 8, no. 1, pp. 67--127, 2007.
 \bibitem{boyddigital} S. Boyd, S.-J. Kim, D. Patil, and M. Horowitz, ``Digital circuit optimization via geometric programming,'' \emph{Operations Research}, vol. 53, no. 6, pp. 899--932, 2005.
-\bibitem{lussi} E. W. Lussi, R. de Santiago, and E. I. Duzzioni, ``Time-optimization framework for the implementation of robust low-latency quantum circuits,'' \emph{Physical Review Applied}, vol. 23, Art. no. 044036, 2025.
+\bibitem{lussi} E. W. Lussi, R. de Santiago, and E. I. Duzzioni, ``Time-optimization framework for the implementation of robust low-latency quantum circuits,'' \emph{Physical Review Applied}, vol. 23, Art. no. 044036, 2025, doi: 10.1103/PhysRevApplied.23.044036.
 \bibitem{ahuja} R. K. Ahuja, D. S. Hochbaum, and J. B. Orlin, ``Solving the convex cost integer dual network flow problem,'' \emph{Management Science}, vol. 49, no. 7, pp. 950--964, 2003.
 \bibitem{dalibard} J. Dalibard, Y. Castin, and K. M\o lmer, ``Wave-function approach to dissipative processes in quantum optics,'' \emph{Physical Review Letters}, vol. 68, pp. 580--583, 1992.
 \bibitem{jaggi} M. Jaggi, ``Revisiting Frank-Wolfe: Projection-free sparse convex optimization,'' in \emph{Proceedings of Machine Learning Research}, vol. 28, no. 1, pp. 427--435, 2013.
@@ -503,9 +495,10 @@ By establishing an analytical bridge between continuous convex optimization, non
 \bibitem{murali_noise} P. Murali, J. M. Baker, A. Javadi-Abhari, F. T. Chong, and M. Martonosi, ``Noise-adaptive compiler mappings for noisy intermediate-scale quantum computers,'' in \emph{Proc. ASPLOS}, pp. 1015--1029, 2019.
 \bibitem{murali_crosstalk} P. Murali, D. C. McKay, M. Martonosi, and A. Javadi-Abhari, ``Software mitigation of crosstalk on noisy intermediate-scale quantum computers,'' in \emph{Proc. ASPLOS}, pp. 1001--1016, 2020.
 \bibitem{earnest} N. Earnest et al., ``Pulse-efficient circuit transpilation for quantum applications on cross-resonance-based architectures,'' \emph{PRX Quantum}, vol. 2, Art. no. 020306, 2021.
-\bibitem{vandenberg} E. van den Berg, Z. K. Minev, A. Kandala, and K. Temme, ``Model-free readout-error mitigation for quantum computers,'' \emph{Nature Physics}, vol. 19, pp. 1116--1121, 2023.
+\bibitem{vandenberg} E. van den Berg, Z. K. Minev, A. Kandala, and K. Temme, ``Probabilistic error cancellation with sparse Pauli--Lindblad models on noisy quantum processors,'' \emph{Nature Physics}, vol. 19, pp. 1116--1121, 2023, doi: 10.1038/s41567-023-02042-2.
 \bibitem{aigner} P. Aigner, J. Matti, M. F. Mor-Ruiz, J. Walln\"ofer, and W. D\"ur, ``Analytical and compressed simulation of noisy stabilizer circuits,'' \emph{arXiv preprint arXiv:2604.22588}, 2026.
-\bibitem{saffman} M. Saffman, T. G. Walker, and K. M\o lmer, ``Quantum information with Rydberg atoms,'' \emph{Reviews of Modern Physics}, vol. 82, no. 3, pp. 2313--2363, 2010.
-\bibitem{monz} T. Monz et al., ``14-qubit entanglement: Creation and coherence,'' \emph{Physical Review Letters}, vol. 106, Art. no. 130506, 2011.
+\bibitem{qiskit_sched} IBM Quantum, ``Create a pass manager for dynamical decoupling,'' \emph{IBM Quantum Documentation}. [Online]. Available: \url{https://docs.quantum.ibm.com/guides/dynamical-decoupling-pass-manager}. Accessed: Oct. 9, 2026.
+\bibitem{andersen_data} S. Singh \emph{et al.}, ``Data for the publication Fast microwave-driven two-qubit gates between fluxonium qubits with a transmon coupler,'' 4TU.ResearchData, 2025, doi: 10.4121/cec2d36b-c31b-4c70-a66f-65d3ef7bd514.v1.
+\bibitem{hyyppa_data} E. Hyypp\"a \emph{et al.}, ``Data for Reducing leakage of single-qubit gates for superconducting quantum processors using analytical control pulse envelopes,'' Zenodo, 2024, doi: 10.5281/zenodo.13808824.
 \end{thebibliography}
 \end{document}

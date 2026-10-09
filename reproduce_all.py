@@ -20,6 +20,8 @@ def main() -> None:
     run("examples/quick_reproduce_pass.py")
     run("benchmarks/verify_evidence.py")
     run("benchmarks/analyze_observables.py")
+    run("benchmarks/analyze_feasible_scale.py")
+    run("benchmarks/compare_duration_laws.py")
     run("benchmarks/plot_observable_figures.py")
     run("benchmarks/analyze_physical.py")
     print("Local checks and analyses completed.")

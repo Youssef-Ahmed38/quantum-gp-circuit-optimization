@@ -1,0 +1,344 @@
+{
+  "all_free_local": true,
+  "hardware_jobs": 0,
+  "qiskit_version": "2.5.2",
+  "snapshot_backend": "ibm_torino",
+  "snapshot_updated": "2025-02-26T15:26:08-05:00",
+  "assumed_drive_fraction": 0.8,
+  "deadline_ns": 168.0,
+  "assumption": "Nominal cached gate errors anchor hypothetical duration curves; variable-duration gates are not characterized pulses",
+  "evaluator": "Dense density matrix with per-qubit Pauli gate noise and idle T1/Tphi; seven-node Gauss-Hermite for shot-static Z detuning",
+  "note": "GP uses extra continuous-duration freedom; Qiskit passes schedule nominal fixed-duration gates. All policies share circuit and deadline, not identical hardware action sets.",
+  "nominal_gate_durations_ns": [
+    32.0,
+    68.0,
+    32.0,
+    68.0,
+    32.0
+  ],
+  "nominal_gate_errors": [
+    0.00034183180551021047,
+    0.004854875406855308,
+    0.0003799998665381897,
+    0.0041936877971640585,
+    0.00034183180551021047
+  ],
+  "optimization": {
+    "GP p=1": {
+      "durations": [
+        16.612722041749176,
+        77.60515118168692,
+        47.99999984409641,
+        73.78212668982796,
+        47.999999789028784
+      ],
+      "makespan": 167.99999991326405,
+      "objective": 0.009677351989289498,
+      "status": "optimal",
+      "inverse_power": 1.0
+    },
+    "GP p=2": {
+      "durations": [
+        19.897337471860684,
+        75.56619589275705,
+        47.999999940666804,
+        72.53646662896972,
+        47.999999914142194
+      ],
+      "makespan": 167.99999999358744,
+      "objective": 0.009290403320459925,
+      "status": "optimal",
+      "inverse_power": 2.0
+    }
+  },
+  "results": [
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "GP p=1 ASAP",
+      "fidelity": 0.9932893387396083,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.6127225820959
+    },
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "GP p=1 ALAP",
+      "fidelity": 0.993483307253756,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.61272258209587
+    },
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "GP p=2 ASAP",
+      "fidelity": 0.9932777783757948,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.8973376298768
+    },
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "GP p=2 ALAP",
+      "fidelity": 0.9934735809210998,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.89733762987677
+    },
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "ASAP",
+      "fidelity": 0.9928798626816513,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "ALAP",
+      "fidelity": 0.9931617411069962,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "ASAP+DD",
+      "fidelity": 0.9925838404152352,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    },
+    {
+      "scenario": "aligned_p1_markovian",
+      "policy": "ALAP+DD",
+      "fidelity": 0.9926495946306261,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "GP p=1 ASAP",
+      "fidelity": 0.9942049412836035,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.6127225820959
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "GP p=1 ALAP",
+      "fidelity": 0.9943990969463307,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.61272258209587
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "GP p=2 ASAP",
+      "fidelity": 0.9943566012093792,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.8973376298768
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "GP p=2 ALAP",
+      "fidelity": 0.9945526022677741,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.89733762987677
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "ASAP",
+      "fidelity": 0.9939203545603161,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "ALAP",
+      "fidelity": 0.9942024583450394,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "ASAP+DD",
+      "fidelity": 0.9934484024879862,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    },
+    {
+      "scenario": "p2_zbiased_markovian",
+      "policy": "ALAP+DD",
+      "fidelity": 0.9940417718300487,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "GP p=1 ASAP",
+      "fidelity": 0.9940413320237212,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.6127225820959
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "GP p=1 ALAP",
+      "fidelity": 0.9942353864336337,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.61272258209587
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "GP p=2 ASAP",
+      "fidelity": 0.9940435085422206,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.8973376298768
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "GP p=2 ALAP",
+      "fidelity": 0.994239400844142,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.89733762987677
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "ASAP",
+      "fidelity": 0.9939203545603161,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "ALAP",
+      "fidelity": 0.9942024583450394,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "ASAP+DD",
+      "fidelity": 0.9934484024879862,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    },
+    {
+      "scenario": "flat_zbiased_markovian",
+      "policy": "ALAP+DD",
+      "fidelity": 0.9940417718300487,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "GP p=1 ASAP",
+      "fidelity": 0.8217603184724405,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.6127225820959
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "GP p=1 ALAP",
+      "fidelity": 0.9326712275071676,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 88.61272258209587
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "GP p=2 ASAP",
+      "fidelity": 0.8143155786621171,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.8973376298768
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "GP p=2 ALAP",
+      "fidelity": 0.9381644106747355,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 91.89733762987677
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "ASAP",
+      "fidelity": 0.6947971572638061,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "ALAP",
+      "fidelity": 0.8810031596877009,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 0,
+      "total_idle_ns": 136.0
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "ASAP+DD",
+      "fidelity": 0.9934484024879879,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    },
+    {
+      "scenario": "p1_zbiased_static",
+      "policy": "ALAP+DD",
+      "fidelity": 0.8808607688434236,
+      "deadline_ns": 168.0,
+      "logical_gate_count": 5,
+      "extra_x": 2,
+      "total_idle_ns": 72.0
+    }
+  ]
+}

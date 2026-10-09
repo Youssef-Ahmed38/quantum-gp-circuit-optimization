@@ -26,23 +26,28 @@ class GPSchedulingPass(AnalysisPass):
 
 
 class ConvexDurationAllocationPass(AnalysisPass):
-    """Certified continuous/discrete duration allocation pass for Qiskit PassManager.
+    """Model-based duration-allocation analysis for Qiskit PassManager.
 
-    Extracts circuit dependencies, computes optimal gate durations via exact GP/convex
-    optimization, and certifies the optimality bracket with sub-millisecond overhead.
+    Annotates a fixed circuit without modifying its operations or creating pulses.
+    Any feasibility or optimality bound applies only to the supplied noise model.
     """
-    def __init__(self, snapshot=None, alpha=0.8, target=0.95, safety=1.02, solver="CLARABEL"):
+    def __init__(self, snapshot=None, alpha=0.8, target=0.95, safety=1.02,
+                 solver="CLARABEL", physical_qubits=None):
         super().__init__()
+        if snapshot is not None and solver != "CLARABEL":
+            raise ValueError("Snapshot-based observable optimization currently uses CLARABEL")
         self.snapshot = snapshot
         self.alpha = alpha
         self.target = target
         self.safety = safety
         self.solver = solver
+        self.physical_qubits = None if physical_qubits is None else tuple(physical_qubits)
 
     def run(self, dag):
         circuit = dag_to_circuit(dag)
         from .observables import snapshot_model, optimize_observables, upward_round
-        mapping = list(range(circuit.num_qubits))
+        mapping = (list(range(circuit.num_qubits)) if self.physical_qubits is None
+                   else list(self.physical_qubits))
         if self.snapshot is not None:
             model = snapshot_model(circuit, mapping, self.snapshot, alpha=self.alpha)
             result = optimize_observables(model, self.target, method="gp", safety=self.safety)

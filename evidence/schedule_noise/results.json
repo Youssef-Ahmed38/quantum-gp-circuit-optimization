@@ -1,0 +1,138 @@
+{
+  "created_utc": "2026-10-09T18:22:51.373081+00:00",
+  "all_free_local": true,
+  "hardware_jobs": 0,
+  "qiskit_version": "2.5.2",
+  "python": "3.12.4",
+  "method": "Qiskit scheduling passes, independent density-matrix evaluator; seven-node Gauss-Hermite per qubit for static Gaussian detuning",
+  "circuit": "three-qubit sx-cz-sx-cz-sx native Clifford example",
+  "scenarios": [
+    {
+      "name": "markovian_isotropic",
+      "t1_ns": 200000.0,
+      "tphi_ns": 250000.0,
+      "detuning_std_rad_per_ns": 0.0,
+      "px": 0.0002,
+      "py": 0.0002,
+      "pz": 0.0002
+    },
+    {
+      "name": "markovian_anisotropic_z",
+      "t1_ns": 200000.0,
+      "tphi_ns": 250000.0,
+      "detuning_std_rad_per_ns": 0.0,
+      "px": 5e-05,
+      "py": 5e-05,
+      "pz": 0.0008
+    },
+    {
+      "name": "quasistatic_z_plus_anisotropic",
+      "t1_ns": 200000.0,
+      "tphi_ns": 250000.0,
+      "detuning_std_rad_per_ns": 0.02,
+      "px": 5e-05,
+      "py": 5e-05,
+      "pz": 0.0008
+    }
+  ],
+  "results": [
+    {
+      "policy": "ASAP",
+      "scenario": "markovian_isotropic",
+      "fidelity": 0.9968043986553452,
+      "makespan_ns": 168,
+      "x_count": 0,
+      "idle_ns": 136
+    },
+    {
+      "policy": "ASAP",
+      "scenario": "markovian_anisotropic_z",
+      "fidelity": 0.9959079525958028,
+      "makespan_ns": 168,
+      "x_count": 0,
+      "idle_ns": 136
+    },
+    {
+      "policy": "ASAP",
+      "scenario": "quasistatic_z_plus_anisotropic",
+      "fidelity": 0.6960268606878223,
+      "makespan_ns": 168,
+      "x_count": 0,
+      "idle_ns": 136
+    },
+    {
+      "policy": "ALAP",
+      "scenario": "markovian_isotropic",
+      "fidelity": 0.99708747743887,
+      "makespan_ns": 168,
+      "x_count": 0,
+      "idle_ns": 136
+    },
+    {
+      "policy": "ALAP",
+      "scenario": "markovian_anisotropic_z",
+      "fidelity": 0.996190648490253,
+      "makespan_ns": 168,
+      "x_count": 0,
+      "idle_ns": 136
+    },
+    {
+      "policy": "ALAP",
+      "scenario": "quasistatic_z_plus_anisotropic",
+      "fidelity": 0.8826780700996495,
+      "makespan_ns": 168,
+      "x_count": 0,
+      "idle_ns": 136
+    },
+    {
+      "policy": "ASAP+DD",
+      "scenario": "markovian_isotropic",
+      "fidelity": 0.9962149236402876,
+      "makespan_ns": 168,
+      "x_count": 2,
+      "idle_ns": 72
+    },
+    {
+      "policy": "ASAP+DD",
+      "scenario": "markovian_anisotropic_z",
+      "fidelity": 0.9944256913248758,
+      "makespan_ns": 168,
+      "x_count": 2,
+      "idle_ns": 72
+    },
+    {
+      "policy": "ASAP+DD",
+      "scenario": "quasistatic_z_plus_anisotropic",
+      "fidelity": 0.9944256913248756,
+      "makespan_ns": 168,
+      "x_count": 2,
+      "idle_ns": 72
+    },
+    {
+      "policy": "ALAP+DD",
+      "scenario": "markovian_isotropic",
+      "fidelity": 0.996280817930532,
+      "makespan_ns": 168,
+      "x_count": 2,
+      "idle_ns": 72
+    },
+    {
+      "policy": "ALAP+DD",
+      "scenario": "markovian_anisotropic_z",
+      "fidelity": 0.9959818283655323,
+      "makespan_ns": 168,
+      "x_count": 2,
+      "idle_ns": 72
+    },
+    {
+      "policy": "ALAP+DD",
+      "scenario": "quasistatic_z_plus_anisotropic",
+      "fidelity": 0.8824930443267551,
+      "makespan_ns": 168,
+      "x_count": 2,
+      "idle_ns": 72
+    }
+  ],
+  "calibration_pair_count": 566,
+  "calibration_caveat": "Cross-sectional cached calibration entries; not a same-gate duration sweep or fitted duration-response curve."
+}

@@ -1,0 +1,28 @@
+{
+  "purpose": "Free-plan hardware access and result-retrieval control; not a GP benchmark",
+  "observed_local_date": "2026-10-10",
+  "platform": "IBM Quantum Platform Composer",
+  "plan": "open-instance (open)",
+  "region": "us-east",
+  "backend": "ibm_marrakesh",
+  "processor_type_shown": "Heron r2",
+  "job_id": "db4li2amb58s7389cha0",
+  "status": "Completed",
+  "qasm3_submitted": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[1] q;\nbit[1] c;\nh q[0];\nh q[0];\nc[0] = measure q[0];\n",
+  "shots": 1024,
+  "counts": {"0": 1018, "1": 6},
+  "observed_one_fraction": 0.005859375,
+  "exact_binomial_95_percent_interval_for_one_fraction": [0.0021532323522918087, 0.012709474160549638],
+  "total_qpu_usage_shown": "2s",
+  "total_completion_time_shown": "34s",
+  "chart_file": "job_db4li2amb58s7389cha0_results_c.png",
+  "interpretation": "The device accepted and completed a simple circuit. Composer/compiler transformations are not controlled here; the submitted H-H pair may be canceled. These counts cannot establish physical H-gate error, duration dependence, scheduler performance, or improvement from the GP method.",
+  "failed_attempt": {
+    "qasm3": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[1] q;\nbit[1] c;\nh q[0];\ndelay[1000ns] q[0];\nh q[0];\nc[0] = measure q[0];\n",
+    "shots_requested": 2048,
+    "backend_selected": "ibm_marrakesh",
+    "composer_feedback": "Request failed with status code 500: POST https://quantum.cloud.ibm.com/api/v1/jobs",
+    "job_created": false,
+    "caveat": "The generic server error does not identify whether the delay instruction, Composer conversion, or a transient service condition caused the failure."
+  }
+}

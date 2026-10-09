@@ -1,0 +1,154 @@
+{
+  "source_doi": "10.5281/zenodo.13808824",
+  "all_free_local": true,
+  "hardware_jobs": 0,
+  "status": "Exploratory retrospective comparison; PCHIP considered after earlier law results",
+  "decision_space": "Same withheld measured durations for every method within each pulse family",
+  "interpretation": "Measurement error bars exclude model discrepancy; train-only RMS inflation is a diagnostic, not a confidence interval",
+  "results": {
+    "FAST_DRAG-L": {
+      "n_train": 7,
+      "n_test": 6,
+      "shortest_test_duration_ns": 5.833333333333333,
+      "best_test_duration_ns": 7.916666666666666,
+      "best_test_measured_error": 0.0001555808257712732,
+      "methods": {
+        "inverse_linear": {
+          "selected_duration_ns": 9.583333333333334,
+          "selected_measured_error": 0.00018633683287005987,
+          "selected_reported_one_sigma": 5.830079944212572e-06,
+          "measured_regret_vs_best_test": 3.0756007098786675e-05,
+          "heldout_mae": 2.6521524993435093e-05,
+          "heldout_rms_source_sigma": 4.766476070578181
+        },
+        "inverse_square_linear": {
+          "selected_duration_ns": 9.583333333333334,
+          "selected_measured_error": 0.00018633683287005987,
+          "selected_reported_one_sigma": 5.830079944212572e-06,
+          "measured_regret_vs_best_test": 3.0756007098786675e-05,
+          "heldout_mae": 2.179820037778023e-05,
+          "heldout_rms_source_sigma": 3.6747794159897054
+        },
+        "pchip": {
+          "selected_duration_ns": 7.916666666666666,
+          "selected_measured_error": 0.0001555808257712732,
+          "selected_reported_one_sigma": 6.345919201433259e-06,
+          "measured_regret_vs_best_test": 0.0,
+          "heldout_mae": 1.2006955423687378e-05,
+          "heldout_rms_source_sigma": 1.9243771522156239,
+          "train_only_discrepancy_rms": 2.7888600459829063e-05,
+          "heldout_rms_expanded_scale": 0.5025250391204359,
+          "diagnostic_1_96_band_coverage": 1.0
+        }
+      }
+    },
+    "HD_DRAG-L": {
+      "n_train": 7,
+      "n_test": 6,
+      "shortest_test_duration_ns": 5.833333333333333,
+      "best_test_duration_ns": 12.083333333333334,
+      "best_test_measured_error": 0.00018696447401977956,
+      "methods": {
+        "inverse_linear": {
+          "selected_duration_ns": 12.083333333333334,
+          "selected_measured_error": 0.00018696447401977956,
+          "selected_reported_one_sigma": 2.852963846070814e-06,
+          "measured_regret_vs_best_test": 0.0,
+          "heldout_mae": 7.763742771509684e-05,
+          "heldout_rms_source_sigma": 6.372129207643645
+        },
+        "inverse_square_linear": {
+          "selected_duration_ns": 12.083333333333334,
+          "selected_measured_error": 0.00018696447401977956,
+          "selected_reported_one_sigma": 2.852963846070814e-06,
+          "measured_regret_vs_best_test": 0.0,
+          "heldout_mae": 5.927464138291078e-05,
+          "heldout_rms_source_sigma": 5.598486586409949
+        },
+        "pchip": {
+          "selected_duration_ns": 7.916666666666666,
+          "selected_measured_error": 0.00019193188398247685,
+          "selected_reported_one_sigma": 4.490530637343135e-06,
+          "measured_regret_vs_best_test": 4.967409962697289e-06,
+          "heldout_mae": 5.9322803763585066e-05,
+          "heldout_rms_source_sigma": 5.263168795012836,
+          "train_only_discrepancy_rms": 5.2920208303667956e-05,
+          "heldout_rms_expanded_scale": 1.2638251815838148,
+          "diagnostic_1_96_band_coverage": 1.0
+        }
+      }
+    },
+    "Cosine_DRAG-L": {
+      "n_train": 7,
+      "n_test": 6,
+      "shortest_test_duration_ns": 5.833333333333333,
+      "best_test_duration_ns": 9.583333333333334,
+      "best_test_measured_error": 0.00018806023625805857,
+      "methods": {
+        "inverse_linear": {
+          "selected_duration_ns": 12.083333333333334,
+          "selected_measured_error": 0.00018806487363765,
+          "selected_reported_one_sigma": 4.924952491839248e-06,
+          "measured_regret_vs_best_test": 4.637379591443391e-09,
+          "heldout_mae": 0.00017061274976350532,
+          "heldout_rms_source_sigma": 7.011710134631102
+        },
+        "inverse_square_linear": {
+          "selected_duration_ns": 12.083333333333334,
+          "selected_measured_error": 0.00018806487363765,
+          "selected_reported_one_sigma": 4.924952491839248e-06,
+          "measured_regret_vs_best_test": 4.637379591443391e-09,
+          "heldout_mae": 0.0001417659121326837,
+          "heldout_rms_source_sigma": 5.723256666728377
+        },
+        "pchip": {
+          "selected_duration_ns": 9.583333333333334,
+          "selected_measured_error": 0.00018806023625805857,
+          "selected_reported_one_sigma": 6.167809051653959e-06,
+          "measured_regret_vs_best_test": 0.0,
+          "heldout_mae": 0.00020932316676558181,
+          "heldout_rms_source_sigma": 6.823241827396185,
+          "train_only_discrepancy_rms": 0.0005150778243782825,
+          "heldout_rms_expanded_scale": 0.9059126743784158,
+          "diagnostic_1_96_band_coverage": 0.8333333333333334
+        }
+      }
+    },
+    "Cosine_DRAG-P": {
+      "n_train": 8,
+      "n_test": 7,
+      "shortest_test_duration_ns": 7.916666666666666,
+      "best_test_duration_ns": 15.416666666666666,
+      "best_test_measured_error": 0.00031721974055609614,
+      "methods": {
+        "inverse_linear": {
+          "selected_duration_ns": 19.166666666666668,
+          "selected_measured_error": 0.000351738914890376,
+          "selected_reported_one_sigma": 8.854522309595502e-06,
+          "measured_regret_vs_best_test": 3.451917433427987e-05,
+          "heldout_mae": 0.0003708365291665789,
+          "heldout_rms_source_sigma": 9.0818627430049
+        },
+        "inverse_square_linear": {
+          "selected_duration_ns": 19.166666666666668,
+          "selected_measured_error": 0.000351738914890376,
+          "selected_reported_one_sigma": 8.854522309595502e-06,
+          "measured_regret_vs_best_test": 3.451917433427987e-05,
+          "heldout_mae": 0.00034553197231140624,
+          "heldout_rms_source_sigma": 8.46820156140558
+        },
+        "pchip": {
+          "selected_duration_ns": 15.416666666666666,
+          "selected_measured_error": 0.00031721974055609614,
+          "selected_reported_one_sigma": 1.6729475285936464e-05,
+          "measured_regret_vs_best_test": 0.0,
+          "heldout_mae": 7.004856089799103e-05,
+          "heldout_rms_source_sigma": 2.817587031079482,
+          "train_only_discrepancy_rms": 0.00012327366618738938,
+          "heldout_rms_expanded_scale": 0.7341973608667121,
+          "diagnostic_1_96_band_coverage": 1.0
+        }
+      }
+    }
+  }
+}

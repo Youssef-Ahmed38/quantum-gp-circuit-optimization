@@ -1,0 +1,227 @@
+{
+  "job_id": "db4nov04qg6s73c2e8d0",
+  "backend": "ibm_marrakesh",
+  "purpose": "Nominal fixed-gate noise-model check; not GP hardware improvement",
+  "practical_tolerance_absolute": 0.02,
+  "caveat": "Shot-only intervals exclude calibration drift and model uncertainty; reported tolerance is descriptive, not a significance test",
+  "results": {
+    "single_return": {
+      "successes": 6119,
+      "shots": 6144,
+      "observed": 0.9959309895833334,
+      "prediction": 0.9685077272272901,
+      "residual": 0.02742326235604331,
+      "shot_only_wilson_95": [
+        0.993999939798855,
+        0.9972422776230916
+      ],
+      "block_observed_range": [
+        0.994140625,
+        0.9990234375
+      ],
+      "within_two_percentage_points": false
+    },
+    "bell": {
+      "successes": 6065,
+      "shots": 6144,
+      "observed": 0.9871419270833334,
+      "prediction": 0.9618759374367238,
+      "residual": 0.025265989646609532,
+      "shot_only_wilson_95": [
+        0.9840049293422055,
+        0.9896701467142062
+      ],
+      "block_observed_range": [
+        0.9833984375,
+        0.9892578125
+      ],
+      "within_two_percentage_points": false
+    },
+    "bell_return": {
+      "successes": 6000,
+      "shots": 6144,
+      "observed": 0.9765625,
+      "prediction": 0.9511958408750963,
+      "residual": 0.025366659124903657,
+      "shot_only_wilson_95": [
+        0.9724712692869456,
+        0.9800581736442849
+      ],
+      "block_observed_range": [
+        0.9736328125,
+        0.97900390625
+      ],
+      "within_two_percentage_points": false
+    },
+    "ghz": {
+      "successes": 5984,
+      "shots": 6144,
+      "observed": 0.9739583333333334,
+      "prediction": 0.9201381448251029,
+      "residual": 0.05382018850823045,
+      "shot_only_wilson_95": [
+        0.9696701893513262,
+        0.9776541746567831
+      ],
+      "block_observed_range": [
+        0.9716796875,
+        0.97607421875
+      ],
+      "within_two_percentage_points": false
+    }
+  },
+  "blocks": {
+    "single_return": [
+      {
+        "sequence": 2,
+        "successes": 2046,
+        "shots": 2048,
+        "observed": 0.9990234375,
+        "prediction": 0.9685077272272901,
+        "residual": 0.03051571027270994,
+        "shot_only_wilson_95": [
+          0.9964461805612286,
+          0.9997321504755168
+        ]
+      },
+      {
+        "sequence": 4,
+        "successes": 2036,
+        "shots": 2048,
+        "observed": 0.994140625,
+        "prediction": 0.9685077272272901,
+        "residual": 0.02563289777270994,
+        "shot_only_wilson_95": [
+          0.9897859881382516,
+          0.9966450011075276
+        ]
+      },
+      {
+        "sequence": 8,
+        "successes": 2037,
+        "shots": 2048,
+        "observed": 0.99462890625,
+        "prediction": 0.9685077272272901,
+        "residual": 0.02612117902270994,
+        "shot_only_wilson_95": [
+          0.9904075145383504,
+          0.9969982088865252
+        ]
+      }
+    ],
+    "bell": [
+      {
+        "sequence": 0,
+        "successes": 2026,
+        "shots": 2048,
+        "observed": 0.9892578125,
+        "prediction": 0.9618759374367238,
+        "residual": 0.027381875063276162,
+        "shot_only_wilson_95": [
+          0.9837883060165369,
+          0.992895341438276
+        ]
+      },
+      {
+        "sequence": 6,
+        "successes": 2025,
+        "shots": 2048,
+        "observed": 0.98876953125,
+        "prediction": 0.9618759374367238,
+        "residual": 0.026893593813276162,
+        "shot_only_wilson_95": [
+          0.9832039810088714,
+          0.992504932266845
+        ]
+      },
+      {
+        "sequence": 10,
+        "successes": 2014,
+        "shots": 2048,
+        "observed": 0.9833984375,
+        "prediction": 0.9618759374367238,
+        "residual": 0.021522500063276162,
+        "shot_only_wilson_95": [
+          0.9768912303529305,
+          0.9880956069527231
+        ]
+      }
+    ],
+    "bell_return": [
+      {
+        "sequence": 3,
+        "successes": 2005,
+        "shots": 2048,
+        "observed": 0.97900390625,
+        "prediction": 0.9511958408750963,
+        "residual": 0.027808065374903657,
+        "shot_only_wilson_95": [
+          0.9718391166891165,
+          0.9843751130046674
+        ]
+      },
+      {
+        "sequence": 7,
+        "successes": 1994,
+        "shots": 2048,
+        "observed": 0.9736328125,
+        "prediction": 0.9511958408750963,
+        "residual": 0.022436971624903657,
+        "shot_only_wilson_95": [
+          0.9657568453503613,
+          0.9797353083733598
+        ]
+      },
+      {
+        "sequence": 11,
+        "successes": 2001,
+        "shots": 2048,
+        "observed": 0.97705078125,
+        "prediction": 0.9511958408750963,
+        "residual": 0.025854940374903657,
+        "shot_only_wilson_95": [
+          0.9696172179609267,
+          0.9826980750164708
+        ]
+      }
+    ],
+    "ghz": [
+      {
+        "sequence": 1,
+        "successes": 1995,
+        "shots": 2048,
+        "observed": 0.97412109375,
+        "prediction": 0.9201381448251029,
+        "residual": 0.05398294892489708,
+        "shot_only_wilson_95": [
+          0.9663063536491754,
+          0.9801605342536424
+        ]
+      },
+      {
+        "sequence": 5,
+        "successes": 1999,
+        "shots": 2048,
+        "observed": 0.97607421875,
+        "prediction": 0.9201381448251029,
+        "residual": 0.05593607392489708,
+        "shot_only_wilson_95": [
+          0.9685108390818281,
+          0.981854985537376
+        ]
+      },
+      {
+        "sequence": 9,
+        "successes": 1990,
+        "shots": 2048,
+        "observed": 0.9716796875,
+        "prediction": 0.9201381448251029,
+        "residual": 0.05154154267489708,
+        "shot_only_wilson_95": [
+          0.9635647653948115,
+          0.9780284516125232
+        ]
+      }
+    ]
+  }
+}
