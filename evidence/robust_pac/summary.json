@@ -1,0 +1,98 @@
+{
+  "part_a": {
+    "plain_gp|inside_hull": {
+      "cases": 30,
+      "worse": 0,
+      "better": 30,
+      "median_relative_change": -0.04412540517419605
+    },
+    "plain_gp|outside_hull": {
+      "cases": 12,
+      "worse": 6,
+      "better": 6,
+      "median_relative_change": 0.028096224209073317
+    },
+    "dominance_gp|inside_hull": {
+      "cases": 30,
+      "worse": 0,
+      "better": 30,
+      "median_relative_change": -0.04412540365322498
+    },
+    "dominance_gp|outside_hull": {
+      "cases": 12,
+      "worse": 6,
+      "better": 6,
+      "median_relative_change": 0.02809622893920566
+    },
+    "dominance_gp_plus_table7_law|inside_hull": {
+      "cases": 30,
+      "worse": 0,
+      "better": 30,
+      "median_relative_change": -0.04409710748873863
+    },
+    "dominance_gp_plus_table7_law|outside_hull": {
+      "cases": 12,
+      "worse": 0,
+      "better": 12,
+      "median_relative_change": -0.0035199899221197706
+    },
+    "price_of_dominance_on_declared_law": -2.561678646983978e-11
+  },
+  "part_b": {
+    "grover_3": {
+      "trials": 200,
+      "robust_coverage": 1.0,
+      "plugin_coverage": 0.48,
+      "median_robust_true_over_plugin_true": 1.000185991138748,
+      "robust_never_worse_than_baseline_fraction": 1.0
+    },
+    "grover_4": {
+      "trials": 200,
+      "robust_coverage": 1.0,
+      "plugin_coverage": 0.5,
+      "median_robust_true_over_plugin_true": 1.0001159724197555,
+      "robust_never_worse_than_baseline_fraction": 1.0
+    },
+    "qft_3": {
+      "trials": 200,
+      "robust_coverage": 1.0,
+      "plugin_coverage": 0.545,
+      "median_robust_true_over_plugin_true": 1.0000120885701416,
+      "robust_never_worse_than_baseline_fraction": 1.0
+    },
+    "qft_4": {
+      "trials": 200,
+      "robust_coverage": 1.0,
+      "plugin_coverage": 0.545,
+      "median_robust_true_over_plugin_true": 0.9999892654362839,
+      "robust_never_worse_than_baseline_fraction": 1.0
+    },
+    "vqe_ansatz_3": {
+      "trials": 200,
+      "robust_coverage": 1.0,
+      "plugin_coverage": 0.47,
+      "median_robust_true_over_plugin_true": 1.0000467702826663,
+      "robust_never_worse_than_baseline_fraction": 1.0
+    },
+    "vqe_ansatz_4": {
+      "trials": 200,
+      "robust_coverage": 1.0,
+      "plugin_coverage": 0.475,
+      "median_robust_true_over_plugin_true": 1.0000977160597562,
+      "robust_never_worse_than_baseline_fraction": 1.0
+    },
+    "pooled_robust_coverage": 1.0,
+    "pooled_plugin_coverage": 0.5025,
+    "target_coverage": 0.95,
+    "solver_failures_excluded": {
+      "qft_3": 0,
+      "qft_4": 0,
+      "grover_3": 0,
+      "grover_4": 0,
+      "vqe_ansatz_3": 0,
+      "vqe_ansatz_4": 0
+    }
+  },
+  "elapsed_s": 2491.986177999992,
+  "hardware_jobs": 0
+}

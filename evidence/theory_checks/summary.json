@@ -1,0 +1,33 @@
+{
+  "c6": {
+    "trials": 300,
+    "error_bound_violations": 0,
+    "makespan_bound_violations": 0,
+    "max_error_ratio": 1.0367737322047397,
+    "median_error_ratio": 0.9439480348087818
+  },
+  "c7": {
+    "qft_4": {
+      "min_second_difference": 0.5682958863725049,
+      "max_slope_plus_price_abs": 0.005796707915664223,
+      "error_reduction_full_range": 0.5317059930548171
+    },
+    "grover_4": {
+      "min_second_difference": 0.515838003524647,
+      "max_slope_plus_price_abs": 0.006197638645359493,
+      "error_reduction_full_range": 0.5368342759991196
+    },
+    "vqe_ansatz_4": {
+      "min_second_difference": 0.41063674947654505,
+      "max_slope_plus_price_abs": 0.009436860986893225,
+      "error_reduction_full_range": 0.5613953097820324
+    },
+    "qaoa_4": {
+      "min_second_difference": 0.5687772367439498,
+      "max_slope_plus_price_abs": 0.009863402885087358,
+      "error_reduction_full_range": 0.5135561669222894
+    }
+  },
+  "elapsed_s": 247.37863229995128,
+  "hardware_jobs": 0
+}

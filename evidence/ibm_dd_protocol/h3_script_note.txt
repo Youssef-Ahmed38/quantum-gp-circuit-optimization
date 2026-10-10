@@ -1,0 +1,3 @@
+benchmarks/analyze_ibm_h3.py was edited after pre-registration only to add an optional tag argument for the second-chain run.
+benchmarks/analyze_ibm_h3.prereg.py reproduces the pre-registered script byte-for-byte (sha256 384b469a6d6d78aebf870b48d21f31d943b06a9d3febbadfffa9044666b3c9ac, verified).
+Both produce identical analyses for the untagged H3 run.

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Feasible model-based solves. Targets are chosen separately per instance from its assumed attainable range; times are single-run wall-clock observations, not hardware timings. Makespan reduction against the optimal uniform policy is reported separately for each assumed inverse-duration share $\alpha$ (median over families and seeds).}
+\label{tab:feasible_scale}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{rrrrrr}
+\toprule
+Qubits & $n$ & Gates & GP ms & Gain, $\alpha=0.5$ & Gain, $\alpha=0.8$ \\
+\midrule
+32 & 8 & 64--200 & 1166.3 & 14.9\% & 22.2\% \\
+64 & 8 & 132--412 & 2954.1 & 18.0\% & 30.9\% \\
+128 & 8 & 266--830 & 6413.8 & 18.0\% & 30.9\% \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

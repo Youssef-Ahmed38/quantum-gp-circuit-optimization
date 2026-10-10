@@ -1,0 +1,74 @@
+[
+ {
+  "qubits": 8,
+  "seed": 11,
+  "bias": 10.0,
+  "target": 0.973993035059781,
+  "anisotropic_feasible": true,
+  "isotropic_feasible": false,
+  "anisotropic_makespan": 0.13755774512419616,
+  "anisotropic_min_true_expectation": 0.973993035056655
+ },
+ {
+  "qubits": 8,
+  "seed": 29,
+  "bias": 10.0,
+  "target": 0.9635277536747028,
+  "anisotropic_feasible": true,
+  "isotropic_feasible": true,
+  "anisotropic_makespan": 0.1618817084317043,
+  "anisotropic_min_true_expectation": 0.9635277536729033,
+  "isotropic_makespan": 0.14770720763009243,
+  "isotropic_plan_true_violations": 1,
+  "isotropic_plan_min_true_expectation": 0.961600531825754
+ },
+ {
+  "qubits": 16,
+  "seed": 11,
+  "bias": 10.0,
+  "target": 0.9621746880884224,
+  "anisotropic_feasible": true,
+  "isotropic_feasible": true,
+  "anisotropic_makespan": 0.1680188147915599,
+  "anisotropic_min_true_expectation": 0.9621746880879112,
+  "isotropic_makespan": 0.15121006023795489,
+  "isotropic_plan_true_violations": 1,
+  "isotropic_plan_min_true_expectation": 0.9601736388041984
+ },
+ {
+  "qubits": 16,
+  "seed": 29,
+  "bias": 10.0,
+  "target": 0.9607568126052992,
+  "anisotropic_feasible": true,
+  "isotropic_feasible": true,
+  "anisotropic_makespan": 0.26353623468059323,
+  "anisotropic_min_true_expectation": 0.9607568126059548,
+  "isotropic_makespan": 0.2280000000113044,
+  "isotropic_plan_true_violations": 1,
+  "isotropic_plan_min_true_expectation": 0.9564926482148357
+ },
+ {
+  "qubits": 32,
+  "seed": 11,
+  "bias": 10.0,
+  "target": 0.9583099674876601,
+  "anisotropic_feasible": true,
+  "isotropic_feasible": false,
+  "anisotropic_makespan": 0.23356727120851256,
+  "anisotropic_min_true_expectation": 0.9583099674881362
+ },
+ {
+  "qubits": 32,
+  "seed": 29,
+  "bias": 10.0,
+  "target": 0.9439854302662307,
+  "anisotropic_feasible": true,
+  "isotropic_feasible": true,
+  "anisotropic_makespan": 0.18400000000173944,
+  "anisotropic_min_true_expectation": 0.9465414556250997,
+  "isotropic_makespan": 0.18400000000510147,
+  "isotropic_plan_true_violations": 0,
+  "isotropic_plan_min_true_expectation": 0.9441244649926478
+ }
+]

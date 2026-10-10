@@ -1,0 +1,134 @@
+{
+  "no_repetition_delay": {
+    "cases": 32,
+    "median_reduction_vs_best_other": 0.21283332213997386,
+    "min_reduction_vs_best_other": 0.009198024645579284,
+    "max_reduction_vs_best_other": 0.43417025924084085,
+    "median_reduction_vs_nominal": 0.43918847006996925,
+    "winner_counts": {
+      "nominal": 0,
+      "fastest": 0,
+      "error_optimal": 0,
+      "best_uniform": 0,
+      "runtime_optimal": 32
+    },
+    "stationarity_all_valid": true,
+    "max_offcritical_flow": 1.3120460423154348e-05
+  },
+  "fast_reset_5us": {
+    "cases": 32,
+    "median_reduction_vs_best_other": 0.022871411474028325,
+    "min_reduction_vs_best_other": 0.0012826726315376957,
+    "max_reduction_vs_best_other": 0.0886704606744958,
+    "median_reduction_vs_nominal": 0.03735420789125332,
+    "winner_counts": {
+      "nominal": 0,
+      "fastest": 0,
+      "error_optimal": 0,
+      "best_uniform": 0,
+      "runtime_optimal": 32
+    },
+    "stationarity_all_valid": true,
+    "max_offcritical_flow": 0.001189382386541717
+  },
+  "ibm_default_250us": {
+    "cases": 32,
+    "median_reduction_vs_best_other": 3.749686457238388e-05,
+    "min_reduction_vs_best_other": 9.54086194160375e-07,
+    "max_reduction_vs_best_other": 0.0003760405490277341,
+    "median_reduction_vs_nominal": 0.01584827707069225,
+    "winner_counts": {
+      "nominal": 0,
+      "fastest": 0,
+      "error_optimal": 0,
+      "best_uniform": 0,
+      "runtime_optimal": 32
+    },
+    "stationarity_all_valid": true,
+    "max_offcritical_flow": 0.0031437431263400166
+  },
+  "pec_validation": [
+    {
+      "qubits": 8,
+      "alpha": 0.5,
+      "schedule": "nominal",
+      "gamma": 1.0861330668752198,
+      "max_abs_bias_in_se": 0.9775454884792918,
+      "variance_ratio_min": 0.9934445977459929,
+      "variance_ratio_max": 1.0103668054397075,
+      "unmitigated_mean_min": 0.94703
+    },
+    {
+      "qubits": 8,
+      "alpha": 0.5,
+      "schedule": "runtime_optimal_t0",
+      "gamma": 1.1036903009173502,
+      "max_abs_bias_in_se": 1.060854473222481,
+      "variance_ratio_min": 0.9898927829910842,
+      "variance_ratio_max": 1.0016368387538408,
+      "unmitigated_mean_min": 0.93792
+    },
+    {
+      "qubits": 8,
+      "alpha": 0.8,
+      "schedule": "nominal",
+      "gamma": 1.0861330668752198,
+      "max_abs_bias_in_se": 0.9775454884792918,
+      "variance_ratio_min": 0.9934445977459929,
+      "variance_ratio_max": 1.0103668054397075,
+      "unmitigated_mean_min": 0.94703
+    },
+    {
+      "qubits": 8,
+      "alpha": 0.8,
+      "schedule": "runtime_optimal_t0",
+      "gamma": 1.1352426826694522,
+      "max_abs_bias_in_se": 0.9495245304395725,
+      "variance_ratio_min": 0.9921295794196975,
+      "variance_ratio_max": 0.9992888767677959,
+      "unmitigated_mean_min": 0.92256
+    },
+    {
+      "qubits": 16,
+      "alpha": 0.5,
+      "schedule": "nominal",
+      "gamma": 1.2221235377531219,
+      "max_abs_bias_in_se": 2.092618779883241,
+      "variance_ratio_min": 0.9997964394267879,
+      "variance_ratio_max": 1.0133923771639355,
+      "unmitigated_mean_min": 0.93608
+    },
+    {
+      "qubits": 16,
+      "alpha": 0.5,
+      "schedule": "runtime_optimal_t0",
+      "gamma": 1.24757517848349,
+      "max_abs_bias_in_se": 1.2480624190285687,
+      "variance_ratio_min": 0.9942378427402927,
+      "variance_ratio_max": 1.0075076208829314,
+      "unmitigated_mean_min": 0.9236
+    },
+    {
+      "qubits": 16,
+      "alpha": 0.8,
+      "schedule": "nominal",
+      "gamma": 1.2221235377531219,
+      "max_abs_bias_in_se": 2.092618779883241,
+      "variance_ratio_min": 0.9997964394267879,
+      "variance_ratio_max": 1.0133923771639355,
+      "unmitigated_mean_min": 0.93608
+    },
+    {
+      "qubits": 16,
+      "alpha": 0.8,
+      "schedule": "runtime_optimal_t0",
+      "gamma": 1.3081644304023805,
+      "max_abs_bias_in_se": 0.782150454572003,
+      "variance_ratio_min": 0.996508077401418,
+      "variance_ratio_max": 1.0041580082486983,
+      "unmitigated_mean_min": 0.90044
+    }
+  ],
+  "elapsed_s": 158.4396696999902,
+  "hardware_jobs": 0
+}

@@ -1,0 +1,15 @@
+{
+  "created": "2026-10-10, before submission of H3",
+  "purpose": "Control arms: does the GP-DD advantage over XY4 come from the GP's per-qubit decisions or from using 8 pulses instead of 4?",
+  "design": "Same backend (ibm_marrakesh), same layout [55, 54, 53, 39, 33, 32], same frozen H1 fit, 4 randomized blocks x 6000 shots, block-order seed 20261012",
+  "circuits_sha256": "005f5a0ff44ace1d0e6bc736ce4ff6a298607fc2172c9425fb21df1bb0fe573f",
+  "arms": {"gp_dd": "H2 GP schedule (34 pulses)", "cpmg8_uniform": "8 pulses in every window where they fit (64 pulses)",
+           "gp_dd_protect_q54": "GP schedule plus 8 pulses on qubit 54 (42 pulses)", "xy4_like": "H2 reference (36 pulses)"},
+  "model_hazards": {"gp_dd": 1.9607, "gp_dd_protect_q54": 1.9623, "cpmg8_uniform": 1.9750, "xy4_like": 2.1105},
+  "predicted_order": ["gp_dd", "gp_dd_protect_q54", "cpmg8_uniform", "xy4_like"],
+  "prediction_note": "The model predicts small differences among the first three arms and a large gap to XY4; a null primary result is therefore a plausible outcome and will be reported as such",
+  "primary": "gp_dd minus cpmg8_uniform, P(all six qubits return to 0), shot-only 95% CI",
+  "secondary": ["gp_dd minus gp_dd_protect_q54", "gp_dd minus xy4_like", "observed vs predicted order"],
+  "analysis_script": "benchmarks/analyze_ibm_h3.py",
+  "stopping_rule": "Single run; no conditional follow-up on this chain"
+}

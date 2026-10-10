@@ -1,0 +1,9 @@
+{
+  "created": "2026-10-10, before submission of the replication",
+  "design": "Exact replication of H2: identical circuits (sha256 a98edb43766579fc13f01415f2263c4f3b702885e211e269d352181a629dd09a), same frozen fit, same backend (ibm_marrakesh) and layout [55, 54, 53, 39, 33, 32]; 4 randomized blocks x 6000 shots; block-order seed 20261011",
+  "primary": "Same as H2: P(all six qubits return to 0); gp_dd minus the best of {no_dd, xx_qiskit_like, xy4_like} within this run; shot-only 95% CI",
+  "pooled": "Fixed-effect pooling of the H2 and R1 primary differences, weighted by inverse shot-only variance; reported alongside each run separately",
+  "secondary": "Observed ranking vs the H2 pre-registered prediction; qubit-54 marginal under gp_dd vs xy4_like and xx_qiskit_like",
+  "analysis_script": "benchmarks/analyze_ibm_h2.py (tag r1), unchanged except for the tag argument; pooling in benchmarks/pool_ibm_h2.py written before results",
+  "stopping_rule": "No further runs are added conditional on this outcome; any later run is a new pre-registered study"
+}

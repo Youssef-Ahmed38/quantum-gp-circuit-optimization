@@ -1,0 +1,55 @@
+{
+  "created": "2026-10-10T17:06:03",
+  "backend": "ibm_marrakesh",
+  "layout": [
+    55,
+    54,
+    53,
+    39,
+    33,
+    32
+  ],
+  "h2_circuits_sha256": "a98edb43766579fc13f01415f2263c4f3b702885e211e269d352181a629dd09a",
+  "frozen_fit_sha256": "a51d71c8e8c58cc2f36f62416617bf916de7f9d9794b19aa5ec5861b5ee241d2",
+  "h1_job": "db54a1o4qg6s73c2v460",
+  "policies": {
+    "no_dd": {
+      "pulses": 0,
+      "model_hazard": 13.420235771034326
+    },
+    "xx_qiskit_like": {
+      "pulses": 18,
+      "model_hazard": 2.2582296888759643
+    },
+    "xy4_like": {
+      "pulses": 36,
+      "model_hazard": 2.1104962106251968
+    },
+    "gp_dd": {
+      "pulses": 34,
+      "model_hazard": 1.9606738497028497
+    },
+    "gp_dd_correlated": {
+      "pulses": 34,
+      "model_hazard": 1.9606738497028497
+    }
+  },
+  "predicted_order_best_first": [
+    "gp_dd",
+    "gp_dd_correlated",
+    "xy4_like",
+    "xx_qiskit_like",
+    "no_dd"
+  ],
+  "primary_endpoint": "P(all six qubits return to 0) per policy, pooled over 3 randomized blocks x 2000 shots",
+  "primary_comparison": "gp_dd minus the best of {no_dd, xx_qiskit_like, xy4_like}; paired by block; report mean, per-block values and shot-only 95% CI",
+  "secondary": [
+    "full predicted ranking vs observed ranking (Spearman)",
+    "per-qubit marginals, esp. qubit 54 left unprotected by GP-DD"
+  ],
+  "notes": [
+    "gp_dd and gp_dd_correlated are identical schedules under this fit; both run as pre-registered",
+    "Model family extended after H1 (static/quasi-static term, SPAM offset, Ramsey points before first zero crossing); pulse counts capped at H1-calibrated max 8; pulse error floored at backend X error",
+    "Qubit 54 fit is poor (log-residual cost 0.44); its GP decision is a model-driven prediction, not a guaranteed improvement"
+  ]
+}

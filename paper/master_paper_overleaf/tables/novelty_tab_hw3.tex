@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Pre-registered control arms (H3) on \texttt{ibm\_marrakesh}, 4 blocks $\times$ 6000 shots per arm (Chain A: qubits 55, 54, 53, 39, 33, 32; Chain B: qubits 9, 8, 7, 6, 5, 4): all-qubit return probability with shot-only s.e., and paired differences with shot-only 95\% intervals. Pre-registered pooling of the primary over chains: +1.56 pp, 95\% CI [+1.05, +2.07].}\label{tab:hw3}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lcc}
+\toprule
+Arm / comparison & Chain A & Chain B \\
+\midrule
+GP-DD & 0.156 $\pm$ 0.002 & 0.371 $\pm$ 0.003 \\
+GP-DD + protect GP-undecoupled qubit & 0.149 $\pm$ 0.002 & 0.369 $\pm$ 0.003 \\
+Uniform CPMG-8 & 0.139 $\pm$ 0.002 & 0.358 $\pm$ 0.003 \\
+XY4-like & 0.133 $\pm$ 0.002 & 0.369 $\pm$ 0.003 \\
+GP-DD $-$ CPMG-8 (pp, primary) & +1.69 [+1.05, +2.32] & +1.32 [+0.46, +2.18] \\
+GP-DD $-$ protect (pp) & +0.71 [+0.07, +1.35] & +0.23 [-0.63, +1.09] \\
+GP-DD $-$ XY4 (pp) & +2.31 [+1.68, +2.94] & +0.20 [-0.67, +1.06] \\
+Predicted order observed & yes & no \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

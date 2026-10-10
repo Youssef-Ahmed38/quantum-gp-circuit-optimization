@@ -1,0 +1,3746 @@
+[
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 2784.0566919450594,
+   "fastest": 1450.7400374157507,
+   "error_optimal": 2784.0566919450594,
+   "best_uniform": 1450.7400374157507,
+   "runtime_optimal": 1437.396094797272
+  },
+  "pec_overhead": {
+   "nominal": 1.0861330668752198,
+   "fastest": 1.108801474419278,
+   "error_optimal": 1.0861330668752198,
+   "best_uniform": 1.108801474419278,
+   "runtime_optimal": 1.1036903009173502
+  },
+  "makespan_us": {
+   "nominal": 0.23600000000000002,
+   "fastest": 0.11800000000000001,
+   "error_optimal": 0.23600000000000002,
+   "best_uniform": 0.11800000000000001,
+   "runtime_optimal": 0.11800000032814296
+  },
+  "reduction_vs_best_other": 0.009198024645579284,
+  "reduction_vs_nominal": 0.48370444504380883,
+  "stationarity": {
+   "interior_gates": 5,
+   "min_flow": -1.2010641498879693e-06,
+   "max_flow": 1.156306119985574e-05,
+   "max_offcritical_flow": 1.156306119985574e-05,
+   "valid": true
+  },
+  "solve_s": 0.03882669995073229
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 61768.308639933595,
+   "fastest": 62922.775521134,
+   "error_optimal": 61768.308639933595,
+   "best_uniform": 61464.80168934526,
+   "runtime_optimal": 61385.96247041544
+  },
+  "pec_overhead": {
+   "nominal": 1.0861330668752198,
+   "fastest": 1.108801474419278,
+   "error_optimal": 1.0861330668752198,
+   "best_uniform": 1.0883034226158173,
+   "runtime_optimal": 1.088696830231573
+  },
+  "makespan_us": {
+   "nominal": 0.23600000000000002,
+   "fastest": 0.11800000000000001,
+   "error_optimal": 0.23600000000000002,
+   "best_uniform": 0.18951169210437946,
+   "runtime_optimal": 0.17911020796562657
+  },
+  "reduction_vs_best_other": 0.0012826726315376957,
+  "reduction_vs_nominal": 0.006190005488849737,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": -1.7693836842304684e-08,
+   "max_flow": 0.570326099547179,
+   "max_offcritical_flow": 1.7693836842304684e-08,
+   "valid": true
+  },
+  "solve_s": 0.031708599999547005
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 2951996.654091372,
+   "fastest": 3075052.514223328,
+   "error_optimal": 2951996.654091372,
+   "best_uniform": 2951988.7585506323,
+   "runtime_optimal": 2951985.9420989123
+  },
+  "pec_overhead": {
+   "nominal": 1.0861330668752198,
+   "fastest": 1.108801474419278,
+   "error_optimal": 1.0861330668752198,
+   "best_uniform": 1.0861344465927814,
+   "runtime_optimal": 1.0861350199610424
+  },
+  "makespan_us": {
+   "nominal": 0.23600000000000002,
+   "fastest": 0.11800000000000001,
+   "error_optimal": 0.23600000000000002,
+   "best_uniform": 0.2346949598068786,
+   "runtime_optimal": 0.2341920179832327
+  },
+  "reduction_vs_best_other": 9.54086194160375e-07,
+  "reduction_vs_nominal": 3.6287278459834482e-06,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": -0.0005734480298878506,
+   "max_flow": 0.5738307605738551,
+   "max_offcritical_flow": 0.0005734480298878506,
+   "valid": true
+  },
+  "solve_s": 0.030811800039373338
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 2784.0566919450594,
+   "fastest": 1562.731365974574,
+   "error_optimal": 5387.097749454902,
+   "best_uniform": 1562.731365974574,
+   "runtime_optimal": 1520.75561948086
+  },
+  "pec_overhead": {
+   "nominal": 1.0861330668752198,
+   "fastest": 1.1508034650767653,
+   "error_optimal": 1.0683324711681799,
+   "best_uniform": 1.1508034650767653,
+   "runtime_optimal": 1.1352426826694522
+  },
+  "makespan_us": {
+   "nominal": 0.23600000000000002,
+   "fastest": 0.11800000000000001,
+   "error_optimal": 0.47200000000000003,
+   "best_uniform": 0.11800000000000001,
+   "runtime_optimal": 0.11800000001447183
+  },
+  "reduction_vs_best_other": 0.02686050040822996,
+  "reduction_vs_nominal": 0.45376269675801895,
+  "stationarity": {
+   "interior_gates": 5,
+   "min_flow": 1.5497367447457165e-07,
+   "max_flow": 0.03060249376094645,
+   "max_offcritical_flow": 1.5497367447457165e-07,
+   "valid": true
+  },
+  "solve_s": 0.15168699994683266
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 61768.308639933595,
+   "fastest": 67780.16212760906,
+   "error_optimal": 62453.81119707039,
+   "best_uniform": 61327.42431466755,
+   "runtime_optimal": 61102.33442032932
+  },
+  "pec_overhead": {
+   "nominal": 1.0861330668752198,
+   "fastest": 1.1508034650767653,
+   "error_optimal": 1.0683324711681799,
+   "best_uniform": 1.0748662408662357,
+   "runtime_optimal": 1.0754807775696171
+  },
+  "makespan_us": {
+   "nominal": 0.23600000000000002,
+   "fastest": 0.11800000000000001,
+   "error_optimal": 0.47200000000000003,
+   "best_uniform": 0.30818290975298457,
+   "runtime_optimal": 0.2826580304689104
+  },
+  "reduction_vs_best_other": 0.00367029753578596,
+  "reduction_vs_nominal": 0.010781810839057271,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": 1.7019569431438357e-06,
+   "max_flow": 0.569131523522669,
+   "max_offcritical_flow": 4.284080346882919e-06,
+   "valid": true
+  },
+  "solve_s": 0.16438780003227293
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 2951996.654091372,
+   "fastest": 3312434.2694476987,
+   "error_optimal": 2858722.770130229,
+   "best_uniform": 2858684.915965854,
+   "runtime_optimal": 2858671.618105825
+  },
+  "pec_overhead": {
+   "nominal": 1.0861330668752198,
+   "fastest": 1.1508034650767653,
+   "error_optimal": 1.0683324711681799,
+   "best_uniform": 1.068339600333534,
+   "runtime_optimal": 1.0683418396453161
+  },
+  "makespan_us": {
+   "nominal": 0.23600000000000002,
+   "fastest": 0.11800000000000001,
+   "error_optimal": 0.47200000000000003,
+   "best_uniform": 0.4653405338313412,
+   "runtime_optimal": 0.4631254578230024
+  },
+  "reduction_vs_best_other": 4.651740370120727e-06,
+  "reduction_vs_nominal": 0.03161420791456582,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": 0.00017833224403105013,
+   "max_flow": 0.5733127944700096,
+   "max_offcritical_flow": 0.0003604150083496881,
+   "valid": true
+  },
+  "solve_s": 0.17536900006234646
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 3435.306176198735,
+   "fastest": 1801.3463839059332,
+   "error_optimal": 3435.306176198735,
+   "best_uniform": 1801.3463839059332,
+   "runtime_optimal": 1770.216748312956
+  },
+  "pec_overhead": {
+   "nominal": 1.0998249182366266,
+   "fastest": 1.1263009329140465,
+   "error_optimal": 1.0998249182366266,
+   "best_uniform": 1.1263009329140465,
+   "runtime_optimal": 1.116526539267841
+  },
+  "makespan_us": {
+   "nominal": 0.28400000000000003,
+   "fastest": 0.14200000000000002,
+   "error_optimal": 0.28400000000000003,
+   "best_uniform": 0.14200000000000002,
+   "runtime_optimal": 0.14200000000080035
+  },
+  "reduction_vs_best_other": 0.017281315726449864,
+  "reduction_vs_nominal": 0.4846989882363989,
+  "stationarity": {
+   "interior_gates": 8,
+   "min_flow": -4.893916955864102e-09,
+   "max_flow": 0.03203149047700425,
+   "max_offcritical_flow": 4.893916955864102e-09,
+   "valid": true
+  },
+  "solve_s": 0.1536008999682963
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 63916.04871490885,
+   "fastest": 65229.035958058514,
+   "error_optimal": 63916.04871490885,
+   "best_uniform": 63530.46312916045,
+   "runtime_optimal": 63236.74884589935
+  },
+  "pec_overhead": {
+   "nominal": 1.0998249182366266,
+   "fastest": 1.1263009329140465,
+   "error_optimal": 1.0998249182366266,
+   "best_uniform": 1.1025113144389955,
+   "runtime_optimal": 1.103058594150865
+  },
+  "makespan_us": {
+   "nominal": 0.28400000000000003,
+   "fastest": 0.14200000000000002,
+   "error_optimal": 0.28400000000000003,
+   "best_uniform": 0.22655964810576534,
+   "runtime_optimal": 0.19723516668193977
+  },
+  "reduction_vs_best_other": 0.004623203874084325,
+  "reduction_vs_nominal": 0.010628001615673344,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": -1.037166684263031e-05,
+   "max_flow": 0.7485255756944283,
+   "max_offcritical_flow": 1.037166684263031e-05,
+   "valid": true
+  },
+  "solve_s": 0.1506019999505952
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 3027472.4331117044,
+   "fastest": 3173185.8250915348,
+   "error_optimal": 3027472.4331117044,
+   "best_uniform": 3027462.252222564,
+   "runtime_optimal": 3027445.808690588
+  },
+  "pec_overhead": {
+   "nominal": 1.0998249182366266,
+   "fastest": 1.1263009329140465,
+   "error_optimal": 1.0998249182366266,
+   "best_uniform": 1.0998267345773218,
+   "runtime_optimal": 1.0998296737142927
+  },
+  "makespan_us": {
+   "nominal": 0.28400000000000003,
+   "fastest": 0.14200000000000002,
+   "error_optimal": 0.28400000000000003,
+   "best_uniform": 0.2823316622475118,
+   "runtime_optimal": 0.27963458627217896
+  },
+  "reduction_vs_best_other": 5.4314573084690565e-06,
+  "reduction_vs_nominal": 8.79427367372898e-06,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": -0.00028470130110667155,
+   "max_flow": 1.0011538343223958,
+   "max_offcritical_flow": 0.0008092519495569955,
+   "valid": true
+  },
+  "solve_s": 0.23077370005194098
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 3435.306176198735,
+   "fastest": 1962.404050594066,
+   "error_optimal": 6614.027919130496,
+   "best_uniform": 1962.404050594066,
+   "runtime_optimal": 1881.855168102097
+  },
+  "pec_overhead": {
+   "nominal": 1.0998249182366266,
+   "fastest": 1.1755741931145596,
+   "error_optimal": 1.0790929223464427,
+   "best_uniform": 1.1755741931145596,
+   "runtime_optimal": 1.1511950821984527
+  },
+  "makespan_us": {
+   "nominal": 0.28400000000000003,
+   "fastest": 0.14200000000000002,
+   "error_optimal": 0.5680000000000001,
+   "best_uniform": 0.14200000000000002,
+   "runtime_optimal": 0.14200000011827774
+  },
+  "reduction_vs_best_other": 0.041046023354662786,
+  "reduction_vs_nominal": 0.4522016170959109,
+  "stationarity": {
+   "interior_gates": 6,
+   "min_flow": 0.00040116889501020015,
+   "max_flow": 0.07834985798850201,
+   "max_offcritical_flow": 0.0,
+   "valid": true
+  },
+  "solve_s": 0.14366259996313602
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 63916.04871490885,
+   "fastest": 71061.13822644146,
+   "error_optimal": 64836.10467203978,
+   "best_uniform": 63424.4023517269,
+   "runtime_optimal": 62801.198844968036
+  },
+  "pec_overhead": {
+   "nominal": 1.0998249182366266,
+   "fastest": 1.1755741931145596,
+   "error_optimal": 1.0790929223464427,
+   "best_uniform": 1.087040702658558,
+   "runtime_optimal": 1.0869970146527774
+  },
+  "makespan_us": {
+   "nominal": 0.28400000000000003,
+   "fastest": 0.14200000000000002,
+   "error_optimal": 0.5680000000000001,
+   "best_uniform": 0.3674100091991823,
+   "runtime_optimal": 0.31509745110259957
+  },
+  "reduction_vs_best_other": 0.009825926357221682,
+  "reduction_vs_nominal": 0.017442409103126666,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": 2.1565650756548084e-06,
+   "max_flow": 0.6872284587993206,
+   "max_offcritical_flow": 3.0957821006935505e-06,
+   "valid": true
+  },
+  "solve_s": 0.15181509999092668
+ },
+ {
+  "family": "graph",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 15,
+  "qpu_time_us": {
+   "nominal": 3027472.4331117044,
+   "fastest": 3456899.112842963,
+   "error_optimal": 2917717.865564595,
+   "best_uniform": 2917669.3464363525,
+   "runtime_optimal": 2917593.050790123
+  },
+  "pec_overhead": {
+   "nominal": 1.0998249182366266,
+   "fastest": 1.1755741931145596,
+   "error_optimal": 1.0790929223464427,
+   "best_uniform": 1.0791016245879508,
+   "runtime_optimal": 1.0791150511681804
+  },
+  "makespan_us": {
+   "nominal": 0.28400000000000003,
+   "fastest": 0.14200000000000002,
+   "error_optimal": 0.5680000000000001,
+   "best_uniform": 0.5597920233815626,
+   "runtime_optimal": 0.5470051704686346
+  },
+  "reduction_vs_best_other": 2.614951770407714e-05,
+  "reduction_vs_nominal": 0.03629409837718811,
+  "stationarity": {
+   "interior_gates": 15,
+   "min_flow": 9.206298704471267e-05,
+   "max_flow": 1.0000568230452411,
+   "max_offcritical_flow": 0.000375961276411487,
+   "valid": true
+  },
+  "solve_s": 0.15480619994923472
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 4480.75782459062,
+   "fastest": 2476.732086096509,
+   "error_optimal": 4480.75782459062,
+   "best_uniform": 2476.732086096509,
+   "runtime_optimal": 2334.665739046844
+  },
+  "pec_overhead": {
+   "nominal": 1.2221235377531219,
+   "fastest": 1.2849726549869998,
+   "error_optimal": 1.2221235377531219,
+   "best_uniform": 1.2849726549869998,
+   "runtime_optimal": 1.24757517848349
+  },
+  "makespan_us": {
+   "nominal": 0.30000000000000004,
+   "fastest": 0.15000000000000002,
+   "error_optimal": 0.30000000000000004,
+   "best_uniform": 0.15000000000000002,
+   "runtime_optimal": 0.15000000000608282
+  },
+  "reduction_vs_best_other": 0.057360401573983366,
+  "reduction_vs_nominal": 0.4789573928244719,
+  "stationarity": {
+   "interior_gates": 23,
+   "min_flow": -4.810298914596169e-10,
+   "max_flow": 0.05290684646770359,
+   "max_offcritical_flow": 2.4177752492730155e-07,
+   "valid": true
+  },
+  "solve_s": 0.28327070001978427
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 79160.05490110094,
+   "fastest": 85034.46828931347,
+   "error_optimal": 79160.05490110094,
+   "best_uniform": 78880.71552362177,
+   "runtime_optimal": 78288.72483597432
+  },
+  "pec_overhead": {
+   "nominal": 1.2221235377531219,
+   "fastest": 1.2849726549869998,
+   "error_optimal": 1.2221235377531219,
+   "best_uniform": 1.2240462197265862,
+   "runtime_optimal": 1.2250547132859044
+  },
+  "makespan_us": {
+   "nominal": 0.30000000000000004,
+   "fastest": 0.15000000000000002,
+   "error_optimal": 0.30000000000000004,
+   "best_uniform": 0.264719138325036,
+   "runtime_optimal": 0.21660854269680876
+  },
+  "reduction_vs_best_other": 0.007504884859597438,
+  "reduction_vs_nominal": 0.011007193795092962,
+  "stationarity": {
+   "interior_gates": 31,
+   "min_flow": -3.654454040547171e-06,
+   "max_flow": 0.7056174872346193,
+   "max_offcritical_flow": 3.654454040547171e-06,
+   "valid": true
+  },
+  "solve_s": 0.2938563999487087
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 3738445.611650107,
+   "fastest": 4130363.5422469443,
+   "error_optimal": 3738445.611650107,
+   "best_uniform": 3738438.9530542446,
+   "runtime_optimal": 3738408.359458299
+  },
+  "pec_overhead": {
+   "nominal": 1.2221235377531219,
+   "fastest": 1.2849726549869998,
+   "error_optimal": 1.2221235377531219,
+   "best_uniform": 1.2221247302871974,
+   "runtime_optimal": 1.222129524437289
+  },
+  "makespan_us": {
+   "nominal": 0.30000000000000004,
+   "fastest": 0.15000000000000002,
+   "error_optimal": 0.30000000000000004,
+   "best_uniform": 0.29906570916611275,
+   "runtime_optimal": 0.2950536629570698
+  },
+  "reduction_vs_best_other": 8.183521606142108e-06,
+  "reduction_vs_nominal": 9.964620507507682e-06,
+  "stationarity": {
+   "interior_gates": 31,
+   "min_flow": -0.0008024179116753059,
+   "max_flow": 1.0000073709894504,
+   "max_offcritical_flow": 0.0008024179116753059,
+   "valid": true
+  },
+  "solve_s": 0.2804554000031203
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 4480.75782459062,
+   "fastest": 2966.761456965794,
+   "error_optimal": 8270.569663627244,
+   "best_uniform": 2966.761456965794,
+   "runtime_optimal": 2566.9412656960444
+  },
+  "pec_overhead": {
+   "nominal": 1.2221235377531219,
+   "fastest": 1.4063573412580919,
+   "error_optimal": 1.1740648522425017,
+   "best_uniform": 1.4063573412580919,
+   "runtime_optimal": 1.3081644304023805
+  },
+  "makespan_us": {
+   "nominal": 0.30000000000000004,
+   "fastest": 0.15000000000000002,
+   "error_optimal": 0.6000000000000001,
+   "best_uniform": 0.15000000000000002,
+   "runtime_optimal": 0.15000000001408687
+  },
+  "reduction_vs_best_other": 0.1347665449579688,
+  "reduction_vs_nominal": 0.42711894590496624,
+  "stationarity": {
+   "interior_gates": 23,
+   "min_flow": 2.5315655723581935e-07,
+   "max_flow": 0.11838637797650334,
+   "max_offcritical_flow": 2.5496629900597347e-07,
+   "valid": true
+  },
+  "solve_s": 0.4060109000420198
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 79160.05490110094,
+   "fastest": 101858.81002249225,
+   "error_optimal": 77191.9835271876,
+   "best_uniform": 76124.38068044843,
+   "runtime_optimal": 74912.91526346673
+  },
+  "pec_overhead": {
+   "nominal": 1.2221235377531219,
+   "fastest": 1.4063573412580919,
+   "error_optimal": 1.1740648522425017,
+   "best_uniform": 1.180517462729587,
+   "runtime_optimal": 1.1808978383733635
+  },
+  "makespan_us": {
+   "nominal": 0.30000000000000004,
+   "fastest": 0.15000000000000002,
+   "error_optimal": 0.6000000000000001,
+   "best_uniform": 0.46234266501504473,
+   "runtime_optimal": 0.3719510030825901
+  },
+  "reduction_vs_best_other": 0.015914289300653195,
+  "reduction_vs_nominal": 0.05365256053625034,
+  "stationarity": {
+   "interior_gates": 31,
+   "min_flow": 1.0624388781042517e-06,
+   "max_flow": 0.4944690245775286,
+   "max_offcritical_flow": 3.2011673138520667e-06,
+   "valid": true
+  },
+  "solve_s": 0.30439770000521094
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 3738445.611650107,
+   "fastest": 4947569.189733289,
+   "error_optimal": 3454341.2628416456,
+   "best_uniform": 3454310.650080238,
+   "runtime_optimal": 3454173.685565005
+  },
+  "pec_overhead": {
+   "nominal": 1.2221235377531219,
+   "fastest": 1.4063573412580919,
+   "error_optimal": 1.1740648522425017,
+   "best_uniform": 1.1740698421628042,
+   "runtime_optimal": 1.1740921956653694
+  },
+  "makespan_us": {
+   "nominal": 0.30000000000000004,
+   "fastest": 0.15000000000000002,
+   "error_optimal": 0.6000000000000001,
+   "best_uniform": 0.5956490252641847,
+   "runtime_optimal": 0.5761711327279606
+  },
+  "reduction_vs_best_other": 3.965031785135853e-05,
+  "reduction_vs_nominal": 0.07604013957010003,
+  "stationarity": {
+   "interior_gates": 31,
+   "min_flow": 6.116733962136177e-05,
+   "max_flow": 1.0000402756992768,
+   "max_offcritical_flow": 0.0002471635016430629,
+   "valid": true
+  },
+  "solve_s": 0.2933219999540597
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 6585.611025155989,
+   "fastest": 3609.7230979799238,
+   "error_optimal": 6585.611025155989,
+   "best_uniform": 3609.7230979799238,
+   "runtime_optimal": 3402.838460369289
+  },
+  "pec_overhead": {
+   "nominal": 1.2017541113360735,
+   "fastest": 1.2582574796435402,
+   "error_optimal": 1.2017541113360735,
+   "best_uniform": 1.2582574796435402,
+   "runtime_optimal": 1.2216681255277138
+  },
+  "makespan_us": {
+   "nominal": 0.456,
+   "fastest": 0.228,
+   "error_optimal": 0.456,
+   "best_uniform": 0.228,
+   "runtime_optimal": 0.22800000000053486
+  },
+  "reduction_vs_best_other": 0.0573131600388993,
+  "reduction_vs_nominal": 0.4832919151509274,
+  "stationarity": {
+   "interior_gates": 25,
+   "min_flow": -5.155860113860038e-11,
+   "max_flow": 0.029983542465050323,
+   "max_offcritical_flow": 3.273609998085588e-10,
+   "valid": true
+  },
+  "solve_s": 0.28918900003191084
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 78796.25823081378,
+   "fastest": 82770.31735192561,
+   "error_optimal": 78796.25823081378,
+   "best_uniform": 78175.1685486783,
+   "runtime_optimal": 77255.33120559156
+  },
+  "pec_overhead": {
+   "nominal": 1.2017541113360735,
+   "fastest": 1.2582574796435402,
+   "error_optimal": 1.2017541113360735,
+   "best_uniform": 1.2057413710312552,
+   "runtime_optimal": 1.2083945458416214
+  },
+  "makespan_us": {
+   "nominal": 0.456,
+   "fastest": 0.228,
+   "error_optimal": 0.456,
+   "best_uniform": 0.37725337941432974,
+   "runtime_optimal": 0.29067331668082974
+  },
+  "reduction_vs_best_other": 0.011766362134722708,
+  "reduction_vs_nominal": 0.01955584008454392,
+  "stationarity": {
+   "interior_gates": 29,
+   "min_flow": -1.2144738177942069e-06,
+   "max_flow": 0.9179336408444836,
+   "max_offcritical_flow": 2.910023772563889e-06,
+   "valid": true
+  },
+  "solve_s": 0.3006780999712646
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 3617117.9713080446,
+   "fastest": 3961639.435795265,
+   "error_optimal": 3617117.9713080446,
+   "best_uniform": 3617101.7450055284,
+   "runtime_optimal": 3617059.9576193406
+  },
+  "pec_overhead": {
+   "nominal": 1.2017541113360735,
+   "fastest": 1.2582574796435402,
+   "error_optimal": 1.2017541113360735,
+   "best_uniform": 1.2017567111215088,
+   "runtime_optimal": 1.201763555166661
+  },
+  "makespan_us": {
+   "nominal": 0.456,
+   "fastest": 0.228,
+   "error_optimal": 0.456,
+   "best_uniform": 0.4537928331499578,
+   "runtime_optimal": 0.4480467807170722
+  },
+  "reduction_vs_best_other": 1.1552726224994814e-05,
+  "reduction_vs_nominal": 1.603864987653747e-05,
+  "stationarity": {
+   "interior_gates": 31,
+   "min_flow": -0.0007865341735884392,
+   "max_flow": 1.0009193950429,
+   "max_offcritical_flow": 0.0008258262784353068,
+   "valid": true
+  },
+  "solve_s": 0.28555249993223697
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 6585.611025155989,
+   "fastest": 4259.0029741476865,
+   "error_optimal": 12237.700629168849,
+   "best_uniform": 4259.0029741476865,
+   "runtime_optimal": 3607.3074000062916
+  },
+  "pec_overhead": {
+   "nominal": 1.2017541113360735,
+   "fastest": 1.366742024154921,
+   "error_optimal": 1.1583838479378288,
+   "best_uniform": 1.366742024154921,
+   "runtime_optimal": 1.2578363838041573
+  },
+  "makespan_us": {
+   "nominal": 0.456,
+   "fastest": 0.228,
+   "error_optimal": 0.912,
+   "best_uniform": 0.228,
+   "runtime_optimal": 0.22800000000033044
+  },
+  "reduction_vs_best_other": 0.15301599414163647,
+  "reduction_vs_nominal": 0.4522440839237317,
+  "stationarity": {
+   "interior_gates": 25,
+   "min_flow": 3.0877566549857355e-08,
+   "max_flow": 0.1036189034568929,
+   "max_offcritical_flow": 4.8170896993653545e-08,
+   "valid": true
+  },
+  "solve_s": 0.3821219999808818
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 78796.25823081378,
+   "fastest": 97658.19100370222,
+   "error_optimal": 79330.3575873314,
+   "best_uniform": 77099.38342561398,
+   "runtime_optimal": 75048.99759471916
+  },
+  "pec_overhead": {
+   "nominal": 1.2017541113360735,
+   "fastest": 1.366742024154921,
+   "error_optimal": 1.1583838479378288,
+   "best_uniform": 1.1703352033344527,
+   "runtime_optimal": 1.1716932712211414
+  },
+  "makespan_us": {
+   "nominal": 0.456,
+   "fastest": 0.228,
+   "error_optimal": 0.912,
+   "best_uniform": 0.6289885803531398,
+   "runtime_optimal": 0.46659656521532783
+  },
+  "reduction_vs_best_other": 0.026594062621435266,
+  "reduction_vs_nominal": 0.0475563271687085,
+  "stationarity": {
+   "interior_gates": 31,
+   "min_flow": 8.766048004124531e-07,
+   "max_flow": 0.7350392504723107,
+   "max_offcritical_flow": 1.7733743537239238e-06,
+   "valid": true
+  },
+  "solve_s": 0.28710139996837825
+ },
+ {
+  "family": "graph",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 31,
+  "qpu_time_us": {
+   "nominal": 3617117.9713080446,
+   "fastest": 4674218.404451875,
+   "error_optimal": 3366870.5485372962,
+   "best_uniform": 3366795.835633171,
+   "runtime_optimal": 3366609.198317183
+  },
+  "pec_overhead": {
+   "nominal": 1.2017541113360735,
+   "fastest": 1.366742024154921,
+   "error_optimal": 1.1583838479378288,
+   "best_uniform": 1.1583963779282676,
+   "runtime_optimal": 1.158426690330413
+  },
+  "makespan_us": {
+   "nominal": 0.456,
+   "fastest": 0.228,
+   "error_optimal": 0.912,
+   "best_uniform": 0.9010041957921506,
+   "runtime_optimal": 0.8739658850681431
+  },
+  "reduction_vs_best_other": 5.543469966673431e-05,
+  "reduction_vs_nominal": 0.06925645637713906,
+  "stationarity": {
+   "interior_gates": 31,
+   "min_flow": 7.822717837426216e-05,
+   "max_flow": 1.0000258466796625,
+   "max_offcritical_flow": 0.00028755218777704354,
+   "valid": true
+  },
+  "solve_s": 0.29008079995401204
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 64,
+  "qpu_time_us": {
+   "nominal": 8885.714034542469,
+   "fastest": 5358.251537342365,
+   "error_optimal": 8885.714034542469,
+   "best_uniform": 5358.251537342365,
+   "runtime_optimal": 4787.41166136075
+  },
+  "pec_overhead": {
+   "nominal": 1.454526107947392,
+   "fastest": 1.597356676235903,
+   "error_optimal": 1.454526107947392,
+   "best_uniform": 1.597356676235903,
+   "runtime_optimal": 1.5098741135129916
+  },
+  "makespan_us": {
+   "nominal": 0.42000000000000004,
+   "fastest": 0.21000000000000002,
+   "error_optimal": 0.42000000000000004,
+   "best_uniform": 0.21000000000000002,
+   "runtime_optimal": 0.21000000000797472
+  },
+  "reduction_vs_best_other": 0.10653472910022155,
+  "reduction_vs_nominal": 0.4612237527845159,
+  "stationarity": {
+   "interior_gates": 51,
+   "min_flow": -2.5716279523501772e-11,
+   "max_flow": 0.1065942863428129,
+   "max_offcritical_flow": 5.127388266246569e-10,
+   "valid": true
+  },
+  "solve_s": 0.5568434000015259
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 64,
+  "qpu_time_us": {
+   "nominal": 114668.02396957186,
+   "fastest": 132935.66909311296,
+   "error_optimal": 114668.02396957186,
+   "best_uniform": 114248.69807320152,
+   "runtime_optimal": 113450.66428507458
+  },
+  "pec_overhead": {
+   "nominal": 1.454526107947392,
+   "fastest": 1.597356676235903,
+   "error_optimal": 1.454526107947392,
+   "best_uniform": 1.45696929591485,
+   "runtime_optimal": 1.459647688704586
+  },
+  "makespan_us": {
+   "nominal": 0.42000000000000004,
+   "fastest": 0.21000000000000002,
+   "error_optimal": 0.42000000000000004,
+   "best_uniform": 0.3820838629884746,
+   "runtime_optimal": 0.3248938575261614
+  },
+  "reduction_vs_best_other": 0.006985058049550963,
+  "reduction_vs_nominal": 0.010616383210896863,
+  "stationarity": {
+   "interior_gates": 64,
+   "min_flow": -5.365639902315007e-06,
+   "max_flow": 0.4906388809860021,
+   "max_offcritical_flow": 5.718989364935346e-06,
+   "valid": true
+  },
+  "solve_s": 0.6822604000335559
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 64,
+  "qpu_time_us": {
+   "nominal": 5298001.210786012,
+   "fastest": 6384229.129325872,
+   "error_optimal": 5298001.210786012,
+   "best_uniform": 5297991.336175936,
+   "runtime_optimal": 5297926.234292331
+  },
+  "pec_overhead": {
+   "nominal": 1.454526107947392,
+   "fastest": 1.597356676235903,
+   "error_optimal": 1.454526107947392,
+   "best_uniform": 1.4545272862205196,
+   "runtime_optimal": 1.45453617700776
+  },
+  "makespan_us": {
+   "nominal": 0.42000000000000004,
+   "fastest": 0.21000000000000002,
+   "error_optimal": 0.42000000000000004,
+   "best_uniform": 0.4191275419796012,
+   "runtime_optimal": 0.4129890794608627
+  },
+  "reduction_vs_best_other": 1.2288031345120132e-05,
+  "reduction_vs_nominal": 1.4151845327714518e-05,
+  "stationarity": {
+   "interior_gates": 64,
+   "min_flow": -0.0005778477919534624,
+   "max_flow": 1.0003085353247891,
+   "max_offcritical_flow": 0.0005778477919534624,
+   "valid": true
+  },
+  "solve_s": 0.5730089999269694
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 64,
+  "qpu_time_us": {
+   "nominal": 8885.714034542469,
+   "fastest": 7507.104582739236,
+   "error_optimal": 15297.966996993999,
+   "best_uniform": 7460.5671147460225,
+   "runtime_optimal": 5489.4079391294745
+  },
+  "pec_overhead": {
+   "nominal": 1.454526107947392,
+   "fastest": 1.890717246461327,
+   "error_optimal": 1.3495134483439541,
+   "best_uniform": 1.7912267600052931,
+   "runtime_optimal": 1.616788105826711
+  },
+  "makespan_us": {
+   "nominal": 0.42000000000000004,
+   "fastest": 0.21000000000000002,
+   "error_optimal": 0.8400000000000001,
+   "best_uniform": 0.23252556274169986,
+   "runtime_optimal": 0.21000000011207917
+  },
+  "reduction_vs_best_other": 0.2642103670269913,
+  "reduction_vs_nominal": 0.3822209540178919,
+  "stationarity": {
+   "interior_gates": 50,
+   "min_flow": 2.7273895236690164e-07,
+   "max_flow": 0.21913977563321552,
+   "max_offcritical_flow": 6.643805102467353e-07,
+   "valid": true
+  },
+  "solve_s": 0.5682079000398517
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 64,
+  "qpu_time_us": {
+   "nominal": 114668.02396957186,
+   "fastest": 186247.68988605437,
+   "error_optimal": 106357.2943600535,
+   "best_uniform": 104837.8613345472,
+   "runtime_optimal": 102861.51288785624
+  },
+  "pec_overhead": {
+   "nominal": 1.454526107947392,
+   "fastest": 1.890717246461327,
+   "error_optimal": 1.3495134483439541,
+   "best_uniform": 1.3576812890398402,
+   "runtime_optimal": 1.362107677758288
+  },
+  "makespan_us": {
+   "nominal": 0.42000000000000004,
+   "fastest": 0.21000000000000002,
+   "error_optimal": 0.8400000000000001,
+   "best_uniform": 0.6875141125362751,
+   "runtime_optimal": 0.5440868599490828
+  },
+  "reduction_vs_best_other": 0.018851476189353455,
+  "reduction_vs_nominal": 0.1029625406717446,
+  "stationarity": {
+   "interior_gates": 64,
+   "min_flow": 2.34533714594198e-06,
+   "max_flow": 0.43731626143338515,
+   "max_offcritical_flow": 6.422355124478863e-06,
+   "valid": true
+  },
+  "solve_s": 0.699079200043343
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 64,
+  "qpu_time_us": {
+   "nominal": 5298001.210786012,
+   "fastest": 8944536.369748496,
+   "error_optimal": 4568264.33514997,
+   "best_uniform": 4568221.844409824,
+   "runtime_optimal": 4567999.3021477945
+  },
+  "pec_overhead": {
+   "nominal": 1.454526107947392,
+   "fastest": 1.890717246461327,
+   "error_optimal": 1.3495134483439541,
+   "best_uniform": 1.34951966749209,
+   "runtime_optimal": 1.3495389294819788
+  },
+  "makespan_us": {
+   "nominal": 0.42000000000000004,
+   "fastest": 0.21000000000000002,
+   "error_optimal": 0.8400000000000001,
+   "best_uniform": 0.8353549416855,
+   "runtime_optimal": 0.8159754702340187
+  },
+  "reduction_vs_best_other": 4.8715292209844385e-05,
+  "reduction_vs_nominal": 0.13778817323635806,
+  "stationarity": {
+   "interior_gates": 64,
+   "min_flow": 6.501857901904806e-05,
+   "max_flow": 0.702956099950473,
+   "max_offcritical_flow": 0.00020701204990355347,
+   "valid": true
+  },
+  "solve_s": 0.6022153999656439
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 65,
+  "qpu_time_us": {
+   "nominal": 8548.240557514335,
+   "fastest": 5276.5975161502265,
+   "error_optimal": 8548.240557514335,
+   "best_uniform": 5276.5975161502265,
+   "runtime_optimal": 4630.270688397536
+  },
+  "pec_overhead": {
+   "nominal": 1.524103492498553,
+   "fastest": 1.693433211374453,
+   "error_optimal": 1.524103492498553,
+   "best_uniform": 1.693433211374453,
+   "runtime_optimal": 1.5863327081693268
+  },
+  "makespan_us": {
+   "nominal": 0.368,
+   "fastest": 0.184,
+   "error_optimal": 0.368,
+   "best_uniform": 0.184,
+   "runtime_optimal": 0.1840000000056877
+  },
+  "reduction_vs_best_other": 0.12248931736302804,
+  "reduction_vs_nominal": 0.45833640768014017,
+  "stationarity": {
+   "interior_gates": 51,
+   "min_flow": -1.4778556768803544e-09,
+   "max_flow": 0.13373887469094167,
+   "max_offcritical_flow": 1.4778556768803544e-09,
+   "valid": true
+  },
+  "solve_s": 0.6069942999165505
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 65,
+  "qpu_time_us": {
+   "nominal": 124692.81334982868,
+   "fastest": 148662.39958544986,
+   "error_optimal": 124692.81334982868,
+   "best_uniform": 124369.71612172376,
+   "runtime_optimal": 123507.55093348435
+  },
+  "pec_overhead": {
+   "nominal": 1.524103492498553,
+   "fastest": 1.693433211374453,
+   "error_optimal": 1.524103492498553,
+   "best_uniform": 1.5259385825175527,
+   "runtime_optimal": 1.5287754528777757
+  },
+  "makespan_us": {
+   "nominal": 0.368,
+   "fastest": 0.184,
+   "error_optimal": 0.368,
+   "best_uniform": 0.3412208410882502,
+   "runtime_optimal": 0.28452684637205794
+  },
+  "reduction_vs_best_other": 0.006932275919932063,
+  "reduction_vs_nominal": 0.009505458931454602,
+  "stationarity": {
+   "interior_gates": 65,
+   "min_flow": -4.5894282792795137e-07,
+   "max_flow": 0.4815931272020999,
+   "max_offcritical_flow": 5.809034111918712e-07,
+   "valid": true
+  },
+  "solve_s": 0.7301266000140458
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 65,
+  "qpu_time_us": {
+   "nominal": 5815776.8801732315,
+   "fastest": 7174566.700981133,
+   "error_optimal": 5815776.8801732315,
+   "best_uniform": 5815769.43937116,
+   "runtime_optimal": 5815707.442409247
+  },
+  "pec_overhead": {
+   "nominal": 1.524103492498553,
+   "fastest": 1.693433211374453,
+   "error_optimal": 1.524103492498553,
+   "best_uniform": 1.5241044568087017,
+   "runtime_optimal": 1.5241099371318139
+  },
+  "makespan_us": {
+   "nominal": 0.368,
+   "fastest": 0.184,
+   "error_optimal": 0.368,
+   "best_uniform": 0.3673628567958404,
+   "runtime_optimal": 0.36289340766034583
+  },
+  "reduction_vs_best_other": 1.0660147820362731e-05,
+  "reduction_vs_nominal": 1.1939550882855698e-05,
+  "stationarity": {
+   "interior_gates": 65,
+   "min_flow": -0.0005075789449660021,
+   "max_flow": 0.7901766120452781,
+   "max_offcritical_flow": 0.000613104039304881,
+   "valid": true
+  },
+  "solve_s": 0.31865000003017485
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 65,
+  "qpu_time_us": {
+   "nominal": 8548.240557514335,
+   "fastest": 7710.223744993204,
+   "error_optimal": 14444.447926960787,
+   "best_uniform": 7513.979023156252,
+   "runtime_optimal": 5526.93114836541
+  },
+  "pec_overhead": {
+   "nominal": 1.524103492498553,
+   "fastest": 2.0470317515476237,
+   "error_optimal": 1.400914294181272,
+   "best_uniform": 1.8275813951717665,
+   "runtime_optimal": 1.7331378834754734
+  },
+  "makespan_us": {
+   "nominal": 0.368,
+   "fastest": 0.184,
+   "error_optimal": 0.736,
+   "best_uniform": 0.22496581109534058,
+   "runtime_optimal": 0.18400000032598327
+  },
+  "reduction_vs_best_other": 0.2644468222052849,
+  "reduction_vs_nominal": 0.35344225385574124,
+  "stationarity": {
+   "interior_gates": 48,
+   "min_flow": 3.2492986565485184e-07,
+   "max_flow": 0.27647939869649063,
+   "max_offcritical_flow": 6.089180714082669e-07,
+   "valid": true
+  },
+  "solve_s": 0.6156499999342486
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 65,
+  "qpu_time_us": {
+   "nominal": 124692.81334982868,
+   "fastest": 217227.17333719984,
+   "error_optimal": 112572.49090903134,
+   "best_uniform": 111395.39026718543,
+   "runtime_optimal": 109327.54178938831
+  },
+  "pec_overhead": {
+   "nominal": 1.524103492498553,
+   "fastest": 2.0470317515476237,
+   "error_optimal": 1.400914294181272,
+   "best_uniform": 1.4072887688857716,
+   "runtime_optimal": 1.4109932474388103
+  },
+  "makespan_us": {
+   "nominal": 0.368,
+   "fastest": 0.184,
+   "error_optimal": 0.736,
+   "best_uniform": 0.6247182890017333,
+   "runtime_optimal": 0.4913574272912663
+  },
+  "reduction_vs_best_other": 0.018563142270405564,
+  "reduction_vs_nominal": 0.12322499707607626,
+  "stationarity": {
+   "interior_gates": 65,
+   "min_flow": 9.451325709594446e-07,
+   "max_flow": 0.4067584436603653,
+   "max_offcritical_flow": 2.9439654118059176e-06,
+   "valid": true
+  },
+  "solve_s": 0.6000723000615835
+ },
+ {
+  "family": "graph",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 65,
+  "qpu_time_us": {
+   "nominal": 5815776.8801732315,
+   "fastest": 10483557.703355324,
+   "error_optimal": 4920846.597030489,
+   "best_uniform": 4920815.339381429,
+   "runtime_optimal": 4920629.6652189465
+  },
+  "pec_overhead": {
+   "nominal": 1.524103492498553,
+   "fastest": 2.0470317515476237,
+   "error_optimal": 1.400914294181272,
+   "best_uniform": 1.4009190876705506,
+   "runtime_optimal": 1.4009354362632538
+  },
+  "makespan_us": {
+   "nominal": 0.368,
+   "fastest": 0.184,
+   "error_optimal": 0.736,
+   "best_uniform": 0.732691442765574,
+   "runtime_optimal": 0.7173789669335963
+  },
+  "reduction_vs_best_other": 3.773239792126404e-05,
+  "reduction_vs_nominal": 0.15391704898548686,
+  "stationarity": {
+   "interior_gates": 65,
+   "min_flow": 6.691647989816986e-05,
+   "max_flow": 0.5886303356066815,
+   "max_offcritical_flow": 0.00025152130496905364,
+   "valid": true
+  },
+  "solve_s": 0.17396450007800013
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 132,
+  "qpu_time_us": {
+   "nominal": 66670.0815322335,
+   "fastest": 63700.26455893607,
+   "error_optimal": 66670.0815322335,
+   "best_uniform": 55093.21602265979,
+   "runtime_optimal": 37525.4286075592
+  },
+  "pec_overhead": {
+   "nominal": 3.6515772354486358,
+   "fastest": 5.047782267845398,
+   "error_optimal": 3.6515772354486358,
+   "best_uniform": 4.008152334186059,
+   "runtime_optimal": 3.8742962473778073
+  },
+  "makespan_us": {
+   "nominal": 0.5,
+   "fastest": 0.25,
+   "error_optimal": 0.5,
+   "best_uniform": 0.34293332214764943,
+   "runtime_optimal": 0.25000000050928667
+  },
+  "reduction_vs_best_other": 0.3188738774638782,
+  "reduction_vs_nominal": 0.43714740187596,
+  "stationarity": {
+   "interior_gates": 118,
+   "min_flow": -2.5632235275444064e-09,
+   "max_flow": 0.24430954535743896,
+   "max_offcritical_flow": 1.019871576978094e-07,
+   "valid": true
+  },
+  "solve_s": 0.3047109000617638
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 132,
+  "qpu_time_us": {
+   "nominal": 733370.8968545685,
+   "fastest": 1337705.5557376575,
+   "error_optimal": 733370.8968545685,
+   "best_uniform": 732237.813478507,
+   "runtime_optimal": 724500.565373937
+  },
+  "pec_overhead": {
+   "nominal": 3.6515772354486358,
+   "fastest": 5.047782267845398,
+   "error_optimal": 3.6515772354486358,
+   "best_uniform": 3.6543063434281966,
+   "runtime_optimal": 3.6656204325918202
+  },
+  "makespan_us": {
+   "nominal": 0.5,
+   "fastest": 0.25,
+   "error_optimal": 0.5,
+   "best_uniform": 0.4833030485324866,
+   "runtime_optimal": 0.39192376749575136
+  },
+  "reduction_vs_best_other": 0.010566578182863884,
+  "reduction_vs_nominal": 0.012095287007810596,
+  "stationarity": {
+   "interior_gates": 132,
+   "min_flow": -4.318491438631417e-05,
+   "max_flow": 0.5621373155246997,
+   "max_offcritical_flow": 0.0002518975857000585,
+   "valid": true
+  },
+  "solve_s": 0.279617500025779
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 132,
+  "qpu_time_us": {
+   "nominal": 33401710.847648982,
+   "fastest": 63763964.82349501,
+   "error_optimal": 33401710.847648982,
+   "best_uniform": 33401685.436114144,
+   "runtime_optimal": 33401065.494302344
+  },
+  "pec_overhead": {
+   "nominal": 3.6515772354486358,
+   "fastest": 5.047782267845398,
+   "error_optimal": 3.6515772354486358,
+   "best_uniform": 3.6515783715698134,
+   "runtime_optimal": 3.6516052544833584
+  },
+  "makespan_us": {
+   "nominal": 0.5,
+   "fastest": 0.25,
+   "error_optimal": 0.5,
+   "best_uniform": 0.4996535464952262,
+   "runtime_optimal": 0.49131597712100494
+  },
+  "reduction_vs_best_other": 1.856019550228183e-05,
+  "reduction_vs_nominal": 1.9320966808566986e-05,
+  "stationarity": {
+   "interior_gates": 132,
+   "min_flow": -1.4109099634928279e-06,
+   "max_flow": 0.8848708419928419,
+   "max_offcritical_flow": 2.4838796479749245e-05,
+   "valid": true
+  },
+  "solve_s": 0.29855639999732375
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 132,
+  "qpu_time_us": {
+   "nominal": 66670.0815322335,
+   "fastest": 204349.5463360613,
+   "error_optimal": 79427.1145227865,
+   "best_uniform": 62673.71601700109,
+   "runtime_optimal": 37253.272241744315
+  },
+  "pec_overhead": {
+   "nominal": 3.6515772354486358,
+   "fastest": 9.041007606147918,
+   "error_optimal": 2.818281648856028,
+   "best_uniform": 3.1594649641157693,
+   "runtime_optimal": 3.370217213947377
+  },
+  "makespan_us": {
+   "nominal": 0.5,
+   "fastest": 0.25,
+   "error_optimal": 1.0,
+   "best_uniform": 0.6278535553997756,
+   "runtime_optimal": 0.32798096640346625
+  },
+  "reduction_vs_best_other": 0.4055997536249668,
+  "reduction_vs_nominal": 0.4412295382639785,
+  "stationarity": {
+   "interior_gates": 128,
+   "min_flow": 8.079065272262836e-08,
+   "max_flow": 0.22798224744817489,
+   "max_offcritical_flow": 1.8814174697394373e-07,
+   "valid": true
+  },
+  "solve_s": 0.30917959997896105
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 132,
+  "qpu_time_us": {
+   "nominal": 733370.8968545685,
+   "fastest": 4291340.473057287,
+   "error_optimal": 476562.687136719,
+   "best_uniform": 473576.8412854433,
+   "runtime_optimal": 459554.0082123468
+  },
+  "pec_overhead": {
+   "nominal": 3.6515772354486358,
+   "fastest": 9.041007606147918,
+   "error_optimal": 2.818281648856028,
+   "best_uniform": 2.8266323060369367,
+   "runtime_optimal": 2.8449656868059408
+  },
+  "makespan_us": {
+   "nominal": 0.5,
+   "fastest": 0.25,
+   "error_optimal": 1.0,
+   "best_uniform": 0.9272305464354625,
+   "runtime_optimal": 0.6778314084933977
+  },
+  "reduction_vs_best_other": 0.029610470467757444,
+  "reduction_vs_nominal": 0.37336754133089234,
+  "stationarity": {
+   "interior_gates": 129,
+   "min_flow": 8.260462225097623e-07,
+   "max_flow": 0.47341131943477277,
+   "max_offcritical_flow": 7.823944878616268e-06,
+   "valid": true
+  },
+  "solve_s": 0.2676592000061646
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 132,
+  "qpu_time_us": {
+   "nominal": 33401710.847648982,
+   "fastest": 204553895.88239735,
+   "error_optimal": 19936205.745219413,
+   "best_uniform": 19936130.072351336,
+   "runtime_optimal": 19934814.535127573
+  },
+  "pec_overhead": {
+   "nominal": 3.6515772354486358,
+   "fastest": 9.041007606147918,
+   "error_optimal": 2.818281648856028,
+   "best_uniform": 2.8182879622313917,
+   "runtime_optimal": 2.81834091789501
+  },
+  "makespan_us": {
+   "nominal": 0.5,
+   "fastest": 0.25,
+   "error_optimal": 1.0,
+   "best_uniform": 0.9979227189990505,
+   "runtime_optimal": 0.9719283508802488
+  },
+  "reduction_vs_best_other": 6.598759232556706e-05,
+  "reduction_vs_nominal": 0.40317983632473997,
+  "stationarity": {
+   "interior_gates": 131,
+   "min_flow": 5.078490951898284e-05,
+   "max_flow": 0.5837622566336409,
+   "max_offcritical_flow": 0.0005303759965734449,
+   "valid": true
+  },
+  "solve_s": 0.30463290004990995
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 133,
+  "qpu_time_us": {
+   "nominal": 72926.1514534772,
+   "fastest": 69770.9117432358,
+   "error_optimal": 72926.1514534772,
+   "best_uniform": 60286.105525334475,
+   "runtime_optimal": 41064.584619286245
+  },
+  "pec_overhead": {
+   "nominal": 3.6613580194505797,
+   "fastest": 5.06468858804139,
+   "error_optimal": 3.6613580194505797,
+   "best_uniform": 4.018267165916977,
+   "runtime_optimal": 3.8623124288155406
+  },
+  "makespan_us": {
+   "nominal": 0.544,
+   "fastest": 0.272,
+   "error_optimal": 0.544,
+   "best_uniform": 0.3733701653013357,
+   "runtime_optimal": 0.2752787140566454
+  },
+  "reduction_vs_best_other": 0.31883832499298914,
+  "reduction_vs_nominal": 0.43690179996015355,
+  "stationarity": {
+   "interior_gates": 121,
+   "min_flow": -2.4834781691221176e-12,
+   "max_flow": 0.6877124114133841,
+   "max_offcritical_flow": 8.439460364391207e-11,
+   "valid": true
+  },
+  "solve_s": 0.290078500052914
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 133,
+  "qpu_time_us": {
+   "nominal": 743203.2787832308,
+   "fastest": 1352324.4364350704,
+   "error_optimal": 743203.2787832308,
+   "best_uniform": 741871.2495590304,
+   "runtime_optimal": 731403.5942790114
+  },
+  "pec_overhead": {
+   "nominal": 3.6613580194505797,
+   "fastest": 5.06468858804139,
+   "error_optimal": 3.6613580194505797,
+   "best_uniform": 3.6645663056378592,
+   "runtime_optimal": 3.677306506781716
+  },
+  "makespan_us": {
+   "nominal": 0.544,
+   "fastest": 0.272,
+   "error_optimal": 0.544,
+   "best_uniform": 0.5243778154109099,
+   "runtime_optimal": 0.40875649604884234
+  },
+  "reduction_vs_best_other": 0.014109800435373465,
+  "reduction_vs_nominal": 0.015876792852068444,
+  "stationarity": {
+   "interior_gates": 133,
+   "min_flow": -5.616088970819489e-05,
+   "max_flow": 0.6437455020921921,
+   "max_offcritical_flow": 0.00026061323548764315,
+   "valid": true
+  },
+  "solve_s": 0.24770329997409135
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 133,
+  "qpu_time_us": {
+   "nominal": 33586782.517941155,
+   "fastest": 64197447.14633495,
+   "error_optimal": 33586782.517941155,
+   "best_uniform": 33586752.929857135,
+   "runtime_optimal": 33586081.74091213
+  },
+  "pec_overhead": {
+   "nominal": 3.6613580194505797,
+   "fastest": 5.06468858804139,
+   "error_optimal": 3.6613580194505797,
+   "best_uniform": 3.661359160967615,
+   "runtime_optimal": 3.6613954320520126
+  },
+  "makespan_us": {
+   "nominal": 0.544,
+   "fastest": 0.272,
+   "error_optimal": 0.544,
+   "best_uniform": 0.5436230585868062,
+   "runtime_optimal": 0.5336524353530185
+  },
+  "reduction_vs_best_other": 1.9983740208617817e-05,
+  "reduction_vs_nominal": 2.0864666886444283e-05,
+  "stationarity": {
+   "interior_gates": 133,
+   "min_flow": -3.5668071519565883e-07,
+   "max_flow": 1.0000001429449734,
+   "max_offcritical_flow": 3.5668071519565883e-07,
+   "valid": true
+  },
+  "solve_s": 0.29468199994880706
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 133,
+  "qpu_time_us": {
+   "nominal": 72926.1514534772,
+   "fastest": 224363.5877716032,
+   "error_optimal": 86787.34680313444,
+   "best_uniform": 68513.75524082582,
+   "runtime_optimal": 38767.12036635295
+  },
+  "pec_overhead": {
+   "nominal": 3.6613580194505797,
+   "fastest": 9.082214110629891,
+   "error_optimal": 2.8243190681680255,
+   "best_uniform": 3.1658821506369303,
+   "runtime_optimal": 3.36405289271857
+  },
+  "makespan_us": {
+   "nominal": 0.544,
+   "fastest": 0.272,
+   "error_optimal": 1.088,
+   "best_uniform": 0.6835783244875678,
+   "runtime_optimal": 0.3425609951317051
+  },
+  "reduction_vs_best_other": 0.43417025924084085,
+  "reduction_vs_nominal": 0.4684057831972087,
+  "stationarity": {
+   "interior_gates": 126,
+   "min_flow": 1.529732807703114e-07,
+   "max_flow": 0.29123768332437405,
+   "max_offcritical_flow": 1.4436968145984202e-06,
+   "valid": true
+  },
+  "solve_s": 0.31948790000751615
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 133,
+  "qpu_time_us": {
+   "nominal": 743203.2787832308,
+   "fastest": 4348694.245337838,
+   "error_optimal": 485626.2567440096,
+   "best_uniform": 482148.53816621256,
+   "runtime_optimal": 464108.520298284
+  },
+  "pec_overhead": {
+   "nominal": 3.6613580194505797,
+   "fastest": 9.082214110629891,
+   "error_optimal": 2.8243190681680255,
+   "best_uniform": 2.8338190589603482,
+   "runtime_optimal": 2.8547068142878724
+  },
+  "makespan_us": {
+   "nominal": 0.544,
+   "fastest": 0.272,
+   "error_optimal": 1.088,
+   "best_uniform": 1.0039438320073326,
+   "runtime_optimal": 0.6950365808539938
+  },
+  "reduction_vs_best_other": 0.03741589248935884,
+  "reduction_vs_nominal": 0.3755295037743638,
+  "stationarity": {
+   "interior_gates": 131,
+   "min_flow": 7.012125934231413e-07,
+   "max_flow": 0.5569571731633267,
+   "max_offcritical_flow": 6.639145842304152e-06,
+   "valid": true
+  },
+  "solve_s": 0.2862091000424698
+ },
+ {
+  "family": "graph",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 133,
+  "qpu_time_us": {
+   "nominal": 33586782.517941155,
+   "fastest": 206440896.46608335,
+   "error_optimal": 20028732.84384689,
+   "best_uniform": 20028642.481520038,
+   "runtime_optimal": 20026713.66656034
+  },
+  "pec_overhead": {
+   "nominal": 3.6613580194505797,
+   "fastest": 9.082214110629891,
+   "error_optimal": 2.8243190681680255,
+   "best_uniform": 2.8243254081352567,
+   "runtime_optimal": 2.824454512582043
+  },
+  "makespan_us": {
+   "nominal": 0.544,
+   "fastest": 0.272,
+   "error_optimal": 1.088,
+   "best_uniform": 1.085739918270967,
+   "runtime_optimal": 1.0386083709965857
+  },
+  "reduction_vs_best_other": 9.630283038286613e-05,
+  "reduction_vs_nominal": 0.4037322968979654,
+  "stationarity": {
+   "interior_gates": 133,
+   "min_flow": 0.00019700750500496126,
+   "max_flow": 0.9999845681304947,
+   "max_offcritical_flow": 0.001946409657016274,
+   "valid": true
+  },
+  "solve_s": 0.28939799999352545
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 48,
+  "qpu_time_us": {
+   "nominal": 13346.923382257764,
+   "fastest": 7565.604309546093,
+   "error_optimal": 13346.923382257764,
+   "best_uniform": 7565.604309546093,
+   "runtime_optimal": 7067.100518235292
+  },
+  "pec_overhead": {
+   "nominal": 1.2852419823713053,
+   "fastest": 1.3684569171318701,
+   "error_optimal": 1.2852419823713053,
+   "best_uniform": 1.3684569171318701,
+   "runtime_optimal": 1.3226043650329669
+  },
+  "makespan_us": {
+   "nominal": 0.8080000000000003,
+   "fastest": 0.40400000000000014,
+   "error_optimal": 0.8080000000000003,
+   "best_uniform": 0.40400000000000014,
+   "runtime_optimal": 0.4040000000206994
+  },
+  "reduction_vs_best_other": 0.06589080936757441,
+  "reduction_vs_nominal": 0.4705071486639626,
+  "stationarity": {
+   "interior_gates": 29,
+   "min_flow": -1.8352095480175177e-08,
+   "max_flow": 0.06818314563682613,
+   "max_offcritical_flow": 6.784260507095673e-08,
+   "valid": true
+  },
+  "solve_s": 0.11947340006008744
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 48,
+  "qpu_time_us": {
+   "nominal": 95939.27104474389,
+   "fastest": 101199.32101184918,
+   "error_optimal": 95939.27104474389,
+   "best_uniform": 94447.36408280648,
+   "runtime_optimal": 92711.38800140869
+  },
+  "pec_overhead": {
+   "nominal": 1.2852419823713053,
+   "fastest": 1.3684569171318701,
+   "error_optimal": 1.2852419823713053,
+   "best_uniform": 1.293512352211694,
+   "runtime_optimal": 1.2958336955969811
+  },
+  "makespan_us": {
+   "nominal": 0.8080000000000003,
+   "fastest": 0.40400000000000014,
+   "error_optimal": 0.8080000000000003,
+   "best_uniform": 0.6448015862463271,
+   "runtime_optimal": 0.5212135555662691
+  },
+  "reduction_vs_best_other": 0.018380355007851512,
+  "reduction_vs_nominal": 0.033645065343781755,
+  "stationarity": {
+   "interior_gates": 44,
+   "min_flow": -7.501227688971535e-08,
+   "max_flow": 1.0000000199392252,
+   "max_offcritical_flow": 7.501227688971535e-08,
+   "valid": true
+  },
+  "solve_s": 0.12375670007895678
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 48,
+  "qpu_time_us": {
+   "nominal": 4142964.3065065644,
+   "fastest": 4689251.439424701,
+   "error_optimal": 4142964.3065065644,
+   "best_uniform": 4142921.763059936,
+   "runtime_optimal": 4142798.719828584
+  },
+  "pec_overhead": {
+   "nominal": 1.2852419823713053,
+   "fastest": 1.3684569171318701,
+   "error_optimal": 1.2852419823713053,
+   "best_uniform": 1.2852482582616875,
+   "runtime_optimal": 1.2852664172718327
+  },
+  "makespan_us": {
+   "nominal": 0.8080000000000003,
+   "fastest": 0.40400000000000014,
+   "error_optimal": 0.8080000000000003,
+   "best_uniform": 0.8029751234046242,
+   "runtime_optimal": 0.7884396412251807
+  },
+  "reduction_vs_best_other": 2.96996270721106e-05,
+  "reduction_vs_nominal": 3.996816427309646e-05,
+  "stationarity": {
+   "interior_gates": 48,
+   "min_flow": -1.754343756244453e-07,
+   "max_flow": 1.0000000113710916,
+   "max_offcritical_flow": 1.3949151976882777e-06,
+   "valid": true
+  },
+  "solve_s": 0.18405440007336438
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 48,
+  "qpu_time_us": {
+   "nominal": 13346.923382257764,
+   "fastest": 9482.656881058272,
+   "error_optimal": 24144.44360333517,
+   "best_uniform": 9482.656881058272,
+   "runtime_optimal": 7942.138769133006
+  },
+  "pec_overhead": {
+   "nominal": 1.2852419823713053,
+   "fastest": 1.5320549263298788,
+   "error_optimal": 1.2223284569386526,
+   "best_uniform": 1.5320549263298788,
+   "runtime_optimal": 1.4020969770108926
+  },
+  "makespan_us": {
+   "nominal": 0.8080000000000003,
+   "fastest": 0.40400000000000014,
+   "error_optimal": 1.6160000000000005,
+   "best_uniform": 0.40400000000000014,
+   "runtime_optimal": 0.40400000000218467
+  },
+  "reduction_vs_best_other": 0.1624563802369008,
+  "reduction_vs_nominal": 0.404946103182806,
+  "stationarity": {
+   "interior_gates": 27,
+   "min_flow": 5.710132114879543e-08,
+   "max_flow": 0.21342981968060554,
+   "max_offcritical_flow": 1.2661408089651349e-07,
+   "valid": true
+  },
+  "solve_s": 0.1333827000344172
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 48,
+  "qpu_time_us": {
+   "nominal": 95939.27104474389,
+   "fastest": 126842.2717456408,
+   "error_optimal": 98848.78643543653,
+   "best_uniform": 93882.15947061559,
+   "runtime_optimal": 90320.50151905454
+  },
+  "pec_overhead": {
+   "nominal": 1.2852419823713053,
+   "fastest": 1.5320549263298788,
+   "error_optimal": 1.2223284569386526,
+   "best_uniform": 1.2447586412233618,
+   "runtime_optimal": 1.2443570566214346
+  },
+  "makespan_us": {
+   "nominal": 0.8080000000000003,
+   "fastest": 0.40400000000000014,
+   "error_optimal": 1.6160000000000005,
+   "best_uniform": 1.0591648852920295,
+   "runtime_optimal": 0.8330582105318786
+  },
+  "reduction_vs_best_other": 0.03793753756458729,
+  "reduction_vs_nominal": 0.05856589761943143,
+  "stationarity": {
+   "interior_gates": 33,
+   "min_flow": 0.0005622982502088444,
+   "max_flow": 0.8468180726594403,
+   "max_offcritical_flow": 0.0,
+   "valid": true
+  },
+  "solve_s": 0.732098100008443
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 48,
+  "qpu_time_us": {
+   "nominal": 4142964.3065065644,
+   "fastest": 5877463.400110184,
+   "error_optimal": 3759361.5852084034,
+   "best_uniform": 3759171.5142422994,
+   "runtime_optimal": 3758662.380532981
+  },
+  "pec_overhead": {
+   "nominal": 1.2852419823713053,
+   "fastest": 1.5320549263298788,
+   "error_optimal": 1.2223284569386526,
+   "best_uniform": 1.222358301143261,
+   "runtime_optimal": 1.2224308728712139
+  },
+  "makespan_us": {
+   "nominal": 0.8080000000000003,
+   "fastest": 0.40400000000000014,
+   "error_optimal": 1.6160000000000005,
+   "best_uniform": 1.590992680113261,
+   "runtime_optimal": 1.5270504251998915
+  },
+  "reduction_vs_best_other": 0.0001354377440320187,
+  "reduction_vs_nominal": 0.09276013442115194,
+  "stationarity": {
+   "interior_gates": 48,
+   "min_flow": 5.771993886759634e-05,
+   "max_flow": 1.0000031892547028,
+   "max_offcritical_flow": 0.00015859423249185196,
+   "valid": true
+  },
+  "solve_s": 0.11162300000432879
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 47,
+  "qpu_time_us": {
+   "nominal": 15893.370073399263,
+   "fastest": 9170.921939586138,
+   "error_optimal": 15893.370073399263,
+   "best_uniform": 9170.921939586138,
+   "runtime_optimal": 8725.14766426327
+  },
+  "pec_overhead": {
+   "nominal": 1.3318459461451653,
+   "fastest": 1.4307623108281093,
+   "error_optimal": 1.3318459461451653,
+   "best_uniform": 1.4307623108281093,
+   "runtime_optimal": 1.395556377614063
+  },
+  "makespan_us": {
+   "nominal": 0.8960000000000001,
+   "fastest": 0.44800000000000006,
+   "error_optimal": 0.8960000000000001,
+   "best_uniform": 0.44800000000000006,
+   "runtime_optimal": 0.4480000001221247
+  },
+  "reduction_vs_best_other": 0.048607356845846716,
+  "reduction_vs_nominal": 0.45101966266634974,
+  "stationarity": {
+   "interior_gates": 25,
+   "min_flow": 2.588422137334624e-10,
+   "max_flow": 0.23966318896192537,
+   "max_offcritical_flow": 7.027981471591919e-09,
+   "valid": true
+  },
+  "solve_s": 0.1091097000753507
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 47,
+  "qpu_time_us": {
+   "nominal": 104584.05128656478,
+   "fastest": 111524.9614438957,
+   "error_optimal": 104584.05128656478,
+   "best_uniform": 102867.86232336068,
+   "runtime_optimal": 101356.33523746574
+  },
+  "pec_overhead": {
+   "nominal": 1.3318459461451653,
+   "fastest": 1.4307623108281093,
+   "error_optimal": 1.3318459461451653,
+   "best_uniform": 1.340981717232489,
+   "runtime_optimal": 1.3424397144492346
+  },
+  "makespan_us": {
+   "nominal": 0.8960000000000001,
+   "fastest": 0.44800000000000006,
+   "error_optimal": 0.8960000000000001,
+   "best_uniform": 0.720500150764101,
+   "runtime_optimal": 0.6242072484601744
+  },
+  "reduction_vs_best_other": 0.01469387087235774,
+  "reduction_vs_nominal": 0.03086241170993609,
+  "stationarity": {
+   "interior_gates": 45,
+   "min_flow": -1.0807976357854057e-10,
+   "max_flow": 0.7805218936026465,
+   "max_offcritical_flow": 1.0807976357854057e-10,
+   "valid": true
+  },
+  "solve_s": 0.14884919999167323
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 47,
+  "qpu_time_us": {
+   "nominal": 4450427.430731675,
+   "fastest": 5126872.897155065,
+   "error_optimal": 4450427.430731675,
+   "best_uniform": 4450378.222729021,
+   "runtime_optimal": 4450258.41034421
+  },
+  "pec_overhead": {
+   "nominal": 1.3318459461451653,
+   "fastest": 1.4307623108281093,
+   "error_optimal": 1.3318459461451653,
+   "best_uniform": 1.3318533726946993,
+   "runtime_optimal": 1.3318702980082509
+  },
+  "makespan_us": {
+   "nominal": 0.8960000000000001,
+   "fastest": 0.44800000000000006,
+   "error_optimal": 0.8960000000000001,
+   "best_uniform": 0.8904278596170091,
+   "runtime_optimal": 0.877297043410049
+  },
+  "reduction_vs_best_other": 2.6921843226390685e-05,
+  "reduction_vs_nominal": 3.7978461640997274e-05,
+  "stationarity": {
+   "interior_gates": 47,
+   "min_flow": -0.0004926866350021313,
+   "max_flow": 1.0006271319453874,
+   "max_offcritical_flow": 0.0007676463448633423,
+   "valid": true
+  },
+  "solve_s": 0.10959140001796186
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 47,
+  "qpu_time_us": {
+   "nominal": 15893.370073399263,
+   "fastest": 11869.203902299463,
+   "error_optimal": 28344.212438944887,
+   "best_uniform": 11869.203902299463,
+   "runtime_optimal": 10497.634395654906
+  },
+  "pec_overhead": {
+   "nominal": 1.3318459461451653,
+   "fastest": 1.6276903486379057,
+   "error_optimal": 1.2576598440847444,
+   "best_uniform": 1.6276903486379057,
+   "runtime_optimal": 1.5130953195034547
+  },
+  "makespan_us": {
+   "nominal": 0.8960000000000001,
+   "fastest": 0.44800000000000006,
+   "error_optimal": 1.7920000000000003,
+   "best_uniform": 0.44800000000000006,
+   "runtime_optimal": 0.4585206165084788
+  },
+  "reduction_vs_best_other": 0.11555699252742957,
+  "reduction_vs_nominal": 0.3394960070032724,
+  "stationarity": {
+   "interior_gates": 28,
+   "min_flow": 5.959091443060531e-07,
+   "max_flow": 0.7736702820117076,
+   "max_offcritical_flow": 1.3177921728397481e-06,
+   "valid": true
+  },
+  "solve_s": 0.11153570003807545
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 47,
+  "qpu_time_us": {
+   "nominal": 104584.05128656478,
+   "fastest": 144337.99745474884,
+   "error_optimal": 107429.62661010805,
+   "best_uniform": 101797.4985896246,
+   "runtime_optimal": 98868.7712890145
+  },
+  "pec_overhead": {
+   "nominal": 1.3318459461451653,
+   "fastest": 1.6276903486379057,
+   "error_optimal": 1.2576598440847444,
+   "best_uniform": 1.2822616340268416,
+   "runtime_optimal": 1.2824236679279493
+  },
+  "makespan_us": {
+   "nominal": 0.8960000000000001,
+   "fastest": 0.44800000000000006,
+   "error_optimal": 1.7920000000000003,
+   "best_uniform": 1.1913279689308167,
+   "runtime_optimal": 1.0116832191881753
+  },
+  "reduction_vs_best_other": 0.02877013031937703,
+  "reduction_vs_nominal": 0.05464772044343702,
+  "stationarity": {
+   "interior_gates": 47,
+   "min_flow": 9.080092435028015e-07,
+   "max_flow": 0.7109826935325801,
+   "max_offcritical_flow": 2.3574190801390674e-06,
+   "valid": true
+  },
+  "solve_s": 0.11534060002304614
+ },
+ {
+  "family": "scrambled",
+  "qubits": 8,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 47,
+  "qpu_time_us": {
+   "nominal": 4450427.430731675,
+   "fastest": 6635308.881524767,
+   "error_optimal": 3982614.9209971037,
+   "best_uniform": 3982398.2733792537,
+   "runtime_optimal": 3981901.769675559
+  },
+  "pec_overhead": {
+   "nominal": 1.3318459461451653,
+   "fastest": 1.6276903486379057,
+   "error_optimal": 1.2576598440847444,
+   "best_uniform": 1.2576933682673819,
+   "runtime_optimal": 1.2577634424241841
+  },
+  "makespan_us": {
+   "nominal": 0.8960000000000001,
+   "fastest": 0.44800000000000006,
+   "error_optimal": 1.7920000000000003,
+   "best_uniform": 1.7648806656688267,
+   "runtime_optimal": 1.7054429653637475
+  },
+  "reduction_vs_best_other": 0.00012467454775022535,
+  "reduction_vs_nominal": 0.10527655339817277,
+  "stationarity": {
+   "interior_gates": 47,
+   "min_flow": 3.874678726054656e-05,
+   "max_flow": 1.0001602138046455,
+   "max_offcritical_flow": 0.00019586294116723574,
+   "valid": true
+  },
+  "solve_s": 0.14767870004288852
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 95,
+  "qpu_time_us": {
+   "nominal": 34759.43201583593,
+   "fastest": 23476.628020807897,
+   "error_optimal": 34759.43201583593,
+   "best_uniform": 23476.628020807897,
+   "runtime_optimal": 19351.15777026838
+  },
+  "pec_overhead": {
+   "nominal": 1.824677371782583,
+   "fastest": 2.120716463406278,
+   "error_optimal": 1.824677371782583,
+   "best_uniform": 2.120716463406278,
+   "runtime_optimal": 1.9253878431925475
+  },
+  "makespan_us": {
+   "nominal": 1.0440000000000003,
+   "fastest": 0.5220000000000001,
+   "error_optimal": 1.0440000000000003,
+   "best_uniform": 0.5220000000000001,
+   "runtime_optimal": 0.5220000000114139
+  },
+  "reduction_vs_best_other": 0.17572669494456428,
+  "reduction_vs_nominal": 0.44328325729107854,
+  "stationarity": {
+   "interior_gates": 71,
+   "min_flow": 1.1928210544559419e-11,
+   "max_flow": 0.1375872767902521,
+   "max_offcritical_flow": 3.8391795743337865e-09,
+   "valid": true
+  },
+  "solve_s": 0.22959509992506355
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 95,
+  "qpu_time_us": {
+   "nominal": 201231.80757060568,
+   "fastest": 248348.54392892946,
+   "error_optimal": 201231.80757060568,
+   "best_uniform": 199009.4711920026,
+   "runtime_optimal": 194282.47040532192
+  },
+  "pec_overhead": {
+   "nominal": 1.824677371782583,
+   "fastest": 2.120716463406278,
+   "error_optimal": 1.824677371782583,
+   "best_uniform": 1.833783636436771,
+   "runtime_optimal": 1.8426947646182554
+  },
+  "makespan_us": {
+   "nominal": 1.0440000000000003,
+   "fastest": 0.5220000000000001,
+   "error_optimal": 1.0440000000000003,
+   "best_uniform": 0.9180354132933533,
+   "runtime_optimal": 0.7217227932964451
+  },
+  "reduction_vs_best_other": 0.023752642315802652,
+  "reduction_vs_nominal": 0.03453398967678345,
+  "stationarity": {
+   "interior_gates": 95,
+   "min_flow": -1.3864064719537836e-07,
+   "max_flow": 0.8668244004770351,
+   "max_offcritical_flow": 8.889493618437592e-07,
+   "valid": true
+  },
+  "solve_s": 0.2734452999429777
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 95,
+  "qpu_time_us": {
+   "nominal": 8358378.209754324,
+   "fastest": 11267072.423426885,
+   "error_optimal": 8358378.209754324,
+   "best_uniform": 8358318.328658549,
+   "runtime_optimal": 8358102.63130169
+  },
+  "pec_overhead": {
+   "nominal": 1.824677371782583,
+   "fastest": 2.120716463406278,
+   "error_optimal": 1.824677371782583,
+   "best_uniform": 1.824683962215851,
+   "runtime_optimal": 1.8247069460838325
+  },
+  "makespan_us": {
+   "nominal": 1.0440000000000003,
+   "fastest": 0.5220000000000001,
+   "error_optimal": 1.0440000000000003,
+   "best_uniform": 1.040388034392294,
+   "runtime_optimal": 1.0275856405205164
+  },
+  "reduction_vs_best_other": 2.5806310357867623e-05,
+  "reduction_vs_nominal": 3.297032578786219e-05,
+  "stationarity": {
+   "interior_gates": 95,
+   "min_flow": -0.0007241032331647251,
+   "max_flow": 1.0002840905532635,
+   "max_offcritical_flow": 0.0007241032331647251,
+   "valid": true
+  },
+  "solve_s": 0.26887590007390827
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 95,
+  "qpu_time_us": {
+   "nominal": 34759.43201583593,
+   "fastest": 40336.962970680026,
+   "error_optimal": 54654.79031011849,
+   "best_uniform": 33707.41792133526,
+   "runtime_optimal": 23394.672305624044
+  },
+  "pec_overhead": {
+   "nominal": 1.824677371782583,
+   "fastest": 2.779817897322748,
+   "error_optimal": 1.6178895468274848,
+   "best_uniform": 2.001348213291776,
+   "runtime_optimal": 2.002755622289121
+  },
+  "makespan_us": {
+   "nominal": 1.0440000000000003,
+   "fastest": 0.5220000000000001,
+   "error_optimal": 2.0880000000000005,
+   "best_uniform": 0.8415504760786582,
+   "runtime_optimal": 0.5832584603902298
+  },
+  "reduction_vs_best_other": 0.3059488460308234,
+  "reduction_vs_nominal": 0.32695470124581594,
+  "stationarity": {
+   "interior_gates": 78,
+   "min_flow": 2.029936504825283e-07,
+   "max_flow": 0.465705991638806,
+   "max_offcritical_flow": 4.2247914980210764e-07,
+   "valid": true
+  },
+  "solve_s": 0.2267627000110224
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 95,
+  "qpu_time_us": {
+   "nominal": 201231.80757060568,
+   "fastest": 426706.34008447325,
+   "error_optimal": 185533.11959680068,
+   "best_uniform": 178765.84332506056,
+   "runtime_optimal": 169472.0489459359
+  },
+  "pec_overhead": {
+   "nominal": 1.824677371782583,
+   "fastest": 2.779817897322748,
+   "error_optimal": 1.6178895468274848,
+   "best_uniform": 1.6429199994269326,
+   "runtime_optimal": 1.6514043076479008
+  },
+  "makespan_us": {
+   "nominal": 1.0440000000000003,
+   "fastest": 0.5220000000000001,
+   "error_optimal": 2.0880000000000005,
+   "best_uniform": 1.622953552602822,
+   "runtime_optimal": 1.2142862440837776
+  },
+  "reduction_vs_best_other": 0.05198864730677433,
+  "reduction_vs_nominal": 0.15782673230486344,
+  "stationarity": {
+   "interior_gates": 95,
+   "min_flow": 6.29755872548268e-07,
+   "max_flow": 0.7273337292185869,
+   "max_offcritical_flow": 1.917743397274124e-06,
+   "valid": true
+  },
+  "solve_s": 0.27862440003082156
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 95,
+  "qpu_time_us": {
+   "nominal": 8358378.209754324,
+   "fastest": 19358805.81866034,
+   "error_optimal": 6598571.254644227,
+   "best_uniform": 6598338.070138621,
+   "runtime_optimal": 6597518.654384576
+  },
+  "pec_overhead": {
+   "nominal": 1.824677371782583,
+   "fastest": 2.779817897322748,
+   "error_optimal": 1.6178895468274848,
+   "best_uniform": 1.6179187649410944,
+   "runtime_optimal": 1.6180134098093737
+  },
+  "makespan_us": {
+   "nominal": 1.0440000000000003,
+   "fastest": 0.5220000000000001,
+   "error_optimal": 2.0880000000000005,
+   "best_uniform": 2.0699870066220383,
+   "runtime_optimal": 2.0091987658535477
+  },
+  "reduction_vs_best_other": 0.00012418517289281006,
+  "reduction_vs_nominal": 0.21067000214405285,
+  "stationarity": {
+   "interior_gates": 95,
+   "min_flow": 4.3814597865475495e-05,
+   "max_flow": 0.999999995308594,
+   "max_offcritical_flow": 0.00014481031289321513,
+   "valid": true
+  },
+  "solve_s": 0.22906100004911423
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 100,
+  "qpu_time_us": {
+   "nominal": 37262.8337048114,
+   "fastest": 24650.824997872885,
+   "error_optimal": 37262.8337048114,
+   "best_uniform": 24650.824997872885,
+   "runtime_optimal": 21276.94228388803
+  },
+  "pec_overhead": {
+   "nominal": 1.7505364240075818,
+   "fastest": 2.0135570531348477,
+   "error_optimal": 1.7505364240075818,
+   "best_uniform": 2.0135570531348477,
+   "runtime_optimal": 1.8706942790785512
+  },
+  "makespan_us": {
+   "nominal": 1.2160000000000004,
+   "fastest": 0.6080000000000002,
+   "error_optimal": 1.2160000000000004,
+   "best_uniform": 0.6080000000000002,
+   "runtime_optimal": 0.6080000000675105
+  },
+  "reduction_vs_best_other": 0.13686692896793462,
+  "reduction_vs_nominal": 0.4290036433503783,
+  "stationarity": {
+   "interior_gates": 76,
+   "min_flow": 8.463853951974907e-12,
+   "max_flow": 0.17337174587753437,
+   "max_offcritical_flow": 5.614233629393504e-09,
+   "valid": true
+  },
+  "solve_s": 0.2994984000688419
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 100,
+  "qpu_time_us": {
+   "nominal": 190481.722293674,
+   "fastest": 227371.4253093275,
+   "error_optimal": 190481.722293674,
+   "best_uniform": 187643.3761569254,
+   "runtime_optimal": 183517.06442078864
+  },
+  "pec_overhead": {
+   "nominal": 1.7505364240075818,
+   "fastest": 2.0135570531348477,
+   "error_optimal": 1.7505364240075818,
+   "best_uniform": 1.7621497558922834,
+   "runtime_optimal": 1.7706752200114106
+  },
+  "makespan_us": {
+   "nominal": 1.2160000000000004,
+   "fastest": 0.6080000000000002,
+   "error_optimal": 1.2160000000000004,
+   "best_uniform": 1.042930650139323,
+   "runtime_optimal": 0.8532710343588805
+  },
+  "reduction_vs_best_other": 0.021990180632253997,
+  "reduction_vs_nominal": 0.03656339195709113,
+  "stationarity": {
+   "interior_gates": 97,
+   "min_flow": -5.138532882270593e-11,
+   "max_flow": 1.0000079998305123,
+   "max_offcritical_flow": 2.601247033098389e-09,
+   "valid": true
+  },
+  "solve_s": 0.29171310004312545
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 100,
+  "qpu_time_us": {
+   "nominal": 7698207.263147942,
+   "fastest": 10160680.840570603,
+   "error_optimal": 7698207.263147942,
+   "best_uniform": 7698127.166126404,
+   "runtime_optimal": 7697895.194903886
+  },
+  "pec_overhead": {
+   "nominal": 1.7505364240075818,
+   "fastest": 2.0135570531348477,
+   "error_optimal": 1.7505364240075818,
+   "best_uniform": 1.7505449006526086,
+   "runtime_optimal": 1.750571058469518
+  },
+  "makespan_us": {
+   "nominal": 1.2160000000000004,
+   "fastest": 0.6080000000000002,
+   "error_optimal": 1.2160000000000004,
+   "best_uniform": 1.210953299762861,
+   "runtime_optimal": 1.1958763131729164
+  },
+  "reduction_vs_best_other": 3.0133462011194823e-05,
+  "reduction_vs_nominal": 4.05377815104746e-05,
+  "stationarity": {
+   "interior_gates": 100,
+   "min_flow": -0.00014107702579654855,
+   "max_flow": 1.000043309405549,
+   "max_offcritical_flow": 0.00014107702579654855,
+   "valid": true
+  },
+  "solve_s": 0.23724739998579025
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 100,
+  "qpu_time_us": {
+   "nominal": 37262.8337048114,
+   "fastest": 40802.3798952497,
+   "error_optimal": 59571.34604753775,
+   "best_uniform": 35612.18646571937,
+   "runtime_optimal": 26332.305041435207
+  },
+  "pec_overhead": {
+   "nominal": 1.7505364240075818,
+   "fastest": 2.5905439092841536,
+   "error_optimal": 1.5650813683175315,
+   "best_uniform": 1.9566204058790124,
+   "runtime_optimal": 1.9473611920206573
+  },
+  "makespan_us": {
+   "nominal": 1.2160000000000004,
+   "fastest": 0.6080000000000002,
+   "error_optimal": 2.432000000000001,
+   "best_uniform": 0.9302195906366013,
+   "runtime_optimal": 0.6943778448884508
+  },
+  "reduction_vs_best_other": 0.26058162514725314,
+  "reduction_vs_nominal": 0.2933359483598488,
+  "stationarity": {
+   "interior_gates": 85,
+   "min_flow": 6.711336444428651e-07,
+   "max_flow": 0.6972010911011918,
+   "max_offcritical_flow": 1.6666835778295386e-06,
+   "valid": true
+  },
+  "solve_s": 0.26805990003049374
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 100,
+  "qpu_time_us": {
+   "nominal": 190481.722293674,
+   "fastest": 376348.26719171094,
+   "error_optimal": 182045.33052027156,
+   "best_uniform": 173507.1456948688,
+   "runtime_optimal": 164968.09371100916
+  },
+  "pec_overhead": {
+   "nominal": 1.7505364240075818,
+   "fastest": 2.5905439092841536,
+   "error_optimal": 1.5650813683175315,
+   "best_uniform": 1.5956543933821687,
+   "runtime_optimal": 1.6031642439051432
+  },
+  "makespan_us": {
+   "nominal": 1.2160000000000004,
+   "fastest": 0.6080000000000002,
+   "error_optimal": 2.432000000000001,
+   "best_uniform": 1.8145895162948318,
+   "runtime_optimal": 1.4186533257010276
+  },
+  "reduction_vs_best_other": 0.04921441102418056,
+  "reduction_vs_nominal": 0.1339426600906588,
+  "stationarity": {
+   "interior_gates": 100,
+   "min_flow": 6.299609763213061e-07,
+   "max_flow": 0.8543120585384941,
+   "max_offcritical_flow": 1.8384443955801983e-06,
+   "valid": true
+  },
+  "solve_s": 0.2975370000349358
+ },
+ {
+  "family": "scrambled",
+  "qubits": 16,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 100,
+  "qpu_time_us": {
+   "nominal": 7698207.263147942,
+   "fastest": 16818096.74471831,
+   "error_optimal": 6183270.569684229,
+   "best_uniform": 6182953.658080047,
+   "runtime_optimal": 6182070.695297406
+  },
+  "pec_overhead": {
+   "nominal": 1.7505364240075818,
+   "fastest": 2.5905439092841536,
+   "error_optimal": 1.5650813683175315,
+   "best_uniform": 1.5651218304495627,
+   "runtime_optimal": 1.5652249974370833
+  },
+  "makespan_us": {
+   "nominal": 1.2160000000000004,
+   "fastest": 0.6080000000000002,
+   "error_optimal": 2.432000000000001,
+   "best_uniform": 2.4060109840231996,
+   "runtime_optimal": 2.336698612710294
+  },
+  "reduction_vs_best_other": 0.00014280598423810353,
+  "reduction_vs_nominal": 0.19694670668435066,
+  "stationarity": {
+   "interior_gates": 100,
+   "min_flow": 3.213225696006579e-05,
+   "max_flow": 1.0001996071950154,
+   "max_offcritical_flow": 0.00013045693034718307,
+   "valid": true
+  },
+  "solve_s": 0.2393447000067681
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 199,
+  "qpu_time_us": {
+   "nominal": 116078.1902984842,
+   "fastest": 102270.8035964128,
+   "error_optimal": 116078.1902984842,
+   "best_uniform": 93410.32895438427,
+   "runtime_optimal": 70063.35606812396
+  },
+  "pec_overhead": {
+   "nominal": 3.1050033342742434,
+   "fastest": 4.121711486846146,
+   "error_optimal": 3.1050033342742434,
+   "best_uniform": 3.4500645320352086,
+   "runtime_optimal": 3.398542605580963
+  },
+  "makespan_us": {
+   "nominal": 1.2040000000000002,
+   "fastest": 0.6020000000000001,
+   "error_optimal": 1.2040000000000002,
+   "best_uniform": 0.784766516140748,
+   "runtime_optimal": 0.6066043199211565
+  },
+  "reduction_vs_best_other": 0.24993994933538344,
+  "reduction_vs_nominal": 0.3964124019511107,
+  "stationarity": {
+   "interior_gates": 169,
+   "min_flow": -5.267698822966808e-10,
+   "max_flow": 0.43074991810996094,
+   "max_offcritical_flow": 9.757173296159561e-07,
+   "valid": true
+  },
+  "solve_s": 0.6027592999162152
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 199,
+  "qpu_time_us": {
+   "nominal": 598130.4755911926,
+   "fastest": 951696.0826363863,
+   "error_optimal": 598130.4755911926,
+   "best_uniform": 593496.2791820442,
+   "runtime_optimal": 579078.0490371248
+  },
+  "pec_overhead": {
+   "nominal": 3.1050033342742434,
+   "fastest": 4.121711486846146,
+   "error_optimal": 3.1050033342742434,
+   "best_uniform": 3.116303988999096,
+   "runtime_optimal": 3.134473383682562
+  },
+  "makespan_us": {
+   "nominal": 1.2040000000000002,
+   "fastest": 0.6020000000000001,
+   "error_optimal": 1.2040000000000002,
+   "best_uniform": 1.1113670648917244,
+   "runtime_optimal": 0.8939701193889562
+  },
+  "reduction_vs_best_other": 0.024293716154026312,
+  "reduction_vs_nominal": 0.03185329511129875,
+  "stationarity": {
+   "interior_gates": 198,
+   "min_flow": -1.314515371479364e-10,
+   "max_flow": 0.8325265943432235,
+   "max_offcritical_flow": 1.0040079427575284e-09,
+   "valid": true
+  },
+  "solve_s": 0.6155273000476882
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 199,
+  "qpu_time_us": {
+   "nominal": 24218692.454933904,
+   "fastest": 42573534.75559508,
+   "error_optimal": 24218692.454933904,
+   "best_uniform": 24218569.98033418,
+   "runtime_optimal": 24217703.146133665
+  },
+  "pec_overhead": {
+   "nominal": 3.1050033342742434,
+   "fastest": 4.121711486846146,
+   "error_optimal": 3.1050033342742434,
+   "best_uniform": 3.105010940369742,
+   "runtime_optimal": 3.105059578074367
+  },
+  "makespan_us": {
+   "nominal": 1.2040000000000002,
+   "fastest": 0.6020000000000001,
+   "error_optimal": 1.2040000000000002,
+   "best_uniform": 1.2014989536748568,
+   "runtime_optimal": 1.1846386114457932
+  },
+  "reduction_vs_best_other": 3.579212980864277e-05,
+  "reduction_vs_nominal": 4.084897655309838e-05,
+  "stationarity": {
+   "interior_gates": 199,
+   "min_flow": -2.2703760561750215e-08,
+   "max_flow": 1.0000000846051944,
+   "max_offcritical_flow": 4.987294251811288e-08,
+   "valid": true
+  },
+  "solve_s": 0.5572427998995408
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 199,
+  "qpu_time_us": {
+   "nominal": 116078.1902984842,
+   "fastest": 283535.5586633541,
+   "error_optimal": 147555.63383391406,
+   "best_uniform": 112710.49751314585,
+   "runtime_optimal": 79994.98741895008
+  },
+  "pec_overhead": {
+   "nominal": 3.1050033342742434,
+   "fastest": 6.862866020149594,
+   "error_optimal": 2.4754243388870867,
+   "best_uniform": 2.8154339318348343,
+   "runtime_optimal": 2.925235417232051
+  },
+  "makespan_us": {
+   "nominal": 1.2040000000000002,
+   "fastest": 0.6020000000000001,
+   "error_optimal": 2.4080000000000004,
+   "best_uniform": 1.4219151643611547,
+   "runtime_optimal": 0.9348482694883637
+  },
+  "reduction_vs_best_other": 0.2902614292016592,
+  "reduction_vs_nominal": 0.3108525622836602,
+  "stationarity": {
+   "interior_gates": 195,
+   "min_flow": 1.1308627683209398e-06,
+   "max_flow": 0.3223461728143361,
+   "max_offcritical_flow": 3.3004923404558314e-06,
+   "valid": true
+  },
+  "solve_s": 0.5312992000253871
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 199,
+  "qpu_time_us": {
+   "nominal": 598130.4755911926,
+   "fastest": 2638482.0591895506,
+   "error_optimal": 453941.9167116425,
+   "best_uniform": 442291.13224571897,
+   "runtime_optimal": 417781.7654799526
+  },
+  "pec_overhead": {
+   "nominal": 3.1050033342742434,
+   "fastest": 6.862866020149594,
+   "error_optimal": 2.4754243388870867,
+   "best_uniform": 2.5042900036618128,
+   "runtime_optimal": 2.5247045409810176
+  },
+  "makespan_us": {
+   "nominal": 1.2040000000000002,
+   "fastest": 0.6020000000000001,
+   "error_optimal": 2.4080000000000004,
+   "best_uniform": 2.052433376896532,
+   "runtime_optimal": 1.5543308277099457
+  },
+  "reduction_vs_best_other": 0.055414556112216906,
+  "reduction_vs_nominal": 0.3015206839828437,
+  "stationarity": {
+   "interior_gates": 199,
+   "min_flow": 3.770999632229659e-06,
+   "max_flow": 0.6110883694716457,
+   "max_offcritical_flow": 1.172857844592088e-05,
+   "valid": true
+  },
+  "solve_s": 0.6048169999849051
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 199,
+  "qpu_time_us": {
+   "nominal": 24218692.454933904,
+   "fastest": 118030860.58497317,
+   "error_optimal": 15466869.777720338,
+   "best_uniform": 15466483.551408935,
+   "runtime_optimal": 15464158.93355397
+  },
+  "pec_overhead": {
+   "nominal": 3.1050033342742434,
+   "fastest": 6.862866020149594,
+   "error_optimal": 2.4754243388870867,
+   "best_uniform": 2.475454658406518,
+   "runtime_optimal": 2.4756047948410735
+  },
+  "makespan_us": {
+   "nominal": 1.2040000000000002,
+   "fastest": 0.6020000000000001,
+   "error_optimal": 2.4080000000000004,
+   "best_uniform": 2.395514244287423,
+   "runtime_optimal": 2.326970898682522
+  },
+  "reduction_vs_best_other": 0.00015030034766716494,
+  "reduction_vs_nominal": 0.3614783720331043,
+  "stationarity": {
+   "interior_gates": 199,
+   "min_flow": 0.00044311603977710155,
+   "max_flow": 1.000042530101452,
+   "max_offcritical_flow": 0.0023538047568852243,
+   "valid": true
+  },
+  "solve_s": 0.5572589000221342
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 200,
+  "qpu_time_us": {
+   "nominal": 167257.9392598493,
+   "fastest": 157902.66471548346,
+   "error_optimal": 167257.9392598493,
+   "best_uniform": 137729.90867241597,
+   "runtime_optimal": 98548.49532321104
+  },
+  "pec_overhead": {
+   "nominal": 3.5650483660915646,
+   "fastest": 4.898710591398532,
+   "error_optimal": 3.5650483660915646,
+   "best_uniform": 3.9198684634040393,
+   "runtime_optimal": 3.8700096853838137
+  },
+  "makespan_us": {
+   "nominal": 1.3160000000000003,
+   "fastest": 0.6580000000000001,
+   "error_optimal": 1.3160000000000003,
+   "best_uniform": 0.8963657867934414,
+   "runtime_optimal": 0.6580000003588473
+  },
+  "reduction_vs_best_other": 0.284480064837595,
+  "reduction_vs_nominal": 0.4107992974246344,
+  "stationarity": {
+   "interior_gates": 174,
+   "min_flow": 3.0384433874403433e-13,
+   "max_flow": 0.248306711614176,
+   "max_offcritical_flow": 2.2555092723507918e-08,
+   "valid": true
+  },
+  "solve_s": 0.505885099992156
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 200,
+  "qpu_time_us": {
+   "nominal": 802736.4318884561,
+   "fastest": 1357770.9376294913,
+   "error_optimal": 802736.4318884561,
+   "best_uniform": 796323.0455080629,
+   "runtime_optimal": 772397.0639539816
+  },
+  "pec_overhead": {
+   "nominal": 3.5650483660915646,
+   "fastest": 4.898710591398532,
+   "error_optimal": 3.5650483660915646,
+   "best_uniform": 3.5784936645588683,
+   "runtime_optimal": 3.6034517560419217
+  },
+  "makespan_us": {
+   "nominal": 1.3160000000000003,
+   "fastest": 0.6580000000000001,
+   "error_optimal": 1.3160000000000003,
+   "best_uniform": 1.2185449656459584,
+   "runtime_optimal": 0.9484414373107378
+  },
+  "reduction_vs_best_other": 0.030045572194656645,
+  "reduction_vs_nominal": 0.03779493085059116,
+  "stationarity": {
+   "interior_gates": 200,
+   "min_flow": -5.535046736487583e-10,
+   "max_flow": 0.9136353381181369,
+   "max_offcritical_flow": 4.428006453124848e-09,
+   "valid": true
+  },
+  "solve_s": 0.550558099988848
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 200,
+  "qpu_time_us": {
+   "nominal": 31941182.570690185,
+   "fastest": 60151316.31041587,
+   "error_optimal": 31941182.570690185,
+   "best_uniform": 31941010.697729018,
+   "runtime_optimal": 31939820.533149797
+  },
+  "pec_overhead": {
+   "nominal": 3.5650483660915646,
+   "fastest": 4.898710591398532,
+   "error_optimal": 3.5650483660915646,
+   "best_uniform": 3.565058164055889,
+   "runtime_optimal": 3.5651229504515705
+  },
+  "makespan_us": {
+   "nominal": 1.3160000000000003,
+   "fastest": 0.6580000000000001,
+   "error_optimal": 1.3160000000000003,
+   "best_uniform": 1.3132662982027505,
+   "runtime_optimal": 1.2947685869588808
+  },
+  "reduction_vs_best_other": 3.7261331223503724e-05,
+  "reduction_vs_nominal": 4.2642051131691616e-05,
+  "stationarity": {
+   "interior_gates": 200,
+   "min_flow": -8.778393200967947e-08,
+   "max_flow": 1.0000067834673692,
+   "max_offcritical_flow": 5.997830973989274e-07,
+   "valid": true
+  },
+  "solve_s": 0.5131109000649303
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 200,
+  "qpu_time_us": {
+   "nominal": 167257.9392598493,
+   "fastest": 495733.5851556384,
+   "error_optimal": 201182.66965045308,
+   "best_uniform": 158064.90743552698,
+   "runtime_optimal": 105738.42287657953
+  },
+  "pec_overhead": {
+   "nominal": 3.5650483660915646,
+   "fastest": 8.679830103841663,
+   "error_optimal": 2.764727554708589,
+   "best_uniform": 3.1056448448980465,
+   "runtime_optimal": 3.249978294616739
+  },
+  "makespan_us": {
+   "nominal": 1.3160000000000003,
+   "fastest": 0.6580000000000001,
+   "error_optimal": 2.6320000000000006,
+   "best_uniform": 1.6388223679040372,
+   "runtime_optimal": 1.0010871976866071
+  },
+  "reduction_vs_best_other": 0.33104428685596066,
+  "reduction_vs_nominal": 0.3678122345373037,
+  "stationarity": {
+   "interior_gates": 198,
+   "min_flow": 7.860755705693126e-08,
+   "max_flow": 0.5183621194000647,
+   "max_offcritical_flow": 2.526255062435665e-07,
+   "valid": true
+  },
+  "solve_s": 0.5184569999109954
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 200,
+  "qpu_time_us": {
+   "nominal": 802736.4318884561,
+   "fastest": 4262706.116733437,
+   "error_optimal": 583368.5922386998,
+   "best_uniform": 568219.4168090876,
+   "runtime_optimal": 529694.6984117688
+  },
+  "pec_overhead": {
+   "nominal": 3.5650483660915646,
+   "fastest": 8.679830103841663,
+   "error_optimal": 2.764727554708589,
+   "best_uniform": 2.7976757275646933,
+   "runtime_optimal": 2.8298282713444634
+  },
+  "makespan_us": {
+   "nominal": 1.3160000000000003,
+   "fastest": 0.6580000000000001,
+   "error_optimal": 2.6320000000000006,
+   "best_uniform": 2.259744228704168,
+   "runtime_optimal": 1.614628595753057
+  },
+  "reduction_vs_best_other": 0.06779901787527709,
+  "reduction_vs_nominal": 0.3401387088341691,
+  "stationarity": {
+   "interior_gates": 200,
+   "min_flow": 9.797855933390641e-05,
+   "max_flow": 0.8188049123813101,
+   "max_offcritical_flow": 0.001189382386541717,
+   "valid": true
+  },
+  "solve_s": 0.553760499926284
+ },
+ {
+  "family": "scrambled",
+  "qubits": 32,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 200,
+  "qpu_time_us": {
+   "nominal": 31941182.570690185,
+   "fastest": 188844360.16404557,
+   "error_optimal": 19310478.79906279,
+   "best_uniform": 19309966.34035837,
+   "runtime_optimal": 19306513.450356536
+  },
+  "pec_overhead": {
+   "nominal": 3.5650483660915646,
+   "fastest": 8.679830103841663,
+   "error_optimal": 2.764727554708589,
+   "best_uniform": 2.7647655470432073,
+   "runtime_optimal": 2.7649989021570267
+  },
+  "makespan_us": {
+   "nominal": 1.3160000000000003,
+   "fastest": 0.6580000000000001,
+   "error_optimal": 2.6320000000000006,
+   "best_uniform": 2.618352778639742,
+   "runtime_optimal": 2.530550528782808
+  },
+  "reduction_vs_best_other": 0.00017881387988838426,
+  "reduction_vs_nominal": 0.3955604678183535,
+  "stationarity": {
+   "interior_gates": 200,
+   "min_flow": 0.00013078143186759746,
+   "max_flow": 1.0000038100231634,
+   "max_offcritical_flow": 0.00048757384918459047,
+   "valid": true
+  },
+  "solve_s": 0.5406392000149935
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 402,
+  "qpu_time_us": {
+   "nominal": 32895898.819260865,
+   "fastest": 115263979.14791211,
+   "error_optimal": 32895898.819260865,
+   "best_uniform": 30853041.471703578,
+   "runtime_optimal": 22026254.24157876
+  },
+  "pec_overhead": {
+   "nominal": 49.109294307043754,
+   "fastest": 130.00337190975085,
+   "error_optimal": 49.109294307043754,
+   "best_uniform": 50.70045109795156,
+   "runtime_optimal": 53.483051024115724
+  },
+  "makespan_us": {
+   "nominal": 1.3640000000000003,
+   "fastest": 0.6820000000000002,
+   "error_optimal": 1.3640000000000003,
+   "best_uniform": 1.2002572449457678,
+   "runtime_optimal": 0.770031159257371
+  },
+  "reduction_vs_best_other": 0.2860913157693117,
+  "reduction_vs_nominal": 0.33042552317548535,
+  "stationarity": {
+   "interior_gates": 379,
+   "min_flow": -1.8835790878459567e-10,
+   "max_flow": 0.28149344548434474,
+   "max_offcritical_flow": 1.6129479012475253e-09,
+   "valid": true
+  },
+  "solve_s": 1.2513487000251189
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 402,
+  "qpu_time_us": {
+   "nominal": 153482038.18605286,
+   "fastest": 960307814.543162,
+   "error_optimal": 153482038.18605286,
+   "best_uniform": 153039588.46714583,
+   "runtime_optimal": 147816481.28215232
+  },
+  "pec_overhead": {
+   "nominal": 49.109294307043754,
+   "fastest": 130.00337190975085,
+   "error_optimal": 49.109294307043754,
+   "best_uniform": 49.179222230893494,
+   "runtime_optimal": 49.474262483294645
+  },
+  "makespan_us": {
+   "nominal": 1.3640000000000003,
+   "fastest": 0.6820000000000002,
+   "error_optimal": 1.3640000000000003,
+   "best_uniform": 1.3276212663518372,
+   "runtime_optimal": 1.0389884934296345
+  },
+  "reduction_vs_best_other": 0.0341291246095764,
+  "reduction_vs_nominal": 0.036913484931915486,
+  "stationarity": {
+   "interior_gates": 401,
+   "min_flow": -2.3276748719547348e-08,
+   "max_flow": 0.4839516113983107,
+   "max_offcritical_flow": 5.8565337011632886e-08,
+   "valid": true
+  },
+  "solve_s": 7.820541199995205
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 402,
+  "qpu_time_us": {
+   "nominal": 6062202867.15886,
+   "fastest": 42367455748.9104,
+   "error_optimal": 6062202867.15886,
+   "best_uniform": 6062191415.147667,
+   "runtime_optimal": 6061854425.046455
+  },
+  "pec_overhead": {
+   "nominal": 49.109294307043754,
+   "fastest": 130.00337190975085,
+   "error_optimal": 49.109294307043754,
+   "best_uniform": 49.10934024653434,
+   "runtime_optimal": 49.110665590064485
+  },
+  "makespan_us": {
+   "nominal": 1.3640000000000003,
+   "fastest": 0.6820000000000002,
+   "error_optimal": 1.3640000000000003,
+   "best_uniform": 1.363054874838977,
+   "runtime_optimal": 1.3355158269712206
+  },
+  "reduction_vs_best_other": 5.5588825580432655e-05,
+  "reduction_vs_nominal": 5.7477804692451784e-05,
+  "stationarity": {
+   "interior_gates": 402,
+   "min_flow": -0.00018831169064796471,
+   "max_flow": 1.0000280876749954,
+   "max_offcritical_flow": 0.00018831169064796471,
+   "valid": true
+  },
+  "solve_s": 1.2458276000106707
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 402,
+  "qpu_time_us": {
+   "nominal": 32895898.819260865,
+   "fastest": 3834784226.4329023,
+   "error_optimal": 13858182.473404689,
+   "best_uniform": 12791695.155609636,
+   "runtime_optimal": 8836193.732381836
+  },
+  "pec_overhead": {
+   "nominal": 49.109294307043754,
+   "fastest": 749.8567044373045,
+   "error_optimal": 22.538808558879893,
+   "best_uniform": 23.45500741120075,
+   "runtime_optimal": 24.969212684848678
+  },
+  "makespan_us": {
+   "nominal": 1.3640000000000003,
+   "fastest": 0.6820000000000002,
+   "error_optimal": 2.7280000000000006,
+   "best_uniform": 2.3251819984110216,
+   "runtime_optimal": 1.417279586434475
+  },
+  "reduction_vs_best_other": 0.309224178274227,
+  "reduction_vs_nominal": 0.7313891989718744,
+  "stationarity": {
+   "interior_gates": 401,
+   "min_flow": 1.4016088095650063e-06,
+   "max_flow": 0.23103973967489755,
+   "max_offcritical_flow": 1.2411273681441959e-05,
+   "valid": true
+  },
+  "solve_s": 1.0834175000200048
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 402,
+  "qpu_time_us": {
+   "nominal": 153482038.18605286,
+   "fastest": 31949038085.911655,
+   "error_optimal": 39258077.036096565,
+   "best_uniform": 38881215.69205672,
+   "runtime_optimal": 36128075.004066944
+  },
+  "pec_overhead": {
+   "nominal": 49.109294307043754,
+   "fastest": 749.8567044373045,
+   "error_optimal": 22.538808558879893,
+   "best_uniform": 22.644349447017525,
+   "runtime_optimal": 22.878292619499764
+  },
+  "makespan_us": {
+   "nominal": 1.3640000000000003,
+   "fastest": 0.6820000000000002,
+   "error_optimal": 2.7280000000000006,
+   "best_uniform": 2.5826347860137555,
+   "runtime_optimal": 1.9023599102743332
+  },
+  "reduction_vs_best_other": 0.0708090176447912,
+  "reduction_vs_nominal": 0.7646104037250793,
+  "stationarity": {
+   "interior_gates": 402,
+   "min_flow": 6.3307077797826235e-06,
+   "max_flow": 0.3591475610542748,
+   "max_offcritical_flow": 5.788232778703117e-05,
+   "valid": true
+  },
+  "solve_s": 1.1990618000272661
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 11,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 402,
+  "qpu_time_us": {
+   "nominal": 6062202867.15886,
+   "fastest": 1409547477200.3704,
+   "error_optimal": 1283852910.6079984,
+   "best_uniform": 1283840926.6859057,
+   "runtime_optimal": 1283502236.8841655
+  },
+  "pec_overhead": {
+   "nominal": 49.109294307043754,
+   "fastest": 749.8567044373045,
+   "error_optimal": 22.538808558879893,
+   "best_uniform": 22.53891397920349,
+   "runtime_optimal": 22.541690837460017
+  },
+  "makespan_us": {
+   "nominal": 1.3640000000000003,
+   "fastest": 0.6820000000000002,
+   "error_optimal": 2.7280000000000006,
+   "best_uniform": 2.723276829725687,
+   "runtime_optimal": 2.5943614353409123
+  },
+  "reduction_vs_best_other": 0.00026380978725648596,
+  "reduction_vs_nominal": 0.7882779139844758,
+  "stationarity": {
+   "interior_gates": 402,
+   "min_flow": 0.0003123089770617629,
+   "max_flow": 0.9999949194759006,
+   "max_offcritical_flow": 0.0031437431263400166,
+   "valid": true
+  },
+  "solve_s": 1.2186305000213906
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "no_repetition_delay",
+  "gates": 412,
+  "qpu_time_us": {
+   "nominal": 40902298.554874085,
+   "fastest": 143914858.74841237,
+   "error_optimal": 40902298.554874085,
+   "best_uniform": 38367464.18023782,
+   "runtime_optimal": 25767815.287482798
+  },
+  "pec_overhead": {
+   "nominal": 49.519452464204015,
+   "fastest": 131.36201226837127,
+   "error_optimal": 49.519452464204015,
+   "best_uniform": 51.12738047655145,
+   "runtime_optimal": 54.4798749791202
+  },
+  "makespan_us": {
+   "nominal": 1.6680000000000004,
+   "fastest": 0.8340000000000002,
+   "error_optimal": 1.6680000000000004,
+   "best_uniform": 1.4677632584820683,
+   "runtime_optimal": 0.8681712385265942
+  },
+  "reduction_vs_best_other": 0.32839410062562346,
+  "reduction_vs_nominal": 0.3700154710642246,
+  "stationarity": {
+   "interior_gates": 387,
+   "min_flow": -4.983753638582842e-12,
+   "max_flow": 0.25981970823842765,
+   "max_offcritical_flow": 2.170606928034997e-09,
+   "valid": true
+  },
+  "solve_s": 1.1138162999413908
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "fast_reset_5us",
+  "gates": 412,
+  "qpu_time_us": {
+   "nominal": 163511107.17260212,
+   "fastest": 1006713772.1081988,
+   "error_optimal": 163511107.17260212,
+   "best_uniform": 162872241.2923926,
+   "runtime_optimal": 156419040.93349954
+  },
+  "pec_overhead": {
+   "nominal": 49.519452464204015,
+   "fastest": 131.36201226837127,
+   "error_optimal": 49.519452464204015,
+   "best_uniform": 49.613554120609656,
+   "runtime_optimal": 50.106778379585094
+  },
+  "makespan_us": {
+   "nominal": 1.6680000000000004,
+   "fastest": 0.8340000000000002,
+   "error_optimal": 1.6680000000000004,
+   "best_uniform": 1.6167754146476885,
+   "runtime_optimal": 1.2301235241527835
+  },
+  "reduction_vs_best_other": 0.03962124121143584,
+  "reduction_vs_nominal": 0.04337360538826396,
+  "stationarity": {
+   "interior_gates": 411,
+   "min_flow": -3.9039259601633406e-07,
+   "max_flow": 0.5219340796225077,
+   "max_offcritical_flow": 3.9039259601633406e-07,
+   "valid": true
+  },
+  "solve_s": 1.2247487999266014
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.5,
+  "rep_delay": "ibm_default_250us",
+  "gates": 412,
+  "qpu_time_us": {
+   "nominal": 6171342729.441276,
+   "fastest": 43283860526.737724,
+   "error_optimal": 6171342729.441276,
+   "best_uniform": 6171325958.580926,
+   "runtime_optimal": 6170834542.653101
+  },
+  "pec_overhead": {
+   "nominal": 49.519452464204015,
+   "fastest": 131.36201226837127,
+   "error_optimal": 49.519452464204015,
+   "best_uniform": 49.519498886320065,
+   "runtime_optimal": 49.52143191224928
+  },
+  "makespan_us": {
+   "nominal": 1.6680000000000004,
+   "fastest": 0.8340000000000002,
+   "error_optimal": 1.6680000000000004,
+   "best_uniform": 1.666844231108075,
+   "runtime_optimal": 1.6271590320161384
+  },
+  "reduction_vs_best_other": 7.96289048938803e-05,
+  "reduction_vs_nominal": 8.234622681868586e-05,
+  "stationarity": {
+   "interior_gates": 412,
+   "min_flow": -3.94706028259791e-07,
+   "max_flow": 1.0000000548643162,
+   "max_offcritical_flow": 6.642201454114166e-07,
+   "valid": true
+  },
+  "solve_s": 1.2712607000721619
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "no_repetition_delay",
+  "gates": 412,
+  "qpu_time_us": {
+   "nominal": 40902298.554874085,
+   "fastest": 4823962092.786103,
+   "error_optimal": 17173838.575181194,
+   "best_uniform": 15854882.004632419,
+   "runtime_optimal": 10039352.700086115
+  },
+  "pec_overhead": {
+   "nominal": 49.519452464204015,
+   "fastest": 760.5344968885805,
+   "error_optimal": 22.689277524940117,
+   "best_uniform": 23.609507932982105,
+   "runtime_optimal": 25.850783033227575
+  },
+  "makespan_us": {
+   "nominal": 1.6680000000000004,
+   "fastest": 0.8340000000000002,
+   "error_optimal": 3.3360000000000007,
+   "best_uniform": 2.8443899989379027,
+   "runtime_optimal": 1.5023056714202407
+  },
+  "reduction_vs_best_other": 0.3667973878864027,
+  "reduction_vs_nominal": 0.7545528477667967,
+  "stationarity": {
+   "interior_gates": 409,
+   "min_flow": 1.3764415500744352e-06,
+   "max_flow": 0.3182061109105999,
+   "max_offcritical_flow": 1.3120460423154348e-05,
+   "valid": true
+  },
+  "solve_s": 1.271046799956821
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "fast_reset_5us",
+  "gates": 412,
+  "qpu_time_us": {
+   "nominal": 163511107.17260212,
+   "fastest": 33744598140.664417,
+   "error_optimal": 42914004.30536882,
+   "best_uniform": 42387343.01310476,
+   "runtime_optimal": 38628837.78136489
+  },
+  "pec_overhead": {
+   "nominal": 49.519452464204015,
+   "fastest": 760.5344968885805,
+   "error_optimal": 22.689277524940117,
+   "best_uniform": 22.8245060377337,
+   "runtime_optimal": 23.269539567029422
+  },
+  "makespan_us": {
+   "nominal": 1.6680000000000004,
+   "fastest": 0.8340000000000002,
+   "error_optimal": 3.3360000000000007,
+   "best_uniform": 3.136421139570445,
+   "runtime_optimal": 2.1340485700621046
+  },
+  "reduction_vs_best_other": 0.0886704606744958,
+  "reduction_vs_nominal": 0.7637540443011719,
+  "stationarity": {
+   "interior_gates": 412,
+   "min_flow": 9.7907625946609e-06,
+   "max_flow": 0.5079321266215484,
+   "max_offcritical_flow": 9.167937957260252e-05,
+   "valid": true
+  },
+  "solve_s": 1.2821384000126272
+ },
+ {
+  "family": "scrambled",
+  "qubits": 64,
+  "seed": 29,
+  "alpha": 0.8,
+  "rep_delay": "ibm_default_250us",
+  "gates": 412,
+  "qpu_time_us": {
+   "nominal": 6171342729.441276,
+   "fastest": 1450855764486.7017,
+   "error_optimal": 1304182125.0845628,
+   "best_uniform": 1304164055.3902314,
+   "runtime_optimal": 1303673636.8228202
+  },
+  "pec_overhead": {
+   "nominal": 49.519452464204015,
+   "fastest": 760.5344968885805,
+   "error_optimal": 22.689277524940117,
+   "best_uniform": 22.689430670236867,
+   "runtime_optimal": 22.693408614727616
+  },
+  "makespan_us": {
+   "nominal": 1.6680000000000004,
+   "fastest": 0.8340000000000002,
+   "error_optimal": 3.3360000000000007,
+   "best_uniform": 3.3290701905808326,
+   "runtime_optimal": 3.1450368834906537
+  },
+  "reduction_vs_best_other": 0.0003760405490277341,
+  "reduction_vs_nominal": 0.7887536482776336,
+  "stationarity": {
+   "interior_gates": 412,
+   "min_flow": 0.0002095764090577417,
+   "max_flow": 1.0000226257330855,
+   "max_offcritical_flow": 0.0023036271724355983,
+   "valid": true
+  },
+  "solve_s": 1.2959434000076726
+ }
+]

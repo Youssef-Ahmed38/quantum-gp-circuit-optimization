@@ -1,0 +1,34 @@
+{
+  "deadline": "ASAP makespan at nominal durations",
+  "trajectories": 300,
+  "nominal_us": {
+    "one_qubit": 0.036,
+    "two_qubit": 0.084,
+    "block": 1.2
+  },
+  "gate_errors": {
+    "one_qubit": 0.0003,
+    "two_qubit": 0.003,
+    "alpha": 0.5
+  },
+  "spectroscopy": {
+    "windows": [
+      0.5,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "pulses": [
+      0,
+      2,
+      4,
+      8,
+      16
+    ],
+    "trajectories": 2000
+  },
+  "note": "Model fitted only from single-qubit spectroscopy; evaluation uses the independent simulator.",
+  "hardware_jobs": 0
+}

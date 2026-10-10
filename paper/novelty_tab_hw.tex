@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Pre-registered decoupling test on IBM Heron (\texttt{ibm\_marrakesh}, qubits 55, 54, 53, 39, 33, 32; matched 24\,$\mu$s makespan): probability that all six qubits return to $|0\rangle$, with shot-only standard errors, and the primary difference with its shot-only 95\% interval. Pre-registered inverse-variance pooling: +2.18 pp, 95\% CI [+1.43, +2.92].}\label{tab:hw}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lcc}
+\toprule
+Policy & H2 (3$\times$2000 shots) & R1 (4$\times$6000 shots) \\
+\midrule
+GP-DD & 0.348 $\pm$ 0.006 & 0.326 $\pm$ 0.003 \\
+GP-DD (cross-window, identical) & 0.345 $\pm$ 0.006 & 0.327 $\pm$ 0.003 \\
+XY4-like & 0.338 $\pm$ 0.006 & 0.301 $\pm$ 0.003 \\
+XX (Qiskit-like) & 0.321 $\pm$ 0.006 & 0.296 $\pm$ 0.003 \\
+No DD & 0.290 $\pm$ 0.006 & 0.290 $\pm$ 0.003 \\
+GP-DD $-$ best standard (pp) & +0.98 [-0.72, +2.68] & +2.46 [+1.63, +3.29] \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

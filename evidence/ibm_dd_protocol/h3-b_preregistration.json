@@ -1,0 +1,14 @@
+{
+  "created": "2026-10-10, before submission of H3-B",
+  "purpose": "Second-chain replication of the H3 control design on qubits disjoint from chain A and its neighbours",
+  "design": "ibm_marrakesh, chain [9, 8, 7, 6, 5, 4] chosen by lowest summed readout error excluding chain A [55, 54, 53, 39, 33, 32] and its neighbours; model frozen from calibration H1-B (job db554vclf4us73c3i8ag); 4 randomized blocks x 6000 shots; block-order seed 20261014",
+  "circuits_sha256": "70281fb4ffe4b021cd2b0aaaeb8be5e16247e5b166248e6b661b5ca83004a52b",
+  "arms": {"gp_dd": "GP schedule from the chain-B model (36 pulses; 4 on logical qubit 1 = physical 8)", "cpmg8_uniform": "8 pulses wherever they fit (64)", "gp_dd_protect_q54": "label kept from H3; here protects logical qubit 1 (physical 8) with 8 pulses (40)", "xy4_like": "XY4-like reference (36)"},
+  "model_hazards": {"gp_dd": 1.9165, "gp_dd_protect_q54": 1.9179, "cpmg8_uniform": 1.9485, "xy4_like": 2.7025},
+  "predicted_order": ["gp_dd", "gp_dd_protect_q54", "cpmg8_uniform", "xy4_like"],
+  "primary": "gp_dd minus cpmg8_uniform, P(all six qubits return to 0), shot-only 95% CI",
+  "secondary": ["gp_dd minus gp_dd_protect_q54", "gp_dd minus xy4_like", "observed vs predicted order"],
+  "analysis_script": "benchmarks/analyze_ibm_h3.py with tag b (logic identical to the hashed H3 script; see h3_script_note.txt)",
+  "pooling": "Fixed-effect inverse-variance pooling of the chain-A and chain-B primary differences, reported alongside each chain",
+  "stopping_rule": "Single run on chain B; no conditional follow-up"
+}

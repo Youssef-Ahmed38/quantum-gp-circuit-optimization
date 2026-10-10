@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{State-aware and cross-window DD allocation under exact amplitude damping (fidelity change, $10^{-4}$, paired s.e.): state-aware vs state-blind GP-DD; state-aware vs ALAP+XX; cross-window (correlated) GP-DD vs ALAP+XX; pulses used (correlated/XX).}\label{tab:c5b}
+\footnotesize
+\begin{adjustbox}{max width=0.95\textwidth}
+\begin{tabular}{llrrrr}
+\toprule
+Noise & Circuit & Aware$-$blind & Aware$-$XX & Correlated$-$XX & Pulses \\
+\midrule
+t1\_dominated & excited\_idle\_chain & +8.6 $\pm$ 0.0 & +70.3 $\pm$ 0.0 & +70.3 $\pm$ 0.0 & 2/6 \\
+t1\_dominated & ghz5\_with\_ancilla\_wait & +0.0 $\pm$ 0.0 & +23.5 $\pm$ 0.0 & +23.5 $\pm$ 0.0 & 0/8 \\
+t1\_dominated & rep3\_two\_cycles & +0.0 $\pm$ 0.0 & +57.4 $\pm$ 0.0 & +57.4 $\pm$ 0.0 & 0/16 \\
+t1\_plus\_one\_over\_f & excited\_idle\_chain & +8.6 $\pm$ 0.0 & +70.2 $\pm$ 0.0 & +70.2 $\pm$ 0.0 & 2/6 \\
+t1\_plus\_one\_over\_f & ghz5\_with\_ancilla\_wait & +0.0 $\pm$ 0.0 & +19.8 $\pm$ 0.4 & +19.8 $\pm$ 0.4 & 0/8 \\
+t1\_plus\_one\_over\_f & rep3\_two\_cycles & +0.0 $\pm$ 0.0 & -93.5 $\pm$ 16.7 & -11.8 $\pm$ 5.7 & 6/16 \\
+t1\_plus\_quasi\_static & excited\_idle\_chain & +8.6 $\pm$ 0.0 & +70.2 $\pm$ 0.0 & +70.2 $\pm$ 0.0 & 2/6 \\
+t1\_plus\_quasi\_static & ghz5\_with\_ancilla\_wait & -0.0 $\pm$ 0.0 & +20.8 $\pm$ 0.3 & +20.8 $\pm$ 0.3 & 0/8 \\
+t1\_plus\_quasi\_static & rep3\_two\_cycles & -0.0 $\pm$ 0.0 & -59.3 $\pm$ 12.1 & +1.5 $\pm$ 3.5 & 6/16 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table*}

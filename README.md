@@ -38,6 +38,22 @@ An exploratory `A/t**2 + G*t` model lowers leave-one-duration-out mean absolute 
 
 The `evidence/direct_matched/` study directly compares idealized GP duration choices with Qiskit ASAP/ALAP scheduling, with and without two-X dynamical decoupling, on the same three-qubit circuit and 168-ns deadline. Its local density-matrix evaluator tests aligned and misspecified duration-error laws, anisotropic Pauli noise, and shot-static detuning. The GP variants use hypothetical continuous alternate-duration pulses; the Qiskit variants use fixed nominal durations. A small simulated GP gain under Markovian assumptions reverses strongly in favor of DD under static detuning. This is a sensitivity study, not a calibrated device result. Run `python benchmarks/run_direct_matched.py` to regenerate the JSON and plots.
 
+## GP resource-allocation extensions (C1–C8)
+
+Statements and proofs are in [docs/THEORY.md](docs/THEORY.md); results are in [docs/NOVELTY_RESULTS.md](docs/NOVELTY_RESULTS.md). All of these studies run on local simulators. The hardware protocol is dry-run only until you submit it.
+
+| | Module | Study (`benchmarks/`) | Evidence |
+|---|---|---|---|
+| C2 joint timing + DD (convex, perspective) | `ddgp.py`, `noisesim.py` | `run_dd_gp_sim.py` | `evidence/dd_gp/` |
+| C3 runtime-optimal PEC | `mitigation.py` | `run_runtime_optimal.py` | `evidence/runtime_optimal/` |
+| C4 certified robust GP, baseline dominance | `robust.py` | `run_robust_pac.py` | `evidence/robust_pac/` |
+| C1/C5 anisotropic, state-aware constraints | `anisotropic.py` | `run_anisotropic_prediction.py` | `evidence/anisotropic/` |
+| C6 bicriteria rounding, C7 frontier | `approximation.py`, `frontier.py` | `run_theory_checks.py` | `evidence/theory_checks/` |
+| C8 level-vectorised path-flow | `scale.py` | `run_scale.py` | `evidence/scale/` |
+| Hardware H1/H2 (minimal free tier) | `hardware.py` | `ibm_dd_protocol.py dry-run` | `evidence/ibm_dd_protocol/` |
+
+Unit tests: `python -m pytest tests/test_novelty.py`.
+
 ## Install
 
 Python 3.12 or newer is required. In a fresh virtual environment, run:

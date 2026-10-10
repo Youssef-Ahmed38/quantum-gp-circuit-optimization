@@ -1,0 +1,63 @@
+{
+  "part_one": {
+    "anisotropic_best_policy_correct": {
+      "X": false,
+      "Z": true
+    },
+    "anisotropic_full_order_correct": {
+      "X": false,
+      "Z": true
+    },
+    "anisotropic_best_matches_heron": {
+      "X": true,
+      "Z": true
+    },
+    "isotropic_best_policy_correct": {
+      "X": true,
+      "Z": false
+    },
+    "isotropic_full_order_correct": {
+      "X": true,
+      "Z": false
+    },
+    "isotropic_best_matches_heron": {
+      "X": false,
+      "Z": false
+    },
+    "truth_order": {
+      "X": [
+        "distributed",
+        "slow",
+        "dd_tail",
+        "tail"
+      ],
+      "Z": [
+        "tail",
+        "distributed",
+        "dd_tail",
+        "slow"
+      ]
+    },
+    "heron_order": {
+      "X": [
+        "slow",
+        "distributed",
+        "dd_tail",
+        "tail"
+      ],
+      "Z": [
+        "tail",
+        "dd_tail",
+        "slow",
+        "distributed"
+      ]
+    }
+  },
+  "part_two": {
+    "cases": 6,
+    "isotropic_plans_violating_true_targets": 3,
+    "median_anisotropic_vs_isotropic_makespan": 1.1035625582930328
+  },
+  "elapsed_s": 172.3748185998993,
+  "hardware_jobs": 0
+}

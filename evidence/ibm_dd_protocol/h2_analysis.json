@@ -1,0 +1,150 @@
+{
+  "job_id": "db54ep4vf2bc73cvcvbg",
+  "backend": "ibm_marrakesh",
+  "layout": [
+    55,
+    54,
+    53,
+    39,
+    33,
+    32
+  ],
+  "pooled": {
+    "gp_dd_correlated": {
+      "p_all_zero": 0.3453333333333333,
+      "shot_se": 0.006138379566604179,
+      "per_block": [
+        0.346,
+        0.344,
+        0.346
+      ],
+      "shots": 6000
+    },
+    "gp_dd": {
+      "p_all_zero": 0.3478333333333333,
+      "shot_se": 0.0061487845080085484,
+      "per_block": [
+        0.3555,
+        0.3445,
+        0.3435
+      ],
+      "shots": 6000
+    },
+    "xy4_like": {
+      "p_all_zero": 0.338,
+      "shot_se": 0.006106772197050309,
+      "per_block": [
+        0.336,
+        0.3395,
+        0.3385
+      ],
+      "shots": 6000
+    },
+    "no_dd": {
+      "p_all_zero": 0.2905,
+      "shot_se": 0.005861025934083554,
+      "per_block": [
+        0.2865,
+        0.2915,
+        0.2935
+      ],
+      "shots": 6000
+    },
+    "xx_qiskit_like": {
+      "p_all_zero": 0.321,
+      "shot_se": 0.006027146920392766,
+      "per_block": [
+        0.335,
+        0.318,
+        0.31
+      ],
+      "shots": 6000
+    }
+  },
+  "best_standard": "xy4_like",
+  "primary": {
+    "gp_dd_minus_best_standard": 0.009833333333333305,
+    "shot_only_95ci": [
+      -0.007152101483111743,
+      0.026818768149778353
+    ],
+    "per_block_differences": [
+      0.019499999999999962,
+      0.004999999999999949,
+      0.0050000000000000044
+    ],
+    "blocks_favouring_gp": 3,
+    "interpretation": "No significant difference from the best standard schedule"
+  },
+  "secondary": {
+    "predicted_order": [
+      "gp_dd",
+      "gp_dd_correlated",
+      "xy4_like",
+      "xx_qiskit_like",
+      "no_dd"
+    ],
+    "observed_order": [
+      "gp_dd",
+      "gp_dd_correlated",
+      "xy4_like",
+      "xx_qiskit_like",
+      "no_dd"
+    ],
+    "spearman": 0.9999999999999999,
+    "qubit_marginals_p0": {
+      "gp_dd_correlated": [
+        0.607,
+        0.8733333333333333,
+        0.8945,
+        0.873,
+        0.7111666666666666,
+        0.8215
+      ],
+      "gp_dd": [
+        0.611,
+        0.8706666666666667,
+        0.894,
+        0.8708333333333333,
+        0.7071666666666667,
+        0.8191666666666667
+      ],
+      "xy4_like": [
+        0.6038333333333333,
+        0.8461666666666666,
+        0.878,
+        0.8668333333333333,
+        0.7025,
+        0.8271666666666667
+      ],
+      "no_dd": [
+        0.5223333333333333,
+        0.8801666666666667,
+        0.8786666666666667,
+        0.871,
+        0.735,
+        0.8583333333333333
+      ],
+      "xx_qiskit_like": [
+        0.5943333333333334,
+        0.8623333333333333,
+        0.8526666666666667,
+        0.8398333333333333,
+        0.7123333333333334,
+        0.8346666666666667
+      ]
+    },
+    "qubit54_index": 1,
+    "qubit54_p0": {
+      "gp_dd_correlated": 0.8733333333333333,
+      "gp_dd": 0.8706666666666667,
+      "xy4_like": 0.8461666666666666,
+      "no_dd": 0.8801666666666667,
+      "xx_qiskit_like": 0.8623333333333333
+    }
+  },
+  "caveats": [
+    "Shot-only intervals exclude drift; three blocks on one qubit chain is thin evidence",
+    "Readout error is not mitigated and affects all policies equally"
+  ]
+}

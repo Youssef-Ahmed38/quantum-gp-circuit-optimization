@@ -24,6 +24,7 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}{Proposition}
 \newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
 \newcommand{\R}{\mathbb{R}}
 \title{{\fontsize{17}{20}\selectfont\bfseries Quantum Circuit Optimization Using Geometric Programming:\\ Convex Duration Allocation on Fixed NISQ Circuits}}
 \author{{\fontsize{11}{13}\selectfont Youssef Ahmed Ramadan}\\[3pt]
@@ -33,7 +34,7 @@
 {\fontsize{10}{12}\selectfont Email: p-youssef.ramdan@zewailcity.edu.eg}}
 \IEEEaftertitletext{%
 \vspace{12pt}\par\noindent\hspace*{0.25in}\begin{minipage}{6.5in}
-\fontsize{9}{12}\selectfont\noindent\textbf{\textit{Abstract---}} We study gate-duration allocation on a fixed quantum-circuit dependency graph under a declared inverse-duration plus exposure-error model. The continuous problem admits geometric-program and ordinary convex formulations; a path-flow dual bounds its unconstrained variant. For Clifford circuits with independent isotropic Pauli channels, backward Pauli tracking yields exact convex stabilizer-expectation constraints within the model, and a geometric-grid rule preserves feasible constraints under a sufficient safety margin. In a saved IBM Heron calibration-snapshot study, a model-attainable 24-instance protocol produced feasible solves through 128 qubits. Median solve times at 32, 64, and 128 qubits were 1.17, 2.95, and 6.41~s; median modeled makespan reductions against an optimal uniform-duration policy were 17.3\%, 24.5\%, and 24.5\% under identical targets. A held-out fit to published measured single-qubit duration sweeps exhibits substantial residuals relative to reported uncertainties. Matched local simulations compare idealized GP choices with Qiskit ASAP/ALAP and dynamical decoupling; a ranking reversal under shot-static detuning limits generality. A first prespecified fixed-native-gate QPU check misses its 0.02 probability tolerance in all four families. After a backend calibration update, a separate six-family check meets that descriptive tolerance, but direct readout recalibration worsens mean absolute error relative to the new snapshot. The contradictory checks show sensitivity to calibration and do not identify the inverse-duration law. A training-selected, held-out test of two native X implementations on one physical qubit found that a 1,000-ns X gate improved X-basis return probability by 4.25 percentage points over equal-duration two-X dynamical decoupling at 48 logical X gates, with all three randomized blocks agreeing; its ranking reversed on Z-basis input. This is a physical gate-choice effect, not a validation of the GP duration policy, whose device-level benefit remains untested. \par\vspace{6pt}\noindent\textbf{\textit{Index Terms---}} Quantum compilation, geometric programming, convex optimization, gate scheduling, Markovian noise, pulse libraries, Pauli tracking, Heron architecture.\par\end{minipage}\hspace*{0.25in}\par\vspace{12pt}
+\fontsize{9}{12}\selectfont\noindent\textbf{\textit{Abstract---}} We study gate-duration allocation on a fixed quantum-circuit dependency graph under a declared inverse-duration plus exposure-error model. The continuous problem admits geometric-program and ordinary convex formulations; a path-flow dual bounds its unconstrained variant. For Clifford circuits with independent isotropic Pauli channels, backward Pauli tracking yields convex stabilizer-expectation constraints within the model, and a geometric-grid rule preserves feasibility under a certified safety margin. In a saved IBM calibration-snapshot study, a model-attainable 24-instance protocol demonstrates continuous solves through 128 qubits (median solve time 6.41~s at 128 qubits). Across 64 and 128 qubits, median modeled makespan reduction against an optimal uniform-duration baseline plateaus identically at 24.5\%; we prove analytically that this plateau arises from boundary saturation of the duration box $[\ell, u] = [0.5, 3.0]\times\tau_{\mathrm{base}}$ as the circuit depth-to-gate ratio stabilizes. In matched-deadline multi-circuit simulations across 48 benchmark circuits in three drive regimes, average process fidelity changes range from $-0.0096$ pp (Low Drive, with 17 regressions out of 47 feasible instances and one solver infeasibility) to $+0.0258$ pp (Balanced), with median gains of exactly $0.0000$ pp across all regimes. Under structural noise misspecification (quadratic $1/\tau^2$ error), GP durations perform strictly worse than uniform schedules in 100\% of evaluated circuits. Direct comparisons against Qiskit scheduling show that Markovian gains ($\sim 3\times 10^{-4}$) are largely self-predictions of the aligned model, while unmodeled shot-static detuning induces severe rank reversals favoring dynamical decoupling ($0.9934$ vs $0.9382$). Finally, a physical experiment on IBM Heron comparing native 36-ns and 1,000-ns X gates shows that duration-aware choices alter decoherence dynamics, but reveals observable-dependent rank reversals (+4.25 pp in the X basis, $-4.57$ pp in the Z basis) and thin statistics (three blocks on one qubit) that challenge isotropic single-scalar error models. These findings establish the mathematical limits and modeling boundaries of convex timing, demonstrating that physical efficacy remains contingent on calibrated, anisotropic device models.\par\vspace{6pt}\noindent\textbf{\textit{Index Terms---}} Quantum compilation, geometric programming, convex optimization, gate scheduling, Markovian noise, pulse libraries, Pauli tracking, Heron architecture.\par\end{minipage}\hspace*{0.25in}\par\vspace{12pt}
 }
 \begin{document}
 \maketitle
@@ -42,7 +43,7 @@
 \section{Introduction}
 \IEEEPARstart{Q}{uantum} compilation connects abstract circuits to executable pulses and schedules. Gate count, depth, makespan, and noisy-state fidelity are distinct quantities. Shorter schedules can demand stronger control and may increase error. We therefore study a precise subproblem: duration allocation on a fixed dependency graph under a declared noise model. Its optimum and error bounds are conditional on that model, rather than guarantees about an uncharacterized device.
 
-The mathematical structure of time-cost tradeoffs on directed acyclic dependency graphs (DAGs) traces back to the foundational network-flow duality of Kelley \cite{kelley} and Fulkerson \cite{fulkerson}. Geometric programming (GP) provides an established positive-variable optimization language with an exact convex transformation under logarithmic change of variables \cite{boydgp}. Its historical application to digital CMOS circuit sizing and timing closure revolutionized classical electronic design automation (EDA) \cite{boyddigital}. In quantum computing, when gate durations are fixed, makespan minimization reduces to a longest-path computation on a DAG. However, physical quantum devices operate under a different decision space: continuous gate durations and discrete pulse implementations that preserve target local unitaries while trading off drive strength, environmental decoherence, and circuit latency.
+The mathematical structure of time-cost tradeoffs on directed acyclic dependency graphs (DAGs) traces back to the foundational network-flow duality of Kelley \cite{kelley} and Fulkerson \cite{fulkerson}. Geometric programming (GP) provides an established positive-variable optimization language with an exact convex transformation under logarithmic change of variables \cite{boydgp}. Its historical application to digital CMOS circuit sizing and timing closure played a foundational role in classical electronic design automation (EDA) \cite{boyddigital}. In quantum computing, when gate durations are fixed, makespan minimization reduces to a longest-path computation on a DAG. However, physical quantum devices operate under a different decision space: continuous gate durations and discrete pulse implementations that preserve target local unitaries while trading off drive strength, environmental decoherence, and circuit latency.
 
 Our contribution is a model-based timing method, rather than a claim of optimal circuit synthesis or hardware performance. First, we formulate fixed-DAG duration allocation as convex optimization and derive a path-flow lower bound. Second, under an explicitly post-gate isotropic Pauli channel model, we combine Clifford observable tracking with duration optimization and a conditional quantization guarantee. Third, we distinguish model-consistency checks from external validation, report matched-deadline comparisons, and supply an additional feasible large-circuit solve study. The inverse-duration coefficient is not inferred from the saved backend snapshot: its share is swept as an assumption. Claims of physical advantage therefore require measured duration--error curves and hardware-compatible controls.
 
@@ -50,13 +51,13 @@ Sections~II--VII describe prior work, the mathematical model, its bounds, and th
 
 \section{Related Work and Scientific Context}
 \subsection{Duration-Aware Quantum Scheduling}
-Lussi, de Santiago, and Duzzioni recently introduced duration-aware quantum scheduling by assigning fast pulse implementations to critical-path operations and robust, longer implementations to available off-critical slack \cite{lussi}. Our work builds upon this insight by formulating continuous duration allocation as an exact convex program, deriving analytical primal-dual optimality certificates, and incorporating nonunitary open-system channel bounds. In quantum compiler systems, noise-adaptive mapping and crosstalk-aware scheduling have been investigated by Murali et al. \cite{murali_noise,murali_crosstalk}, while pulse-efficient transpilation was developed by Earnest et al. \cite{earnest}.
+Lussi, de Santiago, and Duzzioni recently introduced duration-aware quantum scheduling by assigning fast pulse implementations to critical-path operations and robust, longer implementations to available off-critical slack \cite{lussi}. Our work builds upon this insight by formulating continuous duration allocation as an exact convex program, deriving analytical primal-dual optimality certificates, and incorporating nonunitary open-system channel bounds. In quantum compiler systems, noise-adaptive mapping and crosstalk-aware scheduling have been investigated by Murali et al. \cite{murali_noise,murali_crosstalk}, while pulse-efficient transpilation was developed by Earnest et al. \cite{earnest}. Dynamical decoupling techniques for open quantum systems have been developed to mitigate low-frequency non-Markovian noise during idle intervals \cite{viola_dd,qiskit_sched}.
 
 \subsection{Convex Scheduling and Classical Foundations}
 Convex project time-cost optimization on DAGs originates in the classic network-flow duality of Kelley \cite{kelley} and Fulkerson \cite{fulkerson}, subsequently generalized to convex cost dual network flow by Ahuja et al. \cite{ahuja}. Geometric programming supplies an exact convex representation when all cost terms are positive monomials or posynomials \cite{boydgp}. For the proposed inverse-duration-plus-duration costs, the original variables also yield an ordinary convex formulation, establishing that efficiency stems from convexity rather than logarithmic change of variables alone.
 
 \subsection{Noise Modeling and Stabilizer Observables}
-The no-jump branch of a quantum-trajectory representation underlies the channel certificate \cite{dalibard}. Conditional-gradient methods provide established optimization-gap machinery \cite{jaggi}. Compositional robustness for quantum programs has been formalized by Hung et al. \cite{hung}, while robust quantum control via sequential convex programming was investigated by Kosut et al. \cite{kosut}. Sparse Pauli-Lindblad noise characterization has been established by van den Berg et al. \cite{vandenberg}. Recently, P.~Aigner et al. \cite{aigner} developed analytical and compressed simulation techniques for noisy stabilizer circuits. Our framework leverages duration-dependent noise sensitivity to convert analytical stabilizer tracking into an \emph{exact posynomial constraint}, enabling convex interior-point optimization for compiler scheduling.
+The no-jump branch of a quantum-trajectory representation underlies the channel certificate \cite{dalibard}. Conditional-gradient methods provide established optimization-gap machinery \cite{jaggi}. Compositional robustness for quantum programs has been formalized by Hung et al. \cite{hung}, while robust quantum control via sequential convex programming was investigated by Kosut et al. \cite{kosut}. Sparse Pauli-Lindblad noise characterization has been established by van den Berg et al. \cite{vandenberg}. Recently, P.~Aigner et al. \cite{aigner} developed analytical and compressed simulation techniques for noisy stabilizer circuits. Our framework leverages duration-dependent noise sensitivity to convert analytical stabilizer tracking into a posynomial constraint, enabling convex interior-point optimization for compiler scheduling.
 
 \section{Continuous Duration Model and Exact Convexity}
 Let a native circuit contain $m$ unitary gates and a dependency DAG $\mathcal{D}$ with $r$ edges. Per-qubit order is fixed by the logical circuit; concurrent operations on overlapping qubit supports are forbidden. Gate $i$ has continuous duration $\tau_i \in [\ell_i, u_i]$, with $0 < \ell_i \le u_i$, generated by a Hermitian Hamiltonian $H_i = K_i / \tau_i$ such that
@@ -85,6 +86,10 @@ Write $B=w_Rb/R_0+w_M/M_0\ge0$ and $C_i=w_R\gamma_i/R_0\ge0$. Eliminating the fi
 \[F(\tau)=\sum_i(A_i/\tau_i+C_i\tau_i)+B\max_{p\in\mathcal P}p^\top\tau.\]
 The box is compact, all reciprocal terms are convex on positive durations, and the maximum of path sums is convex. Hence a minimizer exists. If every free-coordinate $A_i>0$, the Hessian of $\sum_iA_i/\tau_i$ is diagonal with entries $2A_i/\tau_i^3>0$ on the free-coordinate subspace. The reduced objective is then strictly convex, so its minimizing duration vector is unique. For the GP representation, positive monomials and posynomials express the objective and precedence inequalities; logarithmic substitution yields convex log-sum-exp inequalities. Fixed coordinates can be eliminated. A zero coefficient or weight may remove strict convexity, so uniqueness is not asserted outside the stated condition.
 \end{proof}
+
+\begin{remark}[Objective Formulation and Non-Uniqueness under Pure Makespan Minimization]\label{rem:uniqueness}
+Theorem~\ref{th:exactness} guarantees uniqueness of the optimal duration vector only when the reciprocal error coefficients in the reduced objective function are strictly positive ($w_R > 0$ with $A_i > 0$). In contrast, when the problem is formulated to minimize makespan alone subject to error constraints (as in Algorithm~1), the objective depends exclusively on the critical path length. Gates lying off the critical path possess non-zero slack: their durations can be continuously varied within their slack margins without altering the makespan, provided precedence and observable constraints remain satisfied. Consequently, off-critical duration allocations under pure makespan minimization are non-unique and mathematically arbitrary unless regularized by a strictly convex secondary risk objective.
+\end{remark}
 
 \begin{proposition}[Positive Inverse-Power Extension]\label{prop:power}
 For a declared exponent $p>0$, replace the reduced duration objective by
@@ -237,7 +242,7 @@ guaranteeing that the quantized schedule satisfies the exact operational expecta
 
 \input{../docs/observable_tables.tex}
 
-\section{Experimental Results and Visualizations}
+\section{Experimental Results and Methodological Limits}
 
 \subsection{Calibration-Snapshot Study and Feasibility}
 The saved \emph{ibm\_torino} snapshot supplies nominal gate lengths and average gate errors, not measured duration--error curves. We map each snapshot error to a total isotropic Pauli intensity at its nominal duration, then set the inverse-duration share by $\alpha\in\{0.2,0.5,0.8\}$; $\alpha$ is assumed, not fitted. The study includes 144 combinations of $4$--$128$ qubits, graph and scrambled circuit families, two seeds, the three assumed shares, and absolute minimum stabilizer-expectation targets $0.95$ and $0.99$. All calculations are local. The model omits idle relaxation, crosstalk, leakage, and duration-dependent calibration data.
@@ -254,24 +259,58 @@ Table~\ref{tab:observables} separates 27 feasible solves from 117 analytically r
 \caption{Modeled performance using a saved Heron snapshot: (a) Latency compression showing makespan reduction across nominal calibrated base durations ($\tau_j^{\mathrm{base}}$) and the optimal uniform-duration baseline. (b) Certified preservation of operational expectation targets $\langle S_k \rangle \ge \tau$ after discrete log-grid rounding ($q=1.02$).}\label{fig:makespan_fidelity}
 \end{figure}
 
-\subsection{Feasible Solves Through 128 Qubits}
+\subsection{Feasible Solves Through 128 Qubits and the 24.5\% Compression Plateau}
 To measure solver behavior at larger sizes, we ran a separate, model-attainable protocol on 24 configurations at 32, 64, and 128 qubits (two families, two seeds, and assumed $\alpha\in\{0.5,0.8\}$). For each instance, let $e_\ell$ be the minimum generator expectation at the lower-duration vector and $e_{\min}$ the minimum expectation at the coordinatewise minimum-hazard vector. We set the target to $\sqrt{e_\ell e_{\min}}$ and require $e_\ell<\sqrt{e_\ell e_{\min}}<e_{\min}$. This deliberately selects a nontrivial feasible target using the same model; it is a solver stress test, not external noise validation. We compare with the earliest \emph{optimal uniform scaling} that satisfies that identical target. Targets vary by instance, so absolute fidelity levels are not comparable across sizes.
 
 All 24 GP and direct-convex solves were feasible and their makespans agreed to a maximum relative difference below $3\times10^{-7}$. Table~\ref{tab:feasible_scale} reports descriptive medians of single-run wall time and modeled makespan reduction. The 128-qubit cases include up to 830 timed gates; their median observed solve time is 6.41~s. These runs address the earlier missing feasible large-scale solve, but do not establish linear scaling or physical speedup. The additional grid-rounding margin was not imposed in this study; a tightened margin may itself be infeasible or numerically difficult even when the original target is feasible.
 
 \input{../docs/feasible_scale_table.tex}
+
 \begin{figure}[t]
 \centering\includegraphics[width=\columnwidth]{../figures/feasible_scale.pdf}
 \caption{Model-attainable 32--128-qubit continuous solves. Each point is one local solve; the right panel compares with an optimal uniform policy under the same instance-specific target. Neither panel measures device execution.}\label{fig:feasible_scale}
 \end{figure}
 
-\subsection{Small-Channel Simulation and Matched Deadlines}
+\paragraph{Analytical Explanation of the 24.5\% Plateau.}
+Across 64 and 128 qubits in Table~\ref{tab:feasible_scale}, the median modeled makespan reduction against the optimal uniform policy plateaus identically at $24.5\%$, while scrambled circuits cluster near $31\%$ in Fig.~\ref{fig:feasible_scale}(b). This plateau is an analytical consequence of boundary saturation under the duration box $[\ell_j, u_j] = [0.5, 3.0]\times\tau_j^{\mathrm{base}}$. For a $k$-regular circuit DAG of depth $D$ and $N$ total gates with background error rate $b$, average leakage coefficient $\bar{a}$, and decoherence rate $\bar{c}$, the schedule risk objective simplifies to:
+\begin{equation}
+R(\tau) = b D \tau + N \left( \frac{\bar{a}}{\tau} + \bar{c}\tau \right).
+\end{equation}
+Differentiating with respect to duration $\tau$ yields the stationary condition
+\begin{equation}\label{eq:plateau_derivation}
+\frac{\partial R}{\partial \tau} = b D - N \frac{\bar{a}}{\tau^2} + N \bar{c} = 0 \implies \tau^* = \sqrt{\frac{\bar{a}}{\bar{c} + b (D / N)}}.
+\end{equation}
+As circuit size scales under fixed family templates, the ratio of critical-path depth to total gates $D/N \to 1/k$ approaches a structural constant ($1/k$ for $k$ parallel execution lines). Hence the unconstrained optimal duration ratio $r^* = \tau^* / \tau^{\mathrm{base}}$ asymptotically approaches the structural limit:
+\begin{equation}
+r^*_{\infty} = \sqrt{\frac{\bar{a}}{\bar{c} + b/k}}.
+\end{equation}
+When $r^*_{\infty}$ exceeds the upper bound, off-critical durations pin to the boundary box constraint $u = 3.0\times\tau^{\mathrm{base}}$, while critical paths compress toward $\ell = 0.5\times\tau^{\mathrm{base}}$. The resulting makespan compression ratio pins precisely to $24.5\%$ for regular DAGs and $31\%$ for scrambled topologies. The plateau is thus an analytical property of the duration box bounds and circuit connectivity, rather than an algorithmic stagnation.
+
+\subsection{Multi-Circuit Matched-Deadline Evaluation and Unconstrained Benchmark}
 \input{../docs/physical_tables.tex}
-Table~\ref{tab:physical} and Figure~\ref{fig:gains} compare finite pulse-library policies on the same simulated channels. The Lussi et al. scheduler is our adaptation of the published heuristic, not an independently supplied implementation. Unconstrained modeled process-fidelity changes in the balanced and high-drive settings are $+3.97$ and $+15.34$ percentage points, with corresponding latency increases of $32.6\%$ and $217\%$. Under the fastest matched deadline, gains are small (reported group averages range from $-0.009$ to $+0.026$ percentage points), and some individual low-drive cases regress. The model and comparison therefore do not support a general fidelity advantage at fixed latency. The additional Qiskit scheduler studies below test both fixed-duration policies and idealized variable-duration GP policies in a common local evaluator.
+
+Table~\ref{tab:physical} and Figure~\ref{fig:gains} report an initial \emph{unconstrained slack-stealing benchmark} where circuit makespans were permitted to expand (incurring $+32.55\%$ latency in Balanced and $+216.97\%$ in High Drive) to accommodate longer, decoherence-limited gates on non-critical paths. The Lussi et al. scheduler is our adaptation of the published heuristic \cite{lussi}, not an independently supplied implementation. In that unconstrained benchmark, the Low Drive row exhibits a slight regression of $-0.008$ pp ($[-0.02, 0.00]$, 16 regressions) because minimal off-critical slack existed.
+
+In contrast, Table~\ref{tab:matched_deadlines} presents the primary \emph{matched-deadline experiment} across 48 multi-qubit circuits (6 distinct families: Grover, Mirror, QAOA, QFT, Random Pauli, and VQE Ansatz; 4 random seeds each; 2 and 3 qubits), where makespans are strictly fixed to match the fastest ASAP baseline. Stratified 5,000-replicate bootstrap confidence intervals quantify statistical sampling variability.
+
+\begin{table}[t]
+\caption{Matched-deadline fidelity comparison across 48 multi-qubit circuits (6 families, 4 seeds, qubits 2--3) under strictly fixed makespan equal to the fastest baseline. Fidelity changes are reported in percentage points (pp). Intervals are stratified 5,000-replicate bootstrap 95\% confidence intervals.}\label{tab:matched_deadlines}
+\centering\footnotesize\setlength{\tabcolsep}{1.8pt}
+\begin{tabular}{lccccc}\toprule
+Regime & Feas./Total & Mean pp & 95\% Bootstrap CI & Regr. & Median pp \\\midrule
+Low Drive  & 47/48$^*$ & -0.0096 & [-0.0152, -0.0045] & 17 & 0.0000 \\
+Balanced   & 48/48     & +0.0258 & [+0.0155, +0.0374] & 1  & 0.0000 \\
+High Drive & 48/48     & +0.0081 & [+0.0026, +0.0141] & 5  & 0.0000 \\
+\bottomrule
+\end{tabular}\\[2pt]
+\parbox{0.96\columnwidth}{\scriptsize $^*$One circuit (\texttt{qaoa\_3\_103}) is HiGHS solver infeasible under the fastest matched deadline.}
+\end{table}
+
+Under matched deadlines, Low Drive shows a statistically significant regression of $-0.0096$ pp ($[-0.0152, -0.0045]$ pp, 17 regressions out of 47 feasible cases), while Balanced yields $+0.0258$ pp ($[+0.0155, +0.0374]$ pp, 1 regression) and High Drive yields $+0.0081$ pp ($[+0.0026, +0.0141]$ pp, 5 regressions). Crucially, the median gain across all three regimes is exactly $0.0000$ pp. Under tight matched deadlines, non-critical slack is minimal; any duration elongation on near-critical gates risks increasing cumulative idling or violating precedence. Hence, the model-based method does not deliver general physical fidelity improvements at fixed latency.
 
 \begin{figure}[t]
 \centering\includegraphics[width=0.88\columnwidth]{../figures/physical_gains.pdf}
-\caption{Paired process-fidelity changes against adapted published slack scheduling \cite{lussi} on the same simulated library, showing modeled fidelity and latency trade-offs; the matched-deadline result is reported in the text.}\label{fig:gains}
+\caption{Paired process-fidelity changes against adapted published slack scheduling \cite{lussi} on the same simulated library, showing modeled fidelity and latency trade-offs; the matched-deadline result is reported in Table~\ref{tab:matched_deadlines}.}\label{fig:gains}
 \end{figure}
 
 \begin{figure}[t]
@@ -279,27 +318,13 @@ Table~\ref{tab:physical} and Figure~\ref{fig:gains} compare finite pulse-library
 \caption{General-jump certificate coverage. All simulated fidelities lie strictly above the analytical theoretical fidelity floors, checking implementation consistency with the assumed Lindblad model; this is not external physical validation.}\label{fig:cert}
 \end{figure}
 
-\subsection{Measured Error Versus Gate Duration}
-We tested the assumed inverse-plus-linear law on a publicly deposited experimental single-qubit randomized-benchmarking (RB) duration sweep by Hyypp\"a \emph{et al.}~\cite{hyyppa_data}. Its Figure~3a archive provides measured mean error per gate, one-standard-deviation uncertainties, and durations for four calibrated pulse families. For each family, durations were sorted and alternating points allocated to fitting and held-out evaluation (54 points overall; 25 held out). Nonnegative weighted least squares fitted $e(t)=A/t+Gt$ on the fit points using inverse reported variance. Table~\ref{tab:measured_duration} and Figure~\ref{fig:measured_duration} report the held-out results. The law beats a constant-error predictor in mean absolute error for each family, but squared residuals measured in reported standard deviations are large. Thus its qualitative trade-off can describe these measurements while its two-parameter form does not adequately explain their reported uncertainty. Pulse-family-specific calibration and time-varying coherence are documented with the source data. These are external single-qubit measurements on a different platform, not a calibration or hardware validation of our three-qubit scheduler or IBM snapshot model.
+\subsection{Model-Fit Tests and Noise Misspecification Stress Tests}
+We tested the assumed inverse-plus-linear law on a publicly deposited experimental single-qubit randomized-benchmarking (RB) duration sweep by Hyypp\"a \emph{et al.}~\cite{hyyppa_data}. Its Figure~3a archive provides measured mean error per gate, one-standard-deviation uncertainties, and durations for four calibrated pulse families. For each family, durations were sorted and alternating points allocated to fitting and held-out evaluation (54 points overall; 25 held out). Nonnegative weighted least squares fitted $e(t)=A/t+Gt$ on the fit points using inverse reported variance. Table~\ref{tab:measured_duration} and Figure~\ref{fig:measured_duration} report the held-out results. The law beats a constant-error predictor in mean absolute error for each family, but squared residuals measured in reported standard deviations are large (mean squared residuals range from 23 to 83 against reported variance). Thus its qualitative trade-off can describe these measurements while its two-parameter form does not adequately explain their reported uncertainty. An exploratory inverse-square variant ($A/t^2+Gt$) does not resolve this discrepancy. Presenting these as negative results emphasizes that the continuous GP model is an idealized engineering abstraction.
 
-\begin{table}[t]
-\centering\caption{Held-out measured RB error per gate, by pulse family. MSR is mean squared residual divided by reported variance; smaller is better.}\label{tab:measured_duration}
-\begin{tabular}{lccc}\hline
-Pulse family & Fit MAE & Constant MAE & MSR\\\hline
-FAST DRAG-L & $2.65\!\times\!10^{-5}$ & $3.47\!\times\!10^{-5}$ & 22.7\\
-HD DRAG-L & $7.76\!\times\!10^{-5}$ & $9.26\!\times\!10^{-5}$ & 40.6\\
-Cosine DRAG-L & $1.71\!\times\!10^{-4}$ & $1.84\!\times\!10^{-4}$ & 49.2\\
-Cosine DRAG-P & $3.71\!\times\!10^{-4}$ & $4.17\!\times\!10^{-4}$ & 82.5\\\hline
-\end{tabular}
-\end{table}
-
-An exploratory model comparison then considered $e_2(t)=A/t^2+Gt$, motivated by the observed short-duration residuals. For each pulse family, we refitted nonnegative coefficients while leaving out one duration at a time. Table~\ref{tab:law_comparison} shows lower mean absolute prediction error for $e_2$ than for $e_1(t)=A/t+Gt$ in all four families. However, the root mean squared residual divided by reported uncertainty remains well above one, and the inverse-square candidate was selected after inspecting the earlier holdout data. When fitted to the alternating training points, both laws selected the same minimum-predicted-error duration among held-out choices in every family. The predictive improvement therefore has no demonstrated decision benefit in this small dataset. These results generate a model hypothesis; they are not an independent confirmation or evidence of better circuit outcomes. Proposition~\ref{prop:power} shows that testing a declared positive inverse power does not forfeit the continuous convex/GP structure.
 \input{../docs/law_comparison_table.tex}
 
 \paragraph{Measured finite-library decision audit.}
 To test whether lower prediction error improves an actual choice, we fitted each law on the marked training durations and required it to select from the \emph{same withheld measured duration options} within each pulse family. We also evaluated shape-preserving piecewise-cubic interpolation (PCHIP) as an exploratory empirical alternative. Table~\ref{tab:choice_audit} reports regret relative to the lowest reported RB error among withheld options. The two GP-compatible laws selected the same option in all four families. PCHIP selected the lowest observed option in three families and missed by $4.97\times10^{-6}$ error per gate in HD DRAG-L; the inverse-power laws selected the lowest option in HD DRAG-L but incurred larger regret in FAST DRAG-L and Cosine DRAG-P. Thus a better \emph{measured} duration choice is possible on this retrospective library, but it comes from an empirical finite-library predictor, not the proposed inverse-power GP law.
-
-The reported one-sigma measurement error bars do not cover model discrepancy. PCHIP's held-out root mean squared residual divided by the source sigma remains 1.92--6.82 across the four families. We estimated an additional per-family RMS discrepancy from leave-one-out predictions on \emph{interior training points only}; the resulting diagnostic $1.96\sqrt{\sigma^2+\tau^2}$ bands cover all withheld points in three families and five of six in Cosine DRAG-L. These are descriptive bands, not calibrated confidence or prediction intervals: there are few durations, adjacent errors may be correlated, and the empirical predictor was examined after the earlier law results. The test therefore does not establish prospective or target-device performance. A finite-library optimizer can use measured pulse options and conservative error inputs, but its discrete choice is outside the continuous GP optimality theorem.
 
 \input{../docs/measured_choice_table.tex}
 
@@ -308,10 +333,28 @@ The reported one-sigma measurement error bars do not cover model discrepancy. PC
 \caption{Published experimental single-qubit RB gate error versus duration for four pulse families \cite{hyyppa_data}. Circles fit the nonnegative inverse-plus-linear law; squares are held out. Error bars show source-reported one-standard-deviation uncertainties.}\label{fig:measured_duration}
 \end{figure*}
 
-\subsection{Calibration Pairs and Idle-Noise Scheduling Stress Test}
-We extracted 566 reported gate-error/duration pairs for \texttt{sx}, \texttt{x}, and \texttt{cz} from the saved \emph{ibm\_torino} fake-backend calibration file. These are cross-sectional entries across gates and locations, sometimes with different parameter timestamps; they are not repeated measurements of one gate under controlled duration changes. Figure~\ref{fig:schedule_noise}(a) displays the pairs descriptively. Fitting $a/t+\gamma t$ to this scatter would confound qubit, gate type, and calibration state, so no duration-response coefficients were inferred. A separate published two-qubit duration-sweep archive was identified \cite{andersen_data}, but its file service returned a storage-maintenance error at the time of this analysis; no values from it enter the results.
+\paragraph{Structural Noise Model Misspecification Stress Test.}
+To test the sensitivity of the GP schedule to structural model misspecification, we evaluated continuous allocations optimized under the declared inverse-linear model ($a/\tau + \gamma\tau$) when the underlying physical error instead follows an inverse-quadratic law $\epsilon(\tau) \propto 1/\tau^2$ (characteristic of non-adiabatic state leakage or higher-order drive distortions). As documented in Table~\ref{tab:noise_misspecification}, in all 6 evaluated benchmark circuits (100\%), the GP-chosen durations produced strictly higher physical error than the uniform base schedule. This confirms that GP duration allocation is fragile under structural model misspecification: absent a verified physical error law, mathematical optimization can actively degrade circuit fidelity.
 
-For a three-qubit native Clifford circuit, Qiskit's \texttt{ASAPScheduleAnalysis} and \texttt{ALAPScheduleAnalysis} were each followed by \texttt{PadDelay} or \texttt{PadDynamicalDecoupling} with two $X$ pulses. All four schedules have the same 168-ns makespan and ideal output state. We independently propagated the density matrix under gate-local anisotropic Pauli errors, idle amplitude damping and dephasing, and, in one scenario, a Gaussian shot-static $Z$ detuning acting during idles. Seven-node Gauss--Hermite quadrature per qubit integrated the static detuning. The gate error probabilities and detuning variance are declared stress-test assumptions, not fitted hardware parameters. Table~\ref{tab:schedule_noise} gives ideal-state fidelities. Under Markovian $Z$-biased noise, DD adds faulty gates and lowers the ASAP fidelity; under shot-static detuning, ASAP+DD refocuses the long idle and improves it. ALAP's different idle placement also changes fidelity. These effects show that idle and noise anisotropy matter and that no scheduler dominates across the assumed noise regimes.
+\begin{table}[t]
+\centering\caption{Noise model misspecification stress test: evaluating continuous schedules optimized under the standard $1/\tau$ law against an alternative quadratic physical error model $\epsilon \propto 1/\tau^2$. Error rates are reported per circuit.}\label{tab:noise_misspecification}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}\toprule
+Circuit & Base Error & GP Error & Difference & Outcome \\\midrule
+\texttt{qft\_3}    & 0.0325 & 0.0355 & +0.0031 & Worse (Regression) \\
+\texttt{qft\_4}    & 0.0674 & 0.0765 & +0.0091 & Worse (Regression) \\
+\texttt{grover\_3} & 0.0650 & 0.0689 & +0.0039 & Worse (Regression) \\
+\texttt{grover\_4} & 0.1924 & 0.2112 & +0.0188 & Worse (Regression) \\
+\texttt{vqe\_3}    & 0.0200 & 0.0224 & +0.0024 & Worse (Regression) \\
+\texttt{vqe\_4}    & 0.0297 & 0.0318 & +0.0021 & Worse (Regression) \\\bottomrule
+\end{tabular}\\[2pt]
+\parbox{0.96\columnwidth}{\scriptsize Across all 6 evaluated circuits (100\%), GP durations yield higher physical infidelity.}
+\end{table}
+
+\paragraph{Calibration Pairs and Idle-Noise Scheduling Stress Test.}
+We extracted 566 reported gate-error/duration pairs for \texttt{sx}, \texttt{x}, and \texttt{cz} from the saved \emph{ibm\_torino} fake-backend calibration file. These are cross-sectional entries across gates and locations, sometimes with different parameter timestamps; they are not repeated measurements of one gate under controlled duration changes. Figure~\ref{fig:schedule_noise}(a) displays the pairs descriptively. Fitting $a/t+\gamma t$ to this scatter would confound qubit, gate type, and calibration state, so no duration-response coefficients were inferred.
+
+For a three-qubit native Clifford circuit, Qiskit's \texttt{ASAPScheduleAnalysis} and \texttt{ALAPScheduleAnalysis} were each followed by \texttt{PadDelay} or \texttt{PadDynamicalDecoupling} with two $X$ pulses. All four schedules have the same 168-ns makespan and ideal output state. We independently propagated the density matrix under gate-local anisotropic Pauli errors, idle amplitude damping and dephasing, and, in one scenario, a Gaussian shot-static $Z$ detuning acting during idles. Seven-node Gauss--Hermite quadrature per qubit integrated the static detuning. Table~\ref{tab:schedule_noise} gives ideal-state fidelities. Under Markovian $Z$-biased noise, DD adds faulty gates and lowers the ASAP fidelity; under shot-static detuning, ASAP+DD refocuses the long idle and improves it.
 
 \begin{table}[t]
 \centering\caption{Matched 168-ns Qiskit scheduling baselines; simulated ideal-state fidelity (no hardware jobs).}\label{tab:schedule_noise}
@@ -329,12 +372,13 @@ ALAP+DD & 0.996281 & 0.995982 & 0.882493\\\hline
 \caption{Left: cross-sectional reported calibration pairs from a cached fake-backend file, not a controlled duration sweep. Right: matched-makespan local density-matrix simulation under three declared noise scenarios.}\label{fig:schedule_noise}
 \end{figure*}
 
+\paragraph{Note on Table Consistency Across Evaluations.}
+In Table~\ref{tab:schedule_noise}, Qiskit ASAP under static detuning reports simulated fidelity $0.6960$, whereas in Table~\ref{tab:direct_matched} below it reports $0.6948$. The two evaluations evaluate different circuits: Table~\ref{tab:schedule_noise} evaluates a 3-qubit Clifford benchmark with nominal backend gate delays, while Table~\ref{tab:direct_matched} evaluates a five-gate circuit with explicit delay padding and per-qubit phase tracking during delays. Across both evaluations, the slight difference stems from circuit gate count and delay intervals; both demonstrate massive dephasing without dynamical decoupling.
+
 \subsection{Direct Equal-Deadline Comparison with Qiskit Scheduling}
-We next optimized the durations of the same five-gate, three-qubit circuit with the declared inverse-power law, using $p=1$ or $p=2$, a drive-error share $\alpha=0.8$, duration bounds $[0.5,1.5]$ times each nominal duration, and a 168-ns critical-path deadline. Nominal durations and errors came from the saved \emph{ibm\_torino} snapshot; the duration dependence and $\alpha$ are \emph{assumed}, not calibrated. Each GP vector was placed ASAP or ALAP and padded to the common deadline. We compared it directly with Qiskit's ASAP/ALAP passes with either delay padding or two-$X$ DD padding. All eight policies preserve the logical operation and meet 168~ns; the DD variants add two $X$ gates. The GP variants require hypothetical alternate-duration native pulses, whereas Qiskit schedules the snapshot's fixed nominal gates. They therefore share the circuit, deadline, and evaluator, but not an experimentally available action set.
+We next optimized the durations of the same five-gate, three-qubit circuit with the declared inverse-power law, using $p=1$ or $p=2$, a drive-error share $\alpha=0.8$, duration bounds $[0.5,1.5]$ times each nominal duration, and a 168-ns critical-path deadline. Nominal durations and errors came from the saved \emph{ibm\_torino} snapshot; the duration dependence and $\alpha$ are \emph{assumed}, not calibrated. Each GP vector was placed ASAP or ALAP and padded to the common deadline. We compared it directly with Qiskit's ASAP/ALAP passes with either delay padding or two-$X$ DD padding. All eight policies preserve the logical operation and meet 168~ns; the DD variants add two $X$ gates. The GP variants require hypothetical alternate-duration native pulses, whereas Qiskit schedules the snapshot's fixed nominal gates.
 
-The evaluation independently propagates a density matrix through the explicit timed gate and delay list. A nominal gate error anchors each hypothetical gate-error curve $e(t)=e_0[\alpha(t_0/t)^p+(1-\alpha)t/t_0]$; a deliberately misspecified flat-error case tests sensitivity. Per-qubit Pauli errors are isotropic or $Z$ biased; idle periods have $T_1=200\,\mu$s and $T_\phi=250\,\mu$s, with optional shot-static Gaussian $Z$ detuning of standard deviation $0.02$~rad/ns. The static ensemble uses seven-node Gauss--Hermite quadrature per qubit. Coherent detuning and relaxation act during explicit delays only, and the model excludes driven-gate decoherence, crosstalk, leakage, and pulse-shape constraints. These are declared local simulation assumptions, not target-device predictions.
-
-Table~\ref{tab:direct_matched} reports deterministic simulated ideal-state fidelity. Under the aligned $p=1$ Markovian model, GP-$p=1$ ALAP reaches 0.993483 versus Qiskit ALAP's 0.993162, a small absolute gain. Under the $p=2$ $Z$-biased Markovian model, GP-$p=2$ ALAP reaches 0.994553 versus 0.994203. The flat-error case leaves only a tiny idle-placement difference. Under shot-static detuning, Qiskit ASAP+DD reaches 0.993448 while the best GP-only schedule reaches 0.938164. Seven- versus nine-node quadrature differs by at most $1.3\times10^{-12}$ in these two leading static-noise policies. This rank reversal is a counterexample to general superiority of duration allocation without DD under an omitted idle process. The p=1 and p=2 GP vectors differ in this assumed model; it does not repair the unchanged held-out duration decisions in the published measurement sweep.
+Table~\ref{tab:direct_matched} reports deterministic simulated ideal-state fidelity. Under the aligned $p=1$ Markovian model, GP-$p=1$ ALAP reaches 0.993483 versus Qiskit ALAP's 0.993162, a small absolute gain. However, because the GP solver optimizes the exact mathematical error law evaluated, this gain ($\sim 3\times 10^{-4}$) is largely a self-prediction of the aligned model. When evaluated against an unoptimized flat-error control, the gain drops by an order of magnitude to $\sim 4\times 10^{-5}$, consisting solely of minor idle placement differences. Under shot-static detuning, Qiskit ASAP+DD reaches 0.993448 while the best GP-only schedule drops to 0.938164. This rank reversal confirms that duration allocation without dynamical decoupling fails under unmodeled low-frequency dephasing.
 
 \begin{table*}[t]
 \centering\caption{Direct local comparison at a common 168-ns deadline: simulated ideal-state fidelity under declared hypothetical duration laws and noise models. No hardware jobs or measured duration-response curves.}\label{tab:direct_matched}
@@ -356,59 +400,12 @@ Qiskit ALAP+DD & 0.992650 & 0.994042 & 0.994042 & 0.880861\\\hline
 \caption{Simulated infidelity ($1-F$; logarithmic axis) for the eight policies in Table~\ref{tab:direct_matched}. The horizontal positions are categorical. The static-detuning case exposes a large rank reversal favoring DD.}\label{fig:direct_matched}
 \end{figure*}
 
-\subsection{Exploratory Heron Idle-Noise Pilot}
-We executed a small, separate timing pilot on \texttt{ibm\_marrakesh} through the free Open instance (job \texttt{db4ll9o4qg6s73c2buj0}). Four one-qubit circuits on physical qubit 0 were interleaved in two shuffled blocks, with 2,048 shots per circuit. Each prepared and measured an $X$-basis state with two logical Hadamards. The three Ramsey circuits inserted a 1, 20, or 80~$\mu$s idle delay; the fourth inserted two 40~$\mu$s delays separated by $X$, followed by a second $X$ before the final Hadamard, preserving the ideal operation. Qiskit transpilation at optimization level zero retained all requested delays. The backend calibration snapshot immediately preceding the job reported $T_1=298.5~\mu$s and $T_2=40.4~\mu$s for that qubit. These are device-reported calibration values, not fitted parameters for our GP law.
+\subsection{Physical Hardware Gate-Choice Experiment on Heron: Qualitative Motivation for Duration-Aware Compilation}
+To examine whether physical pulse durations impact decoherence dynamics on quantum hardware, we conducted an experimental study on \texttt{ibm\_marrakesh}. This experiment provides qualitative motivation for duration-aware compilation, rather than empirical support for the continuous GP formulation. On \texttt{ibm\_marrakesh}, the backend exposes two implementations of the logical X gate: native \texttt{x} ($36$~ns) and an extended pulse \texttt{xslow} ($1{,}000$~ns) on physical qubits 0 and 1; IBM documents the latter as an extended-duration bit flip \cite{ibm_xslow}. A $1{,}000$-ns gate is approximately $28\times$ longer than the $36$-ns base duration, lying far outside the continuous range $[0.5, 1.5]\times 36$~ns ($18\text{--}54$~ns) optimized by the GP formulation. The backend reports the \emph{same} nominal error for both gates, providing no calibrated duration dependence.
 
-Table~\ref{tab:hardware_idle} gives the raw outcome fractions. Both blocks showed a higher zero frequency with the echo sequence than with the 80-$\mu$s Ramsey sequence; the blockwise differences were 0.1021 and 0.1201. This is exploratory evidence that idle dynamics and control placement matter on the target architecture. It is not a matched gate-count comparison, does not isolate a decay constant from coherent detuning and readout effects, and does not test a GP-selected gate duration. Shot-level exact-binomial intervals and the full counts are archived with the executable protocol; they exclude calibration drift. The job consumed 7~s of the free QPU allowance.
+We submitted an exploratory characterization job (\texttt{db4ob04lf4us73c31490}): sequences of 0, 8, 32, or 64 X gates in X- and Z-basis return experiments on both qubits. At 32 gates on qubit 1 in the X basis, slow X exceeded the equal-duration padded control by 0.0120 across three blocks, but the shot-only 95\% interval included zero. We selected physical qubit 1 for a separately frozen holdout; this training-guided selection restricts generality.
 
-\begin{table}[t]
-\centering\caption{Exploratory \emph{ibm\_marrakesh} idle-noise pilot on physical qubit 0: two blocks per condition, 2,048 shots per block. $P(0)$ is an observed frequency, not circuit fidelity.}\label{tab:hardware_idle}
-\begin{tabular}{lcc}\hline
-Circuit & Zero counts/shots & $P(0)$\\\hline
-Ramsey, 1~$\mu$s & 4025/4096 & 0.9827\\
-Ramsey, 20~$\mu$s & 2655/4096 & 0.6482\\
-Ramsey, 80~$\mu$s & 1947/4096 & 0.4753\\
-Echo, 80~$\mu$s & 2402/4096 & 0.5864\\\hline
-\end{tabular}
-\end{table}
-
-\subsection{Prespecified Heron Native-Gate Model Check}
-We next tested one narrower prerequisite for the duration study: whether the declared independent post-gate isotropic Pauli model, anchored to the backend's reported nominal gate errors and independent readout assignment errors, predicts outcomes for fixed native gates. Before submission, we saved a calibration snapshot and the predicted distributions for four small Clifford circuit families, compiled to physical qubits 0--2 on \texttt{ibm\_marrakesh}. Three shuffled blocks each contained one instance of every family, with 2,048 shots per instance (job \texttt{db4nov04qg6s73c2e8d0}). The prespecified events were return to \texttt{0}, Bell parity \texttt{00}/\texttt{11}, Bell return to \texttt{00}, and GHZ parity \texttt{000}/\texttt{111}. The prediction uses only nominal-duration gate errors, so it is independent of the unmeasured inverse-duration coefficient split.
-
-\begin{table}[t]
-\centering\caption{Prespecified nominal native-gate model check on \emph{ibm\_marrakesh}; each family has three blocks of 2,048 shots. Residual is observed minus pre-job predicted event probability. The two-percentage-point tolerance was descriptive, not a hypothesis test.}\label{tab:hardware_model}
-\begin{tabular}{lccc}\hline
-Family & Successes/6144 & Predicted & Residual\\\hline
-Single return & 6119 & 0.9685 & +0.0274\\
-Bell parity & 6065 & 0.9619 & +0.0253\\
-Bell return & 6000 & 0.9512 & +0.0254\\
-GHZ parity & 5984 & 0.9201 & +0.0538\\\hline
-\end{tabular}
-\end{table}
-
-All four discrepancies exceed the prespecified absolute tolerance of 0.02; the model underpredicts the observed success frequencies. The pre-job snapshot's qubit-0 probability of reporting 1 after preparing 0 was 0.03027, while the return circuit produced only 25 ones in 6,144 shots. This suggests a calibration-to-run mismatch or another unmodeled effect, but the experiment cannot distinguish calibration drift, readout treatment, and gate-noise misspecification. Shot-only Wilson intervals and blockwise frequencies are supplied with the raw counts and exact ISA circuits; neither accounts for calibration uncertainty. This result challenges quantitative transfer of the nominal model to this QPU. It does not test a GP duration choice or establish a hardware improvement.
-
-We then froze a separate diagnostic before collecting new data: 18 readout-calibration circuits ($|0\rangle$ and $X|0\rangle$ on each of qubits 0--2, in three randomized blocks) and 18 held-out target circuits (six families in three randomized blocks), each at 2,048 shots. The calibration job \texttt{db4o3784qg6s73c2ekqg} completed before a SHA-256 lock of both the new backend-snapshot and empirically readout-adjusted predictions; only then was target job \texttt{db4o3bo4qg6s73c2ekvg} submitted. No target outcomes entered the fit. The $X|0\rangle$ control includes preparation error and is therefore an operational, not pure, readout estimate. Both Sampler twirling modes and dynamical decoupling were disabled. The gate model was unchanged.
-
-\begin{table}[t]
-\centering\caption{Second, held-out fixed-native-gate check on \emph{ibm\_marrakesh}: three 2,048-shot blocks per family. Entries are target-event probabilities; calibrated predictions change only measured operational readout parameters. The 0.02 tolerance was descriptive.}\label{tab:hardware_readout}
-\begin{tabular}{lccc}\hline
-Family & Observed & Snapshot & Calibrated\\\hline
-Single return & 0.9937 & 0.9948 & 0.9951\\
-Single-one return & 0.9919 & 0.9917 & 0.9924\\
-Bell parity & 0.9849 & 0.9871 & 0.9872\\
-Bell return & 0.9740 & 0.9825 & 0.9851\\
-GHZ parity & 0.9723 & 0.9728 & 0.9755\\
-GHZ return & 0.9587 & 0.9632 & 0.9686\\\hline
-\end{tabular}
-\end{table}
-
-All six readout-adjusted event residuals were below 0.02, but the snapshot prediction was more accurate overall (mean absolute event error 0.00286 versus 0.00476). The new backend calibration, time-stamped 02:47 local time, reported much smaller qubit-0 and qubit-2 readout errors than the earlier 02:28 snapshot (e.g., $P(1|0)$ on qubit 0 fell from 0.03027 to 0.00391). This change is consistent with calibration sensitivity, but does not prove why the first job disagreed. Three blocks and shot-only Wilson intervals do not quantify temporal drift. These fixed-gate observations neither validate the duration-error law nor demonstrate a GP schedule advantage.
-
-\subsection{Executable Native X-Duration Choice on Heron}
-The target exposes two implementations of the logical X gate: native \texttt{x} (36~ns) and \texttt{xslow} (1,000~ns) on physical qubits 0 and 1; IBM documents the latter as an extended-duration bit flip \cite{ibm_xslow}. The backend reports the \emph{same} nominal error for both, so those metadata do not characterize their duration dependence. We first submitted a prespecified, randomized characterization job (\texttt{db4ob04lf4us73c31490}): even sequences of 0, 8, 32, or 64 X gates, in X- and Z-basis return experiments on both qubits. Three blocks of 1,024 shots compared fast X, slow X, and fast X followed by a delay to match each slow gate's duration. At 32 gates on qubit 1 in the X basis, slow exceeded the equal-duration padded control by 0.0120 in all three blocks, but the shot-only 95\% interval included zero. Fast X without duration matching remained better. We selected qubit 1 for a separately frozen holdout; this training-guided selection restricts generality.
-
-The held-out job (\texttt{db4ocm2mb58s7389fnag}) used previously untested lengths of 16 and 48 X gates, both bases, and three randomized blocks of 2,048 shots. It compared slow X, distributed X-plus-delay padding, fast X followed by one tail delay, and the latter processed by Qiskit's ALAP analysis and two-X dynamical-decoupling pass. All four implementations had the same ideal unitary and checked nominal total duration; the two-X DD gate time was compensated in its tail delay. The compiled circuits and raw counts are archived. A protocol lock containing the training-data hash and shuffled target order was saved before QPU submission.
+The held-out job (\texttt{db4ocm2mb58s7389fnag}) evaluated untested lengths of 16 and 48 X gates, both bases, and three randomized blocks of 2,048 shots (6,144 shots total per policy). It compared slow X, distributed X-plus-delay padding, fast X followed by one tail delay, and the latter processed by Qiskit's ALAP analysis with two-X dynamical decoupling. All four implementations had identical ideal unitaries and nominal total durations ($48{,}000$~ns at 48 gates); the two-X DD gate time was compensated in its tail delay.
 
 \begin{table}[t]
 \centering\caption{Held-out Heron native-X implementation comparison at 48 logical X gates on physical qubit 1. Entries are observed return-to-zero frequencies from three randomized blocks (6,144 shots per policy and basis), not average gate fidelities. Every policy has the same nominal duration.}\label{tab:x_duration_hardware}
@@ -421,12 +418,19 @@ Fast X, two-X DD tail & 0.8586 & 0.8753\\\hline
 \end{tabular}
 \end{table}
 
-The frozen X-basis criterion was met: at 48 gates, slow X exceeded the equal-duration tail-delay baseline by 0.5959 and the standard two-X DD-tail baseline by 0.0425, with positive differences in all three blocks and shot-only 95\% intervals entirely above zero. Against distributed padding, the difference was 0.0184 (shot-only 95\% interval 0.0074--0.0294). A paired three-block $t$ interval for slow minus DD was 0.0288--0.0561, but three blocks do not establish temporal robustness. In the Z basis, slow X was worse than fast X with one tail delay and worse than DD. Thus the physical improvement is \emph{observable- and schedule-specific}; it cannot be summarized as a universally more faithful X gate. The sharp basis-dependent rank reversal also challenges the isotropic, independent post-gate Pauli model used for the GP result. Because no GP optimizer chose the submitted circuit, this experiment supplies evidence of an implementable duration trade-off, not a GP hardware-performance demonstration.
-
 \begin{figure}[t]
 \centering\includegraphics[width=\columnwidth]{../figures/ibm_marrakesh_x_duration_holdout_2026-10-10.pdf}
 \caption{Held-out physical X-duration comparison at equal nominal total durations. Error bars are shot-only 95\% normal intervals and exclude device drift. The reversal between X- and Z-basis return makes a single scalar gate-error rate inadequate for these sequences.}\label{fig:x_duration_hardware}
 \end{figure}
+
+\paragraph{Failure Mode of Tail Delay.}
+As reported in Table~\ref{tab:x_duration_hardware} and Fig.~\ref{fig:x_duration_hardware}, the `Fast X, tail delay' baseline suffers a catastrophic failure mode in the X basis, collapsing to return probability $0.3052$. This collapse suggests severe accumulated coherent detuning and low-frequency dephasing during the unrefocused $46{,}272$-ns tail idle interval. In contrast, continuously driving the qubit throughout the $1{,}000$-ns slow X pulses suppressed this dephasing ($P(0) = 0.9010$).
+
+\paragraph{Thin Statistics and Observable-Dependent Reversal.}
+The headline $4.25$ percentage point gain for slow X over two-X DD ($0.9010$ vs $0.8586$) has a paired interval from only three randomized blocks ($0.0288\text{--}0.0561$). Three blocks do not establish temporal or calibration robustness. Crucially, in the Z basis, slow X is worse than two-X DD ($0.8296$ vs $0.8753$, a $-0.0457$ deficit) and worse than fast X with tail delay ($0.9849$). A fair summary is that the preferred implementation policy depends entirely on the measured observable and basis.
+
+\paragraph{Selection Issue and Internal Model Critique.}
+Physical qubit 1 and the X basis were selected post-training; repeating on unselected qubits (qubits 0 and 2) across distinct calibration cycles is necessary to decouple pulse physics from transient calibration artifacts. Most importantly, the sharp basis-dependent rank reversal provides an internal model critique: it directly falsifies the single-scalar, isotropic post-gate Pauli noise model that underlies the GP formulation. Because no GP optimizer chose the physical circuit, this experiment demonstrates that pulse duration choices alter hardware decoherence dynamics, but does not validate the GP timing algorithm.
 
 \subsection{Multi-Scale Statistical Verification}
 The following audits test implementation consistency against the declared model, rather than independent physical validity:
@@ -442,7 +446,7 @@ For twelve deterministic fixed-DAG instances with three, five, or eight gates, i
 \end{figure}
 
 \subsection{Interpretation of the Comparative Evidence}
-The GP and ordinary convex formulations solve the same mathematical relaxation; their numerical agreement is a software and formulation check, not independent evidence that the physical model is accurate. The path-flow dual bracket bounds the optimum only for the declared fixed-DAG objective. The discrete-library transfer gap is sufficiently wide that it should not be read as a tight device-level performance certificate. Comparisons against the adapted slack heuristic are informative about modeled trade-offs, but unequal makespans confound unconstrained fidelity rankings. Accordingly, we treat matched-deadline results as the primary comparison and retain regressions. The 24 new feasible large-circuit instances establish that the continuous solver, rather than only its pre-filter, can run at 128 qubits under attainable modeled targets. They do not resolve coefficient identification, idle noise, or hardware control feasibility.
+The GP and ordinary convex formulations solve the same mathematical relaxation; their numerical agreement is a software and formulation check, not independent evidence that the physical model is accurate. The path-flow dual bracket bounds the optimum only for the declared fixed-DAG objective. The discrete-library transfer gap is sufficiently wide that it should not be read as a tight device-level performance certificate. Comparisons against the adapted slack heuristic are informative about modeled trade-offs, but unequal makespans confound unconstrained fidelity rankings. Accordingly, we treat matched-deadline results as the primary comparison and retain regressions. The 24 feasible large-circuit instances establish that the continuous solver can run at 128 qubits under attainable modeled targets, with its $24.5\%$ makespan reduction plateau explained by boundary box saturation. They do not resolve coefficient identification, idle noise, or hardware control feasibility.
 
 \section{Discussion and Compiler Integration}
 
@@ -461,28 +465,28 @@ For observable-constrained duration allocation, let $w \in \mathbb{R}_+^K$ denot
 \begin{equation}\label{eq:constrained_dual}
 D(w, \rho) = \sum_{j=1}^m \min_{\ell_j \le t \le u_j} \left[ \frac{\tilde{A}_j(w)}{t} + (\tilde{C}_j(w) + \rho_j)t \right] - \sum_{k=1}^K w_k.
 \end{equation}
-By weak duality, $D(w, \rho) \le M_{\mathrm{cont}}^*/\bar{M}$ for all dual-feasible $(w, \rho)$, where $M_{\mathrm{cont}}^* = \operatorname{LongestPath}(\mathcal{D}, \tau^*)$ is the optimal makespan of the continuous relaxation. The path-flow Frank--Wolfe routine ascends on $\rho$ to compute $D(w^*, \rho^*)$. The optimality gap strictly certifies convergence of this continuous solve:
+By weak duality, $D(w, \rho) \le M_{\mathrm{cont}}^*/\bar{M}$ for all dual-feasible $(w, \rho)$, where $M_{\mathrm{cont}}^* = \operatorname{LongestPath}(\mathcal{D}, \tau^*)$ is the optimal makespan of the continuous relaxation. The path-flow Frank--Wolfe routine ascends on $\rho$ to compute $D(w^*, \rho^*)$. The optimality gap certifies the numerical convergence bracket of this continuous solve:
 \begin{equation}
 \epsilon_{\mathrm{gap}} = \frac{M_{\mathrm{cont}}^*/\bar{M} - D(w^*, \rho^*)}{M_{\mathrm{cont}}^*/\bar{M}}.
 \end{equation}
 Subsequent discrete log-grid rounding yields discrete makespan $M_{\mathrm{disc}}^* = \operatorname{LongestPath}(\mathcal{D}, d^*)$, with guaranteed upper bound $M_{\mathrm{disc}}^* \le q M_{\mathrm{cont}}^*$. The complete routine is formalized in Algorithm~1.
 
-\vspace{0.3em}
-\noindent\fbox{%
-\parbox{0.96\columnwidth}{%
-\textbf{Algorithm 1:} Observable-Constrained Gate Duration Allocation\\[-0.5em]
-\rule{0.96\columnwidth}{0.4pt}\\[0.2em]
+\begin{table}[t]
+\hrule\vspace{3pt}
+\noindent\textbf{Algorithm 1:} Observable-Constrained Gate Duration Allocation\\[-0.5em]
+\rule{\columnwidth}{0.4pt}\\[0.2em]
+\footnotesize
 \textbf{Input:} Circuit DAG $\mathcal{D}=(V, E)$, duration bounds $[\ell_j, u_j]$, noise rates $a_j, \gamma_j$, sensitivity matrix $H = (h_{kj}) \in \mathbb{R}^{K \times m}$, target observable fidelities $\tau_k^{\mathrm{target}}$, grid ratio $q > 1$, baseline makespan $\bar{M}$.\\
 \textbf{Output:} Model-feasible discrete schedule $d^* \in \mathbb{R}^m$, discrete makespan $M_{\mathrm{disc}}^*$, continuous relaxation makespan $M_{\mathrm{cont}}^*$, relative optimality gap certificate $\epsilon_{\mathrm{gap}}$, or Infeasible diagnostic.
 \begin{enumerate}
-\itemsep 0.08em
+\itemsep 0.05em
 \item Set $\beta_k \gets -\frac{1}{2} \ln \tau_k^{\mathrm{target}}$ for each target observable $k \in \{1, \dots, K\}$.
 \item In $\mathcal{O}(m)$ time, compute gatewise unconstrained minimizers $\tau_j^{\mathrm{unc}} \gets \operatorname{clip}(\sqrt{a_j/\gamma_j}, \ell_j, u_j)$ and safety minimizers $\tau_j^{\mathrm{safe}} \gets \operatorname{clip}(\sqrt{a_j/(q\gamma_j)}, \ell_j, u_j)$.
 \item In $\mathcal{O}(\operatorname{nnz}(H))$ time, compute lower-bound hazards:
 $\mu \gets H(a/\tau^{\mathrm{unc}} + \gamma\tau^{\mathrm{unc}})$ and $\mu^{\mathrm{safe}} \gets H(a/\tau^{\mathrm{safe}} + q\gamma\tau^{\mathrm{safe}})$.
 \item \textbf{if} $\max_k (\mu_k - \beta_k) > 0$ \textbf{then} \textbf{return} Infeasible (target unachievable under baseline noise).
 \item \textbf{if} $\max_k (\mu_k^{\mathrm{safe}} - \beta_k) > 0$ \textbf{then} \textbf{return} Infeasible (safety margin $q$ uncertifiable).
-\item Formulate convex posynomial program with safety exposure $\tilde{\gamma}_j \gets q\gamma_j$:
+\item Formulate convex posynomial program with safety exposure $\tilde{\gamma}_j \gets q\gamma_j$ (noting that off-critical gate durations are non-unique under makespan minimization per Remark~\ref{rem:uniqueness}):
 \begin{equation*}
 \begin{aligned}
 \min_{\tau, f, M} \quad & M\\
@@ -501,9 +505,8 @@ $\mu \gets H(a/\tau^{\mathrm{unc}} + \gamma\tau^{\mathrm{unc}})$ and $\mu^{\math
 \item Compute model-based discrete makespan $M_{\mathrm{disc}}^* \gets \operatorname{LongestPath}(\mathcal{D}, d^*)$.
 \item \textbf{return} $d^*$, $M_{\mathrm{disc}}^*$, $M_{\mathrm{cont}}^*$, and primal--dual gap certificate $\epsilon_{\mathrm{gap}}$.
 \end{enumerate}
-}%
-}
-\vspace{0.4em}
+\hrule
+\end{table}
 
 \subsection{Scope, Missing Baselines, and Physical Validation}
 The geometric grid is an abstract library; it is not a measured set of alternate pulses on \emph{ibm\_torino}. A clock-aligned controller may require different rounding and an experimentally characterized noise response. The Qiskit implementation is an analysis pass that attaches duration results to a property set; it does not upload pulses or execute a modified schedule on hardware. The direct comparison uses Qiskit's published ASAP/ALAP and DD passes \cite{qiskit_sched}; it holds circuit and deadline fixed, but GP has hypothetical continuous-duration actions unavailable to those passes. Its rank reversal under static detuning limits rather than establishes a superiority claim.
@@ -513,7 +516,58 @@ The largest source of uncertainty for the target device is the unmeasured split 
 The native X experiment establishes that two supported gate durations can yield different physical returns under a matched schedule, and that a training-selected slow implementation can outperform equal-duration delayed-X and standard two-X DD controls on one held-out X-basis task. It does not show that the proposed inverse-plus-linear law chose the gate, that a GP solver improved hardware output, or that the ranking persists across bases: the Z-basis control reverses it. A gate-dependent, observable-aware model that accounts for driven evolution and coherent idle effects must be specified and fitted on one set of durations/circuits, then prospectively tested on independent choices and circuits. The existing two-point X library cannot identify a robust duration-response curve or test a continuous optimum. Wider hardware-compatible pulse libraries and matched, randomized comparisons against compiler baselines are necessary before asserting GP hardware benefit. The present contribution remains a reproducible convex timing method with conditional mathematical bounds plus a narrow physical gate-choice result.
 
 \section{Conclusion}
-For a fixed circuit DAG and declared inverse-plus-linear noise model, gate-duration allocation has an exact convex representation and an inspectable path-flow lower bound. The same convex structure accommodates a declared positive inverse-power model. Under post-gate isotropic Pauli noise on Clifford circuits, stabilizer-expectation targets produce convex constraints and conditional safe rounding for the evaluated law. The model-attainable study shows feasible continuous solves through 128 qubits, while the original strict-target study mainly demonstrates fast analytic rejection. Experimental duration sweeps reveal sizeable departures from the evaluated two-parameter law; an exploratory inverse-square variant reduces prediction error but does not explain reported uncertainty. A retrospective empirical finite-library predictor improves selected measured durations in two pulse families without validating the GP error law. The direct local GP-versus-Qiskit comparison shows only small modeled Markovian gains and a substantial regression against DD under shot-static detuning. The Heron pilot observes idle-time dependence and an echo response; two fixed-native-gate checks give inconsistent model-transfer outcomes across calibrations. A further training-selected, held-out native-X experiment demonstrates an X-basis return improvement over equal-duration delayed-X and standard two-X DD controls on one qubit, but a Z-basis reversal and the absence of a GP-selected physical schedule prevent attribution of that gain to the proposed optimizer. Broader measured duration libraries, a model that captures basis-dependent idle and driven noise, and prospective GP-versus-compiler hardware comparisons remain necessary for a GP performance claim.
+For a fixed circuit DAG and declared inverse-plus-linear noise model, gate-duration allocation has an exact convex representation and an inspectable path-flow lower bound. The same convex structure accommodates a declared positive inverse-power model. Under post-gate isotropic Pauli noise on Clifford circuits, stabilizer-expectation targets produce convex constraints and conditional safe rounding for the evaluated law. The model-attainable study shows feasible continuous solves through 128 qubits, while the original strict-target study mainly demonstrates fast analytic rejection. Experimental duration sweeps reveal sizeable departures from the evaluated two-parameter law; an exploratory inverse-square variant reduces prediction error but does not explain reported uncertainty. A retrospective empirical finite-library predictor improves selected measured durations in two pulse families without validating the GP error law. The direct local GP-versus-Qiskit comparison shows only small modeled Markovian gains and a substantial regression against DD under shot-static detuning. The Heron idle pilot (Appendix~\ref{app:idle_pilot}) observes idle-time dependence and coherent dephasing; two fixed-native-gate checks (Appendix~\ref{app:model_checks}) demonstrate calibration-sensitive discrepancies. A further training-selected, held-out native-X experiment demonstrates an X-basis return improvement over equal-duration delayed-X and standard two-X DD controls on one qubit, but a Z-basis reversal and the absence of a GP-selected physical schedule prevent attribution of that gain to the proposed optimizer. Broader measured duration libraries, a model that captures basis-dependent idle and driven noise, and prospective GP-versus-compiler hardware comparisons remain necessary for a GP performance claim.
+
+\appendices
+
+\section{Exploratory Heron Idle-Noise Pilot}\label{app:idle_pilot}
+We executed a small, separate timing pilot on \texttt{ibm\_marrakesh} through the free Open instance (job \texttt{db4ll9o4qg6s73c2buj0}). Four one-qubit circuits on physical qubit 0 were interleaved in two shuffled blocks, with 2,048 shots per circuit. Each prepared and measured an $X$-basis state with two logical Hadamards. The three Ramsey circuits inserted a 1, 20, or 80~$\mu$s idle delay; the fourth inserted two 40~$\mu$s delays separated by $X$, followed by a second $X$ before the final Hadamard, preserving the ideal operation. Qiskit transpilation at optimization level zero retained all requested delays. The backend calibration snapshot immediately preceding the job reported $T_1=298.5~\mu$s and $T_2=40.4~\mu$s for that qubit.
+
+Table~\ref{tab:hardware_idle} gives the raw outcome fractions. Both blocks showed a higher zero frequency with the echo sequence than with the 80-$\mu$s Ramsey sequence; the blockwise differences were 0.1021 and 0.1201. This is exploratory evidence that idle dynamics and control placement matter on the target architecture. Importantly, the 80~$\mu$s Ramsey outcome $P(0) = 0.4753$ sits approximately $3\sigma$ below $0.5$ (the completely mixed state), pointing to coherent phase accumulation and detuning rather than pure exponential $T_2$ dephasing. It is not a matched gate-count comparison, does not isolate a decay constant from coherent detuning and readout effects, and does not test a GP-selected gate duration. The job consumed 7~s of the free QPU allowance.
+
+\begin{table}[t]
+\centering\caption{Exploratory \emph{ibm\_marrakesh} idle-noise pilot on physical qubit 0: two blocks per condition, 2,048 shots per block. $P(0)$ is an observed frequency, not circuit fidelity.}\label{tab:hardware_idle}
+\begin{tabular}{lcc}\hline
+Circuit & Zero counts/shots & $P(0)$\\\hline
+Ramsey, 1~$\mu$s & 4025/4096 & 0.9827\\
+Ramsey, 20~$\mu$s & 2655/4096 & 0.6482\\
+Ramsey, 80~$\mu$s & 1947/4096 & 0.4753\\
+Echo, 80~$\mu$s & 2402/4096 & 0.5864\\\hline
+\end{tabular}
+\end{table}
+
+\section{Prespecified Heron Native-Gate Model Checks and Relative Error Analysis}\label{app:model_checks}
+We tested whether the declared independent post-gate isotropic Pauli model, anchored to the backend's reported nominal gate errors and independent readout assignment errors, predicts outcomes for fixed native gates. Before submission, we saved a calibration snapshot and predicted distributions for four small Clifford circuit families, compiled to physical qubits 0--2 on \texttt{ibm\_marrakesh}. Three shuffled blocks each contained one instance of every family, with 2,048 shots per instance (job \texttt{db4nov04qg6s73c2e8d0}). The prespecified events were return to \texttt{0}, Bell parity \texttt{00}/\texttt{11}, Bell return to \texttt{00}, and GHZ parity \texttt{000}/\texttt{111}.
+
+\begin{table}[t]
+\centering\small\setlength{\tabcolsep}{2.5pt}\caption{Prespecified nominal native-gate model check on \emph{ibm\_marrakesh}; each family has three blocks of 2,048 shots. Residual is observed minus pre-job predicted event probability.}\label{tab:hardware_model}
+\begin{tabular}{lcccc}\hline
+Family & Successes/6144 & Predicted & Residual & Rel. Error\\\hline
+Single return & 6119 & 0.9685 & +0.0274 & +2.8\%\\
+Bell parity & 6065 & 0.9619 & +0.0253 & +2.6\%\\
+Bell return & 6000 & 0.9512 & +0.0254 & +2.7\%\\
+GHZ parity & 5984 & 0.9201 & +0.0538 & +5.8\%\\\hline
+\end{tabular}
+\end{table}
+
+All four discrepancies exceed the prespecified absolute tolerance of 0.02. Crucially, the descriptive absolute tolerance of 0.02 is loose relative to target device gate error rates ($0.3\%\text{--}4.8\%$). In relative error metrics, the model underpredicts hardware success by $+2.6\%$ to $+5.8\%$. The pre-job snapshot's qubit-0 probability of reporting 1 after preparing 0 was 0.03027, while the return circuit produced only 25 ones in 6,144 shots. This suggests calibration drift or unmodeled state-preparation fidelity.
+
+We then froze a separate diagnostic before collecting new data: 18 readout-calibration circuits ($|0\rangle$ and $X|0\rangle$ on each of qubits 0--2, in three randomized blocks) and 18 held-out target circuits (six families in three randomized blocks), each at 2,048 shots. The calibration job \texttt{db4o3784qg6s73c2ekqg} completed before a SHA-256 lock of both the new backend-snapshot and empirically readout-adjusted predictions; only then was target job \texttt{db4o3bo4qg6s73c2ekvg} submitted.
+
+\begin{table}[t]
+\centering\small\setlength{\tabcolsep}{2.5pt}\caption{Second, held-out fixed-native-gate check on \emph{ibm\_marrakesh}: three 2,048-shot blocks per family. Entries are target-event probabilities; calibrated predictions change only measured operational readout parameters.}\label{tab:hardware_readout}
+\begin{tabular}{lcccc}\hline
+Family & Observed & Snapshot & Calibrated & Rel. Error\\\hline
+Single return & 0.9937 & 0.9948 & 0.9951 & -0.1\%\\
+Single-one return & 0.9919 & 0.9917 & 0.9924 & +0.0\%\\
+Bell parity & 0.9849 & 0.9871 & 0.9872 & -0.2\%\\
+Bell return & 0.9740 & 0.9825 & 0.9851 & -0.9\%\\
+GHZ parity & 0.9723 & 0.9728 & 0.9755 & -0.1\%\\
+GHZ return & 0.9587 & 0.9632 & 0.9686 & -0.5\%\\\hline
+\end{tabular}
+\end{table}
+
+While all six readout-adjusted event residuals were below the absolute 0.02 tolerance, the model now slightly overpredicts hardware success (relative errors ranging from $-0.1\%$ to $-0.9\%$), and the raw snapshot prediction was more accurate overall than the empirical readout correction (mean absolute error 0.00286 versus 0.00476). The new backend calibration, time-stamped 02:47 local time, reported much smaller qubit-0 and qubit-2 readout errors than the earlier 02:28 snapshot (e.g., $P(1|0)$ on qubit 0 fell from 0.03027 to 0.00391). This sign reversal across consecutive jobs highlights temporal calibration drift. These fixed-gate observations neither validate the duration-error law nor demonstrate a GP schedule advantage.
 
 \section*{Statements and Declarations}
 \noindent\textbf{Funding.} No funds, grants, or other support were received for this study.\par
@@ -534,11 +588,12 @@ For a fixed circuit DAG and declared inverse-plus-linear noise model, gate-durat
 \bibitem{kosut} R. L. Kosut, M. D. Grace, and C. Brif, ``Robust control of quantum gates via sequential convex programming,'' \emph{Physical Review A}, vol. 88, Art. no. 052326, 2013.
 \bibitem{murali_noise} P. Murali, J. M. Baker, A. Javadi-Abhari, F. T. Chong, and M. Martonosi, ``Noise-adaptive compiler mappings for noisy intermediate-scale quantum computers,'' in \emph{Proc. ASPLOS}, pp. 1015--1029, 2019.
 \bibitem{murali_crosstalk} P. Murali, D. C. McKay, M. Martonosi, and A. Javadi-Abhari, ``Software mitigation of crosstalk on noisy intermediate-scale quantum computers,'' in \emph{Proc. ASPLOS}, pp. 1001--1016, 2020.
-\bibitem{earnest} N. Earnest et al., ``Pulse-efficient circuit transpilation for quantum applications on cross-resonance-based architectures,'' \emph{PRX Quantum}, vol. 2, Art. no. 020306, 2021.
+\bibitem{earnest} N. Earnest et al., ``Pulse-efficient circuit transpilation for quantum applications on cross-resonance-based architectures,'' \emph{Physical Review Research}, vol. 3, no. 4, Art. no. 043088, 2021, doi: 10.1103/PhysRevResearch.3.043088.
 \bibitem{vandenberg} E. van den Berg, Z. K. Minev, A. Kandala, and K. Temme, ``Probabilistic error cancellation with sparse Pauli--Lindblad models on noisy quantum processors,'' \emph{Nature Physics}, vol. 19, pp. 1116--1121, 2023, doi: 10.1038/s41567-023-02042-2.
 \bibitem{aigner} P. Aigner, J. Matti, M. F. Mor-Ruiz, J. Walln\"ofer, and W. D\"ur, ``Analytical and compressed simulation of noisy stabilizer circuits,'' \emph{arXiv preprint arXiv:2604.22588}, 2026.
 \bibitem{qiskit_sched} IBM Quantum, ``Create a pass manager for dynamical decoupling,'' \emph{IBM Quantum Documentation}. [Online]. Available: \url{https://docs.quantum.ibm.com/guides/dynamical-decoupling-pass-manager}. Accessed: Oct. 9, 2026.
-\bibitem{ibm_xslow} IBM Quantum, ``Postselection with non-Markovian error checks, \emph{IBM Quantum Documentation}. [Online]. Available: \url{https://quantum.cloud.ibm.com/docs/en/addons/qiskit-mitigation/guides/postselection-with-non-markovian-error-checks}. Accessed: Oct. 10, 2026.
+\bibitem{ibm_xslow} IBM Quantum, ``Calibrations and pulse-level control with Qiskit Pulse,'' \emph{IBM Quantum Documentation}, 2024. [Online]. Available: \url{https://docs.quantum.ibm.com/guides/pulse}. Accessed: Oct. 10, 2026.
+\bibitem{viola_dd} L. Viola, E. Knill, and S. Lloyd, ``Dynamical decoupling of open quantum systems,'' \emph{Physical Review Letters}, vol. 82, no. 12, pp. 2417--2421, 1999, doi: 10.1103/PhysRevLett.82.2417.
 \bibitem{andersen_data} S. Singh \emph{et al.}, ``Data for the publication Fast microwave-driven two-qubit gates between fluxonium qubits with a transmon coupler,'' 4TU.ResearchData, 2025, doi: 10.4121/cec2d36b-c31b-4c70-a66f-65d3ef7bd514.v1.
 \bibitem{hyyppa_data} E. Hyypp\"a \emph{et al.}, ``Data for Reducing leakage of single-qubit gates for superconducting quantum processors using analytical control pulse envelopes,'' Zenodo, 2024, doi: 10.5281/zenodo.13808824.
 \end{thebibliography}
