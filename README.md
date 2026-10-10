@@ -9,8 +9,7 @@ Research code, recorded simulation data, and an editable manuscript for convex q
 - `evidence/`: recorded inputs and outputs, including a saved `ibm_torino` calibration snapshot, serialized circuits, benchmark tables, protocols, and a SHA-256 file manifest.
 - `tests/`: unit and integration tests.
 - `examples/`: runnable demonstrations and notebooks.
-- `figures/`: plots generated for the research manuscript.
-- `paper/`: editable LaTeX manuscript and a rendered PDF.
+- Figures and LaTeX tables are not stored in the repository; the benchmark scripts regenerate them locally (PDF figures under `figures/`, LaTeX tables under `docs/` and `paper/`).
 - `docs/REPRODUCIBILITY.md`: a guide to reproducing and interpreting the evidence.
 - `docs/REVIEW_RESPONSE.md`: a point-by-point account of the latest scientific critique, revisions, and unresolved evidence gaps.
 - `docs/TARGET_CALIBRATION_PROTOCOL.md`: the prospective experiment needed to test physical benefit on a target device.
@@ -32,7 +31,7 @@ The `evidence/measured_duration/` study uses published experimental single-qubit
 
 An exploratory `A/t**2 + G*t` model lowers leave-one-duration-out mean absolute error across the four measured pulse families while retaining the continuous geometric-program structure. It still misses the measurements by more than their reported uncertainty and was proposed after inspecting earlier holdout data. Reproduce with `python benchmarks/compare_duration_laws.py`; see `src/qcgp/generalized.py` for the declared-exponent solver.
 
-`benchmarks/evaluate_measured_choices.py` adds a retrospective decision audit on that measured dataset. Both inverse-power laws and a shape-preserving empirical interpolator choose from the same withheld duration options. The interpolator selects the lowest reported-error duration in three of four pulse families, but it was examined after earlier results and its residuals still exceed source measurement uncertainties. The script records a separate train-only model-discrepancy diagnostic; it does not claim a calibrated confidence interval or a prospective device gain. Outputs are in `evidence/measured_duration/choice_audit.json`, `docs/measured_choice_table.tex`, and `figures/measured_choice.pdf`.
+`benchmarks/evaluate_measured_choices.py` adds a retrospective decision audit on that measured dataset. Both inverse-power laws and a shape-preserving empirical interpolator choose from the same withheld duration options. The interpolator selects the lowest reported-error duration in three of four pulse families, but it was examined after earlier results and its residuals still exceed source measurement uncertainties. The script records a separate train-only model-discrepancy diagnostic; it does not claim a calibrated confidence interval or a prospective device gain. Outputs are in `evidence/measured_duration/choice_audit.json`; the script also regenerates a LaTeX table and a PDF figure locally.
 
 `solve_robust_generalized` in `src/qcgp/generalized.py` accepts a declared finite set of coefficient scenarios and minimizes the worst scenario error under the same DAG and deadline. Its epigraph remains a geometric program. The supplied scenario set is an assumption; it gains a physical coverage interpretation only after a target-device calibration study supports it.
 
@@ -85,14 +84,7 @@ python reproduce_all.py
 
 To regenerate the added feasible large-circuit study in a fresh copy, run `python benchmarks/run_feasible_scale.py` followed by `python benchmarks/analyze_feasible_scale.py`. The saved protocol and raw records are in `evidence/feasible_scale/`.
 
-To compile the manuscript, run a LaTeX engine with the packages declared in the source from the `paper/` directory:
-
-```bash
-cd paper
-tectonic quantum_gp_manuscript.tex
-```
-
-The LaTeX file refers to tables in `../docs/` and figures in `../figures/`.
+The manuscript source and rendered PDFs are not part of this repository. All numbers, tables and figures in the manuscript are generated from the evidence here by `benchmarks/write_novelty_outputs.py` and the other benchmark scripts.
 
 ## Citation and license
 

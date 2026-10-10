@@ -13,3 +13,7 @@ tmp/
 *.synctex.gz
 *.xdv
 .DS_Store
+
+# Manuscript sources and rendered/generated PDFs are kept out of the repository.
+*.tex
+*.pdf
