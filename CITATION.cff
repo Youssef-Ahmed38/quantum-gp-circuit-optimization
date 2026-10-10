@@ -3,8 +3,8 @@ message: "If you use this software or its benchmark data, please cite this repos
 title: "Quantum circuit optimization using geometric programming"
 type: software
 authors:
-  - family-names: Ramadan
-    given-names: Youssef Ahmed
+  - family-names: Mourad
+    given-names: Youssef
     affiliation: "Department of Artificial Intelligence Engineering, School of Engineering, University of Science and Technology at Zewail City, Giza, Egypt"
     email: "p-youssef.ramdan@zewailcity.edu.eg"
 repository-code: "https://github.com/Youssef-Ahmed38/quantum-gp-circuit-optimization"

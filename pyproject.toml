@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "Research code and local simulation data for quantum circuit timing via geometric programming"
 readme = "README.md"
 requires-python = ">=3.12"
-authors = [{name = "Youssef Ahmed Ramadan", email = "p-youssef.ramdan@zewailcity.edu.eg"}]
+authors = [{name = "Youssef Mourad", email = "p-youssef.ramdan@zewailcity.edu.eg"}]
 dependencies = ["qiskit==2.5.2", "cvxpy==1.9.3", "numpy==2.5.3", "scipy==1.18.1", "clarabel==0.11.1", "scs==3.3.1"]
 
 [project.optional-dependencies]

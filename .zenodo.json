@@ -4,7 +4,7 @@
   "description": "Research code, tests, simulation evidence, full proofs and pre-registered IBM Quantum hardware records (frozen calibration models, hashed protocols, raw counts and analysis scripts) accompanying the manuscript 'Quantum Circuit Optimization Using Geometric Programming: Exact Convex Co-Design of Gate Timing, Dynamical Decoupling, and Error-Mitigation Budgets'.",
   "creators": [
     {
-      "name": "Ramadan, Youssef Ahmed",
+      "name": "Mourad, Youssef",
       "affiliation": "Department of Artificial Intelligence Engineering, School of Engineering, University of Science and Technology at Zewail City, Giza, Egypt"
     }
   ],
