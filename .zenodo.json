@@ -1,5 +1,5 @@
 {
-  "title": "Quantum circuit optimization using geometric programming: code, simulation evidence and pre-registered IBM Heron data",
+  "title": "Code, simulation evidence and pre-registered IBM Heron data for 'Geometric Programming for Quantum Compilation: Globally Optimal, Hardware-Validated Scheduling, Decoupling, and Error Mitigation'",
   "upload_type": "software",
   "description": "Research code, tests, simulation evidence, full proofs and pre-registered IBM Quantum hardware records (frozen calibration models, hashed protocols, raw counts and analysis scripts) accompanying the manuscript 'Quantum Circuit Optimization Using Geometric Programming: Exact Convex Co-Design of Gate Timing, Dynamical Decoupling, and Error-Mitigation Budgets'.",
   "creators": [
