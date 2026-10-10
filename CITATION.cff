@@ -5,6 +5,7 @@ type: software
 authors:
   - family-names: Mourad
     given-names: Youssef
+    orcid: "https://orcid.org/0009-0002-7637-8862"
     affiliation: "Department of Artificial Intelligence Engineering, School of Engineering, University of Science and Technology at Zewail City, Giza, Egypt"
     email: "p-youssef.ramdan@zewailcity.edu.eg"
 repository-code: "https://github.com/Youssef-Ahmed38/quantum-gp-circuit-optimization"

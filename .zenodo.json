@@ -5,10 +5,18 @@
   "creators": [
     {
       "name": "Mourad, Youssef",
-      "affiliation": "Department of Artificial Intelligence Engineering, School of Engineering, University of Science and Technology at Zewail City, Giza, Egypt"
+      "affiliation": "Department of Artificial Intelligence Engineering, School of Engineering, University of Science and Technology at Zewail City, Giza, Egypt",
+      "orcid": "0009-0002-7637-8862"
     }
   ],
   "license": "MIT",
-  "keywords": ["quantum compilation", "geometric programming", "convex optimization", "dynamical decoupling", "quantum error mitigation", "robust optimization"],
+  "keywords": [
+    "quantum compilation",
+    "geometric programming",
+    "convex optimization",
+    "dynamical decoupling",
+    "quantum error mitigation",
+    "robust optimization"
+  ],
   "access_right": "open"
 }
