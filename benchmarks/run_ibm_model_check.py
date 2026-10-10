@@ -101,7 +101,7 @@ def readout_probabilities(snapshot, width):
     return result
 
 
-def predicted_distribution(circuit, snapshot):
+def predicted_distribution(circuit, snapshot, *, readout_override=None):
     """Density matrix with the paper's post-gate Pauli channel and readout map."""
     width = circuit.num_qubits
     model = snapshot_model(circuit, tuple(range(width)), snapshot, alpha=.5)
@@ -119,7 +119,11 @@ def predicted_distribution(circuit, snapshot):
             changed = state.evolve(Operator(Pauli((z, x))), qargs=qubits)
             state = DensityMatrix((1 - flip) * state.data + flip * changed.data)
     true_probabilities = np.real(np.diag(state.data))
-    readout = readout_probabilities(snapshot, width)
+    readout = readout_probabilities(snapshot, width) if readout_override is None else readout_override
+    if len(readout) != width or any(len(pair) != 2 or
+                                    any(not np.isfinite(p) or p < 0 or p > 1 for p in pair)
+                                    for pair in readout):
+        raise ValueError("Readout probabilities must be valid pairs for every qubit")
     observed = np.zeros(2 ** width)
     for prepared, mass in enumerate(true_probabilities):
         for measured in range(2 ** width):

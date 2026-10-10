@@ -1,0 +1,870 @@
+{
+  "purpose": "Readout-model diagnosis with held-out native circuits; not GP hardware improvement",
+  "backend": "ibm_marrakesh",
+  "created_utc": "2026-10-10T00:06:52.055714+00:00",
+  "physical_qubits": [
+    0,
+    1,
+    2
+  ],
+  "calibration_snapshot": {
+    "backend_name": "ibm_marrakesh",
+    "last_update_date": "2026-10-10T02:47:06+03:00",
+    "qubits": [
+      [
+        {
+          "date": "2026-10-09T04:14:45+03:00",
+          "name": "T1",
+          "unit": "us",
+          "value": 298.4677469542208
+        },
+        {
+          "date": "2026-10-09T04:14:49+03:00",
+          "name": "T2",
+          "unit": "us",
+          "value": 40.417557291805714
+        },
+        {
+          "date": "2026-10-10T02:47:02+03:00",
+          "name": "readout_error",
+          "unit": "",
+          "value": 0.005126953125
+        },
+        {
+          "date": "2026-10-10T01:36:18+03:00",
+          "name": "init_error",
+          "unit": "",
+          "value": 0.012000032400129796
+        },
+        {
+          "date": "2026-10-10T02:46:53+03:00",
+          "name": "prob_meas0_prep1",
+          "unit": "",
+          "value": 0.00634765625
+        },
+        {
+          "date": "2026-10-10T02:46:58+03:00",
+          "name": "prob_meas1_prep0",
+          "unit": "",
+          "value": 0.00390625
+        },
+        {
+          "date": "2026-10-10T02:47:02+03:00",
+          "name": "readout_length",
+          "unit": "ns",
+          "value": 2684
+        }
+      ],
+      [
+        {
+          "date": "2026-10-09T04:14:45+03:00",
+          "name": "T1",
+          "unit": "us",
+          "value": 143.7375014188929
+        },
+        {
+          "date": "2026-10-09T04:14:48+03:00",
+          "name": "T2",
+          "unit": "us",
+          "value": 112.53063391351886
+        },
+        {
+          "date": "2026-10-10T02:47:02+03:00",
+          "name": "readout_error",
+          "unit": "",
+          "value": 0.004638671875
+        },
+        {
+          "date": "2026-10-10T01:36:19+03:00",
+          "name": "init_error",
+          "unit": "",
+          "value": 0.003400480782190431
+        },
+        {
+          "date": "2026-10-10T02:46:53+03:00",
+          "name": "prob_meas0_prep1",
+          "unit": "",
+          "value": 0.00634765625
+        },
+        {
+          "date": "2026-10-10T02:46:58+03:00",
+          "name": "prob_meas1_prep0",
+          "unit": "",
+          "value": 0.0029296875
+        },
+        {
+          "date": "2026-10-10T02:47:02+03:00",
+          "name": "readout_length",
+          "unit": "ns",
+          "value": 2684
+        }
+      ],
+      [
+        {
+          "date": "2026-10-09T04:14:45+03:00",
+          "name": "T1",
+          "unit": "us",
+          "value": 269.99010715603293
+        },
+        {
+          "date": "2026-10-09T04:14:49+03:00",
+          "name": "T2",
+          "unit": "us",
+          "value": 149.65614384196064
+        },
+        {
+          "date": "2026-10-10T02:47:02+03:00",
+          "name": "readout_error",
+          "unit": "",
+          "value": 0.011474609375
+        },
+        {
+          "date": "2026-10-10T01:36:19+03:00",
+          "name": "init_error",
+          "unit": "",
+          "value": 0.018196813309367735
+        },
+        {
+          "date": "2026-10-10T02:46:53+03:00",
+          "name": "prob_meas0_prep1",
+          "unit": "",
+          "value": 0.01025390625
+        },
+        {
+          "date": "2026-10-10T02:46:58+03:00",
+          "name": "prob_meas1_prep0",
+          "unit": "",
+          "value": 0.0126953125
+        },
+        {
+          "date": "2026-10-10T02:47:02+03:00",
+          "name": "readout_length",
+          "unit": "ns",
+          "value": 2684
+        }
+      ]
+    ],
+    "gates": [
+      {
+        "qubits": [
+          0
+        ],
+        "gate": "id",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0006455898642028418
+          },
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "id0"
+      },
+      {
+        "qubits": [
+          1
+        ],
+        "gate": "id",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:03+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0002563328957151688
+          },
+          {
+            "date": "2026-10-09T06:01:03+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "id1"
+      },
+      {
+        "qubits": [
+          2
+        ],
+        "gate": "id",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.00028532641877750136
+          },
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "id2"
+      },
+      {
+        "qubits": [
+          0
+        ],
+        "gate": "sx",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0006455898642028418
+          },
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "sx0"
+      },
+      {
+        "qubits": [
+          1
+        ],
+        "gate": "sx",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:03+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0002563328957151688
+          },
+          {
+            "date": "2026-10-09T06:01:03+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "sx1"
+      },
+      {
+        "qubits": [
+          2
+        ],
+        "gate": "sx",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.00028532641877750136
+          },
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "sx2"
+      },
+      {
+        "qubits": [
+          0
+        ],
+        "gate": "x",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0006455898642028418
+          },
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "x0"
+      },
+      {
+        "qubits": [
+          1
+        ],
+        "gate": "x",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:03+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0002563328957151688
+          },
+          {
+            "date": "2026-10-09T06:01:03+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "x1"
+      },
+      {
+        "qubits": [
+          2
+        ],
+        "gate": "x",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.00028532641877750136
+          },
+          {
+            "date": "2026-10-09T06:01:04+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 36
+          }
+        ],
+        "name": "x2"
+      },
+      {
+        "qubits": [
+          1,
+          2
+        ],
+        "gate": "cz",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:50:35+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0024132830383006842
+          },
+          {
+            "date": "2026-10-09T06:50:35+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 68
+          }
+        ],
+        "name": "cz1_2"
+      },
+      {
+        "qubits": [
+          2,
+          1
+        ],
+        "gate": "cz",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:50:35+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.0024132830383006842
+          },
+          {
+            "date": "2026-10-09T06:50:35+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 68
+          }
+        ],
+        "name": "cz2_1"
+      },
+      {
+        "qubits": [
+          0,
+          1
+        ],
+        "gate": "cz",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:50:34+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.004136906335316631
+          },
+          {
+            "date": "2026-10-09T06:50:34+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 68
+          }
+        ],
+        "name": "cz0_1"
+      },
+      {
+        "qubits": [
+          1,
+          0
+        ],
+        "gate": "cz",
+        "parameters": [
+          {
+            "date": "2026-10-09T06:50:34+03:00",
+            "name": "gate_error",
+            "unit": "",
+            "value": 0.004136906335316631
+          },
+          {
+            "date": "2026-10-09T06:50:34+03:00",
+            "name": "gate_length",
+            "unit": "ns",
+            "value": 68
+          }
+        ],
+        "name": "cz1_0"
+      }
+    ]
+  },
+  "calibration_order": [
+    "readout_q0_0",
+    "readout_q2_0",
+    "readout_q0_1",
+    "readout_q2_1",
+    "readout_q1_0",
+    "readout_q1_1",
+    "readout_q1_1",
+    "readout_q2_0",
+    "readout_q0_1",
+    "readout_q1_0",
+    "readout_q2_1",
+    "readout_q0_0",
+    "readout_q0_1",
+    "readout_q1_1",
+    "readout_q2_0",
+    "readout_q1_0",
+    "readout_q0_0",
+    "readout_q2_1"
+  ],
+  "target_order": [
+    "single_one_return",
+    "bell",
+    "ghz_return",
+    "ghz",
+    "single_return",
+    "bell_return",
+    "single_return",
+    "ghz",
+    "bell_return",
+    "bell",
+    "ghz_return",
+    "single_one_return",
+    "ghz_return",
+    "single_one_return",
+    "bell_return",
+    "single_return",
+    "bell",
+    "ghz"
+  ],
+  "blocks": 3,
+  "shots_per_circuit": 2048,
+  "seed": 20261011,
+  "max_job_seconds": 60,
+  "target_events": {
+    "single_return": [
+      "0"
+    ],
+    "single_one_return": [
+      "1"
+    ],
+    "bell": [
+      "00",
+      "11"
+    ],
+    "bell_return": [
+      "00"
+    ],
+    "ghz": [
+      "000",
+      "111"
+    ],
+    "ghz_return": [
+      "000"
+    ]
+  },
+  "snapshot_predictions": {
+    "single_return": {
+      "0": 0.9948166349326529,
+      "1": 0.005183365067347687
+    },
+    "single_one_return": {
+      "0": 0.008262092378521312,
+      "1": 0.9917379076214792
+    },
+    "bell": {
+      "00": 0.4950058324064602,
+      "01": 0.006703151968539994,
+      "10": 0.006214870718539994,
+      "11": 0.4920761449064602
+    },
+    "bell_return": {
+      "00": 0.9825066394729698,
+      "01": 0.008110170325231708,
+      "10": 0.006379382592738983,
+      "11": 0.003003807609060858
+    },
+    "ghz": {
+      "000": 0.48724798923519524,
+      "001": 0.003936751720760942,
+      "010": 0.0018826300530250376,
+      "011": 0.005711925866018561,
+      "100": 0.006974205434524714,
+      "101": 0.003550037984518883,
+      "110": 0.0051158784022547876,
+      "111": 0.4855805813037015
+    },
+    "ghz_return": {
+      "000": 0.9632443202981918,
+      "001": 0.00902353072364315,
+      "010": 0.007050300493088039,
+      "011": 0.0037407263408812345,
+      "100": 0.014014398492459975,
+      "101": 0.0011932943707112316,
+      "110": 0.0008908786796973396,
+      "111": 0.0008425506013275752
+    }
+  },
+  "native_target_qasm3": {
+    "single_return": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[1] q;\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\n",
+    "single_one_return": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[1] q;\nx q[0];\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\n",
+    "bell": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[2] q;\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\ncz q[0], q[1];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\n",
+    "bell_return": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[2] q;\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\ncz q[0], q[1];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\ncz q[0], q[1];\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\n",
+    "ghz": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[3] q;\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\ncz q[0], q[1];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\nrz(pi/2) q[2];\nsx q[2];\nrz(pi/2) q[2];\ncz q[1], q[2];\nrz(pi/2) q[2];\nsx q[2];\nrz(pi/2) q[2];\n",
+    "ghz_return": "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nqubit[3] q;\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\ncz q[0], q[1];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\nrz(pi/2) q[2];\nsx q[2];\nrz(pi/2) q[2];\ncz q[1], q[2];\nrz(pi/2) q[2];\nsx q[2];\nrz(pi/2) q[2];\nrz(pi/2) q[2];\nsx q[2];\nrz(pi/2) q[2];\ncz q[1], q[2];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\ncz q[0], q[1];\nrz(pi/2) q[0];\nsx q[0];\nrz(pi/2) q[0];\nrz(pi/2) q[1];\nsx q[1];\nrz(pi/2) q[1];\nrz(pi/2) q[2];\nsx q[2];\nrz(pi/2) q[2];\n"
+  },
+  "target_gate_counts": {
+    "single_return": {
+      "rz": 4,
+      "sx": 2,
+      "barrier": 1,
+      "measure": 1
+    },
+    "single_one_return": {
+      "rz": 4,
+      "sx": 2,
+      "x": 1,
+      "barrier": 1,
+      "measure": 1
+    },
+    "bell": {
+      "rz": 6,
+      "sx": 3,
+      "measure": 2,
+      "cz": 1
+    },
+    "bell_return": {
+      "rz": 12,
+      "sx": 6,
+      "cz": 2,
+      "measure": 2,
+      "barrier": 1
+    },
+    "ghz": {
+      "rz": 10,
+      "sx": 5,
+      "measure": 3,
+      "cz": 2
+    },
+    "ghz_return": {
+      "rz": 20,
+      "sx": 10,
+      "cz": 4,
+      "measure": 3,
+      "barrier": 1
+    }
+  },
+  "calibrator_gate_counts": {
+    "readout_q0_0": {
+      "measure": 1
+    },
+    "readout_q0_1": {
+      "x": 1,
+      "measure": 1
+    },
+    "readout_q1_0": {
+      "measure": 1
+    },
+    "readout_q1_1": {
+      "x": 1,
+      "measure": 1
+    },
+    "readout_q2_0": {
+      "measure": 1
+    },
+    "readout_q2_1": {
+      "x": 1,
+      "measure": 1
+    }
+  },
+  "sampler_options": {
+    "dynamical_decoupling": false,
+    "gate_twirling": false,
+    "measurement_twirling": false
+  },
+  "dry_run": false,
+  "calibration_job_id": "db4o3784qg6s73c2ekqg",
+  "calibration_counts": [
+    {
+      "0": 2043,
+      "1": 5
+    },
+    {
+      "0": 2027,
+      "1": 21
+    },
+    {
+      "1": 2039,
+      "0": 9
+    },
+    {
+      "1": 2035,
+      "0": 13
+    },
+    {
+      "0": 2047,
+      "1": 1
+    },
+    {
+      "1": 2036,
+      "0": 12
+    },
+    {
+      "1": 2022,
+      "0": 26
+    },
+    {
+      "0": 2029,
+      "1": 19
+    },
+    {
+      "1": 2034,
+      "0": 14
+    },
+    {
+      "1": 2,
+      "0": 2046
+    },
+    {
+      "1": 2034,
+      "0": 14
+    },
+    {
+      "0": 2039,
+      "1": 9
+    },
+    {
+      "1": 2036,
+      "0": 12
+    },
+    {
+      "1": 2028,
+      "0": 20
+    },
+    {
+      "0": 2028,
+      "1": 20
+    },
+    {
+      "0": 2047,
+      "1": 1
+    },
+    {
+      "0": 2040,
+      "1": 8
+    },
+    {
+      "1": 2026,
+      "0": 22
+    }
+  ],
+  "calibration_job_status": "DONE",
+  "operational_readout": [
+    [
+      0.0035807291666666665,
+      0.005696614583333333
+    ],
+    [
+      0.0006510416666666666,
+      0.009440104166666666
+    ],
+    [
+      0.009765625,
+      0.007975260416666666
+    ]
+  ],
+  "calibrated_predictions": {
+    "single_return": {
+      "0": 0.9951408956623184,
+      "1": 0.0048591043376821855
+    },
+    "single_one_return": {
+      "0": 0.007612939647353925,
+      "1": 0.9923870603526465
+    },
+    "bell": {
+      "00": 0.49630983778886223,
+      "01": 0.008084693461138055,
+      "10": 0.004748104919471387,
+      "11": 0.4908573638305288
+    },
+    "bell_return": {
+      "00": 0.9850818280912959,
+      "01": 0.007818928593879549,
+      "10": 0.004122603088028343,
+      "11": 0.002976640226797781
+    },
+    "ghz": {
+      "000": 0.48996909358939583,
+      "001": 0.003804748128840624,
+      "010": 0.0007553874363522382,
+      "011": 0.004575588553744581,
+      "100": 0.005556977596135738,
+      "101": 0.0050637119356277465,
+      "110": 0.004776484086449467,
+      "111": 0.4854980086734536
+    },
+    "ghz_return": {
+      "000": 0.9686327549596386,
+      "001": 0.008767032233399247,
+      "010": 0.004847536762539377,
+      "011": 0.003718608398625501,
+      "100": 0.011190922886529541,
+      "101": 0.0011713609995533463,
+      "110": 0.0008434554440703841,
+      "111": 0.0008283283156444251
+    }
+  },
+  "prediction_lock_sha256": "8e204b1b51b75ec6dda2fa7847e764e8a2f986924edbce125db8c81ad8f1f0fe",
+  "target_job_id": "db4o3bo4qg6s73c2ekvg",
+  "target_counts": [
+    {
+      "1": 2026,
+      "0": 22
+    },
+    {
+      "11": 975,
+      "00": 1041,
+      "10": 20,
+      "01": 12
+    },
+    {
+      "000": 1967,
+      "010": 8,
+      "011": 8,
+      "001": 31,
+      "101": 5,
+      "100": 23,
+      "110": 5,
+      "111": 1
+    },
+    {
+      "111": 1010,
+      "000": 982,
+      "110": 14,
+      "010": 4,
+      "100": 10,
+      "011": 14,
+      "001": 8,
+      "101": 6
+    },
+    {
+      "0": 2034,
+      "1": 14
+    },
+    {
+      "00": 2004,
+      "10": 18,
+      "11": 7,
+      "01": 19
+    },
+    {
+      "0": 2034,
+      "1": 14
+    },
+    {
+      "000": 976,
+      "111": 1004,
+      "011": 16,
+      "110": 13,
+      "100": 18,
+      "001": 9,
+      "101": 10,
+      "010": 2
+    },
+    {
+      "00": 1992,
+      "01": 30,
+      "10": 24,
+      "11": 2
+    },
+    {
+      "00": 1012,
+      "11": 1006,
+      "10": 15,
+      "01": 15
+    },
+    {
+      "000": 1955,
+      "100": 28,
+      "001": 28,
+      "010": 19,
+      "101": 8,
+      "111": 3,
+      "011": 6,
+      "110": 1
+    },
+    {
+      "1": 2035,
+      "0": 13
+    },
+    {
+      "000": 1968,
+      "100": 20,
+      "101": 13,
+      "001": 22,
+      "111": 3,
+      "011": 6,
+      "110": 4,
+      "010": 12
+    },
+    {
+      "1": 2033,
+      "0": 15
+    },
+    {
+      "00": 1988,
+      "10": 23,
+      "01": 28,
+      "11": 9
+    },
+    {
+      "0": 2037,
+      "1": 11
+    },
+    {
+      "11": 963,
+      "00": 1054,
+      "01": 14,
+      "10": 17
+    },
+    {
+      "111": 1013,
+      "000": 989,
+      "100": 15,
+      "110": 8,
+      "010": 1,
+      "101": 5,
+      "011": 8,
+      "001": 9
+    }
+  ],
+  "target_job_status": "DONE"
+}

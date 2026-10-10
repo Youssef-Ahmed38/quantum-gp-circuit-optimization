@@ -1,0 +1,376 @@
+{
+  "purpose": "Held-out nominal native-gate model check, not GP duration validation",
+  "calibration_job_id": "db4o3784qg6s73c2ekqg",
+  "target_job_id": "db4o3bo4qg6s73c2ekvg",
+  "backend": "ibm_marrakesh",
+  "prespecified_descriptive_tolerance": 0.02,
+  "snapshot_event_mae": 0.002856445405692095,
+  "calibrated_event_mae": 0.0047585536858010995,
+  "calibrated_within_tolerance_all_families": true,
+  "calibrated_improves_mae": false,
+  "calibrator_diagnostic": {
+    "readout_q0_0": {
+      "errors": 22,
+      "shots": 6144,
+      "measured_error": 0.0035807291666666665,
+      "snapshot_error": 0.00390625,
+      "shot_only_wilson_95": [
+        0.002365919792412038,
+        0.00541591048755606
+      ]
+    },
+    "readout_q0_1": {
+      "errors": 35,
+      "shots": 6144,
+      "measured_error": 0.005696614583333333,
+      "snapshot_error": 0.00634765625,
+      "shot_only_wilson_95": [
+        0.0040990076565921504,
+        0.007911949248412148
+      ]
+    },
+    "readout_q1_0": {
+      "errors": 4,
+      "shots": 6144,
+      "measured_error": 0.0006510416666666666,
+      "snapshot_error": 0.0029296875,
+      "shot_only_wilson_95": [
+        0.00025320560080108645,
+        0.0016729108906553482
+      ]
+    },
+    "readout_q1_1": {
+      "errors": 58,
+      "shots": 6144,
+      "measured_error": 0.009440104166666666,
+      "snapshot_error": 0.00634765625,
+      "shot_only_wilson_95": [
+        0.007310055029465276,
+        0.012183202827526149
+      ]
+    },
+    "readout_q2_0": {
+      "errors": 60,
+      "shots": 6144,
+      "measured_error": 0.009765625,
+      "snapshot_error": 0.0126953125,
+      "shot_only_wilson_95": [
+        0.007594798426001154,
+        0.012549094296380455
+      ]
+    },
+    "readout_q2_1": {
+      "errors": 49,
+      "shots": 6144,
+      "measured_error": 0.007975260416666666,
+      "snapshot_error": 0.01025390625,
+      "shot_only_wilson_95": [
+        0.0060381310816069195,
+        0.010527269881128674
+      ]
+    }
+  },
+  "target_summary": {
+    "single_return": {
+      "successes": 6105,
+      "shots": 6144,
+      "observed": 0.99365234375,
+      "snapshot_prediction": 0.9948166349326529,
+      "calibrated_prediction": 0.9951408956623184,
+      "snapshot_residual": -0.0011642911826529323,
+      "calibrated_residual": -0.0014885519123184476,
+      "shot_only_wilson_95": [
+        0.9913348368020785,
+        0.9953529365621367
+      ],
+      "block_observed_range": [
+        0.9931640625,
+        0.99462890625
+      ]
+    },
+    "single_one_return": {
+      "successes": 6094,
+      "shots": 6144,
+      "observed": 0.9918619791666666,
+      "snapshot_prediction": 0.9917379076214792,
+      "calibrated_prediction": 0.9923870603526465,
+      "snapshot_residual": 0.0001240715451874541,
+      "calibrated_residual": -0.0005250811859798254,
+      "shot_only_wilson_95": [
+        0.9892879050743146,
+        0.9938213765302546
+      ],
+      "block_observed_range": [
+        0.9892578125,
+        0.99365234375
+      ]
+    },
+    "bell": {
+      "successes": 6051,
+      "shots": 6144,
+      "observed": 0.98486328125,
+      "snapshot_prediction": 0.9870819773129204,
+      "calibrated_prediction": 0.9871672016193911,
+      "snapshot_residual": -0.0022186960629203556,
+      "calibrated_residual": -0.002303920369391088,
+      "shot_only_wilson_95": [
+        0.9814932730305395,
+        0.9876273589681408
+      ],
+      "block_observed_range": [
+        0.984375,
+        0.9853515625
+      ]
+    },
+    "bell_return": {
+      "successes": 5984,
+      "shots": 6144,
+      "observed": 0.9739583333333334,
+      "snapshot_prediction": 0.9825066394729698,
+      "calibrated_prediction": 0.9850818280912959,
+      "snapshot_residual": -0.008548306139636419,
+      "calibrated_residual": -0.011123494757962482,
+      "shot_only_wilson_95": [
+        0.9696701893513262,
+        0.9776541746567831
+      ],
+      "block_observed_range": [
+        0.970703125,
+        0.978515625
+      ]
+    },
+    "ghz": {
+      "successes": 5974,
+      "shots": 6144,
+      "observed": 0.9723307291666666,
+      "snapshot_prediction": 0.9728285705388968,
+      "calibrated_prediction": 0.9754671022628494,
+      "snapshot_residual": -0.00049784137223019,
+      "calibrated_residual": -0.003136373096182754,
+      "shot_only_wilson_95": [
+        0.9679249035366251,
+        0.9761462861445331
+      ],
+      "block_observed_range": [
+        0.966796875,
+        0.9775390625
+      ]
+    },
+    "ghz_return": {
+      "successes": 5890,
+      "shots": 6144,
+      "observed": 0.9586588541666666,
+      "snapshot_prediction": 0.9632443202981918,
+      "calibrated_prediction": 0.9686327549596386,
+      "snapshot_residual": -0.004585466131525218,
+      "calibrated_residual": -0.009973900792972001,
+      "shot_only_wilson_95": [
+        0.953387676808746,
+        0.9633568485260243
+      ],
+      "block_observed_range": [
+        0.95458984375,
+        0.9609375
+      ]
+    }
+  },
+  "target_blocks": {
+    "single_return": [
+      {
+        "sequence": 4,
+        "successes": 2034,
+        "shots": 2048,
+        "observed": 0.9931640625,
+        "snapshot_prediction": 0.9948166349326529,
+        "calibrated_prediction": 0.9951408956623184,
+        "snapshot_residual": -0.0016525724326529323,
+        "calibrated_residual": -0.0019768331623184476
+      },
+      {
+        "sequence": 6,
+        "successes": 2034,
+        "shots": 2048,
+        "observed": 0.9931640625,
+        "snapshot_prediction": 0.9948166349326529,
+        "calibrated_prediction": 0.9951408956623184,
+        "snapshot_residual": -0.0016525724326529323,
+        "calibrated_residual": -0.0019768331623184476
+      },
+      {
+        "sequence": 15,
+        "successes": 2037,
+        "shots": 2048,
+        "observed": 0.99462890625,
+        "snapshot_prediction": 0.9948166349326529,
+        "calibrated_prediction": 0.9951408956623184,
+        "snapshot_residual": -0.0001877286826529323,
+        "calibrated_residual": -0.0005119894123184476
+      }
+    ],
+    "single_one_return": [
+      {
+        "sequence": 0,
+        "successes": 2026,
+        "shots": 2048,
+        "observed": 0.9892578125,
+        "snapshot_prediction": 0.9917379076214792,
+        "calibrated_prediction": 0.9923870603526465,
+        "snapshot_residual": -0.0024800951214791755,
+        "calibrated_residual": -0.003129247852646455
+      },
+      {
+        "sequence": 11,
+        "successes": 2035,
+        "shots": 2048,
+        "observed": 0.99365234375,
+        "snapshot_prediction": 0.9917379076214792,
+        "calibrated_prediction": 0.9923870603526465,
+        "snapshot_residual": 0.0019144361285208245,
+        "calibrated_residual": 0.001265283397353545
+      },
+      {
+        "sequence": 13,
+        "successes": 2033,
+        "shots": 2048,
+        "observed": 0.99267578125,
+        "snapshot_prediction": 0.9917379076214792,
+        "calibrated_prediction": 0.9923870603526465,
+        "snapshot_residual": 0.0009378736285208245,
+        "calibrated_residual": 0.0002887208973535449
+      }
+    ],
+    "bell": [
+      {
+        "sequence": 1,
+        "successes": 2016,
+        "shots": 2048,
+        "observed": 0.984375,
+        "snapshot_prediction": 0.9870819773129204,
+        "calibrated_prediction": 0.9871672016193911,
+        "snapshot_residual": -0.0027069773129203556,
+        "calibrated_residual": -0.002792201619391088
+      },
+      {
+        "sequence": 9,
+        "successes": 2018,
+        "shots": 2048,
+        "observed": 0.9853515625,
+        "snapshot_prediction": 0.9870819773129204,
+        "calibrated_prediction": 0.9871672016193911,
+        "snapshot_residual": -0.0017304148129203556,
+        "calibrated_residual": -0.0018156391193910881
+      },
+      {
+        "sequence": 16,
+        "successes": 2017,
+        "shots": 2048,
+        "observed": 0.98486328125,
+        "snapshot_prediction": 0.9870819773129204,
+        "calibrated_prediction": 0.9871672016193911,
+        "snapshot_residual": -0.0022186960629203556,
+        "calibrated_residual": -0.002303920369391088
+      }
+    ],
+    "bell_return": [
+      {
+        "sequence": 5,
+        "successes": 2004,
+        "shots": 2048,
+        "observed": 0.978515625,
+        "snapshot_prediction": 0.9825066394729698,
+        "calibrated_prediction": 0.9850818280912959,
+        "snapshot_residual": -0.003991014472969789,
+        "calibrated_residual": -0.0065662030912958524
+      },
+      {
+        "sequence": 8,
+        "successes": 1992,
+        "shots": 2048,
+        "observed": 0.97265625,
+        "snapshot_prediction": 0.9825066394729698,
+        "calibrated_prediction": 0.9850818280912959,
+        "snapshot_residual": -0.00985038947296979,
+        "calibrated_residual": -0.012425578091295852
+      },
+      {
+        "sequence": 14,
+        "successes": 1988,
+        "shots": 2048,
+        "observed": 0.970703125,
+        "snapshot_prediction": 0.9825066394729698,
+        "calibrated_prediction": 0.9850818280912959,
+        "snapshot_residual": -0.01180351447296979,
+        "calibrated_residual": -0.014378703091295852
+      }
+    ],
+    "ghz": [
+      {
+        "sequence": 3,
+        "successes": 1992,
+        "shots": 2048,
+        "observed": 0.97265625,
+        "snapshot_prediction": 0.9728285705388968,
+        "calibrated_prediction": 0.9754671022628494,
+        "snapshot_residual": -0.00017232053889681964,
+        "calibrated_residual": -0.0028108522628493837
+      },
+      {
+        "sequence": 7,
+        "successes": 1980,
+        "shots": 2048,
+        "observed": 0.966796875,
+        "snapshot_prediction": 0.9728285705388968,
+        "calibrated_prediction": 0.9754671022628494,
+        "snapshot_residual": -0.00603169553889682,
+        "calibrated_residual": -0.008670227262849384
+      },
+      {
+        "sequence": 17,
+        "successes": 2002,
+        "shots": 2048,
+        "observed": 0.9775390625,
+        "snapshot_prediction": 0.9728285705388968,
+        "calibrated_prediction": 0.9754671022628494,
+        "snapshot_residual": 0.00471049196110318,
+        "calibrated_residual": 0.0020719602371506163
+      }
+    ],
+    "ghz_return": [
+      {
+        "sequence": 2,
+        "successes": 1967,
+        "shots": 2048,
+        "observed": 0.96044921875,
+        "snapshot_prediction": 0.9632443202981918,
+        "calibrated_prediction": 0.9686327549596386,
+        "snapshot_residual": -0.0027951015481918473,
+        "calibrated_residual": -0.008183536209638631
+      },
+      {
+        "sequence": 10,
+        "successes": 1955,
+        "shots": 2048,
+        "observed": 0.95458984375,
+        "snapshot_prediction": 0.9632443202981918,
+        "calibrated_prediction": 0.9686327549596386,
+        "snapshot_residual": -0.008654476548191847,
+        "calibrated_residual": -0.014042911209638631
+      },
+      {
+        "sequence": 12,
+        "successes": 1968,
+        "shots": 2048,
+        "observed": 0.9609375,
+        "snapshot_prediction": 0.9632443202981918,
+        "calibrated_prediction": 0.9686327549596386,
+        "snapshot_residual": -0.0023068202981918473,
+        "calibrated_residual": -0.007695254959638631
+      }
+    ]
+  },
+  "limitations": [
+    "The operational p(0|1) estimate includes error in its X preparation gate.",
+    "Shot-only Wilson intervals exclude calibration drift and model uncertainty.",
+    "No target circuits were used to fit readout probabilities, but the target device still used fixed native gate durations."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "job_id": "db4nov04qg6s73c2e8d0",
+  "backend": "ibm_marrakesh",
+  "families": {
+    "single_return": {
+      "observed": 0.9959309895833334,
+      "ideal": 1.0,
+      "readout_only": 0.9697265625,
+      "full_model": 0.9685077272272901,
+      "predicted_loss_from_readout": 0.0302734375,
+      "additional_predicted_loss_from_gate_model": 0.0012188352727099394,
+      "observed_minus_readout_only": 0.02620442708333337
+    },
+    "bell": {
+      "observed": 0.9871419270833334,
+      "ideal": 1.0000000000000004,
+      "readout_only": 0.9649142622947697,
+      "full_model": 0.9618759374367238,
+      "predicted_loss_from_readout": 0.03508573770523071,
+      "additional_predicted_loss_from_gate_model": 0.0030383248580458933,
+      "observed_minus_readout_only": 0.02222766478856364
+    },
+    "bell_return": {
+      "observed": 0.9765625,
+      "ideal": 1.0,
+      "readout_only": 0.9614403247833252,
+      "full_model": 0.9511958408750963,
+      "predicted_loss_from_readout": 0.038559675216674805,
+      "additional_predicted_loss_from_gate_model": 0.010244483908228852,
+      "observed_minus_readout_only": 0.015122175216674805
+    },
+    "ghz": {
+      "observed": 0.9739583333333334,
+      "ideal": 1.0000000000000004,
+      "readout_only": 0.9257432222366337,
+      "full_model": 0.9201381448251029,
+      "predicted_loss_from_readout": 0.0742567777633667,
+      "additional_predicted_loss_from_gate_model": 0.005605077411530823,
+      "observed_minus_readout_only": 0.048215111096699625
+    }
+  }
+}

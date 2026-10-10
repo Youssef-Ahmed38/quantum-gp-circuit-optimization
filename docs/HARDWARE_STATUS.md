@@ -30,4 +30,19 @@ A subsequent free Open-instance Sampler job, `db4nov04qg6s73c2e8d0`, completed o
 
 All four absolute residuals exceed the prespecified descriptive tolerance of two percentage points. The model was pessimistic for these circuits, and this experiment does **not** validate its quantitative predictions on the QPU. In particular, the pre-job snapshot reported `prob_meas1_prep0 = 0.03027` for qubit 0, whereas the measured single-qubit return error was only 25/6,144 = 0.00407. Calibration mismatch, readout treatment, and the simplistic independent Pauli-channel assumption are possible explanations; these data do not identify a cause. The shot-only Wilson intervals and three block ranges are in the [analysis](../evidence/hardware/ibm_marrakesh_model_check_analysis_2026-10-10.json). They do not cover device drift or calibration uncertainty. The [raw evidence](../evidence/hardware/ibm_marrakesh_model_check_2026-10-10.json) contains the predeclared probability distributions, calibration snapshot, circuit order and counts; the companion QPY file preserves exact ISA circuits. The [submission](../benchmarks/run_ibm_model_check.py) and [analysis](../benchmarks/analyze_ibm_model_check.py) scripts reproduce the protocol and calculations.
 
+## Separate readout-calibration and held-out target check
+
+The [frozen protocol](IBM_READOUT_HOLDOUT_PROTOCOL.md) followed the failure above. Two additional free Open-instance jobs completed on `ibm_marrakesh`: readout controls `db4o3784qg6s73c2ekqg` and held-out targets `db4o3bo4qg6s73c2ekvg`. Each job contained 18 circuits at 2,048 shots. Calibration results yielded six operational readout estimates; both the original snapshot and readout-adjusted target predictions were saved in a SHA-256 [prediction lock](../evidence/hardware/ibm_marrakesh_readout_holdout_2026-10-10_prediction_lock.json) before the target job was submitted. The lock hash in the [raw result](../evidence/hardware/ibm_marrakesh_readout_holdout_2026-10-10.json) matches the lock file. Neither target results nor outcomes were used to fit predictions. The calibrator's `|1>` preparation includes X-gate error, so it does not isolate readout error perfectly.
+
+| Target family | Observed event probability | Snapshot prediction | Calibrated prediction |
+| --- | ---: | ---: | ---: |
+| Single return | 0.99365 | 0.99482 | 0.99514 |
+| Single-one return | 0.99186 | 0.99174 | 0.99239 |
+| Bell parity | 0.98486 | 0.98708 | 0.98717 |
+| Bell return | 0.97396 | 0.98251 | 0.98508 |
+| GHZ parity | 0.97233 | 0.97283 | 0.97547 |
+| GHZ return | 0.95866 | 0.96324 | 0.96863 |
+
+All six calibrated residuals were within the prespecified descriptive 0.02 tolerance. The snapshot prediction was **better**, however: event mean absolute error 0.00286 versus 0.00476 for readout adjustment. Thus the proposed explanation that separate readout calibration would improve prediction was **not supported** on this holdout. The new device snapshot reported much lower readout errors than the earlier one; for qubit 0, `prob_meas1_prep0` changed from 0.03027 to 0.00391, and for qubit 2 from 0.04565 to 0.01270. This is consistent with calibration sensitivity but cannot establish the cause of the first mismatch. Raw counts, exact ISA circuits, block ranges, and shot-only Wilson intervals are available in the [analysis](../evidence/hardware/ibm_marrakesh_readout_holdout_analysis_2026-10-10.json), [raw file](../evidence/hardware/ibm_marrakesh_readout_holdout_2026-10-10.json), and companion QPY file. Both jobs report `DONE` and were capped at 60 seconds of execution. No gate duration was selected by GP in either job.
+
 The temporary one-day API key used for this run was not stored in this repository. Its downloaded and temporary local copies were removed after result retrieval. At the user's request, the IBM Cloud key remains active until its configured one-day expiration rather than being revoked immediately.
