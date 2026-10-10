@@ -1,0 +1,370 @@
+{
+  "backend": "ibm_marrakesh",
+  "job_id": "db4ocm2mb58s7389fnag",
+  "job_status": "DONE",
+  "protocol_lock_sha256": "6ac79e8a1a6acc4ce0d1d0a666ea85b46a8818e790a6a091399d9390d0baac7f",
+  "nominal_ticks_equal": true,
+  "conditions": {
+    "X_m16_dd_tail": {
+      "successes": 5807,
+      "shots": 6144,
+      "return_probability": 0.9451497395833334,
+      "block_probabilities": [
+        0.94580078125,
+        0.943359375,
+        0.9462890625
+      ]
+    },
+    "X_m16_fast_tail": {
+      "successes": 4841,
+      "shots": 6144,
+      "return_probability": 0.7879231770833334,
+      "block_probabilities": [
+        0.7890625,
+        0.78759765625,
+        0.787109375
+      ]
+    },
+    "X_m16_padded": {
+      "successes": 5827,
+      "shots": 6144,
+      "return_probability": 0.9484049479166666,
+      "block_probabilities": [
+        0.951171875,
+        0.94677734375,
+        0.947265625
+      ]
+    },
+    "X_m16_slow": {
+      "successes": 5895,
+      "shots": 6144,
+      "return_probability": 0.95947265625,
+      "block_probabilities": [
+        0.9619140625,
+        0.95947265625,
+        0.95703125
+      ]
+    },
+    "X_m48_dd_tail": {
+      "successes": 5275,
+      "shots": 6144,
+      "return_probability": 0.8585611979166666,
+      "block_probabilities": [
+        0.85009765625,
+        0.8603515625,
+        0.865234375
+      ]
+    },
+    "X_m48_fast_tail": {
+      "successes": 1875,
+      "shots": 6144,
+      "return_probability": 0.30517578125,
+      "block_probabilities": [
+        0.314453125,
+        0.306640625,
+        0.29443359375
+      ]
+    },
+    "X_m48_padded": {
+      "successes": 5423,
+      "shots": 6144,
+      "return_probability": 0.8826497395833334,
+      "block_probabilities": [
+        0.88232421875,
+        0.884765625,
+        0.880859375
+      ]
+    },
+    "X_m48_slow": {
+      "successes": 5536,
+      "shots": 6144,
+      "return_probability": 0.9010416666666666,
+      "block_probabilities": [
+        0.89599609375,
+        0.90576171875,
+        0.9013671875
+      ]
+    },
+    "Z_m16_dd_tail": {
+      "successes": 5825,
+      "shots": 6144,
+      "return_probability": 0.9480794270833334,
+      "block_probabilities": [
+        0.9619140625,
+        0.93994140625,
+        0.9423828125
+      ]
+    },
+    "Z_m16_fast_tail": {
+      "successes": 6069,
+      "shots": 6144,
+      "return_probability": 0.98779296875,
+      "block_probabilities": [
+        0.9873046875,
+        0.98779296875,
+        0.98828125
+      ]
+    },
+    "Z_m16_padded": {
+      "successes": 5714,
+      "shots": 6144,
+      "return_probability": 0.9300130208333334,
+      "block_probabilities": [
+        0.9365234375,
+        0.92138671875,
+        0.93212890625
+      ]
+    },
+    "Z_m16_slow": {
+      "successes": 5815,
+      "shots": 6144,
+      "return_probability": 0.9464518229166666,
+      "block_probabilities": [
+        0.94775390625,
+        0.951171875,
+        0.9404296875
+      ]
+    },
+    "Z_m48_dd_tail": {
+      "successes": 5378,
+      "shots": 6144,
+      "return_probability": 0.8753255208333334,
+      "block_probabilities": [
+        0.8681640625,
+        0.8681640625,
+        0.8896484375
+      ]
+    },
+    "Z_m48_fast_tail": {
+      "successes": 6051,
+      "shots": 6144,
+      "return_probability": 0.98486328125,
+      "block_probabilities": [
+        0.9853515625,
+        0.98583984375,
+        0.9833984375
+      ]
+    },
+    "Z_m48_padded": {
+      "successes": 4923,
+      "shots": 6144,
+      "return_probability": 0.80126953125,
+      "block_probabilities": [
+        0.8017578125,
+        0.7958984375,
+        0.80615234375
+      ]
+    },
+    "Z_m48_slow": {
+      "successes": 5097,
+      "shots": 6144,
+      "return_probability": 0.82958984375,
+      "block_probabilities": [
+        0.83056640625,
+        0.83642578125,
+        0.82177734375
+      ]
+    }
+  },
+  "contrasts": {
+    "X_m16_slow_minus_padded": {
+      "difference": 0.01106770833333337,
+      "shot_only_normal_95": [
+        0.0036576445841935753,
+        0.018477772082473164
+      ],
+      "block_differences": [
+        0.0107421875,
+        0.0126953125,
+        0.009765625
+      ],
+      "paired_block_t_95": [
+        0.007362060839586498,
+        0.01477335582708017
+      ]
+    },
+    "X_m16_slow_minus_fast_tail": {
+      "difference": 0.17154947916666663,
+      "shot_only_normal_95": [
+        0.16020071961465274,
+        0.18289823871868052
+      ],
+      "block_differences": [
+        0.1728515625,
+        0.171875,
+        0.169921875
+      ],
+      "paired_block_t_95": [
+        0.16784383167291983,
+        0.17525512666041348
+      ]
+    },
+    "X_m16_slow_minus_dd_tail": {
+      "difference": 0.01432291666666663,
+      "shot_only_normal_95": [
+        0.006791134413596702,
+        0.021854698919736557
+      ],
+      "block_differences": [
+        0.01611328125,
+        0.01611328125,
+        0.0107421875
+      ],
+      "paired_block_t_95": [
+        0.006619599604940742,
+        0.02202623372839259
+      ]
+    },
+    "X_m48_slow_minus_padded": {
+      "difference": 0.01839192708333326,
+      "shot_only_normal_95": [
+        0.007413964251196925,
+        0.029369889915469592
+      ],
+      "block_differences": [
+        0.013671875,
+        0.02099609375,
+        0.0205078125
+      ],
+      "paired_block_t_95": [
+        0.008219459468650698,
+        0.028564394698015964
+      ]
+    },
+    "X_m48_slow_minus_fast_tail": {
+      "difference": 0.5958658854166666,
+      "shot_only_normal_95": [
+        0.5821423971306207,
+        0.6095893737027126
+      ],
+      "block_differences": [
+        0.58154296875,
+        0.59912109375,
+        0.60693359375
+      ],
+      "paired_block_t_95": [
+        0.5635607995254122,
+        0.6281709713079211
+      ]
+    },
+    "X_m48_slow_minus_dd_tail": {
+      "difference": 0.04248046875,
+      "shot_only_normal_95": [
+        0.031005299940888156,
+        0.05395563755911184
+      ],
+      "block_differences": [
+        0.0458984375,
+        0.04541015625,
+        0.0361328125
+      ],
+      "paired_block_t_95": [
+        0.028811127800850656,
+        0.056149809699149344
+      ]
+    },
+    "Z_m16_slow_minus_padded": {
+      "difference": 0.01643880208333326,
+      "shot_only_normal_95": [
+        0.007930798166075038,
+        0.02494680600059148
+      ],
+      "block_differences": [
+        0.01123046875,
+        0.02978515625,
+        0.00830078125
+      ],
+      "paired_block_t_95": [
+        -0.012503230053727193,
+        0.04538083422039386
+      ]
+    },
+    "Z_m16_slow_minus_fast_tail": {
+      "difference": -0.04134114583333337,
+      "shot_only_normal_95": [
+        -0.04760437835609661,
+        -0.03507791331057013
+      ],
+      "block_differences": [
+        -0.03955078125,
+        -0.03662109375,
+        -0.0478515625
+      ],
+      "paired_block_t_95": [
+        -0.0558121619018636,
+        -0.02687012976480307
+      ]
+    },
+    "Z_m16_slow_minus_dd_tail": {
+      "difference": -0.0016276041666667407,
+      "shot_only_normal_95": [
+        -0.009531211893959439,
+        0.006276003560625958
+      ],
+      "block_differences": [
+        -0.01416015625,
+        0.01123046875,
+        -0.001953125
+      ],
+      "paired_block_t_95": [
+        -0.033172283123048665,
+        0.029917074789715333
+      ]
+    },
+    "Z_m48_slow_minus_padded": {
+      "difference": 0.0283203125,
+      "shot_only_normal_95": [
+        0.014610542775477254,
+        0.042030082224522744
+      ],
+      "block_differences": [
+        0.02880859375,
+        0.04052734375,
+        0.015625
+      ],
+      "paired_block_t_95": [
+        -0.0026279455853410287,
+        0.05926857058534103
+      ]
+    },
+    "Z_m48_slow_minus_fast_tail": {
+      "difference": -0.1552734375,
+      "shot_only_normal_95": [
+        -0.16515850354938882,
+        -0.14538837145061118
+      ],
+      "block_differences": [
+        -0.15478515625,
+        -0.1494140625,
+        -0.16162109375
+      ],
+      "paired_block_t_95": [
+        -0.17047175601233486,
+        -0.14007511898766514
+      ]
+    },
+    "Z_m48_slow_minus_dd_tail": {
+      "difference": -0.04573567708333337,
+      "shot_only_normal_95": [
+        -0.05825080951982881,
+        -0.03322054464683793
+      ],
+      "block_differences": [
+        -0.03759765625,
+        -0.03173828125,
+        -0.06787109375
+      ],
+      "paired_block_t_95": [
+        -0.09390909450204221,
+        0.0024377403353755336
+      ]
+    }
+  },
+  "frozen_primary_criterion_met": true,
+  "limits": [
+    "A return probability is not average gate fidelity.",
+    "The shot-only normal intervals and three-block t intervals do not capture slow device drift, and the latter rely on a tiny number of blocks.",
+    "The tested choice was selected after a training job. Only this holdout was independent of selection.",
+    "The result tests one supported X gate pair and one device, not the paper's continuous GP duration allocation."
+  ]
+}

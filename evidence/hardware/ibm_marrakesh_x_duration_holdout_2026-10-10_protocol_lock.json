@@ -1,0 +1,296 @@
+{
+  "conditions": [
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "slow"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "padded"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "slow"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "slow"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "slow"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "padded"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "padded"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "padded"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "padded"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "slow"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "slow"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "padded"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "padded"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "slow"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "slow"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "padded"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "padded"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "slow"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "slow"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "X",
+      "length": 16,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "padded"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "slow"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "padded"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "padded"
+    },
+    {
+      "basis": "Z",
+      "length": 16,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "dd_tail"
+    },
+    {
+      "basis": "X",
+      "length": 48,
+      "mode": "fast_tail"
+    },
+    {
+      "basis": "Z",
+      "length": 48,
+      "mode": "slow"
+    }
+  ],
+  "frozen_utc": "2026-10-10T00:27:00.544443+00:00",
+  "nominal_ticks": [
+    12689,
+    4689,
+    12671,
+    4671,
+    12671,
+    12671,
+    4671,
+    4689,
+    12689,
+    4689,
+    12689,
+    12689,
+    4671,
+    4671,
+    4689,
+    12671,
+    12671,
+    4671,
+    4671,
+    12689,
+    12689,
+    12689,
+    4689,
+    4689,
+    12671,
+    4671,
+    12689,
+    12671,
+    4689,
+    4671,
+    12671,
+    4689,
+    4689,
+    4689,
+    4689,
+    12689,
+    4671,
+    12671,
+    4689,
+    12671,
+    4671,
+    4671,
+    12689,
+    12689,
+    4671,
+    12671,
+    12689,
+    12671
+  ],
+  "training_data_sha256": "d028b460cce521f26fe348a931565efabe39765abe837d4ffe81da2c82d6459e"
+}

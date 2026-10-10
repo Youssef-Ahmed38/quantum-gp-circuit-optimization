@@ -1,0 +1,2004 @@
+{
+  "purpose": "Native two-duration X characterization; no GP improvement claim",
+  "backend": "ibm_marrakesh",
+  "created_utc": "2026-10-10T00:23:26.048186+00:00",
+  "qubits": [
+    0,
+    1
+  ],
+  "bases": [
+    "Z",
+    "X"
+  ],
+  "modes": [
+    "fast",
+    "padded",
+    "slow"
+  ],
+  "lengths": [
+    0,
+    8,
+    32,
+    64
+  ],
+  "blocks": 3,
+  "shots_per_circuit": 1024,
+  "seed": 20261012,
+  "max_job_seconds": 90,
+  "durations": {
+    "0": {
+      "x_seconds": 3.6e-08,
+      "xslow_seconds": 1e-06,
+      "x_target_error": 0.0006455898642028418,
+      "xslow_target_error": 0.0006455898642028418,
+      "pad_dt": 241
+    },
+    "1": {
+      "x_seconds": 3.6e-08,
+      "xslow_seconds": 1e-06,
+      "x_target_error": 0.0002563328957151688,
+      "xslow_target_error": 0.0002563328957151688,
+      "pad_dt": 241
+    }
+  },
+  "order": [
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 64
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "fast",
+      "length": 0
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 32
+    },
+    {
+      "qubit": 1,
+      "basis": "Z",
+      "mode": "fast",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "Z",
+      "mode": "padded",
+      "length": 32
+    },
+    {
+      "qubit": 0,
+      "basis": "X",
+      "mode": "padded",
+      "length": 8
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "slow",
+      "length": 64
+    },
+    {
+      "qubit": 1,
+      "basis": "X",
+      "mode": "fast",
+      "length": 0
+    }
+  ],
+  "compiled_counts": [
+    {
+      "x": 64,
+      "delay": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "measure": 1
+    },
+    {
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "measure": 1
+    },
+    {
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "measure": 1
+    },
+    {
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "delay": 64,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "measure": 1
+    },
+    {
+      "xslow": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 64,
+      "measure": 1
+    },
+    {
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 32,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "measure": 1
+    },
+    {
+      "x": 32,
+      "delay": 32,
+      "measure": 1
+    },
+    {
+      "x": 8,
+      "delay": 8,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "xslow": 64,
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    },
+    {
+      "rz": 4,
+      "sx": 2,
+      "measure": 1
+    }
+  ],
+  "qasm3": [
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nxslow $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nx $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nx $1;\ndelay[241dt] $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nx $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nx $0;\ndelay[241dt] $0;\nrz(pi/2) $0;\nsx $0;\nrz(pi/2) $0;\nc[0] = measure $0;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nxslow $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n",
+    "OPENQASM 3.0;\ninclude \"stdgates.inc\";\nbit[1] c;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nrz(pi/2) $1;\nsx $1;\nrz(pi/2) $1;\nc[0] = measure $1;\n"
+  ],
+  "sampler_options": {
+    "dynamical_decoupling": false,
+    "gate_twirling": false,
+    "measurement_twirling": false
+  },
+  "dry_run": false,
+  "job_id": "db4ob04lf4us73c31490",
+  "counts": [
+    {
+      "1": 286,
+      "0": 738
+    },
+    {
+      "0": 801,
+      "1": 223
+    },
+    {
+      "1": 187,
+      "0": 837
+    },
+    {
+      "0": 1018,
+      "1": 6
+    },
+    {
+      "0": 946,
+      "1": 78
+    },
+    {
+      "0": 790,
+      "1": 234
+    },
+    {
+      "0": 991,
+      "1": 33
+    },
+    {
+      "0": 940,
+      "1": 84
+    },
+    {
+      "0": 1018,
+      "1": 6
+    },
+    {
+      "0": 1018,
+      "1": 6
+    },
+    {
+      "0": 1015,
+      "1": 9
+    },
+    {
+      "1": 539,
+      "0": 485
+    },
+    {
+      "0": 838,
+      "1": 186
+    },
+    {
+      "0": 799,
+      "1": 225
+    },
+    {
+      "0": 998,
+      "1": 26
+    },
+    {
+      "0": 1020,
+      "1": 4
+    },
+    {
+      "0": 1010,
+      "1": 14
+    },
+    {
+      "0": 985,
+      "1": 39
+    },
+    {
+      "0": 1008,
+      "1": 16
+    },
+    {
+      "0": 924,
+      "1": 100
+    },
+    {
+      "0": 1021,
+      "1": 3
+    },
+    {
+      "0": 1022,
+      "1": 2
+    },
+    {
+      "0": 883,
+      "1": 141
+    },
+    {
+      "0": 719,
+      "1": 305
+    },
+    {
+      "0": 935,
+      "1": 89
+    },
+    {
+      "0": 720,
+      "1": 304
+    },
+    {
+      "0": 1008,
+      "1": 16
+    },
+    {
+      "0": 1006,
+      "1": 18
+    },
+    {
+      "0": 892,
+      "1": 132
+    },
+    {
+      "0": 942,
+      "1": 82
+    },
+    {
+      "0": 1023,
+      "1": 1
+    },
+    {
+      "0": 873,
+      "1": 151
+    },
+    {
+      "0": 1011,
+      "1": 13
+    },
+    {
+      "0": 998,
+      "1": 26
+    },
+    {
+      "0": 998,
+      "1": 26
+    },
+    {
+      "0": 1003,
+      "1": 21
+    },
+    {
+      "0": 878,
+      "1": 146
+    },
+    {
+      "0": 972,
+      "1": 52
+    },
+    {
+      "0": 1021,
+      "1": 3
+    },
+    {
+      "0": 905,
+      "1": 119
+    },
+    {
+      "0": 1014,
+      "1": 10
+    },
+    {
+      "0": 836,
+      "1": 188
+    },
+    {
+      "0": 1007,
+      "1": 17
+    },
+    {
+      "0": 770,
+      "1": 254
+    },
+    {
+      "0": 1019,
+      "1": 5
+    },
+    {
+      "0": 901,
+      "1": 123
+    },
+    {
+      "0": 1009,
+      "1": 15
+    },
+    {
+      "0": 1013,
+      "1": 11
+    },
+    {
+      "0": 754,
+      "1": 270
+    },
+    {
+      "0": 1013,
+      "1": 11
+    },
+    {
+      "0": 1019,
+      "1": 5
+    },
+    {
+      "0": 1007,
+      "1": 17
+    },
+    {
+      "1": 294,
+      "0": 730
+    },
+    {
+      "0": 957,
+      "1": 67
+    },
+    {
+      "0": 923,
+      "1": 101
+    },
+    {
+      "1": 131,
+      "0": 893
+    },
+    {
+      "0": 993,
+      "1": 31
+    },
+    {
+      "0": 996,
+      "1": 28
+    },
+    {
+      "0": 891,
+      "1": 133
+    },
+    {
+      "0": 946,
+      "1": 78
+    },
+    {
+      "0": 1016,
+      "1": 8
+    },
+    {
+      "1": 317,
+      "0": 707
+    },
+    {
+      "1": 561,
+      "0": 463
+    },
+    {
+      "0": 904,
+      "1": 120
+    },
+    {
+      "0": 978,
+      "1": 46
+    },
+    {
+      "0": 1015,
+      "1": 9
+    },
+    {
+      "0": 945,
+      "1": 79
+    },
+    {
+      "0": 1010,
+      "1": 14
+    },
+    {
+      "0": 830,
+      "1": 194
+    },
+    {
+      "0": 1005,
+      "1": 19
+    },
+    {
+      "0": 1020,
+      "1": 4
+    },
+    {
+      "0": 880,
+      "1": 144
+    },
+    {
+      "0": 854,
+      "1": 170
+    },
+    {
+      "0": 943,
+      "1": 81
+    },
+    {
+      "0": 1021,
+      "1": 3
+    },
+    {
+      "0": 997,
+      "1": 27
+    },
+    {
+      "0": 747,
+      "1": 277
+    },
+    {
+      "0": 995,
+      "1": 29
+    },
+    {
+      "0": 1014,
+      "1": 10
+    },
+    {
+      "0": 938,
+      "1": 86
+    },
+    {
+      "0": 1019,
+      "1": 5
+    },
+    {
+      "1": 310,
+      "0": 714
+    },
+    {
+      "0": 989,
+      "1": 35
+    },
+    {
+      "1": 299,
+      "0": 725
+    },
+    {
+      "0": 786,
+      "1": 238
+    },
+    {
+      "0": 824,
+      "1": 200
+    },
+    {
+      "0": 748,
+      "1": 276
+    },
+    {
+      "0": 528,
+      "1": 496
+    },
+    {
+      "0": 864,
+      "1": 160
+    },
+    {
+      "0": 1001,
+      "1": 23
+    },
+    {
+      "0": 935,
+      "1": 89
+    },
+    {
+      "0": 1014,
+      "1": 10
+    },
+    {
+      "0": 1017,
+      "1": 7
+    },
+    {
+      "0": 1000,
+      "1": 24
+    },
+    {
+      "1": 58,
+      "0": 966
+    },
+    {
+      "0": 1012,
+      "1": 12
+    },
+    {
+      "0": 1001,
+      "1": 23
+    },
+    {
+      "0": 1016,
+      "1": 8
+    },
+    {
+      "0": 928,
+      "1": 96
+    },
+    {
+      "0": 775,
+      "1": 249
+    },
+    {
+      "0": 911,
+      "1": 113
+    },
+    {
+      "0": 1022,
+      "1": 2
+    },
+    {
+      "1": 139,
+      "0": 885
+    },
+    {
+      "0": 1015,
+      "1": 9
+    },
+    {
+      "1": 205,
+      "0": 819
+    },
+    {
+      "0": 812,
+      "1": 212
+    },
+    {
+      "0": 1000,
+      "1": 24
+    },
+    {
+      "0": 947,
+      "1": 77
+    },
+    {
+      "0": 1000,
+      "1": 24
+    },
+    {
+      "0": 1001,
+      "1": 23
+    },
+    {
+      "0": 1023,
+      "1": 1
+    },
+    {
+      "0": 1020,
+      "1": 4
+    },
+    {
+      "0": 1012,
+      "1": 12
+    },
+    {
+      "0": 1001,
+      "1": 23
+    },
+    {
+      "0": 956,
+      "1": 68
+    },
+    {
+      "0": 1012,
+      "1": 12
+    },
+    {
+      "0": 942,
+      "1": 82
+    },
+    {
+      "0": 938,
+      "1": 86
+    },
+    {
+      "1": 107,
+      "0": 917
+    },
+    {
+      "0": 1019,
+      "1": 5
+    }
+  ],
+  "job_status": "DONE"
+}
