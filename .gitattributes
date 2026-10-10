@@ -1,0 +1,8 @@
+# Pre-registered protocols, hashes and analysis scripts must keep their exact bytes
+# so that their SHA-256 hashes verify on every platform.
+evidence/ibm_dd_protocol/** -text
+benchmarks/analyze_ibm_h2.py -text
+benchmarks/analyze_ibm_h3.py -text
+benchmarks/analyze_ibm_h3.prereg.py -text
+benchmarks/pool_ibm_h2.py -text
+benchmarks/pool_ibm_h3.py -text
