@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or its benchmark data, please cite this repository and the manuscript if published."
-title: "Quantum circuit timing with geometric programming"
+title: "Quantum circuit optimization using geometric programming"
 type: software
 authors:
   - family-names: Ramadan
@@ -14,4 +14,7 @@ keywords:
   - geometric programming
   - convex optimization
   - gate scheduling
+  - dynamical decoupling
+  - quantum error mitigation
   - Pauli observables
+version: "1.0.0"

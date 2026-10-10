@@ -236,4 +236,4 @@ submission; same qubits; 4 blocks × 6,000 shots).
 - **Conclusion:** the GP's allocation beats a pulse-matched uniform schedule that has nearly twice as many pulses, on two disjoint chains. The gain is therefore not explained by pulse count.
 - **Against XY4 the result is chain-dependent:** a large win on chain A, a tie on chain B. The model over-predicted XY4's deficit on chain B. A plausible cause is XY4's robustness to pulse errors from alternating X/Y, against the GP's X-only CPMG blocks; a natural extension is GP selection over robust sequence families.
 - **Drift:** absolute fidelities on chain A fell from about 0.33 (H2/R1) to about 0.15 (H3). The paired within-run comparisons remain valid.
-- **Total hardware use:** 7 free-tier jobs, about 2 minutes of shot time.
+- **Total hardware use:** 6 free-tier jobs (H1, H2, R1, H3, H1-B, H3-B), about 2 minutes of shot time.
